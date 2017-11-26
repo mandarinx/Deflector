@@ -3,13 +3,11 @@ using System.Collections;
 
 public class Turret : MonoBehaviour {
 
-    public SpriteRenderer warning;
-    public SpriteRenderer cannon;
-    public GameObject projectile;
+    public SpriteRenderer spawnHole;
+    public GameObject     projectile;
 
     private void Awake() {
-        warning.gameObject.SetActive(true);
-        cannon.gameObject.SetActive(false);
+        spawnHole.gameObject.SetActive(false);
     }
 
     private void Start() {
@@ -17,22 +15,22 @@ public class Turret : MonoBehaviour {
     }
 
     private IEnumerator Fire() {
-        warning.color = new Color(0f, 0f, 0f, 0.25f);
-        yield return new WaitForSeconds(0.5f);
-        warning.color = new Color(0f, 0f, 0f, 0.35f);
-        yield return new WaitForSeconds(0.4f);
-        warning.color = new Color(0f, 0f, 0f, 0.45f);
-        yield return new WaitForSeconds(0.3f);
-        warning.color = new Color(0f, 0f, 0f, 0.6f);
-        yield return new WaitForSeconds(0.2f);
-        warning.color = new Color(0f, 0f, 0f, 0.8f);
-        yield return new WaitForSeconds(0.1f);
-        warning.color = new Color(0f, 0f, 0f, 1f);
-        yield return new WaitForSeconds(0.1f);
+        const float blink = 0.25f;
+        spawnHole.gameObject.SetActive(true);
+        spawnHole.color = new Color(1f, 1f, 1f, 1f);
+        yield return new WaitForSeconds(blink);
+        spawnHole.color = new Color(1f, 1f, 1f, 0f);
+        yield return new WaitForSeconds(blink);
+        spawnHole.color = new Color(1f, 1f, 1f, 1f);
+        yield return new WaitForSeconds(blink);
+        spawnHole.color = new Color(1f, 1f, 1f, 0f);
+        yield return new WaitForSeconds(blink);
+        spawnHole.color = new Color(1f, 1f, 1f, 1f);
+        yield return new WaitForSeconds(blink);
+        spawnHole.color = new Color(1f, 1f, 1f, 0f);
+        yield return new WaitForSeconds(blink);
+        spawnHole.color = new Color(1f, 1f, 1f, 1f);
 
-        warning.gameObject.SetActive(false);
-        cannon.gameObject.SetActive(true);
-        
         yield return new WaitForSeconds(0.5f);
 
         GameObject go = Instantiate(projectile);
