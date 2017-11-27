@@ -55,8 +55,11 @@
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\SpriteAnim.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\SpriteAnimEventHandler.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\SpriteAnimNodes.cs" />
+    <Compile Include="Assets\Scripts\AngleTest.cs" />
+    <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Shield.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />
     <Compile Include="Assets\Scripts\Turrets.cs" />
     <None Include="Assets\PixelArtCamera\PixelArtDiffuse.shader" />

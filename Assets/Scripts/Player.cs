@@ -1,17 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using PowerTools;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour {
     
-    public float moveSpeed = 1f;
-    public float bounceForce;
+    public float          moveSpeed = 1f;
+    public float          bounceForce;
     public AnimationCurve forceFalloff;
+    public Transform      shieldAnchor;
+    public Shield         shield;
+    public SpriteAnim     hitEffect;
     
-    private Rigidbody2D rb;
-    private float walkAngle;
-    private float hitTime;
-    public Vector2 hitNormal;
+    private Rigidbody2D               rb;
+    private float                     walkAngle;
+    private int                       walkDir;
+    private float                     hitTime;
+    private Vector2                   hitNormal;
     private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[8];
     
     private readonly Dictionary<int, float> radianMap = new Dictionary<int, float> {
@@ -28,37 +34,55 @@ public class Player : MonoBehaviour {
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         walkAngle = Mathf.PI;
+        hitEffect.gameObject.SetActive(false);
     }
 
     private void FixedUpdate() {
+        
+        // Shield
+
+        if (Input.GetKeyDown(KeyCode.X)) {
+            Projectile projectile = shield.GetOverlapped();
+            if (projectile != null) {
+                projectile.Hit(walkDir);
+                hitEffect.gameObject.SetActive(true);
+                hitEffect.Play(hitEffect.Clip);
+                StartCoroutine(DisableHitEffect());
+            }
+        }
+        
+        // Movement
+        
         int input = -1;
         
-        if (Input.GetKey(KeyCode.UpArrow)) {             input = 0;
+        if (Input.GetKey(KeyCode.UpArrow)) {             input = 2;
             if (Input.GetKey(KeyCode.RightArrow)) {      input = 1; }
-            else if (Input.GetKey(KeyCode.LeftArrow)) {  input = 7; }
+            else if (Input.GetKey(KeyCode.LeftArrow)) {  input = 3; }
         }
-        else if (Input.GetKey(KeyCode.DownArrow)) {      input = 4;
-            if (Input.GetKey(KeyCode.RightArrow)) {      input = 3; }
+        else if (Input.GetKey(KeyCode.DownArrow)) {      input = 6;
+            if (Input.GetKey(KeyCode.RightArrow)) {      input = 7; }
             else if (Input.GetKey(KeyCode.LeftArrow)) {  input = 5; }
         }
         
-        if (Input.GetKey(KeyCode.RightArrow)) {          input = 2;
+        if (Input.GetKey(KeyCode.RightArrow)) {          input = 0;
             if (Input.GetKey(KeyCode.UpArrow)) {         input = 1; }
-            else if (Input.GetKey(KeyCode.DownArrow)) {  input = 3; }
+            else if (Input.GetKey(KeyCode.DownArrow)) {  input = 7; }
         }
-        else if (Input.GetKey(KeyCode.LeftArrow)) {      input = 6;
-            if (Input.GetKey(KeyCode.UpArrow)) {         input = 7; }
+        else if (Input.GetKey(KeyCode.LeftArrow)) {      input = 4;
+            if (Input.GetKey(KeyCode.UpArrow)) {         input = 3; }
             else if (Input.GetKey(KeyCode.DownArrow)) {  input = 5; }
         }
         
         Vector2 velocity = Vector2.zero;
         
         if (input >= 0) {
+            walkDir = input;
             walkAngle = radianMap[input];
             velocity = new Vector2 {
-                x = Mathf.Sin(walkAngle) * moveSpeed,
-                y = Mathf.Cos(walkAngle) * moveSpeed
+                x = Mathf.Cos(walkAngle) * moveSpeed,
+                y = Mathf.Sin(walkAngle) * moveSpeed
             };
+            shieldAnchor.rotation = Quaternion.Euler(0f, 0f, Mathf.Rad2Deg * walkAngle);
         }
         
         rb.MovePosition(rb.position + (velocity + (hitNormal * bounceForce)) * Time.fixedDeltaTime);
@@ -84,4 +108,8 @@ public class Player : MonoBehaviour {
         hitTime = Time.time;
     }
 
+    private IEnumerator DisableHitEffect() {
+        yield return new WaitForSeconds(0.33f);
+        hitEffect.gameObject.SetActive(false);
+    }
 }

@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunchGame01", "Assembly-CSharp.csproj", "{323BC6CF-AB06-1975-2571-EDF83ADC37F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{323BC6CF-AB06-1975-2571-EDF83ADC37F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunchGame01", "Assembly-CSharp-Editor.csproj", "{B192BF1E-6BCE-23AA-7774-C17402EBC072}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{B192BF1E-6BCE-23AA-7774-C17402EBC072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunchGame01", "Assembly-CSharp-Editor-firstpass.csproj", "{1967753B-E6A9-EB05-7FD4-7D20A59A2FF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{1967753B-E6A9-EB05-7FD4-7D20A59A2FF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

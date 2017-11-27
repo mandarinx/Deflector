@@ -57,7 +57,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -92,10 +92,22 @@ MonoBehaviour:
   angle: 0
   speed: 1
   sprites:
+  - {fileID: 21300224, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300224, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300222, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300222, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300220, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300220, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300218, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300218, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
   - {fileID: 21300240, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
-  - {fileID: 21300234, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
-  - {fileID: 21300236, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300240, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
   - {fileID: 21300238, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300238, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300236, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300236, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300234, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  - {fileID: 21300234, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
   explosion: {fileID: 0}
 --- !u!212 &212637977036971934
 SpriteRenderer:
