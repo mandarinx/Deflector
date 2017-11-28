@@ -3,23 +3,27 @@ using System.Collections.Generic;
 using PowerTools;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
 public class Player : MonoBehaviour {
     
-    public float          moveSpeed = 1f;
-    public float          bounceForce;
-    public AnimationCurve forceFalloff;
-    public Transform      shieldAnchor;
-    public Shield         shield;
-    public SpriteAnim     hitEffect;
+    public float                      moveSpeed = 1f;
+    public float                      bounceForce;
+    public AnimationCurve             forceFalloff;
+    public Transform                  shieldAnchor;
+    public Shield                     shield;
+    public SpriteAnim                 hitEffect;
+    public SpriteAnim                 playerAnim;
+    public PlayerHealth               playerHealth;
     
     private Rigidbody2D               rb;
+    private SpriteRenderer            sr;
     private float                     walkAngle;
     private int                       walkDir;
     private float                     hitTime;
     private Vector2                   hitNormal;
     private bool                      inputHit;
     private int                       inputMove;
+    private bool                      activated;
     private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[8];
     
     private readonly Dictionary<int, float> radianMap = new Dictionary<int, float> {
@@ -34,15 +38,33 @@ public class Player : MonoBehaviour {
     };
 
     private void Awake() {
+        activated = false;
         inputHit = false;
         inputMove = -1;
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         walkAngle = Mathf.PI;
+        hitEffect.gameObject.SetActive(false);
+    }
+
+    public void Activate() {
+        activated = true;
+        playerAnim.Play(playerAnim.Clip);
+    }
+
+    public void Deactivate() {
+        activated = false;
+        playerAnim.Stop();
+        StopAllCoroutines();
         hitEffect.gameObject.SetActive(false);
     }
 
     private void Update() {
 
+        if (!activated) {
+            return;
+        }
+        
         // Shield
 
         if (Input.GetKeyDown(KeyCode.X)) {
@@ -69,6 +91,12 @@ public class Player : MonoBehaviour {
             else if (Input.GetKey(KeyCode.DownArrow)) {  inputMove = 5; }
         }
 
+        if (inputMove == 0 || inputMove == 1 || inputMove == 7) {
+            sr.flipX = true;
+        }
+        if (inputMove == 3 || inputMove == 4 || inputMove == 5) {
+            sr.flipX = false;
+        }
     }
     
     private void FixedUpdate() {
@@ -106,6 +134,10 @@ public class Player : MonoBehaviour {
     }
     
     private void OnCollisionEnter2D(Collision2D other) {
+        if (!activated) {
+            return;
+        }
+        
         if (!other.gameObject.CompareTag("Projectile")) {
             return;
         }
@@ -114,7 +146,9 @@ public class Player : MonoBehaviour {
         if (contacts == 0) {
             return;
         }
-
+        
+        playerHealth.SetLives(playerHealth.numLives - 1);
+        
         hitNormal = Vector2.zero;
         for (int i = 0; i < contacts; ++i) {
             hitNormal += contactPoints[i].normal;

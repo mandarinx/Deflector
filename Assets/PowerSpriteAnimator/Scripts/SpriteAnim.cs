@@ -27,6 +27,7 @@ public class SpriteAnim : SpriteAnimEventHandler
 	#region Vars: Editor
 
 	[SerializeField] AnimationClip m_defaultAnim = null;
+	[SerializeField] bool m_playOnAwake = true;
 
 	#endregion
 	#region Vars: Private
@@ -224,6 +225,9 @@ public class SpriteAnim : SpriteAnimEventHandler
 		#endif
 
 		Play(m_defaultAnim);
+		if (!m_playOnAwake) {
+			Stop();
+		}
 
 		m_nodes = GetComponent<SpriteAnimNodes>();
 	}

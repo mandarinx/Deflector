@@ -51,10 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bde1baa29b6140f5901a1ba78063eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1238722765353642, guid: 0a3cd0a093fef4abcb97be4ceaf5965d, type: 2}
   spawnInterval: 4
   maxTurrets: -1
   top: 3
   right: 6
   bottom: 4
   left: 6
+  spawnedTurrets: {fileID: 11400000, guid: 70e1521d47c4a45078ee3f0bf1785ac7, type: 2}

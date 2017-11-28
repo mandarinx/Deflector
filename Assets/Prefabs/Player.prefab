@@ -69,11 +69,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4928502872058554}
   - component: {fileID: 114108300275756790}
+  - component: {fileID: 114943011308257730}
   - component: {fileID: 212161194741644122}
   - component: {fileID: 50007249700960364}
   - component: {fileID: 58749400449453462}
   - component: {fileID: 95684812862246244}
-  - component: {fileID: 114943011308257730}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 19d4e153a77564b3ab0687afb5b6ee86, type: 2}
+  m_playOnAwake: 1
 --- !u!114 &114108300275756790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,6 +320,8 @@ MonoBehaviour:
   shieldAnchor: {fileID: 4363176378934414}
   shield: {fileID: 114494586970716236}
   hitEffect: {fileID: 114080714855716322}
+  playerAnim: {fileID: 114943011308257730}
+  playerHealth: {fileID: 11400000, guid: af7b056e5a04248d8bd7d11442f91193, type: 2}
 --- !u!114 &114494586970716236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -343,6 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 834317c78794d4090a3ca0d770e7f6d2, type: 2}
+  m_playOnAwake: 0
 --- !u!212 &212161194741644122
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -379,7 +383,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}

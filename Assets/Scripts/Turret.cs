@@ -4,7 +4,7 @@ using System.Collections;
 public class Turret : MonoBehaviour {
 
     public SpriteRenderer spawnHole;
-    public GameObject     projectile;
+    public GameObjectSet  projectileSet;
 
     private void Awake() {
         spawnHole.gameObject.SetActive(false);
@@ -32,9 +32,8 @@ public class Turret : MonoBehaviour {
         spawnHole.color = new Color(1f, 1f, 1f, 1f);
 
         yield return new WaitForSeconds(0.5f);
-
-        GameObject go = Instantiate(projectile);
-        go.transform.position = transform.position;
+        
+        projectileSet.Spawn(transform.position);
         
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
