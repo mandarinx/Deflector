@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1238722765353642, guid: 0a3cd0a093fef4abcb97be4ceaf5965d, type: 2}
   spawnInterval: 4
-  maxTurrets: 1
+  maxTurrets: -1
   top: 3
   right: 6
   bottom: 4

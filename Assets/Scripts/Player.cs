@@ -18,6 +18,8 @@ public class Player : MonoBehaviour {
     private int                       walkDir;
     private float                     hitTime;
     private Vector2                   hitNormal;
+    private bool                      inputHit;
+    private int                       inputMove;
     private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[8];
     
     private readonly Dictionary<int, float> radianMap = new Dictionary<int, float> {
@@ -32,16 +34,49 @@ public class Player : MonoBehaviour {
     };
 
     private void Awake() {
+        inputHit = false;
+        inputMove = -1;
         rb = GetComponent<Rigidbody2D>();
         walkAngle = Mathf.PI;
         hitEffect.gameObject.SetActive(false);
     }
 
+    private void Update() {
+
+        // Shield
+
+        if (Input.GetKeyDown(KeyCode.X)) {
+            inputHit = true;
+        }
+        
+        // Movement
+        
+        if (Input.GetKey(KeyCode.UpArrow)) {             inputMove = 2;
+            if (Input.GetKey(KeyCode.RightArrow)) {      inputMove = 1; }
+            else if (Input.GetKey(KeyCode.LeftArrow)) {  inputMove = 3; }
+        }
+        else if (Input.GetKey(KeyCode.DownArrow)) {      inputMove = 6;
+            if (Input.GetKey(KeyCode.RightArrow)) {      inputMove = 7; }
+            else if (Input.GetKey(KeyCode.LeftArrow)) {  inputMove = 5; }
+        }
+        
+        if (Input.GetKey(KeyCode.RightArrow)) {          inputMove = 0;
+            if (Input.GetKey(KeyCode.UpArrow)) {         inputMove = 1; }
+            else if (Input.GetKey(KeyCode.DownArrow)) {  inputMove = 7; }
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow)) {      inputMove = 4;
+            if (Input.GetKey(KeyCode.UpArrow)) {         inputMove = 3; }
+            else if (Input.GetKey(KeyCode.DownArrow)) {  inputMove = 5; }
+        }
+
+    }
+    
     private void FixedUpdate() {
         
         // Shield
 
-        if (Input.GetKeyDown(KeyCode.X)) {
+        if (inputHit) {
+            inputHit = false;
             Projectile projectile = shield.GetOverlapped();
             if (projectile != null) {
                 projectile.Hit(walkDir);
@@ -53,31 +88,12 @@ public class Player : MonoBehaviour {
         
         // Movement
         
-        int input = -1;
-        
-        if (Input.GetKey(KeyCode.UpArrow)) {             input = 2;
-            if (Input.GetKey(KeyCode.RightArrow)) {      input = 1; }
-            else if (Input.GetKey(KeyCode.LeftArrow)) {  input = 3; }
-        }
-        else if (Input.GetKey(KeyCode.DownArrow)) {      input = 6;
-            if (Input.GetKey(KeyCode.RightArrow)) {      input = 7; }
-            else if (Input.GetKey(KeyCode.LeftArrow)) {  input = 5; }
-        }
-        
-        if (Input.GetKey(KeyCode.RightArrow)) {          input = 0;
-            if (Input.GetKey(KeyCode.UpArrow)) {         input = 1; }
-            else if (Input.GetKey(KeyCode.DownArrow)) {  input = 7; }
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow)) {      input = 4;
-            if (Input.GetKey(KeyCode.UpArrow)) {         input = 3; }
-            else if (Input.GetKey(KeyCode.DownArrow)) {  input = 5; }
-        }
-        
         Vector2 velocity = Vector2.zero;
         
-        if (input >= 0) {
-            walkDir = input;
-            walkAngle = radianMap[input];
+        if (inputMove >= 0) {
+            walkDir = inputMove;
+            walkAngle = radianMap[inputMove];
+            inputMove = -1;
             velocity = new Vector2 {
                 x = Mathf.Cos(walkAngle) * moveSpeed,
                 y = Mathf.Sin(walkAngle) * moveSpeed

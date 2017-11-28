@@ -77,7 +77,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.32
 --- !u!114 &114994274980875066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,7 +108,8 @@ MonoBehaviour:
   - {fileID: 21300236, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
   - {fileID: 21300234, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
   - {fileID: 21300234, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
-  explosion: {fileID: 0}
+  explosionPrefab: {fileID: 1173977352691514, guid: 5ecaee20e84b240bfa32dd05759870f7,
+    type: 2}
 --- !u!212 &212637977036971934
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -148,7 +149,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.24, y: 0.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
