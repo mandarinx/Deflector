@@ -10,10 +10,21 @@ public class GameObjectSet : ScriptableObject {
 
     public int Count => instances.Count;
 
+    private void OnEnable() {
+        instances = new List<GameObject>();
+    }
+
     public void Spawn(Vector3 pos) {
         GameObject p = Instantiate(prefab);
         p.transform.position = pos;
         instances.Add(p);
+    }
+
+    public void Despawn(GameObject go) {
+        bool found = instances.Remove(go);
+        if (found) {
+            Destroy(go);
+        }
     }
 
     public void DespawnAll() {

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using RoboRyanTron.Unite2017.Events;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
@@ -14,6 +15,8 @@ public class Projectile : MonoBehaviour {
     private Sprite[]                  sprites;
     [SerializeField]
     private GameObject                explosionPrefab;
+    [SerializeField]
+    private GameObjectEvent           onDespawn;
 
     private int                       angleIndex;
     private int                       activated;
@@ -107,7 +110,7 @@ public class Projectile : MonoBehaviour {
         explosion.transform.position = transform.position;
         explosion.GetComponent<Explosion>().Explode();
         
-        Destroy(gameObject);
+        onDespawn.Raise(gameObject);
     }
 
     private void FixedUpdate() {

@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnHole: {fileID: 212848381926812548}
   projectileSet: {fileID: 11400000, guid: f2ebe9782043142c59545e3714926981, type: 2}
+  onDespawn: {fileID: 11400000, guid: f85d0c8911ac74dd4a7d3ab0cc3fc0a5, type: 2}
 --- !u!212 &212848381926812548
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -57,8 +57,10 @@
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorNodes.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorTimeline.cs" />
     <Compile Include="Assets\Resources\Editor\CM Tools\TileMaster\TileMaster.cs" />
+    <Compile Include="Assets\Scripts\Editor\PlayerHealthInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\TransformInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvent\Editor\EventEditor.cs" />
+    <Compile Include="Assets\Scripts\GameObjectEvent\Editor\GameObjectEventInspector.cs" />
     <None Include="Assets\PixelArtCamera\PixelArtDiffuse.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtParticle.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtUI.shader" />

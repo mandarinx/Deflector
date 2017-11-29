@@ -11,8 +11,15 @@ public class Turrets : MonoBehaviour {
     public int            left;
     public GameObjectSet  spawnedTurrets;
 
-    public void StartInterval() {
-        StartCoroutine(Spawn());
+    private Coroutine     spawnRoutine;
+
+    public void Activate() {
+        spawnRoutine = StartCoroutine(Spawn());
+    }
+
+    public void Deactivate() {
+        StopCoroutine(spawnRoutine);
+        spawnRoutine = null;
     }
 
     private IEnumerator Spawn() {

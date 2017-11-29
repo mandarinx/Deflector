@@ -12,7 +12,6 @@ public class UIController : MonoBehaviour {
     public RectTransform panelIngame;
     public RectTransform panelStart;
     public RectTransform panelGameOver;
-    public PlayerHealth  playerHealth;
     [Tooltip("Triggered when player presses S on the start panel")]
     public GameEvent     enterGameEvent;
     [Tooltip("Triggered when player presses R on the game over panel")]
@@ -24,21 +23,21 @@ public class UIController : MonoBehaviour {
         set {
             switch (value) {
                 case State.START:
-                    panelStart.gameObject.SetActive(true);
-                    panelIngame.gameObject.SetActive(false);
-                    panelGameOver.gameObject.SetActive(false);
+                    EnterPanel(panelStart);
+                    ClosePanel(panelIngame);
+                    ClosePanel(panelGameOver);
                     _state = State.START;
                     return;
                 case State.INGAME:
-                    panelStart.gameObject.SetActive(false);
-                    panelIngame.gameObject.SetActive(true);
-                    panelGameOver.gameObject.SetActive(false);
+                    ClosePanel(panelStart);
+                    EnterPanel(panelIngame);
+                    ClosePanel(panelGameOver);
                     _state = State.INGAME;
                     return;
                 default:
-                    panelStart.gameObject.SetActive(false);
-                    panelIngame.gameObject.SetActive(false);
-                    panelGameOver.gameObject.SetActive(true);
+                    ClosePanel(panelStart);
+                    ClosePanel(panelIngame);
+                    EnterPanel(panelGameOver);
                     _state = State.GAMEOVER;
                     return;
             }
@@ -47,10 +46,9 @@ public class UIController : MonoBehaviour {
     
     private void Awake() {
         state = State.START;
-        playerHealth.onDead = OnPlayerDead;
     }
 
-    private void OnPlayerDead() {
+    public void OnPlayerDead() {
         state = State.GAMEOVER;
     }
 
@@ -67,5 +65,15 @@ public class UIController : MonoBehaviour {
                 resetGameEvent.Raise();
             }
         }
+    }
+
+    private void EnterPanel(Component panel) {
+        panel.gameObject.SetActive(true);
+        panel.GetComponent<UIPanel>().OnEnter();
+    }
+
+    private void ClosePanel(Component panel) {
+        panel.gameObject.SetActive(false);
+        panel.GetComponent<UIPanel>().OnClose();
     }
 }

@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
     public SpriteAnim                 hitEffect;
     public SpriteAnim                 playerAnim;
     public PlayerHealth               playerHealth;
+    public SpriteRenderer             blood;
     
     private Rigidbody2D               rb;
     private SpriteRenderer            sr;
@@ -48,6 +49,8 @@ public class Player : MonoBehaviour {
     }
 
     public void Activate() {
+        blood.enabled = false;
+        sr.enabled = true;
         activated = true;
         playerAnim.Play(playerAnim.Clip);
     }
@@ -148,6 +151,11 @@ public class Player : MonoBehaviour {
         }
         
         playerHealth.SetLives(playerHealth.numLives - 1);
+        if (playerHealth.numLives == 0) {
+            blood.enabled = true;
+            sr.enabled = false;
+            Deactivate();
+        }
         
         hitNormal = Vector2.zero;
         for (int i = 0; i < contacts; ++i) {

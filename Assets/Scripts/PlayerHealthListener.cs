@@ -23,6 +23,14 @@ public class PlayerHealthListener : MonoBehaviour {
         }
     }
 
+    public void ResetHearts() {
+        for (int i = transform.childCount - 1; i >= 0; --i) {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+        health.SetLives(health.maxLives);
+        StartCoroutine(LoadHearts());
+    }
+
     private void OnLivesChanged(int lives, int max) {
         for (int i = 0; i < max; ++i) {
             transform.GetChild(i).GetComponent<UIHeart>().isAlive = i < lives;

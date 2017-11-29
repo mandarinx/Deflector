@@ -1,16 +1,18 @@
 ﻿using System;
+using RoboRyanTron.Unite2017.Events;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "PlayerHealth", fileName = "PlayerHealth.asset")]
 public class PlayerHealth : ScriptableObject {
     
     [SerializeField]
-    private int lives;
+    private int       lives;
     [SerializeField]
-    private int livesMax;
+    private int       livesMax;
+    [SerializeField]
+    private GameEvent onDead;
 
     public Action<int, int> onLivesChanged;
-    public Action           onDead;
 
     private void OnDisable() {
         lives = livesMax;
@@ -20,7 +22,7 @@ public class PlayerHealth : ScriptableObject {
         lives = l;
         onLivesChanged.Invoke(lives, livesMax);
         if (lives <= 0) {
-            onDead.Invoke();
+            onDead.Raise();
         }
     }
 

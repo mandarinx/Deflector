@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using RoboRyanTron.Unite2017.Events;
 
 public class Turret : MonoBehaviour {
 
-    public SpriteRenderer spawnHole;
-    public GameObjectSet  projectileSet;
+    public SpriteRenderer  spawnHole;
+    public GameObjectSet   projectileSet;
+    public GameObjectEvent onDespawn;
 
     private void Awake() {
         spawnHole.gameObject.SetActive(false);
@@ -36,6 +38,6 @@ public class Turret : MonoBehaviour {
         projectileSet.Spawn(transform.position);
         
         yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
+        onDespawn.Raise(gameObject);
     }
 }
