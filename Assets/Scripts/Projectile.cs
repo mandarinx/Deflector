@@ -17,6 +17,8 @@ public class Projectile : MonoBehaviour {
     private GameObject                explosionPrefab;
     [SerializeField]
     private GameObjectEvent           onDespawn;
+    [SerializeField]
+    private GameEvent                 onHit;
 
     private int                       angleIndex;
     private int                       activated;
@@ -50,6 +52,8 @@ public class Projectile : MonoBehaviour {
         if (exploding) {
             return;
         }
+        
+        onHit.Raise();
         
         if (activated == 8) {
             StartCoroutine(Explosion(4));

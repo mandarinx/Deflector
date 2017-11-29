@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour {
     public SpriteRenderer  spawnHole;
     public GameObjectSet   projectileSet;
     public GameObjectEvent onDespawn;
+    public GameEvent       onFire;
 
     private void Awake() {
         spawnHole.gameObject.SetActive(false);
@@ -36,6 +37,7 @@ public class Turret : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
         
         projectileSet.Spawn(transform.position);
+        onFire.Raise();
         
         yield return new WaitForSeconds(1f);
         onDespawn.Raise(gameObject);

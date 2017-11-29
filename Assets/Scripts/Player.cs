@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using PowerTools;
+using RoboRyanTron.Unite2017.Events;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
@@ -8,6 +9,9 @@ public class Player : MonoBehaviour {
     
     public float                      moveSpeed = 1f;
     public float                      bounceForce;
+    public int                        immuneBlinks;
+    public float                      immuneBlinkDuration;
+    public float                      footstepInterval;
     public AnimationCurve             forceFalloff;
     public Transform                  shieldAnchor;
     public Shield                     shield;
@@ -15,6 +19,8 @@ public class Player : MonoBehaviour {
     public SpriteAnim                 playerAnim;
     public PlayerHealth               playerHealth;
     public SpriteRenderer             blood;
+    public SpriteRenderer             shadow;
+    public GameEvent                  onFootstep;
     
     private Rigidbody2D               rb;
     private SpriteRenderer            sr;
@@ -51,8 +57,11 @@ public class Player : MonoBehaviour {
     public void Activate() {
         blood.enabled = false;
         sr.enabled = true;
+        sr.color = new Color(1f, 1f, 1f, 1f);
+        shadow.color = new Color(1f, 1f, 1f, 1f);
         activated = true;
         playerAnim.Play(playerAnim.Clip);
+        StartCoroutine(Footsteps());
     }
 
     public void Deactivate() {
@@ -151,6 +160,8 @@ public class Player : MonoBehaviour {
         }
         
         playerHealth.SetLives(playerHealth.numLives - 1);
+        StartCoroutine(Immune());
+        
         if (playerHealth.numLives == 0) {
             blood.enabled = true;
             sr.enabled = false;
@@ -166,8 +177,45 @@ public class Player : MonoBehaviour {
         hitTime = Time.time;
     }
 
+    private IEnumerator Immune() {
+        gameObject.layer = LayerMask.NameToLayer("Default");
+
+        int count = 0;
+        while (count < immuneBlinks) {
+            sr.color = new Color(1f, 1f, 1f, 0f);
+            shadow.color = new Color(1f, 1f, 1f, 0f);
+            yield return new WaitForSeconds(immuneBlinkDuration);
+            sr.color = new Color(1f, 1f, 1f, 1f);
+            shadow.color = new Color(1f, 1f, 1f, 1f);
+            yield return new WaitForSeconds(immuneBlinkDuration);
+            ++count;
+        }
+        
+        gameObject.layer = LayerMask.NameToLayer("Player");
+    }
+
     private IEnumerator DisableHitEffect() {
         yield return new WaitForSeconds(0.33f);
         hitEffect.gameObject.SetActive(false);
+    }
+
+    private IEnumerator Footsteps() {
+        float stepTime = -1f;
+        while (activated) {
+            if (inputMove < 0) {
+                stepTime = -1f;
+            }
+            if (inputMove >= 0) {
+                if (stepTime < 0f) {
+                    stepTime = Time.time;
+                    onFootstep.Raise();
+                }
+                if (Time.time - stepTime >= footstepInterval) {
+                    stepTime = Time.time;
+                    onFootstep.Raise();
+                }
+            }
+            yield return null;
+        }
     }
 }

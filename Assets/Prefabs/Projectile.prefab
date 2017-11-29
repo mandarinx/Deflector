@@ -111,6 +111,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1173977352691514, guid: 5ecaee20e84b240bfa32dd05759870f7,
     type: 2}
   onDespawn: {fileID: 11400000, guid: bef435d5f27234915872e12a74c6cb01, type: 2}
+  onHit: {fileID: 11400000, guid: aef3a4c4d4fba406bb10fd109d329760, type: 2}
 --- !u!212 &212637977036971934
 SpriteRenderer:
   m_ObjectHideFlags: 1

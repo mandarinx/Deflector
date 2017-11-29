@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 20987351231481648}
   - component: {fileID: 81984784532361684}
   - component: {fileID: 114502609853673522}
+  - component: {fileID: 114605900990644626}
+  - component: {fileID: 114879813966660180}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -105,3 +107,43 @@ MonoBehaviour:
   finalBlitStretch: {x: 1, y: 1}
   mainCamera: {fileID: 20987351231481648}
   mainCanvas: {fileID: 0}
+--- !u!114 &114605900990644626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787273200100508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c2f6c3ebb543528d0b18b71a59331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeConfig: {fileID: 11400000, guid: 602b92a408d484925bd825423b091f0b, type: 2}
+--- !u!114 &114879813966660180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787273200100508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7fd4f120384664b2f9ed9085a6dd842a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114605900990644626}
+        m_MethodName: Shake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

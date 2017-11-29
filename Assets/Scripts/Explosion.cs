@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using PowerTools;
+using RoboRyanTron.Unite2017.Events;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour {
@@ -7,6 +8,7 @@ public class Explosion : MonoBehaviour {
     public float         delayMin;
     public float         delayMax;
     public float         duration;
+    public GameEvent     onExplode;
     public SpriteAnim[]  anims;
     
     public void Explode() {
@@ -20,8 +22,9 @@ public class Explosion : MonoBehaviour {
             anims[i].Play(anims[i].Clip);
         }
 
-        Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position, 1.4f, 1 << LayerMask.NameToLayer("Projectiles"));
+        onExplode.Raise();
         
+        Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position, 1.4f, 1 << LayerMask.NameToLayer("Projectiles"));
         for (int i = 0; i < overlapped.Length; ++i) {
             overlapped[i].GetComponent<Projectile>().Explode();
         }

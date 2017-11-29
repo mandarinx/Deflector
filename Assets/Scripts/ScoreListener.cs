@@ -8,7 +8,7 @@ public class ScoreListener : MonoBehaviour {
 
     private Text label;
     
-    private void Start() {
+    private void OnEnable() {
         label = GetComponent<Text>();
         score.OnValueChanged(OnScoreChanged);
     }

@@ -55,6 +55,7 @@
     <None Include="Assets\PixelArtCamera\PixelArtDiffuse.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtParticle.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtUI.shader" />
+    <None Include="Assets\8 Bit Retro Rampage Free\Readme.txt" />
     <None Include="Assets\PixelArtCamera\PixelArtFont.shader" />
     <None Include="Assets\Resources\Editor\CM Tools\TileMasterReadme.txt" />
     <None Include="Assets\PixelArtCamera\PixelArtSprite.shader" />

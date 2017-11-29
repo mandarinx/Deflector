@@ -348,6 +348,7 @@ MonoBehaviour:
   delayMin: 0.1
   delayMax: 0.3
   duration: 0.3
+  onExplode: {fileID: 11400000, guid: 7fd4f120384664b2f9ed9085a6dd842a, type: 2}
   anims:
   - {fileID: 114423026720833434}
   - {fileID: 114537049593252454}
@@ -367,6 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  m_playOnAwake: 1
 --- !u!114 &114423026720833434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -379,6 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  m_playOnAwake: 1
 --- !u!114 &114457203271066402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -391,6 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  m_playOnAwake: 1
 --- !u!114 &114537049593252454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -403,6 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  m_playOnAwake: 1
 --- !u!114 &114642224346167316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,6 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  m_playOnAwake: 1
 --- !u!114 &114936533498048728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -427,6 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  m_playOnAwake: 1
 --- !u!212 &212390888107543678
 SpriteRenderer:
   m_ObjectHideFlags: 1
