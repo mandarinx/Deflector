@@ -16,6 +16,7 @@ public class UIController : MonoBehaviour {
     public GameEvent     enterGameEvent;
     [Tooltip("Triggered when player presses R on the game over panel")]
     public GameEvent     resetGameEvent;
+    public GameEvent     onButtonPress;
 
     private State _state;
     private State state {
@@ -55,12 +56,14 @@ public class UIController : MonoBehaviour {
     private void Update() {
         if (state == State.START) {
             if (Input.GetKeyUp(KeyCode.S)) {
+                onButtonPress.Raise();
                 state = State.INGAME;
                 enterGameEvent.Raise();
             }
         }
         if (state == State.GAMEOVER) {
             if (Input.GetKeyUp(KeyCode.R)) {
+                onButtonPress.Raise();
                 state = State.INGAME;
                 resetGameEvent.Raise();
             }

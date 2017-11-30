@@ -1,10 +1,12 @@
 ﻿using System.Collections;
+using RoboRyanTron.Unite2017.Events;
 using UnityEngine;
 
 public class PlayerHealthListener : MonoBehaviour {
 
     public PlayerHealth health;
     public GameObject   heartPrefab;
+    public GameEvent    onHeartAdded;
     
     private void Awake() {
         health.onLivesChanged = OnLivesChanged;
@@ -15,6 +17,7 @@ public class PlayerHealthListener : MonoBehaviour {
         while (heart < health.maxLives) {
             GameObject uiHeart = Instantiate(heartPrefab);
             uiHeart.transform.SetParent(transform, false);
+            onHeartAdded.Raise();
             uiHeart.GetComponent<UIHeart>().isAlive = false;
             yield return new WaitForSeconds(0.2f);
             uiHeart.GetComponent<UIHeart>().isAlive = true;

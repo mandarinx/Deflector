@@ -23,10 +23,11 @@ public class Explosion : MonoBehaviour {
         }
 
         onExplode.Raise();
-        
-        Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position, 1.4f, 1 << LayerMask.NameToLayer("Projectiles"));
+
+        int layer = 1 << LayerMask.NameToLayer("Projectiles") | 1 << LayerMask.NameToLayer("Player");
+        Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position, 1.4f, layer);
         for (int i = 0; i < overlapped.Length; ++i) {
-            overlapped[i].GetComponent<Projectile>().Explode();
+            overlapped[i].GetComponent<Killable>().Kill(transform.position);
         }
         
         yield return new WaitForSeconds(duration);

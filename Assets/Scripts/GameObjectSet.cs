@@ -21,10 +21,11 @@ public class GameObjectSet : ScriptableObject {
     }
 
     public void Despawn(GameObject go) {
-        bool found = instances.Remove(go);
-        if (found) {
-            Destroy(go);
+        if (!instances.Contains(go)) {
+            return;
         }
+        Destroy(go);
+        instances.Remove(go);
     }
 
     public void DespawnAll() {

@@ -21,6 +21,8 @@ public class Player : MonoBehaviour {
     public SpriteRenderer             blood;
     public SpriteRenderer             shadow;
     public GameEvent                  onFootstep;
+    public GameEvent                  onPlayerHit;
+    public GameEvent                  onPlayerDied;
     
     private Rigidbody2D               rb;
     private SpriteRenderer            sr;
@@ -55,6 +57,8 @@ public class Player : MonoBehaviour {
     }
 
     public void Activate() {
+        gameObject.layer = LayerMask.NameToLayer("Player");
+        transform.localPosition = Vector3.zero;
         blood.enabled = false;
         sr.enabled = true;
         sr.color = new Color(1f, 1f, 1f, 1f);
@@ -71,8 +75,31 @@ public class Player : MonoBehaviour {
         hitEffect.gameObject.SetActive(false);
     }
 
-    private void Update() {
+    public void Hit(Vector3 hitPos) {
+        hitNormal = new Vector2(
+            transform.position.x - hitPos.x, 
+            transform.position.y - hitPos.y).normalized;
+        Hit();
+    }
 
+    private void Hit() {
+        playerHealth.SetLives(playerHealth.numLives - 1);
+        if (playerHealth.numLives > 0) {
+            onPlayerHit.Raise();
+        }
+        else {
+            onPlayerDied.Raise();
+            blood.enabled = true;
+            sr.enabled = false;
+            Deactivate();
+            return;
+        }
+        
+        hitTime = Time.time;
+        StartCoroutine(Immune());
+    } 
+
+    private void Update() {
         if (!activated) {
             return;
         }
@@ -158,15 +185,15 @@ public class Player : MonoBehaviour {
         if (contacts == 0) {
             return;
         }
-        
-        playerHealth.SetLives(playerHealth.numLives - 1);
-        StartCoroutine(Immune());
-        
-        if (playerHealth.numLives == 0) {
-            blood.enabled = true;
-            sr.enabled = false;
-            Deactivate();
-        }
+
+//        playerHealth.SetLives(playerHealth.numLives - 1);
+//        StartCoroutine(Immune());
+//        
+//        if (playerHealth.numLives == 0) {
+//            blood.enabled = true;
+//            sr.enabled = false;
+//            Deactivate();
+//        }
         
         hitNormal = Vector2.zero;
         for (int i = 0; i < contacts; ++i) {
@@ -174,7 +201,11 @@ public class Player : MonoBehaviour {
         }
         hitNormal /= contacts;
         hitNormal.Normalize();
-        hitTime = Time.time;
+        
+        Hit();
+        
+//        hitTime = Time.time;
+//        onPlayerHit.Raise();
     }
 
     private IEnumerator Immune() {

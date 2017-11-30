@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4266768752712806}
   - component: {fileID: 114994274980875066}
+  - component: {fileID: 114653854013446386}
   - component: {fileID: 212637977036971934}
   - component: {fileID: 58870541000983498}
   - component: {fileID: 50929540953826510}
@@ -78,6 +79,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &114653854013446386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1400654147882312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b24b10ff1c840d0b8fd0e8a27bb9d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onKilled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114994274980875066}
+        m_MethodName: Explode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityVector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114994274980875066
 MonoBehaviour:
   m_ObjectHideFlags: 1

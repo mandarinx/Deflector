@@ -793,6 +793,7 @@ MonoBehaviour:
   health: {fileID: 11400000, guid: af7b056e5a04248d8bd7d11442f91193, type: 2}
   heartPrefab: {fileID: 1523326015610284, guid: d86c36fc690b14bc193003e9af5b70e7,
     type: 2}
+  onHeartAdded: {fileID: 11400000, guid: 7151ef6c4b5c449a190724fafe4128ee, type: 2}
 --- !u!114 &114784563501649746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1015,6 +1016,7 @@ MonoBehaviour:
   panelGameOver: {fileID: 224632055892776710}
   enterGameEvent: {fileID: 11400000, guid: eb93cfd9f5839415ab18f2ea45a096c6, type: 2}
   resetGameEvent: {fileID: 11400000, guid: 468c8d96938a94a3f9cf1c066eff89cc, type: 2}
+  onButtonPress: {fileID: 11400000, guid: f096c97b443bd4141b4e33ec052116e1, type: 2}
 --- !u!114 &114951079691182970
 MonoBehaviour:
   m_ObjectHideFlags: 1

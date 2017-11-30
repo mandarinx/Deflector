@@ -104,6 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4928502872058554}
   - component: {fileID: 114108300275756790}
+  - component: {fileID: 114004374530399364}
   - component: {fileID: 114943011308257730}
   - component: {fileID: 114185707209500572}
   - component: {fileID: 114973710969268592}
@@ -246,7 +247,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -338,6 +339,33 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114004374530399364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1574596575962138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b24b10ff1c840d0b8fd0e8a27bb9d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onKilled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114108300275756790}
+        m_MethodName: Hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityVector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114080714855716322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -393,6 +421,8 @@ MonoBehaviour:
   blood: {fileID: 212117894192380854}
   shadow: {fileID: 212835153610289030}
   onFootstep: {fileID: 11400000, guid: 46d0145b9a7fe482d9220a17b0d4de68, type: 2}
+  onPlayerHit: {fileID: 11400000, guid: 2b7de0a2ce8a6444c93c674858504356, type: 2}
+  onPlayerDied: {fileID: 11400000, guid: 638dd9f8605a941d38ccaf54f30c7c5b, type: 2}
 --- !u!114 &114185707209500572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -495,7 +525,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   numAudioSources: 4
   output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
-  volume: 1
+  volume: 0.344
   audioSourceConfig:
     minDistance: 5
     maxDistance: 10
@@ -781,7 +811,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300018, guid: eb5f10529e36a4163bb7ada7f65e701f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.428}
   m_FlipX: 0

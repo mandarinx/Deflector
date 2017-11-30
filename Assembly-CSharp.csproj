@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CameraShakeConfig.cs" />
+    <Compile Include="Assets\Scripts\Delay.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\GameEvent\GameEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvent\GameEventListener.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Scripts\GOTraversal.cs" />
     <Compile Include="Assets\Scripts\ImageColorLerp.cs" />
     <Compile Include="Assets\Scripts\IntAsset.cs" />
+    <Compile Include="Assets\Scripts\Killable.cs" />
     <Compile Include="Assets\Scripts\List\ListPingPong.cs" />
     <Compile Include="Assets\Scripts\List\ListRandom.cs" />
     <Compile Include="Assets\Scripts\List\ListSequential.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Assets\Scripts\Turret.cs" />
     <Compile Include="Assets\Scripts\Turrets.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\Scripts\UIEndGamePanel.cs" />
     <Compile Include="Assets\Scripts\UIHeart.cs" />
     <Compile Include="Assets\Scripts\UIIngamePanel.cs" />
     <Compile Include="Assets\Scripts\UIPanel.cs" />
