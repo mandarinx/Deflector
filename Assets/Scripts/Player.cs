@@ -176,8 +176,8 @@ public class Player : MonoBehaviour {
         if (!activated) {
             return;
         }
-        
-        if (!other.gameObject.CompareTag("Projectile")) {
+
+        if (other.gameObject.layer != LayerMask.NameToLayer("Projectiles")) {
             return;
         }
 
@@ -185,15 +185,6 @@ public class Player : MonoBehaviour {
         if (contacts == 0) {
             return;
         }
-
-//        playerHealth.SetLives(playerHealth.numLives - 1);
-//        StartCoroutine(Immune());
-//        
-//        if (playerHealth.numLives == 0) {
-//            blood.enabled = true;
-//            sr.enabled = false;
-//            Deactivate();
-//        }
         
         hitNormal = Vector2.zero;
         for (int i = 0; i < contacts; ++i) {
@@ -203,9 +194,6 @@ public class Player : MonoBehaviour {
         hitNormal.Normalize();
         
         Hit();
-        
-//        hitTime = Time.time;
-//        onPlayerHit.Raise();
     }
 
     private IEnumerator Immune() {

@@ -21,6 +21,7 @@ public class Projectile : MonoBehaviour {
     private GameEvent                 onHit;
 
     private int                       angleIndex;
+    [SerializeField]
     private int                       activated;
     private bool                      exploding;
     private Rigidbody2D               rb;
@@ -37,6 +38,8 @@ public class Projectile : MonoBehaviour {
         { 6, Mathf.PI * 1.5f },
         { 7, Mathf.PI * 1.75f },
     };
+
+    public bool isActivated => activated > 0;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -94,8 +97,6 @@ public class Projectile : MonoBehaviour {
             return;
         }
         
-        activated = 8;
-        sr.sprite = sprites[angleIndex + activated];
         StartCoroutine(Explosion(2));
     }
 

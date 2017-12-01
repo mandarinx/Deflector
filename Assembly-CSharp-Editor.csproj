@@ -51,16 +51,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Brushes\Editor\BrushEditorUtility.cs" />
+    <Compile Include="Assets\Brushes\Editor\DefaultBrushReplacementEditor.cs" />
+    <Compile Include="Assets\Brushes\Editor\DoorBrushEditor.cs" />
+    <Compile Include="Assets\Brushes\Editor\LaserBrushEditor.cs" />
+    <Compile Include="Assets\Brushes\Editor\LayerObjectBrushEditor.cs" />
+    <Compile Include="Assets\Brushes\Editor\LevelBrushEditor.cs" />
+    <Compile Include="Assets\Brushes\Editor\SequenceTurretBrushEditor.cs" />
+    <Compile Include="Assets\Brushes\Editor\SwarmBrushEditor.cs" />
+    <Compile Include="Assets\Brushes\Editor\TeleportBrushEditor.cs" />
+    <Compile Include="Assets\Brushes\Editor\TintBrushEditor.cs" />
+    <Compile Include="Assets\Brushes\Editor\TurretBrushEditor.cs" />
     <Compile Include="Assets\PixelArtCamera\Editor\PixelArtCameraEditor.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimator.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorInfoPanel.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorNodes.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorTimeline.cs" />
     <Compile Include="Assets\Resources\Editor\CM Tools\TileMaster\TileMaster.cs" />
+    <Compile Include="Assets\Robodash\Editor\TintTextureGeneratorEditor.cs" />
     <Compile Include="Assets\Scripts\Editor\PlayerHealthInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\TransformInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvent\Editor\EventEditor.cs" />
     <Compile Include="Assets\Scripts\GameObjectEvent\Editor\GameObjectEventInspector.cs" />
+    <Compile Include="Assets\Scripts\Tilemap\Brushes\Coordinate Brush\Scripts\Editor\CoordinateBrush.cs" />
+    <Compile Include="Assets\Scripts\Tilemap\Brushes\GameObject Brush\Scripts\Editor\GameObjectBrush.cs" />
+    <Compile Include="Assets\Scripts\Tilemap\Brushes\Line Brush\Scripts\Editor\LineBrush.cs" />
+    <Compile Include="Assets\Scripts\Tilemap\Brushes\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
+    <Compile Include="Assets\Scripts\Tilemap\Brushes\Random Brush\Scripts\Editor\RandomBrush.cs" />
+    <Compile Include="Assets\Scripts\Tilemap\Brushes\Tint Brush\Scripts\Editor\TintBrush.cs" />
+    <Compile Include="Assets\Scripts\Tilemap\Tiles\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
+    <None Include="Assets\Brushes\Editor\GizmoShader.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtDiffuse.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtParticle.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtUI.shader" />

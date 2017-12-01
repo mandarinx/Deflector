@@ -5,8 +5,8 @@ public class ScoreCounter : MonoBehaviour {
 
     public IntAsset score;
     public IntAsset multiplier;
-    public int explosionBaseScore;
-    public float multiplierCooldown;
+    public int      explosionBaseScore;
+    public float    multiplierCooldown;
 
     private Coroutine cooldown;
 
@@ -15,7 +15,12 @@ public class ScoreCounter : MonoBehaviour {
         score.SetValue(0);
     }
 
-    public void OnProjectileDespawn(GameObject projectile) {
+    public void OnProjectileDespawn(GameObject projectileGO) {
+        Projectile projectile = projectileGO.GetComponent<Projectile>();
+        if (projectile == null || !projectile.isActivated) {
+            return;
+        }
+
         score.SetValue(score.value + (explosionBaseScore * multiplier.value));
         multiplier.SetValue(multiplier.value + 1);
         if (cooldown != null) {

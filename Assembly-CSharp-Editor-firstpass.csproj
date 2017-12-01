@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\Editor\JetBrains\Unity3DRider.cs" />
+    <None Include="Assets\Brushes\Editor\GizmoShader.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtDiffuse.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtParticle.shader" />
     <None Include="Assets\PixelArtCamera\PixelArtUI.shader" />

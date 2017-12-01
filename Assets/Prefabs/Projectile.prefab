@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 50929540953826510}
   m_Layer: 9
   m_Name: Projectile
-  m_TagString: Projectile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +140,7 @@ MonoBehaviour:
     type: 2}
   onDespawn: {fileID: 11400000, guid: bef435d5f27234915872e12a74c6cb01, type: 2}
   onHit: {fileID: 11400000, guid: aef3a4c4d4fba406bb10fd109d329760, type: 2}
+  activated: 0
 --- !u!212 &212637977036971934
 SpriteRenderer:
   m_ObjectHideFlags: 1
