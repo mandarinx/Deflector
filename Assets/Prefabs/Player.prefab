@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 114943011308257730}
   - component: {fileID: 114185707209500572}
   - component: {fileID: 114973710969268592}
+  - component: {fileID: 114145359510433156}
   - component: {fileID: 212161194741644122}
   - component: {fileID: 50007249700960364}
   - component: {fileID: 58749400449453462}
@@ -225,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574596575962138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4363176378934414}
@@ -251,7 +252,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -304,7 +305,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.35
 --- !u!95 &95403728157025190
 Animator:
   serializedVersion: 3
@@ -395,6 +396,7 @@ MonoBehaviour:
   immuneBlinks: 8
   immuneBlinkDuration: 0.12
   footstepInterval: 0.3
+  hurtDuration: 3
   forceFalloff:
     serializedVersion: 2
     m_Curve:
@@ -420,9 +422,28 @@ MonoBehaviour:
   playerHealth: {fileID: 11400000, guid: af7b056e5a04248d8bd7d11442f91193, type: 2}
   blood: {fileID: 212117894192380854}
   shadow: {fileID: 212835153610289030}
+  spawnZones: {fileID: 114145359510433156}
   onFootstep: {fileID: 11400000, guid: 46d0145b9a7fe482d9220a17b0d4de68, type: 2}
   onPlayerHit: {fileID: 11400000, guid: 2b7de0a2ce8a6444c93c674858504356, type: 2}
   onPlayerDied: {fileID: 11400000, guid: 638dd9f8605a941d38ccaf54f30c7c5b, type: 2}
+--- !u!114 &114145359510433156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1574596575962138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b5f726b05c04ed68faae7a1766addf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  zones:
+  - serializedVersion: 2
+    x: -1
+    y: -1
+    width: 1
+    height: 1
 --- !u!114 &114185707209500572
 MonoBehaviour:
   m_ObjectHideFlags: 1

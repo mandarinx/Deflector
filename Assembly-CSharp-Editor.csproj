@@ -67,8 +67,8 @@
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorInfoPanel.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorNodes.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorTimeline.cs" />
-    <Compile Include="Assets\Resources\Editor\CM Tools\TileMaster\TileMaster.cs" />
     <Compile Include="Assets\Robodash\Editor\TintTextureGeneratorEditor.cs" />
+    <Compile Include="Assets\Scripts\Editor\GridZonesInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\PlayerHealthInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\TransformInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvent\Editor\EventEditor.cs" />
@@ -86,7 +86,6 @@
     <None Include="Assets\PixelArtCamera\PixelArtUI.shader" />
     <None Include="Assets\8 Bit Retro Rampage Free\Readme.txt" />
     <None Include="Assets\PixelArtCamera\PixelArtFont.shader" />
-    <None Include="Assets\Resources\Editor\CM Tools\TileMasterReadme.txt" />
     <None Include="Assets\PixelArtCamera\PixelArtSprite.shader" />
     <Reference Include="UnityEngine.UIAutomation">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>

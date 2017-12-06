@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
     public int                        immuneBlinks;
     public float                      immuneBlinkDuration;
     public float                      footstepInterval;
+    public float                      hurtDuration;
     public AnimationCurve             forceFalloff;
     public Transform                  shieldAnchor;
     public Shield                     shield;
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour {
     public PlayerHealth               playerHealth;
     public SpriteRenderer             blood;
     public SpriteRenderer             shadow;
+    public GridZones                  spawnZones;
     public GameEvent                  onFootstep;
     public GameEvent                  onPlayerHit;
     public GameEvent                  onPlayerDied;
@@ -34,6 +36,8 @@ public class Player : MonoBehaviour {
     private int                       inputMove;
     private bool                      activated;
     private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[8];
+    private Coroutine                 hurtRoutine;
+    private Collider2D                trigger;
     
     private readonly Dictionary<int, float> radianMap = new Dictionary<int, float> {
         { 0, 0f },
@@ -56,14 +60,23 @@ public class Player : MonoBehaviour {
         hitEffect.gameObject.SetActive(false);
     }
 
+    private void Start() {
+        transform.position = spawnZones
+            .GetCoordinateWorld(Random.Range(0, spawnZones.numCoordinates));
+    }
+
     public void Activate() {
+        transform.position = spawnZones
+            .GetCoordinateWorld(Random.Range(0, spawnZones.numCoordinates));
         gameObject.layer = LayerMask.NameToLayer("Player");
-        transform.localPosition = Vector3.zero;
         blood.enabled = false;
         sr.enabled = true;
         sr.color = new Color(1f, 1f, 1f, 1f);
         shadow.color = new Color(1f, 1f, 1f, 1f);
         activated = true;
+        trigger = null;
+        StopAllCoroutines();
+        hurtRoutine = null;
         playerAnim.Play(playerAnim.Clip);
         StartCoroutine(Footsteps());
     }
@@ -136,6 +149,10 @@ public class Player : MonoBehaviour {
         if (inputMove == 3 || inputMove == 4 || inputMove == 5) {
             sr.flipX = false;
         }
+        
+        // Overlap triggers
+        
+        OverlapTrigger();
     }
     
     private void FixedUpdate() {
@@ -171,6 +188,32 @@ public class Player : MonoBehaviour {
         rb.MovePosition(rb.position + (velocity + (hitNormal * bounceForce)) * Time.fixedDeltaTime);
         hitNormal *= forceFalloff.Evaluate(Mathf.Clamp01((Time.time - hitTime) / 1f));
     }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        trigger = other;
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        trigger = null;
+    }
+
+    private void OverlapTrigger() {
+        if (trigger == null) {
+            return;
+        }
+        
+        if (hurtRoutine != null) {
+            return;
+        }
+        
+        Hurt hurt = trigger.GetComponent<Hurt>();
+        if (hurt == null) {
+            return;
+        }
+        
+        playerHealth.SetLives(playerHealth.numLives - 1);
+        hurtRoutine = StartCoroutine(Hurt());
+    }
     
     private void OnCollisionEnter2D(Collision2D other) {
         if (!activated) {
@@ -196,6 +239,19 @@ public class Player : MonoBehaviour {
         Hit();
     }
 
+    private IEnumerator Hurt() {
+        float startTime = Time.time;
+        float red = 0f;
+        while (Time.time - startTime < hurtDuration) {
+            sr.color = new Color(1f, red, red, 1f);
+            red += Time.deltaTime / hurtDuration;
+            yield return null;
+        }
+        sr.color = new Color(1f, 1f, 1f, 1f);
+        hurtRoutine = null;
+        Debug.Log(hurtRoutine);
+    }
+    
     private IEnumerator Immune() {
         gameObject.layer = LayerMask.NameToLayer("Default");
 

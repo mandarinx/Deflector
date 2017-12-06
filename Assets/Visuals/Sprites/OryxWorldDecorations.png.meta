@@ -1,0 +1,4028 @@
+fileFormatVersion: 2
+guid: 1461371dc9b56498f8865d7e2286bdce
+timeCreated: 1512572303
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: OryxWorldDecorations_0
+    21300002: OryxWorldDecorations_1
+    21300004: OryxWorldDecorations_2
+    21300006: OryxWorldDecorations_3
+    21300008: OryxWorldDecorations_4
+    21300010: OryxWorldDecorations_5
+    21300012: OryxWorldDecorations_6
+    21300014: OryxWorldDecorations_7
+    21300016: OryxWorldDecorations_8
+    21300018: OryxWorldDecorations_9
+    21300020: OryxWorldDecorations_10
+    21300022: OryxWorldDecorations_11
+    21300024: OryxWorldDecorations_12
+    21300026: OryxWorldDecorations_13
+    21300028: OryxWorldDecorations_14
+    21300030: OryxWorldDecorations_15
+    21300032: OryxWorldDecorations_16
+    21300034: OryxWorldDecorations_17
+    21300036: OryxWorldDecorations_18
+    21300038: OryxWorldDecorations_19
+    21300040: OryxWorldDecorations_20
+    21300042: OryxWorldDecorations_21
+    21300044: OryxWorldDecorations_22
+    21300046: OryxWorldDecorations_23
+    21300048: OryxWorldDecorations_24
+    21300050: OryxWorldDecorations_25
+    21300052: OryxWorldDecorations_26
+    21300054: OryxWorldDecorations_27
+    21300056: OryxWorldDecorations_28
+    21300058: OryxWorldDecorations_29
+    21300060: OryxWorldDecorations_30
+    21300062: OryxWorldDecorations_31
+    21300064: OryxWorldDecorations_32
+    21300066: OryxWorldDecorations_33
+    21300068: OryxWorldDecorations_34
+    21300070: OryxWorldDecorations_35
+    21300072: OryxWorldDecorations_36
+    21300074: OryxWorldDecorations_37
+    21300076: OryxWorldDecorations_38
+    21300078: OryxWorldDecorations_39
+    21300080: OryxWorldDecorations_40
+    21300082: OryxWorldDecorations_41
+    21300084: OryxWorldDecorations_42
+    21300086: OryxWorldDecorations_43
+    21300088: OryxWorldDecorations_44
+    21300090: OryxWorldDecorations_45
+    21300092: OryxWorldDecorations_46
+    21300094: OryxWorldDecorations_47
+    21300096: OryxWorldDecorations_48
+    21300098: OryxWorldDecorations_49
+    21300100: OryxWorldDecorations_50
+    21300102: OryxWorldDecorations_51
+    21300104: OryxWorldDecorations_52
+    21300106: OryxWorldDecorations_53
+    21300108: OryxWorldDecorations_54
+    21300110: OryxWorldDecorations_55
+    21300112: OryxWorldDecorations_56
+    21300114: OryxWorldDecorations_57
+    21300116: OryxWorldDecorations_58
+    21300118: OryxWorldDecorations_59
+    21300120: OryxWorldDecorations_60
+    21300122: OryxWorldDecorations_61
+    21300124: OryxWorldDecorations_62
+    21300126: OryxWorldDecorations_63
+    21300128: OryxWorldDecorations_64
+    21300130: OryxWorldDecorations_65
+    21300132: OryxWorldDecorations_66
+    21300134: OryxWorldDecorations_67
+    21300136: OryxWorldDecorations_68
+    21300138: OryxWorldDecorations_69
+    21300140: OryxWorldDecorations_70
+    21300142: OryxWorldDecorations_71
+    21300144: OryxWorldDecorations_72
+    21300146: OryxWorldDecorations_73
+    21300148: OryxWorldDecorations_74
+    21300150: OryxWorldDecorations_75
+    21300152: OryxWorldDecorations_76
+    21300154: OryxWorldDecorations_77
+    21300156: OryxWorldDecorations_78
+    21300158: OryxWorldDecorations_79
+    21300160: OryxWorldDecorations_80
+    21300162: OryxWorldDecorations_81
+    21300164: DecoSpikes
+    21300166: OryxWorldDecorations_83
+    21300168: OryxWorldDecorations_84
+    21300170: OryxWorldDecorations_85
+    21300172: OryxWorldDecorations_86
+    21300174: DecoHole
+    21300176: OryxWorldDecorations_88
+    21300178: OryxWorldDecorations_89
+    21300180: OryxWorldDecorations_90
+    21300182: OryxWorldDecorations_91
+    21300184: OryxWorldDecorations_92
+    21300186: OryxWorldDecorations_93
+    21300188: OryxWorldDecorations_94
+    21300190: OryxWorldDecorations_95
+    21300192: OryxWorldDecorations_96
+    21300194: OryxWorldDecorations_97
+    21300196: OryxWorldDecorations_98
+    21300198: OryxWorldDecorations_99
+    21300200: OryxWorldDecorations_100
+    21300202: OryxWorldDecorations_101
+    21300204: OryxWorldDecorations_102
+    21300206: OryxWorldDecorations_103
+    21300208: OryxWorldDecorations_104
+    21300210: OryxWorldDecorations_105
+    21300212: OryxWorldDecorations_106
+    21300214: OryxWorldDecorations_107
+    21300216: OryxWorldDecorations_108
+    21300218: OryxWorldDecorations_109
+    21300220: OryxWorldDecorations_110
+    21300222: OryxWorldDecorations_111
+    21300224: OryxWorldDecorations_112
+    21300226: OryxWorldDecorations_113
+    21300228: OryxWorldDecorations_114
+    21300230: OryxWorldDecorations_115
+    21300232: OryxWorldDecorations_116
+    21300234: OryxWorldDecorations_117
+    21300236: OryxWorldDecorations_118
+    21300238: OryxWorldDecorations_119
+    21300240: OryxWorldDecorations_120
+    21300242: OryxWorldDecorations_121
+    21300244: OryxWorldDecorations_122
+    21300246: OryxWorldDecorations_123
+    21300248: OryxWorldDecorations_124
+    21300250: OryxWorldDecorations_125
+    21300252: OryxWorldDecorations_126
+    21300254: OryxWorldDecorations_127
+    21300256: OryxWorldDecorations_128
+    21300258: OryxWorldDecorations_129
+    21300260: OryxWorldDecorations_130
+    21300262: OryxWorldDecorations_131
+    21300264: OryxWorldDecorations_132
+    21300266: OryxWorldDecorations_133
+    21300268: OryxWorldDecorations_134
+    21300270: OryxWorldDecorations_135
+    21300272: OryxWorldDecorations_136
+    21300274: OryxWorldDecorations_137
+    21300276: OryxWorldDecorations_138
+    21300278: OryxWorldDecorations_139
+    21300280: OryxWorldDecorations_140
+    21300282: OryxWorldDecorations_141
+    21300284: OryxWorldDecorations_142
+    21300286: OryxWorldDecorations_143
+    21300288: OryxWorldDecorations_144
+    21300290: OryxWorldDecorations_145
+    21300292: OryxWorldDecorations_146
+    21300294: OryxWorldDecorations_147
+    21300296: OryxWorldDecorations_148
+    21300298: OryxWorldDecorations_149
+    21300300: OryxWorldDecorations_150
+    21300302: OryxWorldDecorations_151
+    21300304: OryxWorldDecorations_152
+    21300306: OryxWorldDecorations_153
+    21300308: OryxWorldDecorations_154
+    21300310: OryxWorldDecorations_155
+    21300312: OryxWorldDecorations_156
+    21300314: OryxWorldDecorations_157
+    21300316: OryxWorldDecorations_158
+    21300318: OryxWorldDecorations_159
+    21300320: OryxWorldDecorations_160
+    21300322: OryxWorldDecorations_161
+    21300324: OryxWorldDecorations_162
+    21300326: OryxWorldDecorations_163
+    21300328: OryxWorldDecorations_164
+    21300330: OryxWorldDecorations_165
+    21300332: OryxWorldDecorations_166
+    21300334: OryxWorldDecorations_167
+    21300336: OryxWorldDecorations_168
+    21300338: OryxWorldDecorations_169
+    21300340: OryxWorldDecorations_170
+    21300342: OryxWorldDecorations_171
+    21300344: OryxWorldDecorations_172
+    21300346: OryxWorldDecorations_173
+    21300348: OryxWorldDecorations_174
+    21300350: OryxWorldDecorations_175
+    21300352: OryxWorldDecorations_176
+    21300354: OryxWorldDecorations_177
+    21300356: OryxWorldDecorations_178
+    21300358: OryxWorldDecorations_179
+    21300360: OryxWorldDecorations_180
+    21300362: OryxWorldDecorations_181
+    21300364: OryxWorldDecorations_182
+    21300366: OryxWorldDecorations_183
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 24
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OryxWorldDecorations_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -12, y: 6}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -3}
+        - {x: 7, y: 4}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -12, y: 7}
+        - {x: -12, y: -6}
+        - {x: -9, y: -9}
+        - {x: 2, y: -12}
+        - {x: 10, y: -12}
+        - {x: 11, y: -11}
+        - {x: 11, y: -2}
+        - {x: 5, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: 12}
+        - {x: -8, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -8}
+        - {x: -11, y: -9}
+        - {x: 1, y: -9}
+        - {x: 3, y: -2}
+        - {x: 3, y: 10}
+        - {x: 2, y: 11}
+      - - {x: 8, y: 4}
+        - {x: 4, y: 1}
+        - {x: 4, y: -5}
+        - {x: 5, y: -7}
+        - {x: 8, y: -7}
+        - {x: 12, y: -5}
+        - {x: 12, y: 1}
+        - {x: 9, y: 4}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 11}
+        - {x: -12, y: -10}
+        - {x: -10, y: -12}
+        - {x: 11, y: -12}
+        - {x: 12, y: -11}
+        - {x: 12, y: 10}
+        - {x: 6, y: 11}
+      - - {x: -3, y: 2}
+        - {x: -1, y: 2}
+        - {x: 0, y: 4}
+        - {x: -5, y: 0}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: 12}
+        - {x: -3, y: 11}
+        - {x: -3, y: -4}
+        - {x: 3, y: -7}
+        - {x: 10, y: -7}
+        - {x: 12, y: -6}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 6}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+        - {x: -5, y: 12}
+        - {x: -11, y: 9}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -11, y: 8}
+        - {x: -12, y: 4}
+        - {x: -12, y: -11}
+        - {x: -11, y: -12}
+        - {x: 7, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 9}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -5, y: 12}
+        - {x: -12, y: 0}
+        - {x: -12, y: -8}
+        - {x: -6, y: -12}
+        - {x: 7, y: -12}
+        - {x: 12, y: -8}
+        - {x: 12, y: 5}
+        - {x: 4, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: 12}
+        - {x: -4, y: 9}
+        - {x: -12, y: 2}
+        - {x: -12, y: -10}
+        - {x: -10, y: -12}
+        - {x: 7, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 1}
+        - {x: 4, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_12
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 9}
+        - {x: -10, y: 2}
+        - {x: -10, y: -8}
+        - {x: -4, y: -12}
+        - {x: 5, y: -12}
+        - {x: 7, y: -11}
+        - {x: 11, y: -8}
+        - {x: 11, y: 5}
+        - {x: 10, y: 9}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_13
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 312
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: 10}
+        - {x: -6, y: 10}
+        - {x: -10, y: 8}
+        - {x: -11, y: 2}
+        - {x: -11, y: -7}
+        - {x: -8, y: -11}
+        - {x: -6, y: -12}
+        - {x: 11, y: -12}
+        - {x: 12, y: -9}
+        - {x: 12, y: 8}
+        - {x: 10, y: 9}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: -7, y: -12}
+        - {x: 12, y: 7}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_15
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: 7}
+        - {x: 7, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: 12}
+        - {x: -12, y: -7}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_17
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -5}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -12, y: 8}
+        - {x: -12, y: -8}
+        - {x: -8, y: -12}
+        - {x: 8, y: -12}
+        - {x: 12, y: -8}
+        - {x: 12, y: 8}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_20
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 9}
+        - {x: -10, y: 7}
+        - {x: -10, y: -3}
+        - {x: -9, y: -7}
+        - {x: -7, y: -10}
+        - {x: 9, y: -10}
+        - {x: 10, y: -8}
+        - {x: 10, y: 4}
+        - {x: 8, y: 9}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_21
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: 2}
+        - {x: -3, y: -1}
+        - {x: -3, y: -3}
+        - {x: 0, y: -6}
+        - {x: 2, y: -6}
+        - {x: 5, y: -3}
+        - {x: 5, y: -1}
+        - {x: 2, y: 2}
+      - - {x: -7, y: 4}
+        - {x: -7, y: 2}
+        - {x: -6, y: 0}
+        - {x: -3, y: 0}
+        - {x: -1, y: 1}
+        - {x: -1, y: 4}
+        - {x: -3, y: 6}
+        - {x: -5, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -5}
+        - {x: 2, y: -8}
+        - {x: 5, y: -8}
+        - {x: 8, y: -7}
+        - {x: 8, y: -4}
+        - {x: 7, y: -1}
+        - {x: 4, y: -1}
+        - {x: 1, y: -2}
+      - - {x: -4, y: 7}
+        - {x: -8, y: 5}
+        - {x: -8, y: 1}
+        - {x: -7, y: -2}
+        - {x: 3, y: -2}
+        - {x: 5, y: 3}
+        - {x: 5, y: 7}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_23
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 7}
+        - {x: -7, y: -9}
+        - {x: 3, y: -9}
+        - {x: 5, y: -8}
+        - {x: 5, y: -5}
+        - {x: 0, y: 7}
+        - {x: -5, y: 8}
+      - - {x: 4, y: 6}
+        - {x: 1, y: 5}
+        - {x: 1, y: -1}
+        - {x: 3, y: -2}
+        - {x: 8, y: -2}
+        - {x: 9, y: 1}
+        - {x: 9, y: 5}
+        - {x: 8, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_24
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 9}
+        - {x: -10, y: 7}
+        - {x: -10, y: -3}
+        - {x: -9, y: -7}
+        - {x: -7, y: -10}
+        - {x: 9, y: -10}
+        - {x: 10, y: -8}
+        - {x: 10, y: 4}
+        - {x: 8, y: 9}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_25
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 7}
+        - {x: -7, y: -9}
+        - {x: 3, y: -9}
+        - {x: 5, y: -8}
+        - {x: 5, y: -5}
+        - {x: 0, y: 7}
+        - {x: -5, y: 8}
+      - - {x: 4, y: 6}
+        - {x: 1, y: 5}
+        - {x: 1, y: -1}
+        - {x: 3, y: -2}
+        - {x: 8, y: -2}
+        - {x: 9, y: 1}
+        - {x: 9, y: 5}
+        - {x: 8, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_26
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -12, y: 9}
+        - {x: -12, y: -5}
+        - {x: -10, y: -12}
+        - {x: 8, y: -12}
+        - {x: 12, y: -4}
+        - {x: 12, y: 7}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_27
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: 12}
+        - {x: -9, y: 12}
+        - {x: -11, y: 10}
+        - {x: -11, y: -12}
+        - {x: 9, y: -12}
+        - {x: 12, y: -4}
+        - {x: 12, y: 9}
+        - {x: 9, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_29
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_30
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_31
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_33
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_34
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_35
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_37
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_38
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_39
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_40
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      - - {x: -2, y: 4}
+        - {x: 4, y: 2}
+        - {x: 5, y: 2}
+        - {x: 5, y: 3}
+        - {x: 1, y: 4}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_41
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 264
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_43
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_44
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      - - {x: 0, y: -5}
+        - {x: 0, y: -3}
+        - {x: -2, y: -7}
+        - {x: -1, y: -7}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_45
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -12, y: 9}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_46
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 6}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_47
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 5}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_48
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 6}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_49
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -10, y: 12}
+        - {x: -12, y: 8}
+        - {x: -12, y: -7}
+        - {x: -7, y: -12}
+        - {x: 8, y: -12}
+        - {x: 11, y: -8}
+        - {x: 11, y: 7}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_50
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -10, y: 12}
+        - {x: -12, y: 8}
+        - {x: -12, y: -7}
+        - {x: -7, y: -12}
+        - {x: 8, y: -12}
+        - {x: 11, y: -8}
+        - {x: 11, y: 7}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_51
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -10, y: 12}
+        - {x: -12, y: 7}
+        - {x: -12, y: -10}
+        - {x: -11, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 7}
+        - {x: 6, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_52
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -9}
+        - {x: -11, y: -12}
+        - {x: 9, y: -12}
+        - {x: 12, y: -8}
+        - {x: 12, y: 11}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_53
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_54
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 11}
+        - {x: -11, y: -12}
+        - {x: 5, y: -12}
+        - {x: 11, y: -9}
+        - {x: 11, y: 7}
+        - {x: 5, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_55
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 11}
+        - {x: -12, y: -10}
+        - {x: -9, y: -12}
+        - {x: 3, y: -12}
+        - {x: 10, y: -10}
+        - {x: 12, y: -1}
+        - {x: 12, y: 7}
+        - {x: 7, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_57
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_58
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_59
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_60
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_61
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -11, y: -12}
+        - {x: 11, y: -12}
+        - {x: 11, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_63
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -12, y: 9}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_64
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 8}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_65
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -12, y: 8}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 9}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_66
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_67
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_68
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 12, y: -12}
+        - {x: 12, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_69
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 12, y: -12}
+        - {x: 12, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_70
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -12, y: 11}
+        - {x: -12, y: -7}
+        - {x: -10, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -11}
+        - {x: 12, y: 9}
+        - {x: 4, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_71
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: 12}
+        - {x: -12, y: 7}
+        - {x: -12, y: -4}
+        - {x: -10, y: -10}
+        - {x: -9, y: -12}
+        - {x: 9, y: -12}
+        - {x: 12, y: -11}
+        - {x: 12, y: 8}
+        - {x: 6, y: 12}
+      - - {x: -4, y: 8}
+        - {x: -1, y: 9}
+        - {x: -1, y: 12}
+        - {x: -5, y: 12}
+        - {x: -6, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_72
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_73
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 2}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 6}
+        - {x: -6, y: 5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_74
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      - - {x: 9, y: 0}
+        - {x: 11, y: -2}
+        - {x: 12, y: -2}
+        - {x: 12, y: 3}
+        - {x: 10, y: 3}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_75
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 11}
+        - {x: 11, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_76
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -11, y: -12}
+        - {x: 10, y: -12}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_77
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -11, y: -12}
+        - {x: 10, y: -12}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_78
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 9}
+        - {x: -11, y: 4}
+        - {x: -11, y: -10}
+        - {x: -10, y: -12}
+        - {x: 9, y: -12}
+        - {x: 10, y: -11}
+        - {x: 10, y: 1}
+        - {x: 6, y: 9}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_79
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -11, y: 10}
+        - {x: -11, y: -9}
+        - {x: -7, y: -12}
+        - {x: 6, y: -12}
+        - {x: 10, y: -8}
+        - {x: 10, y: 11}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_80
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -11, y: 11}
+        - {x: -11, y: -6}
+        - {x: -10, y: -9}
+        - {x: -8, y: -12}
+        - {x: 7, y: -12}
+        - {x: 9, y: -11}
+        - {x: 9, y: 10}
+        - {x: 7, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_81
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: 6}
+        - {x: -6, y: 5}
+        - {x: -10, y: 1}
+        - {x: -10, y: -5}
+        - {x: -9, y: -9}
+        - {x: -6, y: -12}
+        - {x: 7, y: -12}
+        - {x: 10, y: -9}
+        - {x: 10, y: 1}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DecoSpikes
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9.052116, y: 9.052109}
+        - {x: -8.962787, y: -9.141449}
+        - {x: 9.052116, y: -9.052109}
+        - {x: 9.141449, y: 9.052109}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_83
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 12}
+        - {x: -12, y: 7}
+        - {x: -12, y: -7}
+        - {x: -7, y: -12}
+        - {x: 7, y: -12}
+        - {x: 12, y: -7}
+        - {x: 12, y: 7}
+        - {x: 7, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_84
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -12, y: 9}
+        - {x: -12, y: -8}
+        - {x: -10, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -11}
+        - {x: 12, y: 11}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_85
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -12, y: 9}
+        - {x: -12, y: -8}
+        - {x: -10, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -11}
+        - {x: 12, y: 11}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_86
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -12, y: 11}
+        - {x: -12, y: -7}
+        - {x: -10, y: -12}
+        - {x: 8, y: -12}
+        - {x: 12, y: -7}
+        - {x: 12, y: 11}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DecoHole
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_88
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_89
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_90
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -10, y: 9}
+        - {x: -10, y: -8}
+        - {x: -8, y: -12}
+        - {x: 11, y: -12}
+        - {x: 11, y: 10}
+        - {x: 7, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_91
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -10, y: 10}
+        - {x: -10, y: -9}
+        - {x: -7, y: -12}
+        - {x: 8, y: -12}
+        - {x: 10, y: -11}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_92
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 6}
+        - {x: -5, y: 5}
+        - {x: -9, y: 1}
+        - {x: -9, y: -5}
+        - {x: -8, y: -9}
+        - {x: -5, y: -12}
+        - {x: 8, y: -12}
+        - {x: 11, y: -9}
+        - {x: 11, y: 1}
+        - {x: 7, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_93
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -11, y: 10}
+        - {x: -11, y: -9}
+        - {x: -7, y: -12}
+        - {x: 6, y: -12}
+        - {x: 10, y: -8}
+        - {x: 10, y: 11}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_94
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -11, y: 11}
+        - {x: -11, y: -6}
+        - {x: -10, y: -9}
+        - {x: -8, y: -12}
+        - {x: 7, y: -12}
+        - {x: 9, y: -11}
+        - {x: 9, y: 10}
+        - {x: 7, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_95
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: 6}
+        - {x: -6, y: 5}
+        - {x: -10, y: 1}
+        - {x: -10, y: -5}
+        - {x: -9, y: -9}
+        - {x: -6, y: -12}
+        - {x: 7, y: -12}
+        - {x: 10, y: -9}
+        - {x: 10, y: 1}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 12}
+        - {x: -12, y: 6}
+        - {x: -12, y: -10}
+        - {x: -10, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 7}
+        - {x: 7, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_97
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -10, y: 11}
+        - {x: -12, y: 6}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 4}
+        - {x: 5, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_98
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 12}
+        - {x: -12, y: 6}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 5}
+        - {x: 6, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_99
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 10}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_100
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 12}
+        - {x: -12, y: 7}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 7}
+        - {x: 7, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_101
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 12}
+        - {x: -12, y: 6}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 5}
+        - {x: 6, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_102
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 12}
+        - {x: -12, y: 8}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 9}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_103
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 8}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 5}
+        - {x: 7, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_104
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -10, y: 9}
+        - {x: -10, y: -8}
+        - {x: -8, y: -12}
+        - {x: 11, y: -12}
+        - {x: 11, y: 10}
+        - {x: 7, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_105
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -10, y: 10}
+        - {x: -10, y: -9}
+        - {x: -7, y: -12}
+        - {x: 8, y: -12}
+        - {x: 10, y: -11}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_106
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 6}
+        - {x: -5, y: 5}
+        - {x: -9, y: 1}
+        - {x: -9, y: -5}
+        - {x: -8, y: -9}
+        - {x: -5, y: -12}
+        - {x: 8, y: -12}
+        - {x: 11, y: -9}
+        - {x: 11, y: 1}
+        - {x: 7, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_107
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 12}
+        - {x: -11, y: 10}
+        - {x: -11, y: -9}
+        - {x: -7, y: -12}
+        - {x: 6, y: -12}
+        - {x: 10, y: -8}
+        - {x: 10, y: 11}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_108
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -11, y: 11}
+        - {x: -11, y: -6}
+        - {x: -10, y: -9}
+        - {x: -8, y: -12}
+        - {x: 7, y: -12}
+        - {x: 9, y: -11}
+        - {x: 9, y: 10}
+        - {x: 7, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_109
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: 6}
+        - {x: -6, y: 5}
+        - {x: -10, y: 1}
+        - {x: -10, y: -5}
+        - {x: -9, y: -9}
+        - {x: -6, y: -12}
+        - {x: 7, y: -12}
+        - {x: 10, y: -9}
+        - {x: 10, y: 1}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_111
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_112
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_113
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_114
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 9}
+        - {x: -12, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 7}
+        - {x: 7, y: 9}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_115
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -10}
+        - {x: -10, y: -12}
+        - {x: 11, y: -12}
+        - {x: 12, y: -11}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_116
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -5, y: 11}
+        - {x: -12, y: 1}
+        - {x: -12, y: -9}
+        - {x: -10, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -11}
+        - {x: 12, y: 3}
+        - {x: 6, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_117
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4, y: 11}
+        - {x: -12, y: 4}
+        - {x: -12, y: -9}
+        - {x: -9, y: -12}
+        - {x: 9, y: -12}
+        - {x: 12, y: -11}
+        - {x: 12, y: 4}
+        - {x: 8, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_118
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -11, y: 9}
+        - {x: -11, y: -9}
+        - {x: -8, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 10}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_119
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -11, y: 9}
+        - {x: -11, y: -9}
+        - {x: -8, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 10}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_120
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -11, y: 9}
+        - {x: -11, y: -9}
+        - {x: -8, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 10}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_121
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -11, y: 9}
+        - {x: -11, y: -9}
+        - {x: -8, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 10}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_122
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -10, y: 11}
+        - {x: -10, y: -6}
+        - {x: -8, y: -12}
+        - {x: 8, y: -12}
+        - {x: 11, y: -10}
+        - {x: 11, y: 10}
+        - {x: 10, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_123
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 120
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: 4}
+        - {x: -7, y: -11}
+        - {x: -4, y: -12}
+        - {x: 5, y: -12}
+        - {x: 6, y: -10}
+        - {x: 12, y: 0}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: -2, y: -12}
+        - {x: 12, y: -9}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_125
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -9}
+        - {x: -5, y: -12}
+        - {x: 6, y: -12}
+        - {x: 12, y: -9}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_126
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -9}
+        - {x: 2, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_127
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: -2, y: -12}
+        - {x: 12, y: -9}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_128
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -9}
+        - {x: 2, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_129
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_130
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_131
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_132
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -11, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 9}
+        - {x: 11, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_133
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -11, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 9}
+        - {x: 11, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_134
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -11, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 9}
+        - {x: 11, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_135
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -11, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: -10}
+        - {x: 12, y: 9}
+        - {x: 11, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_136
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 12}
+        - {x: -10, y: 11}
+        - {x: -10, y: -6}
+        - {x: -8, y: -12}
+        - {x: 6, y: -12}
+        - {x: 11, y: -5}
+        - {x: 11, y: 8}
+        - {x: 8, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_137
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 96
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 11}
+        - {x: -12, y: 9}
+        - {x: -12, y: -3}
+        - {x: -9, y: -9}
+        - {x: 7, y: -9}
+        - {x: 12, y: -5}
+        - {x: 12, y: 5}
+        - {x: 10, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_138
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 11}
+        - {x: -11, y: 8}
+        - {x: -11, y: -7}
+        - {x: -8, y: -11}
+        - {x: 10, y: -11}
+        - {x: 11, y: -8}
+        - {x: 11, y: 8}
+        - {x: 5, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_139
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 11}
+        - {x: -11, y: 8}
+        - {x: -11, y: -7}
+        - {x: -8, y: -11}
+        - {x: 10, y: -11}
+        - {x: 11, y: -8}
+        - {x: 11, y: 8}
+        - {x: 5, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_140
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 11}
+        - {x: -11, y: 8}
+        - {x: -11, y: -7}
+        - {x: -8, y: -11}
+        - {x: 10, y: -11}
+        - {x: 11, y: -8}
+        - {x: 11, y: 8}
+        - {x: 5, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_141
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 11}
+        - {x: -11, y: 8}
+        - {x: -11, y: -7}
+        - {x: -8, y: -11}
+        - {x: 10, y: -11}
+        - {x: 11, y: -8}
+        - {x: 11, y: 8}
+        - {x: 5, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_142
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: -8}
+        - {x: -8, y: -11}
+        - {x: 9, y: -11}
+        - {x: 12, y: -10}
+        - {x: 12, y: 3}
+        - {x: 9, y: 11}
+        - {x: -9, y: 11}
+        - {x: -11, y: 5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_143
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 4}
+        - {x: -12, y: -11}
+        - {x: 10, y: -11}
+        - {x: 12, y: -10}
+        - {x: 12, y: 12}
+        - {x: -3, y: 12}
+        - {x: -10, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_144
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_145
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_146
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_147
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_148
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_149
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_150
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_151
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_152
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_153
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_154
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_155
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_157
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_158
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_159
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_160
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_161
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_162
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_163
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_164
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_165
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_166
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_167
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_168
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_169
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_171
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_172
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_173
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_174
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_175
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_176
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_177
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_178
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 0}
+        - {x: 10, y: -1}
+        - {x: 12, y: -1}
+        - {x: 12, y: 12}
+        - {x: 0, y: 12}
+        - {x: 1, y: 9}
+        - {x: -6, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -10}
+        - {x: -9, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -1}
+        - {x: 9, y: -1}
+      - - {x: 7, y: -6}
+        - {x: 6, y: -3}
+        - {x: -5, y: -4}
+        - {x: -7, y: -9}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_179
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_180
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_181
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_182
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OryxWorldDecorations_183
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

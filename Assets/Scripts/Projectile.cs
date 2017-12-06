@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour {
     private bool                      exploding;
     private Rigidbody2D               rb;
     private SpriteRenderer            sr;
-    private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[1];
+    private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[2];
 
     private readonly Dictionary<int, float> radianMap = new Dictionary<int, float> {
         { 0, 0f },
@@ -46,7 +46,7 @@ public class Projectile : MonoBehaviour {
         sr = GetComponent<SpriteRenderer>();
         exploding = false;
         activated = 0;
-        angleIndex = (Random.Range(0, 4) * 2) + 1;
+        angleIndex = Random.Range(0, 4) * 2 + 1;
         angle = radianMap[angleIndex];
         sr.sprite = sprites[angleIndex + activated];
     }
@@ -122,46 +122,49 @@ public class Projectile : MonoBehaviour {
         rb.MovePosition(rb.position + GetVelocity() * Time.fixedDeltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        int contacts = other.GetContacts(contactPoints);
+    private void OnCollisionEnter2D(Collision2D collision) {
+        int contacts = collision.GetContacts(contactPoints);
         if (contacts == 0) {
             return;
         }
 
-        Vector2 velocity = GetVelocity();
+        Vector2 velocity = GetVelocity().normalized;
+        Vector2 hitNormal = Vector2.zero;
+        for (int i = 0; i < contacts; ++i) {
+            hitNormal += contactPoints[i].normal.normalized;
+        }
         
-        // towards right
-        if (velocity.x > 0) {
-            if (contactPoints[0].normal == Vector2.up) {
+        float dot = Vector2.Dot(hitNormal, velocity);
+        //  1 = same direction
+        // -1 = opposite direction
+        //  0 = perpendicular
+        
+        // Bounce back
+        if (dot < -0.995f) {
+            angleIndex += 4;
+        }
+        
+        // Bounce to either side
+        if (dot <= 0.995f && dot > 0f) {
+            Vector3 cross = Vector3.Cross(hitNormal, velocity).normalized;
+            // To right
+            if (cross == Vector3.back) {
                 angleIndex += 2;
             }
-            if (contactPoints[0].normal == Vector2.down) {
+            // To left
+            if (cross == Vector3.forward) {
                 angleIndex -= 2;
             }
-            if (contactPoints[0].normal == Vector2.left) {
-                if (velocity.y > 0) {
-                    angleIndex += 2;
-                }
-                else {
-                    angleIndex -= 2;
-                }
-            }
-
-        // towards left
-        } else {
-            if (contactPoints[0].normal == Vector2.up) {
-                angleIndex -= 2;
-            }
-            if (contactPoints[0].normal == Vector2.down) {
+        }
+        if (dot >= -0.995f && dot < 0f) {
+            Vector3 cross = Vector3.Cross(hitNormal, velocity).normalized;
+            // To right
+            if (cross == Vector3.back) {
                 angleIndex += 2;
             }
-            if (contactPoints[0].normal == Vector2.right) {
-                if (velocity.y > 0) {
-                    angleIndex -= 2;
-                }
-                else {
-                    angleIndex += 2;
-                }
+            // To left
+            if (cross == Vector3.forward) {
+                angleIndex -= 2;
             }
         }
         
@@ -171,6 +174,7 @@ public class Projectile : MonoBehaviour {
         }
         angle = radianMap[angleIndex];
         sr.sprite = sprites[angleIndex + activated];
+        rb.MovePosition(rb.position + (hitNormal.normalized * 0.04167f) * Time.fixedDeltaTime);
     }
 
     private Vector2 GetVelocity() {
@@ -180,7 +184,13 @@ public class Projectile : MonoBehaviour {
         );
     }
 
-    private void OnDrawGizmos() {
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position, GetVelocity());
+        
+        Gizmos.color = Color.cyan;
+        for (int i=0; i<contactPoints.Length; ++i) {
+            Gizmos.DrawRay(contactPoints[i].point, contactPoints[i].normal);
+        }
     }
 }

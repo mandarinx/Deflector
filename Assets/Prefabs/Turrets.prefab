@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114678710149753276}
   - component: {fileID: 114858875753414546}
   - component: {fileID: 114089900280452844}
+  - component: {fileID: 114226289865970748}
   m_Layer: 0
   m_Name: Turrets
   m_TagString: Untagged
@@ -84,11 +85,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 4
   maxTurrets: -1
-  top: 3
-  right: 6
-  bottom: 4
-  left: 6
+  gridZones: {fileID: 114226289865970748}
   spawnedTurrets: {fileID: 11400000, guid: 70e1521d47c4a45078ee3f0bf1785ac7, type: 2}
+--- !u!114 &114226289865970748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198398547953282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b5f726b05c04ed68faae7a1766addf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  zones:
+  - serializedVersion: 2
+    x: -6
+    y: -4
+    width: 4
+    height: 7
+  - serializedVersion: 2
+    x: 2
+    y: -4
+    width: 4
+    height: 7
 --- !u!114 &114678710149753276
 MonoBehaviour:
   m_ObjectHideFlags: 1

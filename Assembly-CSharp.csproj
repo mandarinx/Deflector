@@ -105,9 +105,11 @@
     <Compile Include="Assets\Scripts\GameObjectEvent\GameObjectEvent.cs" />
     <Compile Include="Assets\Scripts\GameObjectEvent\GameObjectEventListener.cs" />
     <Compile Include="Assets\Scripts\GameObjectSet.cs" />
-    <Compile Include="Assets\Scripts\GO.cs" />
-    <Compile Include="Assets\Scripts\GOGameObjectExtensions.cs" />
-    <Compile Include="Assets\Scripts\GOTraversal.cs" />
+    <Compile Include="Assets\Scripts\GO\GO.cs" />
+    <Compile Include="Assets\Scripts\GO\GOGameObjectExtensions.cs" />
+    <Compile Include="Assets\Scripts\GO\GOTraversal.cs" />
+    <Compile Include="Assets\Scripts\GridZones.cs" />
+    <Compile Include="Assets\Scripts\Hurt.cs" />
     <Compile Include="Assets\Scripts\ImageColorLerp.cs" />
     <Compile Include="Assets\Scripts\IntAsset.cs" />
     <Compile Include="Assets\Scripts\Killable.cs" />
@@ -125,6 +127,8 @@
     <Compile Include="Assets\Scripts\ScoreCounter.cs" />
     <Compile Include="Assets\Scripts\ScoreListener.cs" />
     <Compile Include="Assets\Scripts\Shield.cs" />
+    <Compile Include="Assets\Scripts\Tests\DotProd.cs" />
+    <Compile Include="Assets\Scripts\Tests\TriggerStay.cs" />
     <Compile Include="Assets\Scripts\TextColor.cs" />
     <Compile Include="Assets\Scripts\Tilemap\GridInformation\Scripts\GridInformation.cs" />
     <Compile Include="Assets\Scripts\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
@@ -146,7 +150,6 @@
     <None Include="Assets\PixelArtCamera\PixelArtUI.shader" />
     <None Include="Assets\8 Bit Retro Rampage Free\Readme.txt" />
     <None Include="Assets\PixelArtCamera\PixelArtFont.shader" />
-    <None Include="Assets\Resources\Editor\CM Tools\TileMasterReadme.txt" />
     <None Include="Assets\PixelArtCamera\PixelArtSprite.shader" />
     <Reference Include="UnityEngine.UIAutomation">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
