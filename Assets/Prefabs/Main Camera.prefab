@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenResolution: {x: 384, y: 288}
   internalResolution: {x: 384, y: 288}
-  upscaledResolution: {x: 892, y: 576}
+  upscaledResolution: {x: 384, y: 288}
   smooth: 0
   forceSquarePixels: 1
   pixels: {x: 384, y: 288}
