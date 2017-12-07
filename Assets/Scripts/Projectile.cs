@@ -20,6 +20,7 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private GameEvent                 onHit;
 
+    private int                       contacts;
     private int                       angleIndex;
     [SerializeField]
     private int                       activated;
@@ -37,6 +38,17 @@ public class Projectile : MonoBehaviour {
         { 5, Mathf.PI * 1.25f },
         { 6, Mathf.PI * 1.5f },
         { 7, Mathf.PI * 1.75f },
+    };
+
+    private readonly Dictionary<int, int> angleMap = new Dictionary<int, int> {
+        { Mathf.FloorToInt(0f * 1000f),               0  },
+        { Mathf.FloorToInt(Mathf.PI * 0.25f * 1000f), 1 },
+        { Mathf.FloorToInt(Mathf.PI * 0.5f * 1000f),  2 },
+        { Mathf.FloorToInt(Mathf.PI * 0.75f * 1000f), 3 },
+        { Mathf.FloorToInt(Mathf.PI * 1000f),         4 },
+        { Mathf.FloorToInt(Mathf.PI * 1.25f * 1000f), 5 },
+        { Mathf.FloorToInt(Mathf.PI * 1.5f * 1000f),  6 },
+        { Mathf.FloorToInt(Mathf.PI * 1.75f * 1000f), 7 },
     };
 
     public bool isActivated => activated > 0;
@@ -123,7 +135,15 @@ public class Projectile : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        int contacts = collision.GetContacts(contactPoints);
+        Bounce(collision);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision) {
+        Bounce(collision);
+    }
+    
+    private void Bounce(Collision2D collision) {
+        contacts = collision.GetContacts(contactPoints);
         if (contacts == 0) {
             return;
         }
@@ -145,18 +165,8 @@ public class Projectile : MonoBehaviour {
         }
         
         // Bounce to either side
-        if (dot <= 0.995f && dot > 0f) {
-            Vector3 cross = Vector3.Cross(hitNormal, velocity).normalized;
-            // To right
-            if (cross == Vector3.back) {
-                angleIndex += 2;
-            }
-            // To left
-            if (cross == Vector3.forward) {
-                angleIndex -= 2;
-            }
-        }
-        if (dot >= -0.995f && dot < 0f) {
+        if ((dot < +0.5f && dot > 0f + float.Epsilon) ||
+            (dot > -0.5f && dot < 0f - float.Epsilon)) {
             Vector3 cross = Vector3.Cross(hitNormal, velocity).normalized;
             // To right
             if (cross == Vector3.back) {
@@ -168,13 +178,27 @@ public class Projectile : MonoBehaviour {
             }
         }
         
+        // Follow the normal
+        if (dot >= 0f - float.Epsilon && 
+            dot <= 0f + float.Epsilon) {
+            // convert normal to angle indx
+            float normalRad = Mathf.Atan2(hitNormal.y, hitNormal.x);
+            int radIndex = Mathf.FloorToInt(normalRad * 1000f);
+            angleIndex = angleMap[radIndex];
+        }
+        
+        // Follow the velocity
+        if (dot >= 0.5f && 
+            dot <= 1f) {
+            // do nothing
+        }
+        
         angleIndex %= 8;
         if (angleIndex < 0) {
             angleIndex = 8 + angleIndex;
         }
         angle = radianMap[angleIndex];
         sr.sprite = sprites[angleIndex + activated];
-        rb.MovePosition(rb.position + (hitNormal.normalized * 0.04167f) * Time.fixedDeltaTime);
     }
 
     private Vector2 GetVelocity() {
@@ -189,7 +213,7 @@ public class Projectile : MonoBehaviour {
         Gizmos.DrawRay(transform.position, GetVelocity());
         
         Gizmos.color = Color.cyan;
-        for (int i=0; i<contactPoints.Length; ++i) {
+        for (int i=0; i<contacts; ++i) {
             Gizmos.DrawRay(contactPoints[i].point, contactPoints[i].normal);
         }
     }
