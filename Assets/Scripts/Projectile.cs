@@ -25,6 +25,7 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private int                       activated;
     private bool                      exploding;
+    private Vector2                   hitNormal;
     private Rigidbody2D               rb;
     private SpriteRenderer            sr;
     private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[2];
@@ -40,7 +41,7 @@ public class Projectile : MonoBehaviour {
         { 7, Mathf.PI * 1.75f },
     };
 
-    private readonly Dictionary<int, int> angleMap = new Dictionary<int, int> {
+    private static readonly Dictionary<int, int> angleMap = new Dictionary<int, int> {
         { Mathf.FloorToInt(0f * 1000f),               0  },
         { Mathf.FloorToInt(Mathf.PI * 0.25f * 1000f), 1 },
         { Mathf.FloorToInt(Mathf.PI * 0.5f * 1000f),  2 },
@@ -135,52 +136,82 @@ public class Projectile : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        Bounce(collision);
-    }
-
-    private void OnCollisionStay2D(Collision2D collision) {
-        Bounce(collision);
-    }
-    
-    private void Bounce(Collision2D collision) {
-        contacts = collision.GetContacts(contactPoints);
-        if (contacts == 0) {
+        if (!GetHitNormal(collision, out hitNormal)) {
             return;
         }
-
-        Vector2 velocity = GetVelocity().normalized;
-        Vector2 hitNormal = Vector2.zero;
-        for (int i = 0; i < contacts; ++i) {
-            hitNormal += contactPoints[i].normal.normalized;
+        angleIndex = GetAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
+        angle = radianMap[angleIndex];
+        sr.sprite = sprites[angleIndex + activated];
+    }
+    
+    private void OnCollisionStay2D(Collision2D collision) {
+        // compare hit normals, if not the same, calc new angleindex
+        Vector2 normal;
+        if (!GetHitNormal(collision, out normal)) {
+            return;
         }
-        
+        if (normal == hitNormal) {
+            return;
+        }
+        int index = GetAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
+        if (index == angleIndex) {
+            return;
+        }
+        angleIndex = index;
+        angle = radianMap[angleIndex];
+        sr.sprite = sprites[angleIndex + activated];
+    }
+
+    private bool GetHitNormal(Collision2D collision, out Vector2 normal) {
+        contacts = collision.GetContacts(contactPoints);
+        Debug.Log($"contacts: {contacts}");
+        if (contacts == 0) {
+            normal = Vector2.zero;
+            return false;
+        }
+
+        normal = Vector2.zero;
+        for (int i = 0; i < contacts; ++i) {
+            normal += contactPoints[i].normal.normalized;
+        }
+        return true;
+    }
+
+    private static int GetAngleIndex(int angleIndex, Vector2 hitNormal, Vector2 velocity) {
         float dot = Vector2.Dot(hitNormal, velocity);
+        Debug.Log($"dot: {dot}");
         //  1 = same direction
         // -1 = opposite direction
         //  0 = perpendicular
         
+        // [-1 : -0.995] [...] [-0.7853 : -epsilon] [-epsilon : epsilon] [epsilon : 0.7853] [0.7853 : 1]
+        
         // Bounce back
         if (dot < -0.995f) {
+            Debug.Log("Bounce back");
             angleIndex += 4;
         }
         
         // Bounce to either side
-        if ((dot < +0.5f && dot > 0f + float.Epsilon) ||
-            (dot > -0.5f && dot < 0f - float.Epsilon)) {
+        if ((dot < +0.7853f && dot > +float.Epsilon) ||
+            (dot > -0.7853f && dot < -float.Epsilon)) {
             Vector3 cross = Vector3.Cross(hitNormal, velocity).normalized;
             // To right
             if (cross == Vector3.back) {
+                Debug.Log("Bounce to right");
                 angleIndex += 2;
             }
             // To left
             if (cross == Vector3.forward) {
+                Debug.Log("Bounce to left");
                 angleIndex -= 2;
             }
         }
         
         // Follow the normal
-        if (dot >= 0f - float.Epsilon && 
-            dot <= 0f + float.Epsilon) {
+        if (dot >= -float.Epsilon && 
+            dot <= +float.Epsilon) {
+            Debug.Log("Bounce along normal");
             // convert normal to angle indx
             float normalRad = Mathf.Atan2(hitNormal.y, hitNormal.x);
             int radIndex = Mathf.FloorToInt(normalRad * 1000f);
@@ -188,8 +219,8 @@ public class Projectile : MonoBehaviour {
         }
         
         // Follow the velocity
-        if (dot >= 0.5f && 
-            dot <= 1f) {
+        if (dot >= +0.7853f && dot <= 1f) {
+            Debug.Log("Follow same direction");
             // do nothing
         }
         
@@ -197,8 +228,8 @@ public class Projectile : MonoBehaviour {
         if (angleIndex < 0) {
             angleIndex = 8 + angleIndex;
         }
-        angle = radianMap[angleIndex];
-        sr.sprite = sprites[angleIndex + activated];
+
+        return angleIndex;
     }
 
     private Vector2 GetVelocity() {
