@@ -164,7 +164,6 @@ public class Projectile : MonoBehaviour {
 
     private bool GetHitNormal(Collision2D collision, out Vector2 normal) {
         contacts = collision.GetContacts(contactPoints);
-        Debug.Log($"contacts: {contacts}");
         if (contacts == 0) {
             normal = Vector2.zero;
             return false;
@@ -179,16 +178,12 @@ public class Projectile : MonoBehaviour {
 
     private static int GetAngleIndex(int angleIndex, Vector2 hitNormal, Vector2 velocity) {
         float dot = Vector2.Dot(hitNormal, velocity);
-        Debug.Log($"dot: {dot}");
         //  1 = same direction
         // -1 = opposite direction
         //  0 = perpendicular
         
-        // [-1 : -0.995] [...] [-0.7853 : -epsilon] [-epsilon : epsilon] [epsilon : 0.7853] [0.7853 : 1]
-        
         // Bounce back
         if (dot < -0.995f) {
-            Debug.Log("Bounce back");
             angleIndex += 4;
         }
         
@@ -198,12 +193,10 @@ public class Projectile : MonoBehaviour {
             Vector3 cross = Vector3.Cross(hitNormal, velocity).normalized;
             // To right
             if (cross == Vector3.back) {
-                Debug.Log("Bounce to right");
                 angleIndex += 2;
             }
             // To left
             if (cross == Vector3.forward) {
-                Debug.Log("Bounce to left");
                 angleIndex -= 2;
             }
         }
@@ -211,7 +204,6 @@ public class Projectile : MonoBehaviour {
         // Follow the normal
         if (dot >= -float.Epsilon && 
             dot <= +float.Epsilon) {
-            Debug.Log("Bounce along normal");
             // convert normal to angle indx
             float normalRad = Mathf.Atan2(hitNormal.y, hitNormal.x);
             int radIndex = Mathf.FloorToInt(normalRad * 1000f);
@@ -220,7 +212,6 @@ public class Projectile : MonoBehaviour {
         
         // Follow the velocity
         if (dot >= +0.7853f && dot <= 1f) {
-            Debug.Log("Follow same direction");
             // do nothing
         }
         
