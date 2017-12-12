@@ -20,10 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4434446830111098}
   - component: {fileID: 114106497533702508}
-  - component: {fileID: 114678710149753276}
   - component: {fileID: 114858875753414546}
   - component: {fileID: 114089900280452844}
-  - component: {fileID: 114226289865970748}
+  - component: {fileID: 114514584718883692}
+  - component: {fileID: 114048461284011486}
+  - component: {fileID: 114639929884005888}
   m_Layer: 0
   m_Name: Turrets
   m_TagString: Untagged
@@ -44,6 +45,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114048461284011486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198398547953282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40502709289fe49e3ac93115745917d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: bef435d5f27234915872e12a74c6cb01, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: f2ebe9782043142c59545e3714926981, type: 2}
+        m_MethodName: Despawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: RoboRyanTron.Unite2017.Events.UnityGameObjectEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114089900280452844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,32 +114,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 4
   maxTurrets: -1
-  gridZones: {fileID: 114226289865970748}
+  spawnPoints: {fileID: 11400000, guid: 6c9b0cbc0beb94df0b8ec7518169c942, type: 2}
   spawnedTurrets: {fileID: 11400000, guid: 70e1521d47c4a45078ee3f0bf1785ac7, type: 2}
---- !u!114 &114226289865970748
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1198398547953282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1b5f726b05c04ed68faae7a1766addf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 0}
-  zones:
-  - serializedVersion: 2
-    x: -6
-    y: -4
-    width: 4
-    height: 7
-  - serializedVersion: 2
-    x: 2
-    y: -4
-    width: 4
-    height: 7
---- !u!114 &114678710149753276
+--- !u!114 &114514584718883692
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -136,8 +142,58 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: f2ebe9782043142c59545e3714926981, type: 2}
+        m_MethodName: DespawnAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 70e1521d47c4a45078ee3f0bf1785ac7, type: 2}
+        m_MethodName: DespawnAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114639929884005888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198398547953282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40502709289fe49e3ac93115745917d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f85d0c8911ac74dd4a7d3ab0cc3fc0a5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 70e1521d47c4a45078ee3f0bf1785ac7, type: 2}
+        m_MethodName: Despawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: RoboRyanTron.Unite2017.Events.UnityGameObjectEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114858875753414546
 MonoBehaviour:
   m_ObjectHideFlags: 1

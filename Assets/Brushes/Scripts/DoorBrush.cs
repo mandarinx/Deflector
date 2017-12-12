@@ -13,7 +13,10 @@ public class DoorBrush : LayerObjectBrush<Door>
 		{
 			if (activeObject.m_Key == null)
 			{
-				GameObject newKey = BrushUtility.Instantiate(m_KeyPrefab, grid.LocalToWorld(grid.CellToLocalInterpolated(position + offsetFromBottomLeft)), GetLayer());
+				GameObject newKey = BrushUtility.Instantiate(
+					m_KeyPrefab, 
+					grid.LocalToWorld(grid.CellToLocalInterpolated(position + offsetFromBottomLeft)), 
+					GetLayer());
 				newKey.GetComponent<Doorkey>().m_Door = activeObject;
 				BrushUtility.SetDirty(newKey);
 

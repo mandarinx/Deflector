@@ -68,6 +68,8 @@
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorNodes.cs" />
     <Compile Include="Assets\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorTimeline.cs" />
     <Compile Include="Assets\Robodash\Editor\TintTextureGeneratorEditor.cs" />
+    <Compile Include="Assets\Scripts\Brushes\Editor\SpawnPointBrushInspector.cs" />
+    <Compile Include="Assets\Scripts\Editor\CreateInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\GridZonesInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\PlayerHealthInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\TransformInspector.cs" />

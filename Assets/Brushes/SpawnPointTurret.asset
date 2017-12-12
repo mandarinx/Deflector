@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26f83918002444b9a5ee25ef7372af3, type: 3}
+  m_Name: SpawnPointTurret
+  m_EditorClassIdentifier: 
+  m_Prefab: {fileID: 1834353663006312, guid: 06faaef82640b43249565a6797fd35c2, type: 2}
+  m_LayerName: SpawnPointsTurrets
+  m_PrefabOffset: {x: 0.5, y: 0.5, z: 0}
+  color: {r: 1, g: 0, b: 0, a: 0.372}

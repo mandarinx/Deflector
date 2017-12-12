@@ -5,7 +5,7 @@ public class Turrets : MonoBehaviour {
 
     public float          spawnInterval = 4;
     public int            maxTurrets = -1;
-    public GridZones      gridZones;
+    public SpawnPointSet  spawnPoints;
     public GameObjectSet  spawnedTurrets;
 
     public void Activate() {
@@ -19,9 +19,7 @@ public class Turrets : MonoBehaviour {
     private IEnumerator Spawn() {
         while (maxTurrets < 0 || spawnedTurrets.Count < maxTurrets) {
             yield return new WaitForSeconds(spawnInterval);
-            spawnedTurrets.Spawn(
-                gridZones.GetCoordinateWorld(
-                    Random.Range(0, gridZones.numCoordinates)));
+            spawnedTurrets.Spawn(spawnPoints.Get(Random.Range(0, spawnPoints.Count)).transform.position);
         }
     }
 }

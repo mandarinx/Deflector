@@ -6,11 +6,16 @@ using UnityEditor;
 
 public abstract class LayerObjectBrush<T> : GridBrushBase
 {
-	public T activeObject { get { return BrushUtility.GetSelection() != null ? BrushUtility.GetSelection().GetComponent<T>() : default(T); } }
-	public T[] allObjects { get { return BrushUtility.GetRootGrid(false) != null ? BrushUtility.GetRootGrid(false).GetComponentsInChildren<T>() : default(T[]); } }
+	public T activeObject => BrushUtility.GetSelection() != null 
+		? BrushUtility.GetSelection().GetComponent<T>() 
+		: default(T);
 
-	protected virtual Vector3 offsetFromBottomLeft { get { return m_PrefabOffset; } }
-	public virtual bool alwaysCreateOnPaint { get { return false; } }
+	public T[] allObjects => BrushUtility.GetRootGrid(false) != null 
+		? BrushUtility.GetRootGrid(false).GetComponentsInChildren<T>() 
+		: default(T[]);
+
+	protected virtual Vector3 offsetFromBottomLeft => m_PrefabOffset;
+	public virtual bool alwaysCreateOnPaint => false;
 	public GameObject m_Prefab;
 	public string m_LayerName;
 	public Vector3 m_PrefabOffset;
@@ -43,17 +48,18 @@ public abstract class LayerObjectBrush<T> : GridBrushBase
 		}
 	}
 
-	protected void CreateObject(GridLayout grid, Vector3Int position, GameObject prefab)
-	{
-		if (m_Prefab.GetComponent<T>() != null)
-		{
-			GameObject newObj = BrushUtility.Instantiate(prefab, grid.LocalToWorld(grid.CellToLocalInterpolated(position + offsetFromBottomLeft)), GetLayer());
-			BrushUtility.Select(newObj);
+	protected T CreateObject(GridLayout grid, Vector3Int position, GameObject prefab) {
+		if (m_Prefab.GetComponent<T>() == null) {
+			Debug.LogError($"Prefab {m_Prefab.name} doesn't contain component {typeof(T)}, brush paint operation cancelled.");
 		}
-		else
-		{
-			Debug.LogError("Prefab " + m_Prefab.name + " doesn't contain component " + typeof(T) + ", brush paint operation cancelled.");
-		}
+		
+		GameObject newObj = BrushUtility.Instantiate(
+			prefab, 
+			grid.LocalToWorld(grid.CellToLocalInterpolated(position + offsetFromBottomLeft)), 
+			GetLayer());
+		BrushUtility.Select(newObj);
+
+		return newObj.GetComponent<T>();
 	}
 
 	public override void Erase(GridLayout grid, GameObject layer, Vector3Int position)

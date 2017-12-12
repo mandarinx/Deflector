@@ -21,7 +21,6 @@ public class Player : MonoBehaviour {
     public PlayerHealth               playerHealth;
     public SpriteRenderer             blood;
     public SpriteRenderer             shadow;
-    public GridZones                  spawnZones;
     public GameEvent                  onFootstep;
     public GameEvent                  onPlayerHit;
     public GameEvent                  onPlayerDied;
@@ -60,14 +59,7 @@ public class Player : MonoBehaviour {
         hitEffect.gameObject.SetActive(false);
     }
 
-    private void Start() {
-        transform.position = spawnZones
-            .GetCoordinateWorld(Random.Range(0, spawnZones.numCoordinates));
-    }
-
     public void Activate() {
-        transform.position = spawnZones
-            .GetCoordinateWorld(Random.Range(0, spawnZones.numCoordinates));
         gameObject.layer = LayerMask.NameToLayer("Player");
         blood.enabled = false;
         sr.enabled = true;
@@ -249,7 +241,6 @@ public class Player : MonoBehaviour {
         }
         sr.color = new Color(1f, 1f, 1f, 1f);
         hurtRoutine = null;
-        Debug.Log(hurtRoutine);
     }
     
     private IEnumerator Immune() {
