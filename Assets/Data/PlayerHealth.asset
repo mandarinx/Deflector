@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 0
   livesMax: 3
-  onDead: {fileID: 11400000, guid: 638dd9f8605a941d38ccaf54f30c7c5b, type: 2}
+  onDead: {fileID: 11400000, guid: 5f91beb629d874778988875a2cfaccac, type: 2}
+  onLostLife: {fileID: 11400000, guid: 43ed4ae74f5044f099afaf1b1151b9b4, type: 2}
