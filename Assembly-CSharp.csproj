@@ -51,48 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Brushes\Scripts\BrushUtility.cs" />
-    <Compile Include="Assets\Brushes\Scripts\DefaultBrushReplacement.cs" />
-    <Compile Include="Assets\Brushes\Scripts\DoorBrush.cs" />
-    <Compile Include="Assets\Brushes\Scripts\LaserBrush.cs" />
-    <Compile Include="Assets\Brushes\Scripts\LayerObjectBrush.cs" />
-    <Compile Include="Assets\Brushes\Scripts\LevelBrush.cs" />
-    <Compile Include="Assets\Brushes\Scripts\SequenceTurretBrush.cs" />
-    <Compile Include="Assets\Brushes\Scripts\SwarmBrush.cs" />
-    <Compile Include="Assets\Brushes\Scripts\TeleportBrush.cs" />
-    <Compile Include="Assets\Brushes\Scripts\TintBrush.cs" />
-    <Compile Include="Assets\Brushes\Scripts\TurretBrush.cs" />
-    <Compile Include="Assets\PixelArtCamera\PixelArtCamera.cs" />
-    <Compile Include="Assets\PowerSpriteAnimator\Scripts\SpriteAnim.cs" />
-    <Compile Include="Assets\PowerSpriteAnimator\Scripts\SpriteAnimEventHandler.cs" />
-    <Compile Include="Assets\PowerSpriteAnimator\Scripts\SpriteAnimNodes.cs" />
-    <Compile Include="Assets\Robodash\AspectRatioRectTransform.cs" />
-    <Compile Include="Assets\Robodash\AudioSourcePanner.cs" />
-    <Compile Include="Assets\Robodash\Bullet.cs" />
-    <Compile Include="Assets\Robodash\BulletTurret.cs" />
-    <Compile Include="Assets\Robodash\CameraController.cs" />
-    <Compile Include="Assets\Robodash\Door.cs" />
-    <Compile Include="Assets\Robodash\Doorkey.cs" />
-    <Compile Include="Assets\Robodash\GameStateManager.cs" />
-    <Compile Include="Assets\Robodash\Hero.cs" />
-    <Compile Include="Assets\Robodash\ImageEffectBase.cs" />
-    <Compile Include="Assets\Robodash\ImageEffects.cs" />
-    <Compile Include="Assets\Robodash\Laser.cs" />
-    <Compile Include="Assets\Robodash\LaserBeamTurret.cs" />
-    <Compile Include="Assets\Robodash\LevelGoal.cs" />
-    <Compile Include="Assets\Robodash\LevelStart.cs" />
-    <Compile Include="Assets\Robodash\LineRendererShaderHelper.cs" />
-    <Compile Include="Assets\Robodash\ParticleSystemToggler.cs" />
-    <Compile Include="Assets\Robodash\PlayerSeekingEnemy.cs" />
-    <Compile Include="Assets\Robodash\RenderTextureCamera.cs" />
-    <Compile Include="Assets\Robodash\RenderTextureCompositor.cs" />
-    <Compile Include="Assets\Robodash\SequenceTurret.cs" />
-    <Compile Include="Assets\Robodash\SnapToPixelPerfect.cs" />
-    <Compile Include="Assets\Robodash\SwarmSpawner.cs" />
-    <Compile Include="Assets\Robodash\Teleport.cs" />
-    <Compile Include="Assets\Robodash\TintTextureGenerator.cs" />
-    <Compile Include="Assets\Robodash\UIAnimation.cs" />
-    <Compile Include="Assets\Robodash\UIRenderTextureCamera.cs" />
     <Compile Include="Assets\Scripts\AngleTest.cs" />
     <Compile Include="Assets\Scripts\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hurt.cs" />
@@ -100,8 +58,14 @@
     <Compile Include="Assets\Scripts\Brushes\SpawnPointBrush.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CameraShakeConfig.cs" />
+    <Compile Include="Assets\Scripts\Controllers\GameModes.cs" />
     <Compile Include="Assets\Scripts\Controllers\Players.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Projectiles.cs" />
     <Compile Include="Assets\Scripts\Controllers\Turrets.cs" />
+    <Compile Include="Assets\Scripts\Data\GameMode.cs" />
+    <Compile Include="Assets\Scripts\Data\GameModeEndure.cs" />
+    <Compile Include="Assets\Scripts\Data\IntAsset.cs" />
+    <Compile Include="Assets\Scripts\Data\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Delay.cs" />
     <Compile Include="Assets\Scripts\Entities\Explosion.cs" />
     <Compile Include="Assets\Scripts\Entities\Player.cs" />
@@ -109,22 +73,24 @@
     <Compile Include="Assets\Scripts\Entities\Shield.cs" />
     <Compile Include="Assets\Scripts\Entities\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Entities\Turret.cs" />
-    <Compile Include="Assets\Scripts\GameEvent\GameEvent.cs" />
-    <Compile Include="Assets\Scripts\GameEvent\GameEventListener.cs" />
-    <Compile Include="Assets\Scripts\GameObjectEvent\GameObjectEvent.cs" />
-    <Compile Include="Assets\Scripts\GameObjectEvent\GameObjectEventListener.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\GameEvent.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\GameEventListener.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\GameObjectEvent.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\GameObjectEventListener.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\StringEvent.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\StringEventListener.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Vector3Event.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Vector3EventListener.cs" />
     <Compile Include="Assets\Scripts\GO\GO.cs" />
     <Compile Include="Assets\Scripts\GO\GOGameObjectExtensions.cs" />
     <Compile Include="Assets\Scripts\GO\GOTraversal.cs" />
     <Compile Include="Assets\Scripts\GridZones.cs" />
     <Compile Include="Assets\Scripts\ImageColorLerp.cs" />
-    <Compile Include="Assets\Scripts\IntAsset.cs" />
     <Compile Include="Assets\Scripts\List\ListPingPong.cs" />
     <Compile Include="Assets\Scripts\List\ListRandom.cs" />
     <Compile Include="Assets\Scripts\List\ListSequential.cs" />
     <Compile Include="Assets\Scripts\List\ObjectList.cs" />
     <Compile Include="Assets\Scripts\MultiplierListener.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthListener.cs" />
     <Compile Include="Assets\Scripts\PlaySound.cs" />
     <Compile Include="Assets\Scripts\ScoreCounter.cs" />
@@ -135,26 +101,23 @@
     <Compile Include="Assets\Scripts\Tests\DotProd.cs" />
     <Compile Include="Assets\Scripts\Tests\TriggerStay.cs" />
     <Compile Include="Assets\Scripts\TextColor.cs" />
-    <Compile Include="Assets\Scripts\Tilemap\GridInformation\Scripts\GridInformation.cs" />
-    <Compile Include="Assets\Scripts\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
-    <Compile Include="Assets\Scripts\Tilemap\Tiles\Pipeline Tile\Scripts\PipelineTile.cs" />
-    <Compile Include="Assets\Scripts\Tilemap\Tiles\Random Tile\Scripts\RandomTile.cs" />
-    <Compile Include="Assets\Scripts\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
-    <Compile Include="Assets\Scripts\Tilemap\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
     <Compile Include="Assets\Scripts\UI\UIController.cs" />
-    <Compile Include="Assets\Scripts\UI\UIEndGamePanel.cs" />
     <Compile Include="Assets\Scripts\UI\UIHeart.cs" />
-    <Compile Include="Assets\Scripts\UI\UIIngamePanel.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanel.cs" />
+    <Compile Include="Assets\Scripts\UI\UIPanelEndGame.cs" />
+    <Compile Include="Assets\Scripts\UI\UIPanelInGame.cs" />
+    <Compile Include="Assets\Scripts\UI\UIPanelIntro.cs" />
     <Compile Include="Assets\Scripts\UnityEvents.cs" />
     <Compile Include="Assets\Scripts\Utils\ArrayUtils.cs" />
-    <None Include="Assets\Brushes\Editor\GizmoShader.shader" />
-    <None Include="Assets\PixelArtCamera\PixelArtDiffuse.shader" />
-    <None Include="Assets\PixelArtCamera\PixelArtParticle.shader" />
-    <None Include="Assets\PixelArtCamera\PixelArtUI.shader" />
-    <None Include="Assets\8 Bit Retro Rampage Free\Readme.txt" />
-    <None Include="Assets\PixelArtCamera\PixelArtFont.shader" />
-    <None Include="Assets\PixelArtCamera\PixelArtSprite.shader" />
+    <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
+    <Compile Include="Assets\UIPanelToggle.cs" />
+    <None Include="Assets\Plugins\Robodash\Brushes\Editor\GizmoShader.shader" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtDiffuse.shader" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtParticle.shader" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtUI.shader" />
+    <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtFont.shader" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtSprite.shader" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -188,6 +151,12 @@
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{B4B84D7F-FEA5-5C8D-AA57-E7B59B8501DD}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

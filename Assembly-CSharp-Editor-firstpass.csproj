@@ -52,13 +52,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\Editor\JetBrains\Unity3DRider.cs" />
-    <None Include="Assets\Brushes\Editor\GizmoShader.shader" />
-    <None Include="Assets\PixelArtCamera\PixelArtDiffuse.shader" />
-    <None Include="Assets\PixelArtCamera\PixelArtParticle.shader" />
-    <None Include="Assets\PixelArtCamera\PixelArtUI.shader" />
-    <None Include="Assets\8 Bit Retro Rampage Free\Readme.txt" />
-    <None Include="Assets\PixelArtCamera\PixelArtFont.shader" />
-    <None Include="Assets\PixelArtCamera\PixelArtSprite.shader" />
+    <Compile Include="Assets\Plugins\PixelArtCamera\Editor\PixelArtCameraEditor.cs" />
+    <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimator.cs" />
+    <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorInfoPanel.cs" />
+    <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorNodes.cs" />
+    <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorTimeline.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\BrushEditorUtility.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\DefaultBrushReplacementEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\DoorBrushEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\LaserBrushEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\LayerObjectBrushEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\LevelBrushEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\SequenceTurretBrushEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\SwarmBrushEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\TeleportBrushEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\TintBrushEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\TurretBrushEditor.cs" />
+    <Compile Include="Assets\Plugins\Robodash\Editor\TintTextureGeneratorEditor.cs" />
+    <Compile Include="Assets\Plugins\Tilemap\Brushes\Coordinate Brush\Scripts\Editor\CoordinateBrush.cs" />
+    <Compile Include="Assets\Plugins\Tilemap\Brushes\GameObject Brush\Scripts\Editor\GameObjectBrush.cs" />
+    <Compile Include="Assets\Plugins\Tilemap\Brushes\Line Brush\Scripts\Editor\LineBrush.cs" />
+    <Compile Include="Assets\Plugins\Tilemap\Brushes\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
+    <Compile Include="Assets\Plugins\Tilemap\Brushes\Random Brush\Scripts\Editor\RandomBrush.cs" />
+    <Compile Include="Assets\Plugins\Tilemap\Brushes\Tint Brush\Scripts\Editor\TintBrush.cs" />
+    <Compile Include="Assets\Plugins\Tilemap\Tiles\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
+    <None Include="Assets\Plugins\Robodash\Brushes\Editor\GizmoShader.shader" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtDiffuse.shader" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtParticle.shader" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtUI.shader" />
+    <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtFont.shader" />
+    <None Include="Assets\Plugins\PixelArtCamera\PixelArtSprite.shader" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -143,6 +167,12 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{B4B84D7F-FEA5-5C8D-AA57-E7B59B8501DD}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
