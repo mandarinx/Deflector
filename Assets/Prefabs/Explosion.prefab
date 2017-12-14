@@ -348,7 +348,7 @@ MonoBehaviour:
   delayMin: 0.1
   delayMax: 0.3
   duration: 0.3
-  onExplode: {fileID: 11400000, guid: 7fd4f120384664b2f9ed9085a6dd842a, type: 2}
+  onExplode: {fileID: 11400000, guid: ea0c15998d79346c8999c43a1b72fbb6, type: 2}
   anims:
   - {fileID: 114423026720833434}
   - {fileID: 114537049593252454}

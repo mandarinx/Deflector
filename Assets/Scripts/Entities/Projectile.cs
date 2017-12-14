@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using RoboRyanTron.Unite2017.Events;
+using GameEvents;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
@@ -69,7 +69,7 @@ public class Projectile : MonoBehaviour {
             return;
         }
         
-        onHit.Raise();
+        onHit.Invoke();
         
         if (activated == 8) {
             StartCoroutine(Explosion(4));
@@ -128,7 +128,7 @@ public class Projectile : MonoBehaviour {
         explosion.transform.position = transform.position;
         explosion.GetComponent<Explosion>().Explode();
         
-        onDespawn.Raise(gameObject);
+        onDespawn.Invoke(gameObject);
     }
 
     private void FixedUpdate() {

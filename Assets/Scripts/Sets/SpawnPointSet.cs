@@ -1,4 +1,4 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpawnPointSet.asset", menuName = "Sets/Spawn Points")]
+[CreateAssetMenu(menuName = "Sets/Spawn Points", fileName = "SpawnPointSet.asset")]
 public class SpawnPointSet : Set<SpawnPoint> {}

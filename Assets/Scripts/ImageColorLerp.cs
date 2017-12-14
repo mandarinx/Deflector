@@ -27,7 +27,7 @@ public class ImageColorLerp : MonoBehaviour {
         image.color = defaultColor;
     }
 
-    private IEnumerator LerpColor() {
+    public IEnumerator LerpColor() {
         lerpTime = Time.time;
         float stopTime = lerpTime + duration;
         

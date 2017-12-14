@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 114298975527782784}
   - component: {fileID: 114022868051792028}
   - component: {fileID: 114863532475759946}
-  - component: {fileID: 114690868593178710}
   m_Layer: 0
   m_Name: ScoreCounter
   m_TagString: Untagged
@@ -54,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40502709289fe49e3ac93115745917d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: bef435d5f27234915872e12a74c6cb01, type: 2}
+  Event: {fileID: 11400000, guid: 70696427c874a4c1d999238aa20709a5, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -69,8 +68,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: RoboRyanTron.Unite2017.Events.UnityGameObjectEvent, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: GameEvents.UnityGameObjectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114298975527782784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,34 +85,6 @@ MonoBehaviour:
   multiplier: {fileID: 11400000, guid: 39e28525072b1499ab6d98a18a19e5ed, type: 2}
   explosionBaseScore: 250000
   multiplierCooldown: 2
---- !u!114 &114690868593178710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1751549266862952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 468c8d96938a94a3f9cf1c066eff89cc, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114298975527782784}
-        m_MethodName: OnResetScore
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114863532475759946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 45569a8abf4e341c79c325b3dc902a08, type: 2}
-  Response:
+  gameEvent: {fileID: 11400000, guid: 746a03cc87bab413dbb5c76990f2a9bd, type: 2}
+  response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114298975527782784}

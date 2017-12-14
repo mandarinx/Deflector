@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Int Asset", fileName = "IntAsset.asset")]
+[CreateAssetMenu(menuName = "Data/Int Asset", fileName = "IntAsset.asset")]
 public class IntAsset : ScriptableObject {
     
     [SerializeField]

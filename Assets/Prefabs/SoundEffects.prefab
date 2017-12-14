@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 4381710541489086}
   - component: {fileID: 114708480597239754}
   - component: {fileID: 114320127220012682}
-  - component: {fileID: 114915899955545956}
+  - component: {fileID: 114257325262407120}
   m_Layer: 0
   m_Name: TurretFire
   m_TagString: Untagged
@@ -274,7 +274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b52d35d891124e40a6fc0daa125387c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   numAudioSources: 3
   output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.799
@@ -296,7 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b52d35d891124e40a6fc0daa125387c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   numAudioSources: 3
   output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.799
@@ -347,8 +345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: f096c97b443bd4141b4e33ec052116e1, type: 2}
-  Response:
+  gameEvent: {fileID: 11400000, guid: e0b0c384e36074d3a8a3a647a5669855, type: 2}
+  response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114223570540282140}
@@ -422,6 +420,34 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114257325262407120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1890083985655296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28084496a80494d728291c8ffc77d994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vector3Event: {fileID: 11400000, guid: 77d19a1d6ec5a4105bdfd604d72c7d4e, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114320127220012682}
+        m_MethodName: DispatchObject
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: GameEvents.UnityVector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114299890266547706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -491,7 +517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b52d35d891124e40a6fc0daa125387c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   numAudioSources: 3
   output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.799
@@ -513,8 +538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 638dd9f8605a941d38ccaf54f30c7c5b, type: 2}
-  Response:
+  gameEvent: {fileID: 11400000, guid: 5f91beb629d874778988875a2cfaccac, type: 2}
+  response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114722388495956638}
@@ -570,8 +595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: aef3a4c4d4fba406bb10fd109d329760, type: 2}
-  Response:
+  gameEvent: {fileID: 11400000, guid: 2eb32a8f4e3ba4ad695ef193d49b4f91, type: 2}
+  response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114038690772777030}
@@ -598,7 +623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b52d35d891124e40a6fc0daa125387c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   numAudioSources: 1
   output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.799
@@ -649,7 +673,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b52d35d891124e40a6fc0daa125387c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   numAudioSources: 3
   output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.799
@@ -671,7 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40502709289fe49e3ac93115745917d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: bef435d5f27234915872e12a74c6cb01, type: 2}
+  Event: {fileID: 11400000, guid: 70696427c874a4c1d999238aa20709a5, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -686,8 +709,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: RoboRyanTron.Unite2017.Events.UnityGameObjectEvent, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: GameEvents.UnityGameObjectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114778330788812218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -699,8 +722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 7151ef6c4b5c449a190724fafe4128ee, type: 2}
-  Response:
+  gameEvent: {fileID: 11400000, guid: d62e61acb72204de3b34fccb9f032e6a, type: 2}
+  response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114562953802230882}
@@ -727,7 +750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b52d35d891124e40a6fc0daa125387c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   numAudioSources: 1
   output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.799
@@ -749,39 +771,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 2b7de0a2ce8a6444c93c674858504356, type: 2}
-  Response:
+  gameEvent: {fileID: 11400000, guid: 43ed4ae74f5044f099afaf1b1151b9b4, type: 2}
+  response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114299890266547706}
-        m_MethodName: DispatchObject
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114915899955545956
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1890083985655296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: d0dc12b21f829479095624f69ece4e04, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114320127220012682}
         m_MethodName: DispatchObject
         m_Mode: 3
         m_Arguments:
@@ -805,7 +799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b52d35d891124e40a6fc0daa125387c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   numAudioSources: 16
   output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.772

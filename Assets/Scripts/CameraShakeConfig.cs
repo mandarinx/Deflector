@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Camera Shake Config", fileName = "CameraShake.asset")]
+[CreateAssetMenu(menuName = "Configs/Camera Shake", fileName = "CameraShake.asset")]
 public class CameraShakeConfig : ScriptableObject {
 
 	/// <summary>

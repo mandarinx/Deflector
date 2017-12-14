@@ -20,8 +20,6 @@ namespace HyperGames.Lib {
     public class PlaySound : MonoBehaviour {
 
         [SerializeField]
-        private Camera            cam;
-        [SerializeField]
         [Min(1)]
         private int               numAudioSources;
         [SerializeField]

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "GameObjectSet", fileName = "GameObjectSet.asset")]
+[CreateAssetMenu(menuName = "Sets/Game Object", fileName = "GameObjectSet.asset")]
 public class GameObjectSet : ScriptableObject {
 
     public GameObject        prefab;

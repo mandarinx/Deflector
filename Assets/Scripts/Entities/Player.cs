@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using PowerTools;
-using RoboRyanTron.Unite2017.Events;
+using GameEvents;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
@@ -22,8 +22,6 @@ public class Player : MonoBehaviour {
     public SpriteRenderer             blood;
     public SpriteRenderer             shadow;
     public GameEvent                  onFootstep;
-    public GameEvent                  onPlayerHit;
-    public GameEvent                  onPlayerDied;
     
     private Rigidbody2D               rb;
     private SpriteRenderer            sr;
@@ -80,6 +78,12 @@ public class Player : MonoBehaviour {
         hitEffect.gameObject.SetActive(false);
     }
 
+    public void OnPlayerDied() {
+        blood.enabled = true;
+        sr.enabled = false;
+        Deactivate();
+    }
+
     public void Hit(Vector3 hitPos) {
         hitNormal = new Vector2(
             transform.position.x - hitPos.x, 
@@ -88,18 +92,7 @@ public class Player : MonoBehaviour {
     }
 
     private void Hit() {
-        playerHealth.SetLives(playerHealth.numLives - 1);
-        if (playerHealth.numLives > 0) {
-            onPlayerHit.Raise();
-        }
-        else {
-            onPlayerDied.Raise();
-            blood.enabled = true;
-            sr.enabled = false;
-            Deactivate();
-            return;
-        }
-        
+        playerHealth.RemoveLives(1);
         hitTime = Time.time;
         StartCoroutine(Immune());
     } 
@@ -203,7 +196,7 @@ public class Player : MonoBehaviour {
             return;
         }
         
-        playerHealth.SetLives(playerHealth.numLives - 1);
+        playerHealth.RemoveLives(1);
         hurtRoutine = StartCoroutine(Hurt());
     }
     
@@ -271,15 +264,10 @@ public class Player : MonoBehaviour {
             if (inputMove < 0) {
                 stepTime = -1f;
             }
-            if (inputMove >= 0) {
-                if (stepTime < 0f) {
-                    stepTime = Time.time;
-                    onFootstep.Raise();
-                }
-                if (Time.time - stepTime >= footstepInterval) {
-                    stepTime = Time.time;
-                    onFootstep.Raise();
-                }
+            else if (stepTime < 0f ||
+                     Time.time - stepTime >= footstepInterval) {
+                stepTime = Time.time;
+                onFootstep.Invoke();
             }
             yield return null;
         }

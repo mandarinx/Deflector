@@ -104,10 +104,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4928502872058554}
   - component: {fileID: 114108300275756790}
+  - component: {fileID: 114593070675170002}
   - component: {fileID: 114004374530399364}
   - component: {fileID: 114943011308257730}
-  - component: {fileID: 114185707209500572}
-  - component: {fileID: 114973710969268592}
   - component: {fileID: 212161194741644122}
   - component: {fileID: 50007249700960364}
   - component: {fileID: 58749400449453462}
@@ -421,37 +420,7 @@ MonoBehaviour:
   playerHealth: {fileID: 11400000, guid: af7b056e5a04248d8bd7d11442f91193, type: 2}
   blood: {fileID: 212117894192380854}
   shadow: {fileID: 212835153610289030}
-  onFootstep: {fileID: 11400000, guid: 46d0145b9a7fe482d9220a17b0d4de68, type: 2}
-  onPlayerHit: {fileID: 11400000, guid: 2b7de0a2ce8a6444c93c674858504356, type: 2}
-  onPlayerDied: {fileID: 11400000, guid: 638dd9f8605a941d38ccaf54f30c7c5b, type: 2}
---- !u!114 &114185707209500572
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1574596575962138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 45569a8abf4e341c79c325b3dc902a08, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114108300275756790}
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  onFootstep: {fileID: 11400000, guid: 819b49bb9700b49d082c6b6fcd351aa0, type: 2}
 --- !u!114 &114468777036925394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -523,7 +492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b52d35d891124e40a6fc0daa125387c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   numAudioSources: 4
   output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.344
@@ -534,6 +502,34 @@ MonoBehaviour:
     dopplerLevel: 0
     spread: 1
     rolloffMode: 0
+--- !u!114 &114593070675170002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1574596575962138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 5f91beb629d874778988875a2cfaccac, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114108300275756790}
+        m_MethodName: OnPlayerDied
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114694424836282652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -545,8 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 46d0145b9a7fe482d9220a17b0d4de68, type: 2}
-  Response:
+  gameEvent: {fileID: 11400000, guid: 819b49bb9700b49d082c6b6fcd351aa0, type: 2}
+  response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114498359914231474}
@@ -575,34 +571,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 834317c78794d4090a3ca0d770e7f6d2, type: 2}
   m_playOnAwake: 0
---- !u!114 &114973710969268592
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1574596575962138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 468c8d96938a94a3f9cf1c066eff89cc, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114108300275756790}
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212117894192380854
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -636,7 +604,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300182, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

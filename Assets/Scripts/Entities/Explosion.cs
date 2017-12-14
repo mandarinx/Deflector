@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using PowerTools;
-using RoboRyanTron.Unite2017.Events;
+using GameEvents;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour {
@@ -22,12 +22,14 @@ public class Explosion : MonoBehaviour {
             anims[i].Play(anims[i].Clip);
         }
 
-        onExplode.Raise();
+        onExplode.Invoke();
 
-        int layer = 1 << LayerMask.NameToLayer("Projectiles") | 1 << LayerMask.NameToLayer("Player");
+        int layer = 1 << LayerMask.NameToLayer("Projectiles") | 
+                    1 << LayerMask.NameToLayer("Player");
         Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position, 1.4f, layer);
+        
         for (int i = 0; i < overlapped.Length; ++i) {
-            overlapped[i].GetComponent<Killable>().Kill(transform.position);
+            overlapped[i].GetComponent<Killable>()?.Kill(transform.position);
         }
         
         yield return new WaitForSeconds(duration);

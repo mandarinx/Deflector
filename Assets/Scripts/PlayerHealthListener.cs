@@ -1,42 +1,62 @@
 ﻿using System.Collections;
-using RoboRyanTron.Unite2017.Events;
+using System.Collections.Generic;
+using GameEvents;
 using UnityEngine;
 
 public class PlayerHealthListener : MonoBehaviour {
 
     public PlayerHealth health;
     public GameObject   heartPrefab;
-    public GameEvent    onHeartAdded;
+    public GameEvent    onHeartFilled;
+
+    private List<UIHeart> hearts;
     
     private void Awake() {
-        health.onLivesChanged = OnLivesChanged;
+        health.onLivesChanged += OnLivesChanged;
+        hearts = new List<UIHeart>(health.maxLives);
+        
+        for (int i = 0; i < health.maxLives; ++i) {
+            AddHeart(false);
+        }
     }
 
-    public IEnumerator LoadHearts() {
+    public IEnumerator RenderHearts() {
         int heart = 0;
-        while (heart < health.maxLives) {
-            GameObject uiHeart = Instantiate(heartPrefab);
-            uiHeart.transform.SetParent(transform, false);
-            onHeartAdded.Raise();
-            uiHeart.GetComponent<UIHeart>().isAlive = false;
+        while (heart < hearts.Count) {
+            onHeartFilled?.Invoke();
             yield return new WaitForSeconds(0.2f);
-            uiHeart.GetComponent<UIHeart>().isAlive = true;
-            yield return new WaitForSeconds(0.2f);
+            hearts[heart].isAlive = true;
             ++heart;
         }
     }
-
-    public void ResetHearts() {
-        for (int i = transform.childCount - 1; i >= 0; --i) {
-            Destroy(transform.GetChild(i).gameObject);
-        }
-        health.SetLives(health.maxLives);
-        StartCoroutine(LoadHearts());
-    }
+    
+//    public void ResetHearts() {
+//        for (int i = 0; i < hearts.Count; ++i) {
+//            hearts[i].isAlive = false;
+//        }
+//    }
 
     private void OnLivesChanged(int lives, int max) {
-        for (int i = 0; i < max; ++i) {
-            transform.GetChild(i).GetComponent<UIHeart>().isAlive = i < lives;
+        if (max > hearts.Count) {
+            AddHeart(true);
         }
+        if (max < hearts.Count) {
+            int remove = hearts.Count - max;
+            hearts.RemoveRange(max, remove);
+            for (int i = 0; i < remove; ++i) {
+                Destroy(transform.GetChild(max));
+            }
+        }
+        for (int i = 0; i < max; ++i) {
+            hearts[i].isAlive = i < lives;
+        }
+    }
+
+    private void AddHeart(bool alive) {
+        GameObject instance = Instantiate(heartPrefab);
+        instance.transform.SetParent(transform, false);
+        UIHeart heart = instance.GetComponent<UIHeart>();
+        hearts.Add(heart);
+        heart.isAlive = alive;
     }
 }
