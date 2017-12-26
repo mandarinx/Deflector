@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Canvas))]
-public class UIPanel : MonoBehaviour {
+public class UIPanel : MonoBehaviour, IOnUpdate {
 
     public UIPanelLink     panelLink;
     
@@ -11,6 +11,7 @@ public class UIPanel : MonoBehaviour {
     public GameEvent       onClosePanel;
     
     protected UIController ui;
+    protected UHooks       hooks;
     private Canvas         canvas;
 
     private void Awake() {
@@ -18,8 +19,9 @@ public class UIPanel : MonoBehaviour {
         panelLink.SetPanel(this);
     }
 
-    public void Init(UIController uiController) {
+    public void Init(UIController uiController, UHooks uhooks) {
         ui = uiController;
+        hooks = uhooks;
     }
 
     protected void Hide() {
@@ -32,11 +34,15 @@ public class UIPanel : MonoBehaviour {
     
     public virtual void Open() {
         Show();
+        hooks.AddOnUpdate(this);
         onEnterPanel?.Invoke();
     }
 
     public virtual void Close() {
         Hide();
+        hooks.RemoveOnUpdate(this);
         onClosePanel?.Invoke();
     }
+
+    public virtual void UOnUpdate() {}
 }

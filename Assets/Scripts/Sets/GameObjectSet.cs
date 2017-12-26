@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
+using GameEvents;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Sets/Game Object", fileName = "GameObjectSet.asset")]
 public class GameObjectSet : ScriptableObject {
 
     public GameObject        prefab;
+    public GameObjectEvent   onGameObjectAdded;
+    public GameObjectEvent   onGameObjectRemoved;
     
     private List<GameObject> instances;
 
@@ -18,12 +21,14 @@ public class GameObjectSet : ScriptableObject {
         GameObject p = Instantiate(prefab);
         p.transform.position = pos;
         instances.Add(p);
+        onGameObjectAdded?.Invoke(p);
     }
 
     public void Despawn(GameObject go) {
         if (!instances.Contains(go)) {
             return;
         }
+        onGameObjectRemoved?.Invoke(go);
         Destroy(go);
         instances.Remove(go);
     }

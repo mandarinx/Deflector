@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\Behaviours\Hitable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hurt.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Killable.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\LevelExit.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Moveable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\ShieldHitEffect.cs" />
     <Compile Include="Assets\Scripts\Brushes\SpawnPointBrush.cs" />
@@ -69,8 +70,8 @@
     <Compile Include="Assets\Scripts\Controllers\ShieldHitEffects.cs" />
     <Compile Include="Assets\Scripts\Controllers\Turrets.cs" />
     <Compile Include="Assets\Scripts\Data\GameMode.cs" />
-    <Compile Include="Assets\Scripts\Data\GameModeEndure.cs" />
     <Compile Include="Assets\Scripts\Data\IntAsset.cs" />
+    <Compile Include="Assets\Scripts\Data\Modes\Survival.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Data\UIPanelLink.cs" />
     <Compile Include="Assets\Scripts\Delay.cs" />

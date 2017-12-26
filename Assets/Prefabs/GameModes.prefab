@@ -21,10 +21,12 @@ GameObject:
   - component: {fileID: 4019561392157822}
   - component: {fileID: 114592360248198622}
   - component: {fileID: 114827201888303064}
+  - component: {fileID: 114095964704645242}
+  - component: {fileID: 114963722858219378}
   m_Layer: 0
   m_Name: GameModes
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34,13 +36,41 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1650974407729566}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114095964704645242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1650974407729566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 3eb5ba2bacc8549838a7e7074543fdc4, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114592360248198622}
+        m_MethodName: StartGameMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114592360248198622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,8 +82,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3f15e10744348bf82ffea3e0551c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMode: {fileID: 0}
-  onWin: {fileID: 11400000, guid: 07a699f04cc2140ae95c5918b64d09a8, type: 2}
+  gameMode: {fileID: 11400000, guid: 83a0e069106874f48965a9750388efc9, type: 2}
+  onGameWon: {fileID: 11400000, guid: 07a699f04cc2140ae95c5918b64d09a8, type: 2}
+  uiDescription: {fileID: 0}
 --- !u!114 &114827201888303064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,3 +96,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da201e8ad117a4cb3a99caf103d9cfc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114963722858219378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1650974407729566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 8f87351ad33704ce7bf44c2ca27c5e12, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114592360248198622}
+        m_MethodName: ShowGameModeDescription
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
