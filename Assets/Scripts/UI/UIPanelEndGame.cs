@@ -11,7 +11,7 @@ public class UIPanelEndGame : UIPanel, IOnUpdate {
     public ImageColorLerp colorLerp;
     public GameObject     contents;
 
-    public override void OnEnter() {
+    public override void Open() {
         contents.SetActive(false);
         Show();
         StartCoroutine(FadeIn());

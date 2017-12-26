@@ -37,7 +37,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1478633134919604}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -59,7 +59,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: f2ebe9782043142c59545e3714926981, type: 2}
+      - m_Target: {fileID: 114160119302493348}
         m_MethodName: Despawn
         m_Mode: 0
         m_Arguments:
@@ -112,6 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSet: {fileID: 11400000, guid: f2ebe9782043142c59545e3714926981, type: 2}
+  onProjectileExplodedAt: {fileID: 11400000, guid: 8ab260df2f5464c5f85e442c273ea67b,
+    type: 2}
 --- !u!114 &114363799489479660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +169,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114160119302493348}
-        m_MethodName: SpawnProjectile
+        m_MethodName: Spawn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

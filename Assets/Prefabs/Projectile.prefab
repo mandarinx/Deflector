@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4266768752712806}
   - component: {fileID: 114994274980875066}
   - component: {fileID: 114653854013446386}
+  - component: {fileID: 114114067233532854}
   - component: {fileID: 212637977036971934}
   - component: {fileID: 58870541000983498}
   - component: {fileID: 50929540953826510}
@@ -79,6 +80,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &114114067233532854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1400654147882312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809f4925081f4dfa93fe9878f9641c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114994274980875066}
+        m_MethodName: Hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114653854013446386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,9 +164,7 @@ MonoBehaviour:
   - {fileID: 21300236, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
   - {fileID: 21300234, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
   - {fileID: 21300234, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
-  explosionPrefab: {fileID: 1173977352691514, guid: 5ecaee20e84b240bfa32dd05759870f7,
-    type: 2}
-  onDespawn: {fileID: 11400000, guid: 70696427c874a4c1d999238aa20709a5, type: 2}
+  onExplode: {fileID: 11400000, guid: 70696427c874a4c1d999238aa20709a5, type: 2}
   onHit: {fileID: 11400000, guid: 2eb32a8f4e3ba4ad695ef193d49b4f91, type: 2}
   activated: 0
 --- !u!212 &212637977036971934

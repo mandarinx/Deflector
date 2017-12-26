@@ -9,8 +9,8 @@ public class UIPanelInGame : UIPanel {
     [Header("Misc")]
     public PlayerHealthListener healthListener;
     
-    public override void OnEnter() {
-        base.OnEnter();
+    public override void Open() {
+        base.Open();
         StartCoroutine(TransitionEnter());
     }
 

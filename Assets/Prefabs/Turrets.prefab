@@ -23,8 +23,12 @@ GameObject:
   - component: {fileID: 114858875753414546}
   - component: {fileID: 114089900280452844}
   - component: {fileID: 114514584718883692}
-  - component: {fileID: 114639929884005888}
   - component: {fileID: 114234367252312990}
+  - component: {fileID: 114639929884005888}
+  - component: {fileID: 114144655829928076}
+  - component: {fileID: 114208467973118094}
+  - component: {fileID: 114442033249963298}
+  - component: {fileID: 114201644461765636}
   m_Layer: 0
   m_Name: Turrets
   m_TagString: Untagged
@@ -39,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1198398547953282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,7 +91,92 @@ MonoBehaviour:
   spawnInterval: 4
   maxTurrets: -1
   spawnPoints: {fileID: 11400000, guid: 6c9b0cbc0beb94df0b8ec7518169c942, type: 2}
-  spawnedTurrets: {fileID: 11400000, guid: 70e1521d47c4a45078ee3f0bf1785ac7, type: 2}
+  turrets: {fileID: 11400000, guid: 70e1521d47c4a45078ee3f0bf1785ac7, type: 2}
+  grid: {fileID: 0}
+--- !u!114 &114144655829928076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198398547953282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3a768e0f2084225ae430ddd592b38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evt: {fileID: 11400000, guid: 38f06d492258a4464aff0f3811e28393, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114106497533702508}
+        m_MethodName: OnCoordFreed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: GameEvents.UnityVector3IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114201644461765636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198398547953282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be14fcf31d08d4ccf97a182475c47f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evt: {fileID: 11400000, guid: 753f4dcdd804943c182d461bad8655a2, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114106497533702508}
+        m_MethodName: OnSpawnPointAdded
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: GameEvents.UnityIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &114208467973118094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198398547953282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3a768e0f2084225ae430ddd592b38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evt: {fileID: 11400000, guid: edd807336a55f4426862e58278862e15, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114106497533702508}
+        m_MethodName: OnCoordOccupied
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: GameEvents.UnityVector3IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114234367252312990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +205,34 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114442033249963298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198398547953282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be14fcf31d08d4ccf97a182475c47f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evt: {fileID: 11400000, guid: 454d22be997c24403a6ee9c8b72b1e82, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114106497533702508}
+        m_MethodName: OnSpawnPointRemoved
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: GameEvents.UnityIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114514584718883692
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -48,6 +48,11 @@ public class PlayerHealth : ScriptableObject {
         onLivesChanged?.Invoke(lives, livesMax);
     }
 
+    public void RefillLives() {
+        lives = livesMax;
+        onLivesChanged?.Invoke(lives, livesMax);
+    }
+
     public int maxLives => livesMax;
     public int numLives => lives;
 }

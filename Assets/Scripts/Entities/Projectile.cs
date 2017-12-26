@@ -14,9 +14,7 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private Sprite[]                  sprites;
     [SerializeField]
-    private GameObject                explosionPrefab;
-    [SerializeField]
-    private GameObjectEvent           onDespawn;
+    private GameObjectEvent           onExplode;
     [SerializeField]
     private GameEvent                 onHit;
 
@@ -30,28 +28,6 @@ public class Projectile : MonoBehaviour {
     private SpriteRenderer            sr;
     private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[2];
 
-    private readonly Dictionary<int, float> radianMap = new Dictionary<int, float> {
-        { 0, 0f },
-        { 1, Mathf.PI * 0.25f },
-        { 2, Mathf.PI * 0.5f },
-        { 3, Mathf.PI * 0.75f },
-        { 4, Mathf.PI },
-        { 5, Mathf.PI * 1.25f },
-        { 6, Mathf.PI * 1.5f },
-        { 7, Mathf.PI * 1.75f },
-    };
-
-    private static readonly Dictionary<int, int> angleMap = new Dictionary<int, int> {
-        { Mathf.FloorToInt(0f * 1000f),               0  },
-        { Mathf.FloorToInt(Mathf.PI * 0.25f * 1000f), 1 },
-        { Mathf.FloorToInt(Mathf.PI * 0.5f * 1000f),  2 },
-        { Mathf.FloorToInt(Mathf.PI * 0.75f * 1000f), 3 },
-        { Mathf.FloorToInt(Mathf.PI * 1000f),         4 },
-        { Mathf.FloorToInt(Mathf.PI * 1.25f * 1000f), 5 },
-        { Mathf.FloorToInt(Mathf.PI * 1.5f * 1000f),  6 },
-        { Mathf.FloorToInt(Mathf.PI * 1.75f * 1000f), 7 },
-    };
-
     public bool isActivated => activated > 0;
 
     private void Awake() {
@@ -60,7 +36,7 @@ public class Projectile : MonoBehaviour {
         exploding = false;
         activated = 0;
         angleIndex = Random.Range(0, 4) * 2 + 1;
-        angle = radianMap[angleIndex];
+        angle = Angles.GetAngle(angleIndex);
         sr.sprite = sprites[angleIndex + activated];
     }
 
@@ -101,7 +77,7 @@ public class Projectile : MonoBehaviour {
         if (angleIndex < 0) {
             angleIndex = 8 + angleIndex;
         }
-        angle = radianMap[angleIndex];
+        angle = Angles.GetAngle(angleIndex);
         sr.sprite = sprites[angleIndex + activated];
     }
 
@@ -123,12 +99,8 @@ public class Projectile : MonoBehaviour {
             yield return new WaitForSeconds(0.2f);
             ++blink;
         }
-
-        GameObject explosion = Instantiate(explosionPrefab);
-        explosion.transform.position = transform.position;
-        explosion.GetComponent<Explosion>().Explode();
         
-        onDespawn.Invoke(gameObject);
+        onExplode.Invoke(gameObject);
     }
 
     private void FixedUpdate() {
@@ -140,7 +112,7 @@ public class Projectile : MonoBehaviour {
             return;
         }
         angleIndex = GetAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
-        angle = radianMap[angleIndex];
+        angle = Angles.GetAngle(angleIndex);
         sr.sprite = sprites[angleIndex + activated];
     }
     
@@ -158,7 +130,7 @@ public class Projectile : MonoBehaviour {
             return;
         }
         angleIndex = index;
-        angle = radianMap[angleIndex];
+        angle = Angles.GetAngle(angleIndex);
         sr.sprite = sprites[angleIndex + activated];
     }
 
@@ -175,7 +147,8 @@ public class Projectile : MonoBehaviour {
         }
         return true;
     }
-
+    
+    // TODO: Should be called something like DeflectAngleIndex
     private static int GetAngleIndex(int angleIndex, Vector2 hitNormal, Vector2 velocity) {
         float dot = Vector2.Dot(hitNormal, velocity);
         //  1 = same direction
@@ -204,10 +177,8 @@ public class Projectile : MonoBehaviour {
         // Follow the normal
         if (dot >= -float.Epsilon && 
             dot <= +float.Epsilon) {
-            // convert normal to angle indx
-            float normalRad = Mathf.Atan2(hitNormal.y, hitNormal.x);
-            int radIndex = Mathf.FloorToInt(normalRad * 1000f);
-            angleIndex = angleMap[radIndex];
+            // convert normal to angle index
+            angleIndex = Angles.GetAngleIndex(Angles.GetRadian(hitNormal));
         }
         
         // Follow the velocity
@@ -224,10 +195,7 @@ public class Projectile : MonoBehaviour {
     }
 
     private Vector2 GetVelocity() {
-        return new Vector2(
-            Mathf.Cos(angle) * speed,
-            Mathf.Sin(angle) * speed
-        );
+        return Angles.GetDirection(angle) * speed;
     }
 
     private void OnDrawGizmosSelected() {

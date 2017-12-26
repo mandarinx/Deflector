@@ -5,7 +5,6 @@ using GameEvents;
 public class Turret : MonoBehaviour {
 
     public SpriteRenderer  spawnHole;
-    public GameObjectSet   projectileSet;
     public GameObjectEvent onDespawn;
     public Vector3Event    onFire;
 

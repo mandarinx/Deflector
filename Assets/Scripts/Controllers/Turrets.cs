@@ -2,11 +2,11 @@
 using UnityEngine;
 
 public class Turrets : MonoBehaviour {
-
+    
     public float          spawnInterval = 4;
     public int            maxTurrets = -1;
     public SpawnPointSet  spawnPoints;
-    public GameObjectSet  spawnedTurrets;
+    public GameObjectSet  turrets;
 
     public void Activate() {
         StartCoroutine(Spawn());
@@ -17,9 +17,11 @@ public class Turrets : MonoBehaviour {
     }
 
     private IEnumerator Spawn() {
-        while (maxTurrets < 0 || spawnedTurrets.Count < maxTurrets) {
+        while (maxTurrets < 0 || turrets.Count < maxTurrets) {
             yield return new WaitForSeconds(spawnInterval);
-            spawnedTurrets.Spawn(spawnPoints.Get(Random.Range(0, spawnPoints.Count)).transform.position);
+            if (spawnPoints.Count > 0) {
+                turrets.Spawn(spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position);
+            }
         }
     }
 }

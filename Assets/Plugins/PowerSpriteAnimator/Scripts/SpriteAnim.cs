@@ -4,20 +4,22 @@
 //			  powerhoof.com
 //----------------------------------------
 
+using System;
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 
 namespace PowerTools
 {
-
-/// Component allowing animations to be played without adding them to a unity animation controller first. 
+	
+	/// Component allowing animations to be played without adding them to a unity animation controller first. 
 // A shared animation controller is used, it has a single state which is overridden whenever an animation is played.
 [RequireComponent(typeof(Animator))]
 [DisallowMultipleComponent]
 public class SpriteAnim : SpriteAnimEventHandler 
 {	
+	
 	#region Definitions
 
 	static readonly string STATE_NAME = "a";
@@ -28,10 +30,12 @@ public class SpriteAnim : SpriteAnimEventHandler
 
 	[SerializeField] AnimationClip m_defaultAnim = null;
 	[SerializeField] bool m_playOnAwake = true;
+	[SerializeField] private UnityEvent onAnimDone;
 
 	#endregion
 	#region Vars: Private
 
+	private bool isDone = false;
 	static RuntimeAnimatorController m_sharedAnimatorController = null;
 
 	Animator m_animator = null;
@@ -89,6 +93,8 @@ public class SpriteAnim : SpriteAnimEventHandler
 		if ( anim == null )
 			return;
 
+		isDone = false;
+		
 		if ( m_animator.enabled == false )
 			m_animator.enabled = true;
 
@@ -255,8 +261,21 @@ public class SpriteAnim : SpriteAnimEventHandler
 
 	}
 
+	private void Update() {
+		if (m_currAnim == null) {
+			return;
+		}
+		if (IsPlaying(m_currAnim)) {
+			return;
+		}
+		if (isDone) {
+			return;
+		}
+		isDone = true;
+		onAnimDone.Invoke();
+	}
+
 	#endregion
 
 }
-
 }

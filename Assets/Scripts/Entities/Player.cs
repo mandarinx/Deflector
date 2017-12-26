@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using PowerTools;
 using GameEvents;
 using UnityEngine;
@@ -16,7 +15,6 @@ public class Player : MonoBehaviour {
     public AnimationCurve             forceFalloff;
     public Transform                  shieldAnchor;
     public Shield                     shield;
-    public SpriteAnim                 hitEffect;
     public SpriteAnim                 playerAnim;
     public PlayerHealth               playerHealth;
     public SpriteRenderer             blood;
@@ -35,17 +33,6 @@ public class Player : MonoBehaviour {
     private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[8];
     private Coroutine                 hurtRoutine;
     private Collider2D                trigger;
-    
-    private readonly Dictionary<int, float> radianMap = new Dictionary<int, float> {
-        { 0, 0f },
-        { 1, Mathf.PI * 0.25f },
-        { 2, Mathf.PI * 0.5f },
-        { 3, Mathf.PI * 0.75f },
-        { 4, Mathf.PI },
-        { 5, Mathf.PI * 1.25f },
-        { 6, Mathf.PI * 1.5f },
-        { 7, Mathf.PI * 1.75f },
-    };
 
     private void Awake() {
         activated = false;
@@ -54,7 +41,6 @@ public class Player : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         walkAngle = Mathf.PI;
-        hitEffect.gameObject.SetActive(false);
     }
 
     public void Activate() {
@@ -75,7 +61,6 @@ public class Player : MonoBehaviour {
         activated = false;
         playerAnim.Stop();
         StopAllCoroutines();
-        hitEffect.gameObject.SetActive(false);
     }
 
     public void OnPlayerDied() {
@@ -146,13 +131,7 @@ public class Player : MonoBehaviour {
 
         if (inputHit) {
             inputHit = false;
-            Projectile projectile = shield.GetOverlapped();
-            if (projectile != null) {
-                projectile.Hit(walkDir);
-                hitEffect.gameObject.SetActive(true);
-                hitEffect.Play(hitEffect.Clip);
-                StartCoroutine(DisableHitEffect());
-            }
+            shield.Hit(walkDir);
         }
         
         // Movement
@@ -161,12 +140,9 @@ public class Player : MonoBehaviour {
         
         if (inputMove >= 0) {
             walkDir = inputMove;
-            walkAngle = radianMap[inputMove];
+            walkAngle = Angles.GetAngle(inputMove);
             inputMove = -1;
-            velocity = new Vector2 {
-                x = Mathf.Cos(walkAngle) * moveSpeed,
-                y = Mathf.Sin(walkAngle) * moveSpeed
-            };
+            velocity = Angles.GetDirection(walkAngle) * moveSpeed;
             shieldAnchor.rotation = Quaternion.Euler(0f, 0f, Mathf.Rad2Deg * walkAngle);
         }
         
@@ -251,11 +227,6 @@ public class Player : MonoBehaviour {
         }
         
         gameObject.layer = LayerMask.NameToLayer("Player");
-    }
-
-    private IEnumerator DisableHitEffect() {
-        yield return new WaitForSeconds(0.33f);
-        hitEffect.gameObject.SetActive(false);
     }
 
     private IEnumerator Footsteps() {

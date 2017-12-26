@@ -244,11 +244,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224056464227970776}
+  - component: {fileID: 114949923053882104}
+  - component: {fileID: 114844637639862474}
   - component: {fileID: 223381477070392832}
   - component: {fileID: 114023160960153190}
   - component: {fileID: 114860789944664916}
-  - component: {fileID: 114949923053882104}
-  - component: {fileID: 114844637639862474}
   - component: {fileID: 95526986117104488}
   m_Layer: 5
   m_Name: UI
@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be151d624e30e4eaaa505636b4be6655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelLink: {fileID: 11400000, guid: 94a972c7234b54755a11722458b964ed, type: 2}
   onEnterPanel: {fileID: 0}
   onClosePanel: {fileID: 0}
   onGameReset: {fileID: 11400000, guid: 746a03cc87bab413dbb5c76990f2a9bd, type: 2}
@@ -604,6 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1320370649eed4c0a941e9fbc1b0d804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelLink: {fileID: 11400000, guid: 3c5c05f2a2fd1488f9521a0835fbc023, type: 2}
   onEnterPanel: {fileID: 0}
   onClosePanel: {fileID: 0}
   onEnterGame: {fileID: 0}
@@ -769,8 +771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eebbfc3f0e78476ebf0d816833d604a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTogglePanelOn: {fileID: 11400000, guid: fe5adf3ae348c4866ba7b0db6ece9cc6, type: 2}
-  onTogglePanelOff: {fileID: 11400000, guid: a7c6a3c4518ca43bfbcffab1381a6f05, type: 2}
 --- !u!114 &114992187782027174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,6 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27b9402ed0e240afa0b893aecd5318a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelLink: {fileID: 11400000, guid: 890a66e8ef89d4ab7936d44253de05bf, type: 2}
   onEnterPanel: {fileID: 0}
   onClosePanel: {fileID: 0}
   onGameReady: {fileID: 11400000, guid: 3eb5ba2bacc8549838a7e7074543fdc4, type: 2}

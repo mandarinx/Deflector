@@ -16,7 +16,7 @@ public class Players : MonoBehaviour {
             if (players[i] == null) {
                 players[i] = Instantiate(prefab).GetComponent<Player>();
             }
-            players[i].transform.position = spawnPoints.Get(Random.Range(0, spawnPoints.Count)).transform.position;
+            players[i].transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position;
             players[i].Activate();
         }
     }

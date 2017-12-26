@@ -22,7 +22,7 @@ public class Explosion : MonoBehaviour {
             anims[i].Play(anims[i].Clip);
         }
 
-        onExplode.Invoke();
+        onExplode?.Invoke();
 
         int layer = 1 << LayerMask.NameToLayer("Projectiles") | 
                     1 << LayerMask.NameToLayer("Player");

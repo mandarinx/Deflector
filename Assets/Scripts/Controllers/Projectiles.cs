@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using GameEvents;
+using UnityEngine;
 
 public class Projectiles : MonoBehaviour {
 
     public GameObjectSet projectileSet;
+    public Vector3Event onProjectileExplodedAt;
 
     private bool active;
 
@@ -18,10 +20,15 @@ public class Projectiles : MonoBehaviour {
         active = false;
     }
 
-    public void SpawnProjectile(Vector3 pos) {
+    public void Spawn(Vector3 pos) {
         if (!active) {
             return;
         }
         projectileSet.Spawn(pos);
+    }
+
+    public void Despawn(GameObject projectile) {
+        projectileSet.Despawn(projectile);
+        onProjectileExplodedAt.Invoke(projectile.transform.position);
     }
 }

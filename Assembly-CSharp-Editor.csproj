@@ -53,13 +53,19 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Brushes\Editor\SpawnPointBrushInspector.cs" />
     <Compile Include="Assets\Scripts\Data\Editor\PlayerHealthInspector.cs" />
+    <Compile Include="Assets\Scripts\Editor\CreateGameEvent.cs" />
     <Compile Include="Assets\Scripts\Editor\CreateInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\GridZonesInspector.cs" />
+    <Compile Include="Assets\Scripts\Editor\SaveProject.cs" />
     <Compile Include="Assets\Scripts\Editor\TransformInspector.cs" />
-    <Compile Include="Assets\Scripts\GameEvents\Editor\EventEditor.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Editor\GameEventInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Editor\GameObjectEventInspector.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Editor\IntEventInspector.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Editor\SpriteAnimEventInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Editor\StringEventInspector.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Editor\Vector2IntEventInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Editor\Vector3EventInspector.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Editor\Vector3IntEventInspector.cs" />
     <None Include="Assets\Plugins\Robodash\Brushes\Editor\GizmoShader.shader" />
     <None Include="Assets\Plugins\PixelArtCamera\PixelArtDiffuse.shader" />
     <None Include="Assets\Plugins\PixelArtCamera\PixelArtParticle.shader" />

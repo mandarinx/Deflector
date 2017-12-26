@@ -14,7 +14,7 @@ public class GameModeEndure : GameMode {
 
     private void OnEnable() {
         Debug.Log("endure enable");
-        onProjectileDespawned?.RegisterCallback(() => {
+        onProjectileDespawned?.RegisterCallback(go => {
             ++despawnedProjectiles;
         });
     }
