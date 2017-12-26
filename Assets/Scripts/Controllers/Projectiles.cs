@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Projectiles : MonoBehaviour {
 
-    public GameObjectSet projectileSet;
-    public Vector3Event onProjectileExplodedAt;
+    public GameObjectPool projectilePool;
+    public Vector3Event   onProjectileExplodedAt;
 
     private bool active;
 
@@ -24,11 +24,11 @@ public class Projectiles : MonoBehaviour {
         if (!active) {
             return;
         }
-        projectileSet.Spawn(pos);
+        projectilePool.Spawn(pos);
     }
 
     public void Despawn(GameObject projectile) {
-        projectileSet.Despawn(projectile);
+        projectilePool.Despawn(projectile);
         onProjectileExplodedAt.Invoke(projectile.transform.position);
     }
 }

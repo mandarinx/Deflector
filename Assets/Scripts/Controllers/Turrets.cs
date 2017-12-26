@@ -6,7 +6,7 @@ public class Turrets : MonoBehaviour {
     public float          spawnInterval = 4;
     public int            maxTurrets = -1;
     public SpawnPointSet  spawnPoints;
-    public GameObjectSet  turrets;
+    public GameObjectPool turrets;
 
     public void Activate() {
         StartCoroutine(Spawn());

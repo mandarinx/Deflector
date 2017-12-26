@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ComponentSet<T> : ScriptableObject where T : Component {
+public abstract class ComponentPool<T> : ScriptableObject where T : Component {
 
     public GameObject   prefab;
     private List<T>     instances;

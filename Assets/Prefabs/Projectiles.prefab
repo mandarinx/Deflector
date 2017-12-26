@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d1783eefc9348f8aaeaeda3dfd4788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSet: {fileID: 11400000, guid: f2ebe9782043142c59545e3714926981, type: 2}
+  projectilePool: {fileID: 11400000, guid: 296920f05dc104317984f86a521da8f1, type: 2}
   onProjectileExplodedAt: {fileID: 11400000, guid: 8ab260df2f5464c5f85e442c273ea67b,
     type: 2}
 --- !u!114 &114363799489479660
@@ -140,7 +140,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: f2ebe9782043142c59545e3714926981, type: 2}
+      - m_Target: {fileID: 11400000, guid: 296920f05dc104317984f86a521da8f1, type: 2}
         m_MethodName: DespawnAll
         m_Mode: 1
         m_Arguments:

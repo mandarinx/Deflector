@@ -9,6 +9,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d062dcdefcf04005861fb39a2279814, type: 3}
-  m_Name: ShieldHitEffectsSet
+  m_Name: ShieldHitEffectsPool
   m_EditorClassIdentifier: 
   prefab: {fileID: 1681930951813180, guid: 77eb8a455f01b488dbabb123f61e399f, type: 2}

@@ -3,14 +3,24 @@ using GameEvents;
 using UnityEngine;
 
 public abstract class Set<T> : ScriptableObject {
+    
+    [SerializeField]
+    private List<T> list;
+    [SerializeField]
+    private bool    prefilled;
 
-    private readonly List<T> list = new List<T>();
-
-    public IntEvent          onItemAdded;
-    public IntEvent          onItemRemoved;
+    public IntEvent onItemAdded;
+    public IntEvent onItemRemoved;
     
     public int Count => list.Count;
     public T this[int i] => list[i];
+
+    private void OnEnable() {
+        if (prefilled) {
+            return;
+        }
+        list = new List<T>();
+    }
 
     public void Add(T item) {
         list.Add(item);

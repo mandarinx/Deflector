@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a18b4177c3b4f03a024a341af6387b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldHitEffectSet: {fileID: 11400000, guid: 433664d83b1fd4fb7a6ad0287089d915, type: 2}
+  shieldHitEffectSet: {fileID: 11400000, guid: 61d185dfb0def4b438a0a36ebef7b7eb, type: 2}
 --- !u!114 &114457083671826134
 MonoBehaviour:
   m_ObjectHideFlags: 1

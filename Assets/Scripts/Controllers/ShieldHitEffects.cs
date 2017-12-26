@@ -2,7 +2,7 @@
 
 public class ShieldHitEffects : MonoBehaviour {
 
-    public SpriteAnimSet shieldHitEffectSet;
+    public SpriteAnimPool shieldHitEffectSet;
     
     public void Spawn(Vector3 pos) {
         shieldHitEffectSet.Spawn(pos);

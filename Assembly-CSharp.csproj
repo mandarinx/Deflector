@@ -114,12 +114,14 @@
     <Compile Include="Assets\Scripts\ScoreCounter.cs" />
     <Compile Include="Assets\Scripts\ScoreListener.cs" />
     <Compile Include="Assets\Scripts\Sets\ComponentSet.cs" />
+    <Compile Include="Assets\Scripts\Sets\GameObjectPool.cs" />
     <Compile Include="Assets\Scripts\Sets\GameObjectSet.cs" />
     <Compile Include="Assets\Scripts\Sets\GridCoordsHashSet.cs" />
     <Compile Include="Assets\Scripts\Sets\HashSet.cs" />
+    <Compile Include="Assets\Scripts\Sets\Pool.cs" />
     <Compile Include="Assets\Scripts\Sets\Set.cs" />
     <Compile Include="Assets\Scripts\Sets\SpawnPointSet.cs" />
-    <Compile Include="Assets\Scripts\Sets\SpriteAnimSet.cs" />
+    <Compile Include="Assets\Scripts\Sets\SpriteAnimPool.cs" />
     <Compile Include="Assets\Scripts\Sets\Vector2IntSet.cs" />
     <Compile Include="Assets\Scripts\Tests\DotProd.cs" />
     <Compile Include="Assets\Scripts\Tests\TriggerStay.cs" />
