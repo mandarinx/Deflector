@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4545601154485656}
   - component: {fileID: 2569400268290815694}
   - component: {fileID: 114815128702206708}
+  - component: {fileID: 114045659323905648}
   m_Layer: 0
   m_Name: GridTemplate
   m_TagString: Untagged
@@ -243,6 +244,17 @@ CompositeCollider2D:
   m_CompositePaths:
     m_Paths: []
   m_VertexDistance: 0.0005
+--- !u!114 &114045659323905648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1712804272211200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e538d3d0170403bae4fc04d03b2c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114089779433601934
 MonoBehaviour:
   m_ObjectHideFlags: 1

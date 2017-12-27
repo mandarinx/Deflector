@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4311462497051138}
   - component: {fileID: 114316821713766676}
   - component: {fileID: 114756654428517226}
+  - component: {fileID: 114207046320030170}
   - component: {fileID: 61021323692907636}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LevelExit
   m_TagString: Untagged
   m_Icon: {fileID: 7707008975528953803, guid: 0000000000000000d000000000000000, type: 0}
@@ -67,6 +68,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.53, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114207046320030170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803831051768550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb233dff8926043b78b4c7a3dd30a135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evt: {fileID: 11400000, guid: 7cfd71bdfaee44325b11ddb2ef57f69c, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114316821713766676}
+        m_MethodName: OnLevelLoaded
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: GameEvents.UnityLevelEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114316821713766676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,7 +109,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coordinate: {x: 0, y: 4, z: 0}
   openDoor: {fileID: 11400000, guid: b552a774364ce4282952ce414c7a6225, type: 2}
-  tilemap: {fileID: 0}
   onLevelExit: {fileID: 11400000, guid: 61b882abcf7fb4e9eaf52d4cfaf8dbb7, type: 2}
 --- !u!114 &114756654428517226
 MonoBehaviour:

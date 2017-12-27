@@ -6,10 +6,16 @@ public class IntAsset : ScriptableObject {
     
     [SerializeField]
     private int curValue;
+    [SerializeField]
+    private int initValue;
 
     private Action<int> onValueChanged = i => { };
 
     public int value => curValue;
+
+    private void OnEnable() {
+        curValue = initValue;
+    }
 
     public void SetValue(int value) {
         bool changed = value != curValue;

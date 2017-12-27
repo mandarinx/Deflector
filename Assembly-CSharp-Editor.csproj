@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\GameEvents\Editor\GameEventInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Editor\GameObjectEventInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Editor\IntEventInspector.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Editor\LevelEventInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Editor\SpriteAnimEventInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Editor\StringEventInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Editor\Vector2IntEventInspector.cs" />

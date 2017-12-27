@@ -16,6 +16,6 @@ public class UIPanelInGame : UIPanel {
 
     private IEnumerator TransitionEnter() {
         yield return StartCoroutine(healthListener.RenderHearts());
-        onGameReady.Invoke();
+        onGameReady?.Invoke();
     }
 }

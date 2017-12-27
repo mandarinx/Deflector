@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\Behaviours\Hitable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hurt.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Killable.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\Level.cs" />
     <Compile Include="Assets\Scripts\Behaviours\LevelExit.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Moveable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\ShieldHitEffect.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Assets\Scripts\Controllers\Coords.cs" />
     <Compile Include="Assets\Scripts\Controllers\Explosions.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameModes.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Levels.cs" />
     <Compile Include="Assets\Scripts\Controllers\Players.cs" />
     <Compile Include="Assets\Scripts\Controllers\Projectiles.cs" />
     <Compile Include="Assets\Scripts\Controllers\ShieldHitEffects.cs" />
@@ -89,6 +91,8 @@
     <Compile Include="Assets\Scripts\GameEvents\GameObjectEventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\IntEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\IntEventListener.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\LevelEvent.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\LevelEventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\SpriteAnimEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\SpriteAnimEventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\StringEvent.cs" />
@@ -136,6 +140,7 @@
     <Compile Include="Assets\Scripts\UnityEvents.cs" />
     <Compile Include="Assets\Scripts\Utils\Angles.cs" />
     <Compile Include="Assets\Scripts\Utils\ArrayUtils.cs" />
+    <Compile Include="Assets\Scripts\Utils\DebugLog.cs" />
     <Compile Include="Assets\Scripts\Utils\IntUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
     <None Include="Assets\Plugins\Robodash\Brushes\Editor\GizmoShader.shader" />
