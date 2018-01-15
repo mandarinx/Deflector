@@ -19,10 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4311462497051138}
+  - component: {fileID: 61021323692907636}
   - component: {fileID: 114316821713766676}
   - component: {fileID: 114756654428517226}
-  - component: {fileID: 114207046320030170}
-  - component: {fileID: 61021323692907636}
+  - component: {fileID: 114288307527871854}
   m_Layer: 14
   m_Name: LevelExit
   m_TagString: Untagged
@@ -68,7 +68,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.53, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114207046320030170
+--- !u!114 &114288307527871854
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,10 +76,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1803831051768550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb233dff8926043b78b4c7a3dd30a135, type: 3}
+  m_Script: {fileID: 11500000, guid: 13dff3ca4e0954b6eb9ae8cebf5f2709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evt: {fileID: 11400000, guid: 7cfd71bdfaee44325b11ddb2ef57f69c, type: 2}
+  evt: {fileID: 11400000, guid: f9ffa4afdb1f242578881a6c88b88e26, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:

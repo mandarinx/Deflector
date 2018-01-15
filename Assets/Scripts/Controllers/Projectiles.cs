@@ -24,7 +24,7 @@ public class Projectiles : MonoBehaviour {
         if (!active) {
             return;
         }
-        projectilePool.Spawn(pos);
+        projectilePool.Spawn(transform, pos);
     }
 
     public void Despawn(GameObject projectile) {

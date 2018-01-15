@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameEvents {
 
-    [CreateAssetMenu(menuName = "Game Events/Vector3Event")]
+    [CreateAssetMenu(menuName = "Game Events/Vector3")]
     public class Vector3Event : ScriptableObject {
         
         private readonly List<Vector3EventListener> eventListeners = new List<Vector3EventListener>();

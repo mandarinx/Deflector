@@ -2,23 +2,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(UHooks))]
 public class GameModes : MonoBehaviour, IOnUpdate {
     
-    [SerializeField]
-    private GameMode  gameMode;
     [SerializeField]
     private GameEvent onGameWon;
     [SerializeField]
     private Text      uiDescription;
+    [SerializeField]
     private UHooks    hooks;
+    private GameMode  gameMode;
 
-    private void Awake() {
-        hooks = GetComponent<UHooks>();
-    }
-    
-    // handler for entering intro panel
-    public void ShowGameModeDescription() {
+    public void OnLevelLoaded(Level level) {
+        gameMode = level.mode;
         uiDescription.text = gameMode.title;
     }
 

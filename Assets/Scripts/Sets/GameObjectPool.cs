@@ -6,8 +6,8 @@ using UnityEngine;
 public class GameObjectPool : ScriptableObject {
 
     public GameObject        prefab;
-    public GameObjectEvent   onGameObjectAdded;
-    public GameObjectEvent   onGameObjectRemoved;
+    public GameObjectEvent   onSpawned;
+    public GameObjectEvent   onDespawned;
     
     private List<GameObject> instances;
 
@@ -17,18 +17,19 @@ public class GameObjectPool : ScriptableObject {
         instances = new List<GameObject>();
     }
 
-    public void Spawn(Vector3 pos) {
+    public void Spawn(Transform parent, Vector3 pos) {
         GameObject p = Instantiate(prefab);
+        p.transform.SetParent(parent, false);
         p.transform.position = pos;
         instances.Add(p);
-        onGameObjectAdded?.Invoke(p);
+        onSpawned?.Invoke(p);
     }
 
     public void Despawn(GameObject go) {
         if (!instances.Contains(go)) {
             return;
         }
-        onGameObjectRemoved?.Invoke(go);
+        onDespawned?.Invoke(go);
         Destroy(go);
         instances.Remove(go);
     }

@@ -13,9 +13,6 @@ public class PixelArtCameraEditor : Editor {
 	SerializedProperty upscaledResolution;
 	SerializedProperty internalResolution;
 	SerializedProperty finalBlitStretch;
-
-	SerializedProperty mainCamera;
-	SerializedProperty mainCanvas;
 	
 	void OnEnable () {
 		pixels = serializedObject.FindProperty("pixels");		
@@ -26,8 +23,6 @@ public class PixelArtCameraEditor : Editor {
 		upscaledResolution = serializedObject.FindProperty("upscaledResolution");
 		internalResolution = serializedObject.FindProperty("internalResolution");
 		finalBlitStretch = serializedObject.FindProperty("finalBlitStretch");
-		mainCamera = serializedObject.FindProperty("mainCamera");
-		mainCanvas = serializedObject.FindProperty("mainCanvas");
 	}
 
 	public override void OnInspectorGUI() {

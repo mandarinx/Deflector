@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 81984784532361684}
   - component: {fileID: 114502609853673522}
   - component: {fileID: 114605900990644626}
-  - component: {fileID: 114879813966660180}
+  - component: {fileID: 114679755019225088}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1787273200100508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.03, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,6 +75,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -97,12 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88f1386dd63147198d003daff00d37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenResolution: {x: 384, y: 288}
-  internalResolution: {x: 384, y: 288}
-  upscaledResolution: {x: 384, y: 288}
+  screenResolution: {x: 360, y: 288}
+  internalResolution: {x: 360, y: 288}
+  upscaledResolution: {x: 360, y: 288}
   smooth: 0
   forceSquarePixels: 1
-  pixels: {x: 384, y: 288}
+  pixels: {x: 360, y: 288}
   pixelsPerUnit: 24
   finalBlitStretch: {x: 1, y: 1}
   mainCamera: {fileID: 20987351231481648}
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeConfig: {fileID: 11400000, guid: 602b92a408d484925bd825423b091f0b, type: 2}
---- !u!114 &114879813966660180
+--- !u!114 &114679755019225088
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -127,10 +128,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1787273200100508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Script: {fileID: 11500000, guid: be14fcf31d08d4ccf97a182475c47f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 43ed4ae74f5044f099afaf1b1151b9b4, type: 2}
+  evt: {fileID: 11400000, guid: 4f5294abe04f94aa4bdc06cd3834e5d8, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
@@ -145,5 +146,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: GameEvents.UnityIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null

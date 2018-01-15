@@ -111,8 +111,10 @@ public abstract class LayerObjectBrush<T> : GridBrushBase
 		return default(T);
 	}
 
-	public Transform GetLayer()
-	{
+	public Transform GetLayer() {
+//		Debug.Log($"Get root grid: {BrushUtility.GetRootGrid(false)}");
+//		Debug.Log($"Root transform: {BrushUtility.GetRootGrid(false).transform}");
+//		Debug.Log($"Find {m_LayerName}: {BrushUtility.GetRootGrid(false).transform.Find(m_LayerName)}");
 		Transform layer = BrushUtility.GetRootGrid(false).transform.Find(m_LayerName);
 		if (layer == null)
 		{

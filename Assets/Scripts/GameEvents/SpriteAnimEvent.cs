@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace GameEvents {
 
-    [CreateAssetMenu(menuName = "Game Events/SpriteAnimEvent")]
+    [CreateAssetMenu(menuName = "Game Events/SpriteAnim")]
     public class SpriteAnimEvent : ScriptableObject {
         
         private readonly List<SpriteAnimEventListener> eventListeners = new List<SpriteAnimEventListener>();

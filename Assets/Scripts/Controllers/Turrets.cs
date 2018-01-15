@@ -20,7 +20,7 @@ public class Turrets : MonoBehaviour {
         while (maxTurrets < 0 || turrets.Count < maxTurrets) {
             yield return new WaitForSeconds(spawnInterval);
             if (spawnPoints.Count > 0) {
-                turrets.Spawn(spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position);
+                turrets.Spawn(transform, spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position);
             }
         }
     }

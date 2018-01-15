@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4773924913520502}
-  - component: {fileID: 114360194980100356}
+  - component: {fileID: 114277850284830462}
   - component: {fileID: 114181423149059292}
   - component: {fileID: 114457083671826134}
   m_Layer: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114360194980100356}
+      - m_Target: {fileID: 114277850284830462}
         m_MethodName: Spawn
         m_Mode: 0
         m_Arguments:
@@ -70,7 +70,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: GameEvents.UnityVector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
---- !u!114 &114360194980100356
+--- !u!114 &114277850284830462
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,10 +78,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578887200761476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a18b4177c3b4f03a024a341af6387b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c7fbbdc754c14f5ba0ff2eab00a536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldHitEffectSet: {fileID: 11400000, guid: 61d185dfb0def4b438a0a36ebef7b7eb, type: 2}
+  shieldHitEffects: {fileID: 11400000, guid: 6f643bd7860164d8d80908cb1e5cff49, type: 2}
 --- !u!114 &114457083671826134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,7 +97,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114360194980100356}
+      - m_Target: {fileID: 114277850284830462}
         m_MethodName: Despawn
         m_Mode: 0
         m_Arguments:

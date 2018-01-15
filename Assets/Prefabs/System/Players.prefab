@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4016236518607446}
   - component: {fileID: 114000145116107040}
-  - component: {fileID: 114329089996577542}
+  - component: {fileID: 114895573607650912}
   m_Layer: 0
   m_Name: Players
   m_TagString: Untagged
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1574596575962138, guid: 5599a919b6dbc455fb7b22a02aaf9666, type: 2}
   spawnPoints: {fileID: 11400000, guid: 775d8738cc517469690f354591e6226f, type: 2}
---- !u!114 &114329089996577542
+--- !u!114 &114895573607650912
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -62,10 +62,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1556081367154490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb233dff8926043b78b4c7a3dd30a135, type: 3}
+  m_Script: {fileID: 11500000, guid: 13dff3ca4e0954b6eb9ae8cebf5f2709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evt: {fileID: 11400000, guid: 7cfd71bdfaee44325b11ddb2ef57f69c, type: 2}
+  evt: {fileID: 11400000, guid: f9ffa4afdb1f242578881a6c88b88e26, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:

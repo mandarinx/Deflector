@@ -11,7 +11,7 @@ public class LevelExit : MonoBehaviour {
     [Header("Events Out")]
     public GameEvent  onLevelExit;
     
-    private Tilemap    tilemap;
+    private Tilemap   tilemap;
 
     public void OnLevelLoaded(Level level) {
         tilemap = level.GetLayer("Walls");

@@ -7,7 +7,7 @@ public class SpawnPointBrushInspector : LayerObjectBrushEditor<SpawnPoint> {
     
     public void OnSceneGUI() {
         Transform layer = brush.GetLayer();
-        Tilemap tilemap = brush.GetLayer().GetComponent<Tilemap>();
+        Tilemap tilemap = layer.GetComponent<Tilemap>();
         BrushEditorUtility.BeginQuads((target as SpawnPointBrush).color);
         foreach (Transform cell in layer) {
             if (cell.GetComponent<SpawnPoint>() == null) {

@@ -383,7 +383,7 @@ public partial class SpriteAnimator
 	void LayoutEvents(Rect rect)
 	{
 		Event e = Event.current;
-		if ( e.type == EventType.mouseDown && e.button == 0 && rect.Contains(e.mousePosition) && m_playing == false )
+		if ( e.type == EventType.MouseDown && e.button == 0 && rect.Contains(e.mousePosition) && m_playing == false )
 		{
 			// Move timeline
 			m_animTime = SnapTimeToFrameRate(GuiPosToAnimTime(rect, e.mousePosition.x));	

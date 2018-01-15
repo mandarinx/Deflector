@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class UIPanelInGame : UIPanel {
 
-    public GameEvent            onGameReady;
+    public GameEvent    onGameReady;
     
     [Header("Misc")]
-    public PlayerHealthListener healthListener;
+    public PlayerHearts hearts;
     
     public override void Open() {
         base.Open();
@@ -15,7 +15,7 @@ public class UIPanelInGame : UIPanel {
     }
 
     private IEnumerator TransitionEnter() {
-        yield return StartCoroutine(healthListener.RenderHearts());
+        yield return StartCoroutine(hearts.RenderHearts());
         onGameReady?.Invoke();
     }
 }

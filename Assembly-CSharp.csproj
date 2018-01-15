@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_0;UNITY_2017_2;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_3_0;UNITY_2017_3;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -44,10 +44,10 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -56,10 +56,11 @@
     <Compile Include="Assets\Scripts\Behaviours\Hitable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hurt.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Killable.cs" />
-    <Compile Include="Assets\Scripts\Behaviours\Level.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\Layers.cs" />
     <Compile Include="Assets\Scripts\Behaviours\LevelExit.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Moveable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\ShieldHitEffect.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\Treasure.cs" />
     <Compile Include="Assets\Scripts\Brushes\SpawnPointBrush.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CameraShakeConfig.cs" />
@@ -72,9 +73,11 @@
     <Compile Include="Assets\Scripts\Controllers\ShieldHitEffects.cs" />
     <Compile Include="Assets\Scripts\Controllers\Turrets.cs" />
     <Compile Include="Assets\Scripts\Data\GameMode.cs" />
+    <Compile Include="Assets\Scripts\Data\HealthAsset.cs" />
     <Compile Include="Assets\Scripts\Data\IntAsset.cs" />
+    <Compile Include="Assets\Scripts\Data\Level.cs" />
+    <Compile Include="Assets\Scripts\Data\Modes\ProtectTreasure.cs" />
     <Compile Include="Assets\Scripts\Data\Modes\Survival.cs" />
-    <Compile Include="Assets\Scripts\Data\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Data\UIPanelLink.cs" />
     <Compile Include="Assets\Scripts\Delay.cs" />
     <Compile Include="Assets\Scripts\Entities\Explosion.cs" />
@@ -91,6 +94,8 @@
     <Compile Include="Assets\Scripts\GameEvents\GameObjectEventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\IntEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\IntEventListener.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\LayersEvent.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\LayersEventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\LevelEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\LevelEventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\SpriteAnimEvent.cs" />
@@ -99,6 +104,8 @@
     <Compile Include="Assets\Scripts\GameEvents\StringEventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Vector2IntEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Vector2IntListener.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Vector3AndIntEvent.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Vector3AndIntEventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Vector3Event.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Vector3EventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Vector3IntEvent.cs" />
@@ -112,24 +119,25 @@
     <Compile Include="Assets\Scripts\List\ListRandom.cs" />
     <Compile Include="Assets\Scripts\List\ListSequential.cs" />
     <Compile Include="Assets\Scripts\List\ObjectList.cs" />
-    <Compile Include="Assets\Scripts\MultiplierListener.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealthListener.cs" />
     <Compile Include="Assets\Scripts\PlaySound.cs" />
     <Compile Include="Assets\Scripts\ScoreCounter.cs" />
-    <Compile Include="Assets\Scripts\ScoreListener.cs" />
-    <Compile Include="Assets\Scripts\Sets\ComponentSet.cs" />
     <Compile Include="Assets\Scripts\Sets\GameObjectPool.cs" />
     <Compile Include="Assets\Scripts\Sets\GameObjectSet.cs" />
     <Compile Include="Assets\Scripts\Sets\GridCoordsHashSet.cs" />
     <Compile Include="Assets\Scripts\Sets\HashSet.cs" />
+    <Compile Include="Assets\Scripts\Sets\LevelSet.cs" />
     <Compile Include="Assets\Scripts\Sets\Pool.cs" />
     <Compile Include="Assets\Scripts\Sets\Set.cs" />
     <Compile Include="Assets\Scripts\Sets\SpawnPointSet.cs" />
-    <Compile Include="Assets\Scripts\Sets\SpriteAnimPool.cs" />
     <Compile Include="Assets\Scripts\Sets\Vector2IntSet.cs" />
     <Compile Include="Assets\Scripts\Tests\DotProd.cs" />
     <Compile Include="Assets\Scripts\Tests\TriggerStay.cs" />
     <Compile Include="Assets\Scripts\TextColor.cs" />
+    <Compile Include="Assets\Scripts\UI\HitPoint.cs" />
+    <Compile Include="Assets\Scripts\UI\HitPointsController.cs" />
+    <Compile Include="Assets\Scripts\UI\MultiplierLabel.cs" />
+    <Compile Include="Assets\Scripts\UI\PlayerHearts.cs" />
+    <Compile Include="Assets\Scripts\UI\ScoreLabel.cs" />
     <Compile Include="Assets\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\Scripts\UI\UIHeart.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanel.cs" />
@@ -143,45 +151,90 @@
     <Compile Include="Assets\Scripts\Utils\DebugLog.cs" />
     <Compile Include="Assets\Scripts\Utils\IntUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
-    <None Include="Assets\Plugins\Robodash\Brushes\Editor\GizmoShader.shader" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtDiffuse.shader" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtParticle.shader" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtUI.shader" />
     <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtFont.shader" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtSprite.shader" />
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>/Users/mandarin/Projects/Games/LunchGame01/Library/resharper-unity-libs/nunit3.5.0/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Timeline">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIAutomation">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomation">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>/Applications/Unity 2017.2.0f3/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
-      <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+      <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
     public Transform                  shieldAnchor;
     public Shield                     shield;
     public SpriteAnim                 playerAnim;
-    public PlayerHealth               playerHealth;
+    public HealthAsset                playerHealth;
     public SpriteRenderer             blood;
     public SpriteRenderer             shadow;
     public GameEvent                  onFootstep;
@@ -27,7 +27,6 @@ public class Player : MonoBehaviour {
     private int                       walkDir;
     private float                     hitTime;
     private Vector2                   hitNormal;
-    private bool                      inputHit;
     private int                       inputMove;
     private bool                      activated;
     private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[8];
@@ -36,7 +35,6 @@ public class Player : MonoBehaviour {
 
     private void Awake() {
         activated = false;
-        inputHit = false;
         inputMove = -1;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -90,7 +88,7 @@ public class Player : MonoBehaviour {
         // Shield
 
         if (Input.GetKeyDown(KeyCode.X)) {
-            inputHit = true;
+            shield.Hit(walkDir);
         }
         
         // Movement
@@ -126,16 +124,6 @@ public class Player : MonoBehaviour {
     }
     
     private void FixedUpdate() {
-        
-        // Shield
-
-        if (inputHit) {
-            inputHit = false;
-            shield.Hit(walkDir);
-        }
-        
-        // Movement
-        
         Vector2 velocity = Vector2.zero;
         
         if (inputMove >= 0) {

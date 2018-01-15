@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb1109a67bea4bb2b5667e9d77fd39c, type: 3}
   m_Name: PlayerHealth
   m_EditorClassIdentifier: 
-  lives: 0
+  lives: 3
   livesMax: 3
   onDead: {fileID: 11400000, guid: 5f91beb629d874778988875a2cfaccac, type: 2}
-  onLostLife: {fileID: 11400000, guid: 43ed4ae74f5044f099afaf1b1151b9b4, type: 2}
+  onLostLife: {fileID: 11400000, guid: 4f5294abe04f94aa4bdc06cd3834e5d8, type: 2}

@@ -2,13 +2,14 @@
 
 public class ShieldHitEffects : MonoBehaviour {
 
-    public SpriteAnimPool shieldHitEffectSet;
+    [SerializeField]
+    private GameObjectPool shieldHitEffects;
     
-    public void Spawn(Vector3 pos) {
-        shieldHitEffectSet.Spawn(pos);
+    public void Spawn(Vector3 position) {
+        shieldHitEffects.Spawn(transform, position);
     }
 
-    public void Despawn(GameObject hitEffect) {
-        shieldHitEffectSet.Despawn(hitEffect);
+    public void Despawn(GameObject instance) {
+        shieldHitEffects.Despawn(instance);
     }
 }

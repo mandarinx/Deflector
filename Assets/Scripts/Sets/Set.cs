@@ -16,6 +16,7 @@ public abstract class Set<T> : ScriptableObject {
     public T this[int i] => list[i];
 
     private void OnEnable() {
+        // FUCK THIS SHIT
         if (prefilled) {
             return;
         }

@@ -8,7 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d062dcdefcf04005861fb39a2279814, type: 3}
+  m_Script: {fileID: 11500000, guid: 64bd7b40b82244ea5aea17286e128f43, type: 3}
   m_Name: ShieldHitEffectsPool
   m_EditorClassIdentifier: 
   prefab: {fileID: 1681930951813180, guid: 77eb8a455f01b488dbabb123f61e399f, type: 2}
+  onSpawned: {fileID: 0}
+  onDespawned: {fileID: 0}

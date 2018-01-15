@@ -81,8 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347a50b75bcce4fb78ac501c0478b7de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSet: {fileID: 11400000, guid: 64ee306b13d264c0ca4edc93da3946da, type: 2}
-  onLevelLoaded: {fileID: 11400000, guid: 7cfd71bdfaee44325b11ddb2ef57f69c, type: 2}
+  levelSet: {fileID: 11400000, guid: 13a4203b3d9744f7ea81a0f6d781b006, type: 2}
+  onLevelLoaded: {fileID: 11400000, guid: f9ffa4afdb1f242578881a6c88b88e26, type: 2}
   onLevelWillLoad: {fileID: 11400000, guid: dc77f3e48e1124669b9c37c3494cf49a, type: 2}
 --- !u!114 &114632195375867616
 MonoBehaviour:

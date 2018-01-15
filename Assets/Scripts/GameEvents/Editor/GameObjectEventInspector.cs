@@ -15,7 +15,7 @@ namespace GameEvents {
 
             go = (GameObject)EditorGUILayout.ObjectField(go, typeof(GameObject), true);
 
-            if (GUILayout.Button("Raise")) {
+            if (GUILayout.Button("Invoke")) {
                 (target as GameObjectEvent)?.Invoke(go);
             }
         }

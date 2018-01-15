@@ -3,7 +3,10 @@ using GameEvents;
 using UnityEngine;
 
 public abstract class Pool<T> : ScriptableObject where T : class, new() {
-
+    
+    // THIS IS REALLY NOT A POOL
+    // NEEDS INIT SIZE, INIT OF INSTANCE ++
+    
     public IntEvent          onItemSpawned;
     public IntEvent          onItemDespawned;
     
