@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: HitPointsPool
   m_EditorClassIdentifier: 
   prefab: {fileID: 1663705804615378, guid: 346dbc21f24d6497f9d099bee98ff08f, type: 2}
-  onSpawned: {fileID: 11400000, guid: 7e26a3bdcbfae4fb7a3e8ef879a0d744, type: 2}
+  onSpawned: {fileID: 0}
   onDespawned: {fileID: 0}

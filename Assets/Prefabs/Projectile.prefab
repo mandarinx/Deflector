@@ -147,6 +147,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle: 0
   speed: 1
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 5376
   sprites:
   - {fileID: 21300224, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
   - {fileID: 21300224, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}

@@ -17,12 +17,13 @@ public class GameObjectPool : ScriptableObject {
         instances = new List<GameObject>();
     }
 
-    public void Spawn(Transform parent, Vector3 pos) {
+    public GameObject Spawn(Transform parent, Vector3 pos) {
         GameObject p = Instantiate(prefab);
         p.transform.SetParent(parent, false);
         p.transform.position = pos;
         instances.Add(p);
         onSpawned?.Invoke(p);
+        return p;
     }
 
     public void Despawn(GameObject go) {

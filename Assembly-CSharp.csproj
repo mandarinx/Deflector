@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\Utils\ArrayUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\DebugLog.cs" />
     <Compile Include="Assets\Scripts\Utils\IntUtils.cs" />
+    <Compile Include="Assets\Scripts\Utils\LayerMasks.cs" />
     <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
     <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
     <Reference Include="UnityEngine.UI">

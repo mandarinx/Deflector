@@ -161,7 +161,6 @@ GameObject:
   - component: {fileID: 114992187782027174}
   - component: {fileID: 114107571180455642}
   - component: {fileID: 114773365582814078}
-  - component: {fileID: 114667698085013182}
   - component: {fileID: 114535983401887998}
   - component: {fileID: 114532448355646542}
   m_Layer: 5
@@ -654,34 +653,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114667698085013182
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1636023597310824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40502709289fe49e3ac93115745917d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 7e26a3bdcbfae4fb7a3e8ef879a0d744, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114107571180455642}
-        m_MethodName: OnHitPointSpawned
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: GameEvents.UnityGameObjectEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114722699702395416
 MonoBehaviour:
   m_ObjectHideFlags: 1

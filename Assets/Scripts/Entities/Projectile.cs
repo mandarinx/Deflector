@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using GameEvents;
 using UnityEngine;
 
@@ -11,6 +10,8 @@ public class Projectile : MonoBehaviour {
     private float                     angle;
     [SerializeField]
     private float                     speed = 1f;
+    [SerializeField]
+    private LayerMask                 hitLayer;
     [SerializeField]
     private Sprite[]                  sprites;
     [SerializeField]
@@ -108,15 +109,24 @@ public class Projectile : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
+        if (!LayerMasks.LayerInMask(collision.gameObject.layer, hitLayer)) {
+            return;
+        }
+        
         if (!GetHitNormal(collision, out hitNormal)) {
             return;
         }
+
         angleIndex = GetAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
         angle = Angles.GetAngle(angleIndex);
         sr.sprite = sprites[angleIndex + activated];
     }
     
     private void OnCollisionStay2D(Collision2D collision) {
+        if (!LayerMasks.LayerInMask(collision.gameObject.layer, hitLayer)) {
+            return;
+        }
+
         // compare hit normals, if not the same, calc new angleindex
         Vector2 normal;
         if (!GetHitNormal(collision, out normal)) {

@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4365862400627362}
   - component: {fileID: 212005502135918058}
   - component: {fileID: 114695944793636702}
+  - component: {fileID: 114688494428701200}
   - component: {fileID: 58903994732980954}
-  - component: {fileID: 114838898466264836}
   m_Layer: 15
   m_Name: Treasure
   m_TagString: Untagged
@@ -58,6 +58,34 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114688494428701200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285319519063286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: e3f4b53621a1f402d8135b593f21f47a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114695944793636702}
+        m_MethodName: OnDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114695944793636702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,35 +102,8 @@ MonoBehaviour:
   spriteOpenedEmpty: {fileID: 21300000, guid: 4e4b85bc9fd6bc940b7b3e78147aa20b, type: 3}
   spriteOpenedTrap: {fileID: 21300000, guid: c42d550038025fd4290fc11c0342f1df, type: 3}
   health: {fileID: 11400000, guid: 5cbba55389ca640c39604b19e511c394, type: 2}
-  onTreasureHitAt: {fileID: 11400000, guid: 32d86030cd8e14254b1dfbdd27f0939b, type: 2}
---- !u!114 &114838898466264836
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1285319519063286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 4c531fcac599b4909b3347020fe6af14, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114695944793636702}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  onTreasureHitAt: {fileID: 11400000, guid: 774148725cb7b4bf9a718440739d7190, type: 2}
+  onTreasureDeadAt: {fileID: 11400000, guid: 1c1f31fe333cf468b8e663e78a26735d, type: 2}
 --- !u!212 &212005502135918058
 SpriteRenderer:
   m_ObjectHideFlags: 1

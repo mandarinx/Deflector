@@ -348,6 +348,9 @@ MonoBehaviour:
   delayMin: 0.1
   delayMax: 0.3
   duration: 0.3
+  layerExplode:
+    serializedVersion: 2
+    m_Bits: 34304
   onExplode: {fileID: 11400000, guid: db69ef4f1a3c64ed9915f1af922cb8ff, type: 2}
   anims:
   - {fileID: 114423026720833434}
@@ -369,6 +372,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 1
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114423026720833434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,6 +390,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 1
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114457203271066402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -395,6 +408,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 1
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114537049593252454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,6 +426,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 1
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114642224346167316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -421,6 +444,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 1
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114936533498048728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,6 +462,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 1
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212390888107543678
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -468,7 +501,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300008, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -476,7 +509,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212480033232567224
 SpriteRenderer:
@@ -512,7 +545,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300008, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -520,7 +553,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212631709438591242
 SpriteRenderer:
@@ -556,7 +589,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300008, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -564,7 +597,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212682587651247880
 SpriteRenderer:
@@ -600,7 +633,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300008, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -608,7 +641,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212727650395053242
 SpriteRenderer:
@@ -644,7 +677,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300008, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -652,7 +685,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212782870359371928
 SpriteRenderer:
@@ -688,7 +721,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300008, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -696,5 +729,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

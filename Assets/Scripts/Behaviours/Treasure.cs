@@ -16,6 +16,8 @@ public class Treasure : MonoBehaviour {
     private HealthAsset health;
     [SerializeField]
     private Vector3AndIntEvent onTreasureHitAt;
+    [SerializeField]
+    private Vector3Event onTreasureDeadAt;
 
     private SpriteRenderer spriteRenderer;
 
@@ -33,10 +35,12 @@ public class Treasure : MonoBehaviour {
         health?.RemoveLives(1);
     }
     
-    // Add support for explosions
     // Add support for player pickup
+    // - switch to some other layer
+    // - ontriggerenter => flip to open chest, give reward
 
-    public void Dead() {
-        spriteRenderer.enabled = false;
+    public void OnDead() {
+        Destroy(gameObject);
+        onTreasureDeadAt?.Invoke(transform.position);
     }
 }
