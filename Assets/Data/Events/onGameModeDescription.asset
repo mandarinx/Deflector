@@ -8,9 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03deb601e25094db486c11194f19f383, type: 3}
-  m_Name: Cellar
+  m_Script: {fileID: 11500000, guid: e8745f2530e454f0ba17ef4a65b864e5, type: 3}
+  m_Name: onGameModeDescription
   m_EditorClassIdentifier: 
-  scenePath: Assets/Scenes/LevelCellar
-  gameModes:
-  - {fileID: 11400000, guid: 83a0e069106874f48965a9750388efc9, type: 2}

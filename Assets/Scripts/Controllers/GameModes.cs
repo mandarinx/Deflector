@@ -1,21 +1,21 @@
 ﻿using GameEvents;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameModes : MonoBehaviour, IOnUpdate {
     
     [SerializeField]
-    private GameEvent onGameWon;
+    private GameEvent   onGameWon;
     [SerializeField]
-    private Text      uiDescription;
+    private StringEvent onGameModeDescription;
     [SerializeField]
-    private UHooks    hooks;
-    private GameMode  gameMode;
+    private UHooks      hooks;
+    private GameMode    gameMode;
 
     public void OnLevelLoaded(Level level) {
         int r = Random.Range(0, level.NumGameModes);
         gameMode = level.GetGameMode(r);
-        uiDescription.text = gameMode.title;
+        gameMode.Activate();
+        onGameModeDescription?.Invoke(gameMode.title);
     }
 
     // handler for game ready event

@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onLevelLoaded: {fileID: 11400000, guid: f9ffa4afdb1f242578881a6c88b88e26, type: 2}
   onLevelWillLoad: {fileID: 11400000, guid: dc77f3e48e1124669b9c37c3494cf49a, type: 2}
+  onLevelWillUnload: {fileID: 11400000, guid: 06e3dbd4b442b4d5b87eda1896ad325e, type: 2}
 --- !u!114 &114632195375867616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,6 +102,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114529872853236176}
         m_MethodName: UnloadCurrentLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114529872853236176}
+        m_MethodName: LoadNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

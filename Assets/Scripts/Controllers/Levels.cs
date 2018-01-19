@@ -12,6 +12,8 @@ public class Levels : MonoBehaviour {
     private LevelEvent  onLevelLoaded;
     [SerializeField]
     private GameEvent   onLevelWillLoad;
+    [SerializeField]
+    private GameEvent   onLevelWillUnload;
 
     private int         curLevel;
     private LevelLoader levelLoader;
@@ -22,6 +24,7 @@ public class Levels : MonoBehaviour {
     }
     
     public void UnloadCurrentLevel() {
+        onLevelWillUnload?.Invoke();
         levelLoader.Unload(curLevel);
     }
 

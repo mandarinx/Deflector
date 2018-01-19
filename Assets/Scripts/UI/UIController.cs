@@ -28,7 +28,7 @@ public class UIController : MonoBehaviour {
         fsm.SetTrigger("Credits");
     }
 
-    public void OnPlayerDied() {
-        TriggerNext();
+    public void TriggerDead() {
+        fsm.SetTrigger("Dead");
     }
 }

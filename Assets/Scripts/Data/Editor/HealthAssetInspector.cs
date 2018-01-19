@@ -13,6 +13,8 @@ public class HealthAssetInspector : Editor {
         DrawDefaultInspector();
         EditorGUILayout.Space();
 
+        GUI.enabled = Application.isPlaying;
+        
         HealthAsset health = target as HealthAsset;
         
         lives = EditorGUILayout.IntField("Lives", lives);

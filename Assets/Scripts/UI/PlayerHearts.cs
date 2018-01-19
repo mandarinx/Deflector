@@ -25,20 +25,20 @@ public class PlayerHearts : MonoBehaviour {
         while (heart < hearts.Count) {
             onHeartFilled?.Invoke();
             yield return new WaitForSeconds(0.2f);
-            hearts[heart++].isAlive = true;
+            hearts[heart].isAlive = heart < health.numLives;
+            ++heart;
         }
     }
-    
-//    public void ResetHearts() {
-//        for (int i = 0; i < hearts.Count; ++i) {
-//            hearts[i].isAlive = false;
-//        }
-//    }
 
     private void OnLivesChanged(int lives, int max) {
+        // If player gets more health during playtime,
+        // add more hearts
         if (max > hearts.Count) {
             AddHeart(true);
         }
+        
+        // If player loses hearts during playtime,
+        // remove hearts
         if (max < hearts.Count) {
             int remove = hearts.Count - max;
             hearts.RemoveRange(max, remove);
@@ -46,6 +46,7 @@ public class PlayerHearts : MonoBehaviour {
                 Destroy(transform.GetChild(max));
             }
         }
+        
         for (int i = 0; i < max; ++i) {
             hearts[i].isAlive = i < lives;
         }

@@ -16,18 +16,24 @@ namespace Modes {
 
         private void OnEnable() {
             spawnedProjectiles = 0;
-            onProjectileSpawned?.RegisterCallback(
-                go => {
-                    ++spawnedProjectiles;
-                });
         }
 
         public override bool Validate() {
             return spawnedProjectiles >= maxProjectiles;
         }
 
+        public override void Activate() {
+            spawnedProjectiles = 0;
+            onProjectileSpawned?.RegisterCallback(OnProjectileSpawned);
+        }
+
         public override void Reset() {
             spawnedProjectiles = 0;
+            onProjectileSpawned?.UnregisterCallback(OnProjectileSpawned);
+        }
+
+        private void OnProjectileSpawned(GameObject projectile) {
+            ++spawnedProjectiles;
         }
     }
 }

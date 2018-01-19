@@ -14,7 +14,6 @@ public class ScoreLabel : MonoBehaviour {
     }
 
     private void OnScoreChanged(int value) {
-        Debug.Log($"Score changed to {value}, label: {label}");
         label.text = value.ToString("### ### ##0");
     }
 }

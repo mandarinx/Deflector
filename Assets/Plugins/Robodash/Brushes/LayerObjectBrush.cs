@@ -115,7 +115,11 @@ public abstract class LayerObjectBrush<T> : GridBrushBase
 //		Debug.Log($"Get root grid: {BrushUtility.GetRootGrid(false)}");
 //		Debug.Log($"Root transform: {BrushUtility.GetRootGrid(false).transform}");
 //		Debug.Log($"Find {m_LayerName}: {BrushUtility.GetRootGrid(false).transform.Find(m_LayerName)}");
-		Transform layer = BrushUtility.GetRootGrid(false).transform.Find(m_LayerName);
+		Grid grid = BrushUtility.GetRootGrid(false);
+		if (grid == null) {
+			return null;
+		}
+		Transform layer = grid.transform.Find(m_LayerName);
 		if (layer == null)
 		{
 			GameObject newGameObject = new GameObject(m_LayerName);

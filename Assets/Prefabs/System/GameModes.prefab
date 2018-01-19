@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114095964704645242}
   - component: {fileID: 114935461115251348}
   - component: {fileID: 114417298562793066}
+  - component: {fileID: 114285782048013444}
   m_Layer: 0
   m_Name: GameModes
   m_TagString: Untagged
@@ -60,6 +61,34 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114592360248198622}
         m_MethodName: StartGameMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114285782048013444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1650974407729566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 61b882abcf7fb4e9eaf52d4cfaf8dbb7, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114592360248198622}
+        m_MethodName: ResetCurrentGameMode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -111,7 +140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onGameWon: {fileID: 11400000, guid: 07a699f04cc2140ae95c5918b64d09a8, type: 2}
-  uiDescription: {fileID: 0}
+  onGameModeDescription: {fileID: 11400000, guid: 5d41fb2372c8f4582912b39e8ada53fc,
+    type: 2}
   hooks: {fileID: 0}
 --- !u!114 &114935461115251348
 MonoBehaviour:

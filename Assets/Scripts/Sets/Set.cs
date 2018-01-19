@@ -34,7 +34,7 @@ public abstract class Set<T> : ScriptableObject {
             return;
         }
         onItemRemoved?.Invoke(i);
-        list.Remove(item);
+        list.RemoveAt(i);
     }
 
     public void RemoveAll() {

@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03deb601e25094db486c11194f19f383, type: 3}
   m_Name: Garden
   m_EditorClassIdentifier: 
-  scenePath: Assets/Levels/Garden
+  scenePath: Assets/Scenes/LevelGarden
   gameModes:
-  - {fileID: 11400000, guid: f30e6b7ec2957435bb53d34b5ee4dd20, type: 2}
+  - {fileID: 11400000, guid: 9335308e1b2444f5c92efea492495af9, type: 2}

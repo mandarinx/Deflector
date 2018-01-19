@@ -33,7 +33,7 @@ namespace Lib {
         private List<LevelLoadOperation> loadOps;
         
         public float                     Progress { get; private set; }
-        public int                       Count => loadOps.Count;
+        public int                       Count => levels.Count;
 
         private void Awake() {
             loadOps = new List<LevelLoadOperation>();

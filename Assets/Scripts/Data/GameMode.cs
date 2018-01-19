@@ -8,5 +8,7 @@ public class GameMode : ScriptableObject {
         return true;
     }
 
+    public virtual void Activate() {}
+    
     public virtual void Reset() {}
 }
