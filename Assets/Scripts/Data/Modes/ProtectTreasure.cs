@@ -35,5 +35,10 @@ namespace Modes {
                 spawnedProjectiles >= maxProjectiles &&
                 explodedProjectiles >= maxProjectiles;
         }
+
+        public override void Reset() {
+            spawnedProjectiles = 0;
+            explodedProjectiles = 0;
+        }
     }
 }

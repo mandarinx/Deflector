@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114316821713766676}
   - component: {fileID: 114756654428517226}
   - component: {fileID: 114288307527871854}
+  - component: {fileID: 114418255151428222}
   m_Layer: 14
   m_Name: LevelExit
   m_TagString: Untagged
@@ -109,7 +110,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coordinate: {x: 0, y: 4, z: 0}
   openDoor: {fileID: 11400000, guid: b552a774364ce4282952ce414c7a6225, type: 2}
+  closedDoor: {fileID: 11400000, guid: f7a92b522a29643d5a7aa7dc69c5ecd8, type: 2}
   onLevelExit: {fileID: 11400000, guid: 61b882abcf7fb4e9eaf52d4cfaf8dbb7, type: 2}
+--- !u!114 &114418255151428222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803831051768550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 746a03cc87bab413dbb5c76990f2a9bd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114316821713766676}
+        m_MethodName: CloseDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114756654428517226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +156,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114316821713766676}
-        m_MethodName: ShowExit
+        m_MethodName: OpenDoor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

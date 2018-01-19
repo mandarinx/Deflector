@@ -1,5 +1,5 @@
-﻿using GameEvents;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Canvas))]
 public class UIPanel : MonoBehaviour, IOnUpdate {
@@ -7,8 +7,8 @@ public class UIPanel : MonoBehaviour, IOnUpdate {
     public UIPanelLink     panelLink;
     
     [Header("Events Out")]
-    public GameEvent       onEnterPanel;
-    public GameEvent       onClosePanel;
+    public UnityEvent      onEnterPanel;
+    public UnityEvent      onClosePanel;
     
     protected UIController ui;
     protected UHooks       hooks;
@@ -24,24 +24,24 @@ public class UIPanel : MonoBehaviour, IOnUpdate {
         hooks = uhooks;
     }
 
-    protected void Hide() {
+    public void Hide() {
         canvas.enabled = false;
     }
 
-    protected void Show() {
+    public void Show() {
         canvas.enabled = true;
     }
     
     public virtual void Open() {
         Show();
         hooks.AddOnUpdate(this);
-        onEnterPanel?.Invoke();
+        onEnterPanel.Invoke();
     }
 
     public virtual void Close() {
         Hide();
         hooks.RemoveOnUpdate(this);
-        onClosePanel?.Invoke();
+        onClosePanel.Invoke();
     }
 
     public virtual void UOnUpdate() {}

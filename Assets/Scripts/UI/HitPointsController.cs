@@ -16,6 +16,6 @@ public class HitPointsController : MonoBehaviour {
     }
 
     public void OnLevelLoaded(Level level) {
-        grid = level.levelInstance.GetComponent<Grid>();
+        grid = level.Grid;
     }
 }

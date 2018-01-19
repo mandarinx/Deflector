@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: LevelSet
   m_EditorClassIdentifier: 
   list:
+  - {fileID: 11400000, guid: 3466581e54c144425b34b3a16e72467a, type: 2}
   - {fileID: 11400000, guid: c82ef2e1e15df484b8a97cddc18d6d19, type: 2}
   prefilled: 1
   onItemAdded: {fileID: 0}

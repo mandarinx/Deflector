@@ -14,17 +14,21 @@ public class UIController : MonoBehaviour {
         for (int i = 0; i < transform.childCount; ++i) {
             UIPanel panel = transform.GetChild(i).GetComponent<UIPanel>();
             panel.Init(this, hooks);
-            panel.Close();
+            panel.Hide();
         }
         
-        NextState();
+        TriggerNext();
     }
 
-    public void NextState() {
+    public void TriggerNext() {
         fsm.SetTrigger("Next");
     }
 
+    public void TriggerCredits() {
+        fsm.SetTrigger("Credits");
+    }
+
     public void OnPlayerDied() {
-        NextState();
+        TriggerNext();
     }
 }

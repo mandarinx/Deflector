@@ -25,5 +25,9 @@ namespace Modes {
         public override bool Validate() {
             return spawnedProjectiles >= maxProjectiles;
         }
+
+        public override void Reset() {
+            spawnedProjectiles = 0;
+        }
     }
 }

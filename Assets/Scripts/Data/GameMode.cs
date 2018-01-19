@@ -7,4 +7,6 @@ public class GameMode : ScriptableObject {
     public virtual bool Validate() {
         return true;
     }
+
+    public virtual void Reset() {}
 }

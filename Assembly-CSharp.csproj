@@ -75,7 +75,6 @@
     <Compile Include="Assets\Scripts\Data\GameMode.cs" />
     <Compile Include="Assets\Scripts\Data\HealthAsset.cs" />
     <Compile Include="Assets\Scripts\Data\IntAsset.cs" />
-    <Compile Include="Assets\Scripts\Data\Level.cs" />
     <Compile Include="Assets\Scripts\Data\Modes\ProtectTreasure.cs" />
     <Compile Include="Assets\Scripts\Data\Modes\Survival.cs" />
     <Compile Include="Assets\Scripts\Data\UIPanelLink.cs" />
@@ -115,6 +114,9 @@
     <Compile Include="Assets\Scripts\GO\GOTraversal.cs" />
     <Compile Include="Assets\Scripts\GridZones.cs" />
     <Compile Include="Assets\Scripts\ImageColorLerp.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level.cs" />
+    <Compile Include="Assets\Scripts\Levels\LevelLoader.cs" />
+    <Compile Include="Assets\Scripts\Levels\LevelSet.cs" />
     <Compile Include="Assets\Scripts\List\ListPingPong.cs" />
     <Compile Include="Assets\Scripts\List\ListRandom.cs" />
     <Compile Include="Assets\Scripts\List\ListSequential.cs" />
@@ -125,7 +127,6 @@
     <Compile Include="Assets\Scripts\Sets\GameObjectSet.cs" />
     <Compile Include="Assets\Scripts\Sets\GridCoordsHashSet.cs" />
     <Compile Include="Assets\Scripts\Sets\HashSet.cs" />
-    <Compile Include="Assets\Scripts\Sets\LevelSet.cs" />
     <Compile Include="Assets\Scripts\Sets\Pool.cs" />
     <Compile Include="Assets\Scripts\Sets\Set.cs" />
     <Compile Include="Assets\Scripts\Sets\SpawnPointSet.cs" />
@@ -141,9 +142,11 @@
     <Compile Include="Assets\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\Scripts\UI\UIHeart.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanel.cs" />
+    <Compile Include="Assets\Scripts\UI\UIPanelCredits.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanelEndGame.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanelInGame.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanelIntro.cs" />
+    <Compile Include="Assets\Scripts\UI\UIPanelSplash.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanelToggle.cs" />
     <Compile Include="Assets\Scripts\UnityEvents.cs" />
     <Compile Include="Assets\Scripts\Utils\Angles.cs" />
@@ -152,6 +155,7 @@
     <Compile Include="Assets\Scripts\Utils\IntUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\LayerMasks.cs" />
     <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
+    <None Include="Assets\Dadako\BitmapFonts\Pixel\_PixelCharLimits.txt" />
     <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.3.0p1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -7,7 +7,7 @@ public class UIPanelIntro : UIPanel {
 
     public override void UOnUpdate() {
         if (Input.GetKeyUp(KeyCode.S)) {
-            ui.NextState();
+            ui.TriggerNext();
             onEnterGame?.Invoke();
         }
     }

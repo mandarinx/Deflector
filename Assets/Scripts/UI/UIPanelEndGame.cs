@@ -1,11 +1,8 @@
 ﻿using System.Collections;
-using GameEvents;
 using UnityEngine;
 
-public class UIPanelEndGame : UIPanel, IOnUpdate {
+public class UIPanelEndGame : UIPanel {
 
-    public GameEvent      onGameReset;
-    
     [Header("Misc")]
     public ImageColorLerp colorLerp;
     public GameObject     contents;
@@ -23,8 +20,7 @@ public class UIPanelEndGame : UIPanel, IOnUpdate {
 
     public override void UOnUpdate() {
         if (Input.GetKeyUp(KeyCode.R)) {
-            onGameReset.Invoke();
-            ui.NextState();
+            ui.TriggerNext();
         }
     }
 }
