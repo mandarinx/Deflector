@@ -14,6 +14,6 @@ public class MultiplierLabel : MonoBehaviour {
     }
 
     private void OnMultiplierChanged(int value) {
-        label.text = value.ToString("###") + "x";
+        label.text = value > 0 ? $"{value:###} x" : "";
     }
 }
