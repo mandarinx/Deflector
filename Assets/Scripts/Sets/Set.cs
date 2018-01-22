@@ -5,9 +5,9 @@ using UnityEngine;
 public abstract class Set<T> : ScriptableObject {
     
     [SerializeField]
-    private bool clearOnAwake;
+    private bool     clearOnEnable;
     [SerializeField]
-    private List<T> list;
+    private List<T>  list;
     [SerializeField]
     private IntEvent onItemAdded;
     [SerializeField]
@@ -17,9 +17,11 @@ public abstract class Set<T> : ScriptableObject {
     public T this[int i] => list[i];
 
     private void OnEnable() {
-        if (!clearOnAwake) {
+        if (!clearOnEnable) {
             return;
         }
+
+        Debug.Log($"Clear {name}");
         list = new List<T>();
     }
 

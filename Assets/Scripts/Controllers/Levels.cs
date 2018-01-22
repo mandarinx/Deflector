@@ -10,10 +10,6 @@ public class Levels : MonoBehaviour {
 
     [SerializeField]
     private LevelEvent  onLevelLoaded;
-    [SerializeField]
-    private GameEvent   onLevelWillLoad;
-    [SerializeField]
-    private GameEvent   onLevelWillUnload;
 
     private int         curLevel;
     private LevelLoader levelLoader;
@@ -24,13 +20,11 @@ public class Levels : MonoBehaviour {
     }
     
     public void UnloadCurrentLevel() {
-        onLevelWillUnload?.Invoke();
         levelLoader.Unload(curLevel);
     }
 
     public void LoadNextLevel() {
         curLevel = (curLevel + 1) % levelLoader.Count;
-        onLevelWillLoad?.Invoke();
         levelLoader.Load(curLevel, LoadSceneMode.Additive);
     }
 

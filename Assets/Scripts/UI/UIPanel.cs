@@ -2,26 +2,22 @@
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Canvas))]
-public class UIPanel : MonoBehaviour, IOnUpdate {
-
-    public UIPanelLink     panelLink;
+public class UIPanel : MonoBehaviour {
+    
+    [SerializeField]
+    private UIPanelLink     panelLink;
     
     [Header("Events Out")]
-    public UnityEvent      onEnterPanel;
-    public UnityEvent      onClosePanel;
+    [SerializeField]
+    private UnityEvent      onEnterPanel;
+    [SerializeField]
+    private UnityEvent      onClosePanel;
     
-    protected UIController ui;
-    protected UHooks       hooks;
-    private Canvas         canvas;
+    private Canvas          canvas;
 
     private void Awake() {
         canvas = GetComponent<Canvas>();
         panelLink.SetPanel(this);
-    }
-
-    public void Init(UIController uiController, UHooks uhooks) {
-        ui = uiController;
-        hooks = uhooks;
     }
 
     public void Hide() {
@@ -34,15 +30,11 @@ public class UIPanel : MonoBehaviour, IOnUpdate {
     
     public virtual void Open() {
         Show();
-        hooks.AddOnUpdate(this);
         onEnterPanel.Invoke();
     }
 
     public virtual void Close() {
         Hide();
-        hooks.RemoveOnUpdate(this);
         onClosePanel.Invoke();
     }
-
-    public virtual void UOnUpdate() {}
 }

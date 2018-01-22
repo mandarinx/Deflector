@@ -7,7 +7,7 @@ public class SpawnPoint : MonoBehaviour {
     [SerializeField]
     private SpawnPointSet set;
     
-    private void Awake() {
+    private void Start() {
         set.Add(this);
     }
 }

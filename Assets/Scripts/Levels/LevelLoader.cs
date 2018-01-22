@@ -24,9 +24,15 @@ namespace Lib {
         [SerializeField]
         private LevelSet                 levels;
         [SerializeField]
+        private UnityEvent               onWillLoad;
+        [SerializeField]
         private UnityLevelEvent          onLevelLoaded;
         [SerializeField]
         private UnityEvent               onAllLevelsLoaded;
+        [SerializeField]
+        private UnityEvent               onWillUnload;
+        [SerializeField]
+        private UnityEvent               onUnloaded;
         private bool                     isLoading;
         private int                      numLoadedLevels;
         private int                      numLevelsToLoad;
@@ -39,12 +45,12 @@ namespace Lib {
             loadOps = new List<LevelLoadOperation>();
         }
 
-        public void Load(int num, LoadSceneMode mode) {
+        public bool Load(int num, LoadSceneMode mode) {
             if (num >= levels.Count) {
-                return;
+                return false;
             }
             
-            StartLoadOp(num, mode);
+            return StartLoadOp(num, mode);
         }
 
         public void LoadAll(LoadSceneMode mode) {
@@ -61,13 +67,19 @@ namespace Lib {
             if (num >= levels.Count) {
                 return;
             }
-
-            string sceneName = Path.GetFileNameWithoutExtension(levels[num].ScenePath);
-            AsyncOperation op = SceneManager.UnloadSceneAsync(sceneName);
-            op.completed += asyncOp => { Resources.UnloadUnusedAssets(); };
+            
+            onWillUnload.Invoke();
+            SceneManager
+                .UnloadSceneAsync(Path.GetFileNameWithoutExtension(levels[num].ScenePath))
+                .completed += OnLevelUnloaded;
         }
 
-        private void StartLoadOp(int n, LoadSceneMode mode) {
+        private void OnLevelUnloaded(AsyncOperation op) {
+            Resources.UnloadUnusedAssets();
+            onUnloaded.Invoke();
+        }
+
+        private bool StartLoadOp(int n, LoadSceneMode mode) {
             LevelLoadOperation loadOp = new LevelLoadOperation {
                 scenePath = levels[n].ScenePath,
                 level = levels[n]
@@ -75,15 +87,16 @@ namespace Lib {
                 
             // Scene path has not been set
             if (string.IsNullOrEmpty(loadOp.scenePath)) {
-                return;
+                return false;
             }
 
+            onWillLoad.Invoke();
             string sceneName = Path.GetFileNameWithoutExtension(loadOp.scenePath);
                 
             // Scene is already loaded
             if (SceneManager.GetSceneByName(sceneName).IsValid()) {
                 onLevelLoaded.Invoke(loadOp.level);
-                return;
+                return false;
             }
 
             numLoadedLevels = 0;
@@ -91,6 +104,8 @@ namespace Lib {
             loadOp.asyncOp = SceneManager.LoadSceneAsync(sceneName, mode);
             loadOps.Add(loadOp);
             isLoading = numLevelsToLoad > 0;
+
+            return true;
         }
 
         private void Update() {

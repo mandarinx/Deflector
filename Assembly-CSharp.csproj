@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AngleTest.cs" />
+    <Compile Include="Assets\Scripts\Anim\InputKeyTrigger.cs" />
+    <Compile Include="Assets\Scripts\Anim\SetAnimatorTrigger.cs" />
     <Compile Include="Assets\Scripts\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hitable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hurt.cs" />
@@ -140,14 +142,9 @@
     <Compile Include="Assets\Scripts\UI\MultiplierLabel.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerHearts.cs" />
     <Compile Include="Assets\Scripts\UI\ScoreLabel.cs" />
-    <Compile Include="Assets\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\Scripts\UI\UIHeart.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanel.cs" />
-    <Compile Include="Assets\Scripts\UI\UIPanelCredits.cs" />
-    <Compile Include="Assets\Scripts\UI\UIPanelEndGame.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanelInGame.cs" />
-    <Compile Include="Assets\Scripts\UI\UIPanelIntro.cs" />
-    <Compile Include="Assets\Scripts\UI\UIPanelSplash.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanelToggle.cs" />
     <Compile Include="Assets\Scripts\UnityEvents.cs" />
     <Compile Include="Assets\Scripts\Utils\Angles.cs" />
@@ -157,6 +154,7 @@
     <Compile Include="Assets\Scripts\Utils\LayerMasks.cs" />
     <Compile Include="Assets\Scripts\Utils\TimeSince.cs" />
     <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
+    <Compile Include="Assets\Scripts\Utils\UHookUpdate.cs" />
     <None Include="Assets\Dadako\BitmapFonts\Pixel\_PixelCharLimits.txt" />
     <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
     <Reference Include="UnityEngine.UI">
