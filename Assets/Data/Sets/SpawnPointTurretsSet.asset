@@ -11,5 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a31300d5951c4353b04483657cbcae6, type: 3}
   m_Name: SpawnPointTurretsSet
   m_EditorClassIdentifier: 
+  clearOnAwake: 1
+  list: []
   onItemAdded: {fileID: 0}
   onItemRemoved: {fileID: 0}

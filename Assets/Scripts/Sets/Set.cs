@@ -5,19 +5,19 @@ using UnityEngine;
 public abstract class Set<T> : ScriptableObject {
     
     [SerializeField]
+    private bool clearOnAwake;
+    [SerializeField]
     private List<T> list;
     [SerializeField]
-    private bool    prefilled;
-
-    public IntEvent onItemAdded;
-    public IntEvent onItemRemoved;
+    private IntEvent onItemAdded;
+    [SerializeField]
+    private IntEvent onItemRemoved;
     
     public int Count => list.Count;
     public T this[int i] => list[i];
 
     private void OnEnable() {
-        // FUCK THIS SHIT
-        if (prefilled) {
+        if (!clearOnAwake) {
             return;
         }
         list = new List<T>();
