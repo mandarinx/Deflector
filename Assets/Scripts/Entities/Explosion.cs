@@ -31,10 +31,15 @@ public class Explosion : MonoBehaviour {
 
         onExplode?.Invoke();
         
-        Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position, 1.4f, layerExplode.value);
+        Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position, 
+                                                             1.4f, 
+                                                             layerExplode.value);
         
         for (int i = 0; i < overlapped.Length; ++i) {
-            overlapped[i].GetComponent<Killable>()?.Kill(transform.position);
+            overlapped[i].tag = "HitByExplosion";
+            overlapped[i]
+               .GetComponent<Killable>()
+              ?.Kill(transform.position);
         }
         
         yield return new WaitForSeconds(duration);

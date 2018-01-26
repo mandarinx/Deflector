@@ -17,12 +17,15 @@ public class ScoreCounter : MonoBehaviour {
 
     public void OnProjectileDespawn(GameObject projectileGO) {
         Projectile projectile = projectileGO.GetComponent<Projectile>();
-        if (projectile == null || !projectile.isActivated) {
+        if (projectile == null) {
             return;
         }
 
         score.SetValue(score.value + (explosionBaseScore * multiplier.value));
-        multiplier.SetValue(multiplier.value + 1);
+
+        int increase = projectile.isActivated && projectile.tag.Contains("HitByExplosion") ? 1 : 0;
+        multiplier.SetValue(multiplier.value + increase);
+        
         if (cooldown != null) {
             StopCoroutine(cooldown);
         }

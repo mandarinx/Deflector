@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hitable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hurt.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\Immune.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Killable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Killer.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Layers.cs" />

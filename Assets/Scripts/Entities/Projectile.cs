@@ -82,11 +82,11 @@ public class Projectile : MonoBehaviour {
         sr.sprite = sprites[angleIndex + activated];
     }
 
-    public void Explode() {
+    public void Explode(Vector3 pos) {
         if (exploding) {
             return;
         }
-        
+
         StartCoroutine(Explosion(2));
     }
 

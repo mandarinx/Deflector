@@ -74,6 +74,10 @@ public class Player : MonoBehaviour {
         Hit();
     }
 
+    public void SetImmune(bool immune) {
+        gameObject.layer = LayerMask.NameToLayer(immune ? "Default" : "Player");
+    }
+
     private void Hit() {
         playerHealth.RemoveLives(1);
         hitTime = Time.time;
@@ -201,7 +205,7 @@ public class Player : MonoBehaviour {
     }
     
     private IEnumerator Immune() {
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        SetImmune(true);
 
         int count = 0;
         while (count < immuneBlinks) {
@@ -214,7 +218,7 @@ public class Player : MonoBehaviour {
             ++count;
         }
         
-        gameObject.layer = LayerMask.NameToLayer("Player");
+        SetImmune(false);
     }
 
     private IEnumerator Footsteps() {
