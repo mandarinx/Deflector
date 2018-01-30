@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEditor;
+using TransformUtils = HyperGames.Lib.TransformUtils;
 
 public static class FindRefs {
 
@@ -31,7 +32,7 @@ public static class FindRefs {
             if (PrefabUtility.GetPrefabType(go) == PrefabType.PrefabInstance
                 && PrefabUtility.GetPrefabParent(go) == to) {
 
-                Debug.Log($"Referenced by {go.name}, {go.GetType()}", go);
+                Debug.Log($"Referenced by {TransformUtils.GetFullPath(go)}, {go.GetType()}", go);
                 referencedBy.Add(go);
             }
  
@@ -55,7 +56,7 @@ public static class FindRefs {
                         continue;
                     }
                     
-                    Debug.Log($"Referenced by {c.name}, {c.GetType()}", c);
+                    Debug.Log($"Referenced by {TransformUtils.GetFullPath(c.transform)}, {c.GetType()}", c);
                     referencedBy.Add(c.gameObject);
                 }
             }

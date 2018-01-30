@@ -21,7 +21,6 @@ public abstract class Set<T> : ScriptableObject {
             return;
         }
 
-        Debug.Log($"Clear {name}");
         list = new List<T>();
     }
 

@@ -17,9 +17,9 @@ public class IntAsset : ScriptableObject {
         curValue = initValue;
     }
 
-    public void SetValue(int value) {
-        bool changed = value != curValue;
-        curValue = value;
+    public void SetValue(int val) {
+        bool changed = val != curValue;
+        curValue = val;
         if (changed) {
             onValueChanged.Invoke(curValue);
         }

@@ -4,16 +4,20 @@ using GameEvents;
 
 public class Turret : MonoBehaviour {
 
-    public SpriteRenderer  spawnHole;
-    public GameObjectEvent onDespawn;
-    public Vector3Event    onFire;
+    [SerializeField]
+    private SpriteRenderer  spawnHole;
+    [SerializeField]
+    private GameObjectEvent onDespawn;
+    [SerializeField]
+    private Vector3Event    onFire;
 
-    private void Awake() {
+    private void OnEnable() {
         spawnHole.gameObject.SetActive(false);
+        StartCoroutine(Fire());
     }
 
-    private void Start() {
-        StartCoroutine(Fire());
+    private void OnDisable() {
+        StopAllCoroutines();
     }
 
     private IEnumerator Fire() {

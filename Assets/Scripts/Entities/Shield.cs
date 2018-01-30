@@ -1,40 +1,44 @@
-﻿using GameEvents;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class Shield : MonoBehaviour {
-
-    public Color                 activeColor;
-    public Vector3Event          shieldHitAt;
     
-    private Hitable              hitable;
+    [SerializeField]
+    private Color                activeColor;
+    [SerializeField]
+    private float                hitRadius;
+    [SerializeField]
+    private Vector2              hitOffset;
+    [SerializeField]
+    private LayerMask            hitLayer;
+    
     private SpriteRenderer       sr;
-    private new CircleCollider2D collider;
+    private Collider2D[]         overlaps;
     
     private void Awake() {
         sr = GetComponent<SpriteRenderer>();
-        collider = GetComponent<CircleCollider2D>();
+        overlaps = new Collider2D[8];
     }
 
-    private void OnTriggerStay2D(Collider2D other) {
-        hitable = other.gameObject.GetComponent<Hitable>();
-        sr.color = activeColor;
+    private void Update() {
+        sr.color = Overlap() > 0 ? activeColor : Color.white;
     }
-
-    private void OnTriggerExit2D(Collider2D other) {
-        hitable = null;
-        sr.color = Color.white;
-    }
-
+    
     public void Hit(int angleIndex) {
-        if (hitable == null) {
-            return;
+        int numOverlaps = Overlap();
+        for (int i = 0; i < numOverlaps; ++i) {
+            overlaps[i].GetComponent<Hitable>()?.Hit(angleIndex);
         }
-        
-        Vector3 delta = hitable.transform.position - transform.position;
-        delta = delta.normalized * collider.radius;
-        shieldHitAt.Invoke(transform.position + delta);
-        
-        hitable.Hit(angleIndex);
+    }
+
+    private int Overlap() {
+        return Physics2D.OverlapCircleNonAlloc(transform.position + (Vector3)hitOffset, 
+                                               hitRadius,
+                                               overlaps,
+                                               hitLayer.value);
+    }
+
+    private void OnDrawGizmosSelected() {
+        GizmoUtils.DrawCircle(transform.position + (Vector3)hitOffset, hitRadius, Color.white);
     }
 }

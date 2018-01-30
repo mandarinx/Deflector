@@ -2387,7 +2387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b190e62437f6c43249024757a9879fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pool: {fileID: 11400000, guid: 296920f05dc104317984f86a521da8f1, type: 2}
+  onKilled: {fileID: 11400000, guid: ce6b4892b4e6e4f43ae86e2c775114fe, type: 2}
   layer:
     serializedVersion: 2
     m_Bits: 512

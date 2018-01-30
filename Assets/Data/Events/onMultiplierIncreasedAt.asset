@@ -8,9 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64bd7b40b82244ea5aea17286e128f43, type: 3}
-  m_Name: TurretsPool
+  m_Script: {fileID: 11500000, guid: ab6a3d67b24a8490cb5d2a4fa04eb33f, type: 3}
+  m_Name: onMultiplierIncreasedAt
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1238722765353642, guid: 0a3cd0a093fef4abcb97be4ceaf5965d, type: 2}
-  onGameObjectAdded: {fileID: 0}
-  onGameObjectRemoved: {fileID: 0}

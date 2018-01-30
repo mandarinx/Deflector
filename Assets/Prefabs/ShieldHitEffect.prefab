@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 19d4e153a77564b3ab0687afb5b6ee86, type: 2}
-  m_playOnAwake: 1
+  m_playOnAwake: 0
   onAnimDone:
     m_PersistentCalls:
       m_Calls:

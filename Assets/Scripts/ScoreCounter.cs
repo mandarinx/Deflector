@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using GameEvents;
 using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour {
@@ -7,7 +8,10 @@ public class ScoreCounter : MonoBehaviour {
     public IntAsset multiplier;
     public int      explosionBaseScore;
     public float    multiplierCooldown;
-
+    
+    [SerializeField]
+    private Vector3AndIntEvent onMultiplierIncreasedAt;
+    
     private Coroutine cooldown;
 
     public void OnResetScore() {
@@ -25,6 +29,9 @@ public class ScoreCounter : MonoBehaviour {
 
         int increase = projectile.isActivated && projectile.tag.Contains("HitByExplosion") ? 1 : 0;
         multiplier.SetValue(multiplier.value + increase);
+        if (increase > 0) {
+            onMultiplierIncreasedAt.Invoke(projectileGO.transform.position, multiplier.value);
+        }
         
         if (cooldown != null) {
             StopCoroutine(cooldown);

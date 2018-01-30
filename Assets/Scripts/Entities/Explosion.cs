@@ -14,22 +14,18 @@ public class Explosion : MonoBehaviour {
     [SerializeField]
     private LayerMask     layerExplode;
     [SerializeField]
-    private GameEvent     onExplode;
+    private Vector3Event  onExplodedAt;
     [SerializeField]
     private SpriteAnim[]  anims;
     
-    public void Explode() {
-        StartCoroutine(BigBadaBoom());
-    }
-
-    private IEnumerator BigBadaBoom() {
+    public IEnumerator BigBadaBoom() {
         yield return new WaitForSeconds(Random.Range(delayMin, delayMax));
 
         for (int i = 0; i < anims.Length; ++i) {
             anims[i].Play(anims[i].Clip);
         }
 
-        onExplode?.Invoke();
+        onExplodedAt?.Invoke(transform.position);
         
         Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position, 
                                                              1.4f, 

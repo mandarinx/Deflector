@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4434446830111098}
   - component: {fileID: 114106497533702508}
   - component: {fileID: 114858875753414546}
-  - component: {fileID: 114514584718883692}
   - component: {fileID: 114234367252312990}
+  - component: {fileID: 114951977325540386}
+  - component: {fileID: 114514584718883692}
   - component: {fileID: 114639929884005888}
   - component: {fileID: 114915192775786986}
-  - component: {fileID: 114951977325540386}
   m_Layer: 0
   m_Name: Turrets
   m_TagString: Untagged
@@ -60,7 +60,7 @@ MonoBehaviour:
   spawnInterval: 4
   maxTurrets: -1
   spawnPoints: {fileID: 11400000, guid: 6c9b0cbc0beb94df0b8ec7518169c942, type: 2}
-  turrets: {fileID: 11400000, guid: 67d1a194105ab40d69343d1256d2ecb2, type: 2}
+  prefab: {fileID: 1238722765353642, guid: 0a3cd0a093fef4abcb97be4ceaf5965d, type: 2}
 --- !u!114 &114234367252312990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -87,17 +87,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 67d1a194105ab40d69343d1256d2ecb2, type: 2}
-        m_MethodName: DespawnAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114514584718883692
@@ -115,7 +104,7 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 67d1a194105ab40d69343d1256d2ecb2, type: 2}
+      - m_Target: {fileID: 114106497533702508}
         m_MethodName: DespawnAll
         m_Mode: 1
         m_Arguments:
@@ -143,7 +132,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 67d1a194105ab40d69343d1256d2ecb2, type: 2}
+      - m_Target: {fileID: 114106497533702508}
         m_MethodName: Despawn
         m_Mode: 0
         m_Arguments:
@@ -229,17 +218,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114106497533702508}
         m_MethodName: Deactivate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 67d1a194105ab40d69343d1256d2ecb2, type: 2}
-        m_MethodName: DespawnAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

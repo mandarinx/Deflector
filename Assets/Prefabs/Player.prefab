@@ -110,9 +110,7 @@ GameObject:
   - component: {fileID: 4745368896387884}
   - component: {fileID: 114494586970716236}
   - component: {fileID: 212632009405841614}
-  - component: {fileID: 58291357748548092}
-  - component: {fileID: 50896347668238330}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,41 +220,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!50 &50896347668238330
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790389534221734}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!58 &58291357748548092
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790389534221734}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.2, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!58 &58749400449453462
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -391,7 +354,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeColor: {r: 0, g: 1, b: 0.048275948, a: 1}
-  shieldHitAt: {fileID: 11400000, guid: a9754f202c6704a6cb13f6547d06c0ab, type: 2}
+  hitRadius: 0.5
+  hitOffset: {x: 0.2, y: 0}
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &114498359914231474
 MonoBehaviour:
   m_ObjectHideFlags: 1

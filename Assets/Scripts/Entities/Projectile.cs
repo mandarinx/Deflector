@@ -15,9 +15,9 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private Sprite[]                  sprites;
     [SerializeField]
-    private GameObjectEvent           onExplode;
+    private GameObjectEvent           onDespawn;
     [SerializeField]
-    private GameEvent                 onHit;
+    private GameObjectEvent           onHit;
 
     private int                       contacts;
     private int                       angleIndex;
@@ -34,6 +34,9 @@ public class Projectile : MonoBehaviour {
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+    }
+
+    private void OnEnable() {
         exploding = false;
         activated = 0;
         angleIndex = Random.Range(0, 4) * 2 + 1;
@@ -41,12 +44,17 @@ public class Projectile : MonoBehaviour {
         sr.sprite = sprites[angleIndex + activated];
     }
 
+    private void OnDisable() {
+        StopAllCoroutines();
+    }
+
+    // Called by Hitable
     public void Hit(int hitAngleIndex) {
         if (exploding) {
             return;
         }
         
-        onHit.Invoke();
+        onHit.Invoke(gameObject);
         
         if (activated == 8) {
             StartCoroutine(Explosion(4));
@@ -82,6 +90,7 @@ public class Projectile : MonoBehaviour {
         sr.sprite = sprites[angleIndex + activated];
     }
 
+    // Called by Killable
     public void Explode(Vector3 pos) {
         if (exploding) {
             return;
@@ -101,7 +110,7 @@ public class Projectile : MonoBehaviour {
             ++blink;
         }
         
-        onExplode.Invoke(gameObject);
+        onDespawn.Invoke(gameObject);
     }
 
     private void FixedUpdate() {

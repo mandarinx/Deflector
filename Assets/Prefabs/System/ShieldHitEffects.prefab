@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4773924913520502}
   - component: {fileID: 114277850284830462}
-  - component: {fileID: 114181423149059292}
   - component: {fileID: 114457083671826134}
+  - component: {fileID: 114981742702170024}
   m_Layer: 0
   m_Name: ShieldHitEffects
   m_TagString: Untagged
@@ -42,34 +42,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114181423149059292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1578887200761476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28084496a80494d728291c8ffc77d994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vector3Event: {fileID: 11400000, guid: a9754f202c6704a6cb13f6547d06c0ab, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114277850284830462}
-        m_MethodName: Spawn
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: GameEvents.UnityVector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &114277850284830462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7fbbdc754c14f5ba0ff2eab00a536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldHitEffects: {fileID: 11400000, guid: 6f643bd7860164d8d80908cb1e5cff49, type: 2}
+  prefab: {fileID: 1681930951813180, guid: 77eb8a455f01b488dbabb123f61e399f, type: 2}
 --- !u!114 &114457083671826134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,6 +71,34 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114277850284830462}
         m_MethodName: Despawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: GameEvents.UnityGameObjectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114981742702170024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578887200761476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40502709289fe49e3ac93115745917d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 03a4ed030947f4ec387fbebeb089625d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114277850284830462}
+        m_MethodName: Spawn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
