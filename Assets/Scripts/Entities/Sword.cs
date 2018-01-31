@@ -15,6 +15,20 @@ public class Sword : MonoBehaviour {
         sr = GetComponent<SpriteRenderer>();
     }
 
+    public void Hit(int angleIndex) {
+        for (int i = 0; i < overlapped.Count; ++i) {
+            overlapped[i].GetComponent<Hitable>()?.Hit(angleIndex);
+        }
+    }
+
+    public void Hide() {
+        sr.enabled = false;
+    }
+
+    public void Show() {
+        sr.enabled = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         if (!overlapped.Contains(other)) {
             overlapped.Add(other);
@@ -27,11 +41,5 @@ public class Sword : MonoBehaviour {
 
     private void Update() {
         sr.color = overlapped.Count > 0 ? activeColor : Color.white;
-    }
-
-    public void Hit(int angleIndex) {
-        for (int i = 0; i < overlapped.Count; ++i) {
-            overlapped[i].GetComponent<Hitable>()?.Hit(angleIndex);
-        }
     }
 }

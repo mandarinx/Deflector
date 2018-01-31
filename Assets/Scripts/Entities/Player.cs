@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using PowerTools;
 using GameEvents;
+using JetBrains.Annotations;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour {
     public void Activate() {
         gameObject.layer = LayerMask.NameToLayer("Player");
         blood.enabled = false;
+        sword.Show();
         sr.enabled = true;
         sr.color = new Color(1f, 1f, 1f, 1f);
         shadow.color = new Color(1f, 1f, 1f, 1f);
@@ -62,12 +64,22 @@ public class Player : MonoBehaviour {
         StopAllCoroutines();
     }
 
+    /// <summary>
+    /// Called by the GameEventLister for onPlayerDied
+    /// </summary>
+    [UsedImplicitly]
     public void OnPlayerDied() {
         blood.enabled = true;
         sr.enabled = false;
+        sword.Hide();
         Deactivate();
     }
 
+    /// <summary>
+    /// Called by the Killable component
+    /// </summary>
+    /// <param name="hitPos">Position of the hit</param>
+    [UsedImplicitly]
     public void Hit(Vector3 hitPos) {
         hitNormal = new Vector2(
             transform.position.x - hitPos.x,
