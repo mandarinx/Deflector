@@ -1,31 +1,31 @@
 ﻿using GameEvents;
 using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class LevelExit : MonoBehaviour {
 
-    public Vector3Int coordinate;
-    public Tile       openDoor;
-    public Tile       closedDoor;
-    
-    [Header("Events Out")]
-    public GameEvent  onLevelExit;
-    
-    private Tilemap   tilemap;
+    [SerializeField]
+    private Sprite     openDoor;
+    [SerializeField]
+    private Sprite     closedDoor;
 
-    public void OnLevelLoaded(Level level) {
-        tilemap = level.Layers.GetLayer("Walls");
-        Assert.IsNotNull(tilemap, $"Could not get layer Walls from level {level.name}");
+    [Header("Events Out")]
+    [SerializeField]
+    private GameEvent  onLevelExit;
+
+    private SpriteRenderer sr;
+
+    private void OnEnable() {
+        sr = GetComponent<SpriteRenderer>();
+        sr.sprite = closedDoor;
     }
-    
+
     public void OpenDoor() {
-        tilemap.SetTile(coordinate, openDoor);
+        sr.sprite = openDoor;
     }
 
     public void CloseDoor() {
-        tilemap.SetTile(coordinate, closedDoor);
+        sr.sprite = closedDoor;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

@@ -7,10 +7,10 @@ namespace Modes {
     public class Survival : GameMode {
 
         [SerializeField]
-        private int             maxProjectiles;
-        private int             spawnedProjectiles;
+        private int          maxProjectiles;
+        private int          spawnedProjectiles;
         [SerializeField]
-        private GameObjectEvent onProjectileSpawned;
+        private Vector3Event onProjectileSpawned;
 
         public override string title => $"Survive {maxProjectiles} projectiles";
 
@@ -32,7 +32,7 @@ namespace Modes {
             onProjectileSpawned?.UnregisterCallback(OnProjectileSpawned);
         }
 
-        private void OnProjectileSpawned(GameObject projectile) {
+        private void OnProjectileSpawned(Vector3 pos) {
             ++spawnedProjectiles;
         }
     }

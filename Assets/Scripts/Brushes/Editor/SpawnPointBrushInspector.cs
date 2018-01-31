@@ -1,20 +1,30 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 [CustomEditor(typeof(SpawnPointBrush))]
-public class SpawnPointBrushInspector : LayerObjectBrushEditor<SpawnPoint> {
-    
+public class SpawnPointBrushInspector : GridBrushEditorBase {
+
+    private SpawnPointBrush brush => target as SpawnPointBrush;
+
     public void OnSceneGUI() {
-        Transform layer = brush.GetLayer();
-        Tilemap tilemap = layer.GetComponent<Tilemap>();
-        BrushEditorUtility.BeginQuads((target as SpawnPointBrush).color);
-        foreach (Transform cell in layer) {
-            if (cell.GetComponent<SpawnPoint>() == null) {
-                continue;
-            }
-            BrushEditorUtility.DrawQuadBatched(tilemap.layoutGrid, tilemap.WorldToCell(cell.position));
+		Grid grid = BrushUtility.GetRootGrid();
+        SpawnPoint[] spawnPoints = BrushUtility
+                                  .GetLayer(brush.Layer)
+                                 ?.GetComponentsInChildren<SpawnPoint>();
+
+        if (spawnPoints == null) {
+            return;
+        }
+
+        BrushEditorUtility.BeginQuads(brush.Color);
+        for (int i = 0; i < spawnPoints.Length; ++i) {
+            SelectSpawnPoint(grid, spawnPoints[i]);
         }
         BrushEditorUtility.EndQuads();
     }
+
+    private static void SelectSpawnPoint(Grid grid, SpawnPoint spawnPoint) {
+        BrushEditorUtility.DrawQuadBatched(grid, grid.WorldToCell(spawnPoint.transform.position));
+    }
+
 }
