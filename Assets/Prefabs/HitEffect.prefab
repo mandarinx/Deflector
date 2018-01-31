@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95962295517647380}
   - component: {fileID: 114894591851038328}
   m_Layer: 0
-  m_Name: ShieldHitEffect
+  m_Name: HitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,18 +75,7 @@ MonoBehaviour:
   m_playOnAwake: 0
   onAnimDone:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114975686723375720}
-        m_MethodName: OnAnimDone
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114975686723375720
@@ -100,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061ed3259e1fe4570a621fa04f7295c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onShieldEffectDone: {fileID: 11400000, guid: d21a04f214a7545eda9c441cd20cf6b0, type: 2}
+  onAnimDone: {fileID: 11400000, guid: d21a04f214a7545eda9c441cd20cf6b0, type: 2}
 --- !u!212 &212640629202137496
 SpriteRenderer:
   m_ObjectHideFlags: 1

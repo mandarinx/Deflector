@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class Shield : MonoBehaviour {
+public class Sword : MonoBehaviour {
 
     [SerializeField]
     private Color            activeColor;

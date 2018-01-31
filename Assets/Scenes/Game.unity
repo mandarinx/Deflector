@@ -1151,7 +1151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1578887200761476, guid: e606ef7252a864298b02bd2833a9b7b5, type: 2}
       propertyPath: m_Name
-      value: ShieldHitEffectController
+      value: HitEffectController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e606ef7252a864298b02bd2833a9b7b5, type: 2}

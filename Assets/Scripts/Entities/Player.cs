@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
     public LayerMask                  hurtBy;
     public AnimationCurve             forceFalloff;
     public Transform                  shieldAnchor;
-    public Shield                     shield;
+    public Sword                      sword;
     public SpriteAnim                 playerAnim;
     public HealthAsset                playerHealth;
     public SpriteRenderer             blood;
@@ -93,7 +93,7 @@ public class Player : MonoBehaviour {
         // Shield
 
         if (Input.GetKeyDown(KeyCode.X)) {
-            shield.Hit(walkDir);
+            sword.Hit(walkDir);
         }
 
         // Movement

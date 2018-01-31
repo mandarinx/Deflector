@@ -12,14 +12,14 @@ using UnityEngine.Events;
 
 namespace PowerTools
 {
-	
-	/// Component allowing animations to be played without adding them to a unity animation controller first. 
+
+	/// Component allowing animations to be played without adding them to a unity animation controller first.
 // A shared animation controller is used, it has a single state which is overridden whenever an animation is played.
 [RequireComponent(typeof(Animator))]
 [DisallowMultipleComponent]
-public class SpriteAnim : SpriteAnimEventHandler 
-{	
-	
+public class SpriteAnim : SpriteAnimEventHandler
+{
+
 	#region Definitions
 
 	static readonly string STATE_NAME = "a";
@@ -60,9 +60,9 @@ public class SpriteAnim : SpriteAnimEventHandler
 
 	/// Property for pausing or resuming the currently playing animation
 	public bool Paused
-	{ 
-		get { return IsPaused(); } 
-		set 
+	{
+		get { return IsPaused(); }
+		set
 		{
 			if ( value == true ) Pause();
 			else Resume();
@@ -85,26 +85,26 @@ public class SpriteAnim : SpriteAnimEventHandler
 	public string ClipName { get { return m_currAnim != null ? m_currAnim.name : string.Empty; } }
 
 	#endregion
-	#region Funcs: Public 
+	#region Funcs: Public
 
 	/// Plays the specified clip
-	public void Play( AnimationClip anim, float speed = 1 ) 
+	public void Play( AnimationClip anim, float speed = 1 )
 	{
 		if ( anim == null )
 			return;
 
 		isDone = false;
-		
+
 		if ( m_animator.enabled == false )
 			m_animator.enabled = true;
 
-		// Reset animation nodes so any curves are 
+		// Reset animation nodes so any curves are
 		if ( m_nodes != null )
 		    m_nodes.Reset();
 
-		#if UNITY_5_6_OR_NEWER			
+		#if UNITY_5_6_OR_NEWER
 			m_clipPairList[0] = new KeyValuePair<AnimationClip, AnimationClip>(m_clipPairList[0].Key, anim);
-			m_controller.ApplyOverrides(m_clipPairList);		
+			m_controller.ApplyOverrides(m_clipPairList);
 		#else
 			m_clipPairArray[0].overrideClip = anim;
 			m_controller.clips = m_clipPairArray;
@@ -115,11 +115,11 @@ public class SpriteAnim : SpriteAnimEventHandler
 		m_animator.speed = m_speed;
 		m_currAnim = anim;
 		m_animator.Update(0.0f); // Update so that normalized time is updated immediately
-	}		 	 
+	}
 
 	/// Stops the clip by disabling the animator
 	public void Stop()
-	{		
+	{
 		m_animator.enabled = false;
 	}
 
@@ -135,32 +135,37 @@ public class SpriteAnim : SpriteAnimEventHandler
 		m_animator.speed = m_speed;
 	}
 
+    public void AddDoneListener(UnityAction callback) {
+        onAnimDone.RemoveListener(callback);
+        onAnimDone.AddListener(callback);
+    }
+
 	/// Returns the currently playing clip
 	public AnimationClip GetCurrentAnimation() { return m_currAnim; }
 
 	///  Returns true if the passed clip is playing. If no clip is passed, returns true if ANY clip is playing
-	public bool IsPlaying(AnimationClip clip = null) 
-	{		
+	public bool IsPlaying(AnimationClip clip = null)
+	{
 		if ( clip == null || m_currAnim == clip )
 			return m_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
 		return false;
-	} 
+	}
 
 	/// Returns true if a clip with the specified name is playing
-	public bool IsPlaying(string animName) 
-	{ 
+	public bool IsPlaying(string animName)
+	{
 		if ( m_currAnim == null )
 			return false;
 		if ( m_currAnim.name == animName )
 			return m_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
 		return false;
-	} 
+	}
 
 	public bool IsPaused()
 	{
 		if ( m_currAnim == null )
 			return false;
-		return m_animator.speed == 0;		
+		return m_animator.speed == 0;
 	}
 
 	/// Sets the current animation playback speed
@@ -175,7 +180,7 @@ public class SpriteAnim : SpriteAnimEventHandler
 
 	/// Returns the time of the currently playing clip (or zero if no clip is playing)
 	public float GetTime()
-	{ 
+	{
 		if ( m_currAnim != null )
 			return m_animator.GetCurrentAnimatorStateInfo(0).normalizedTime * m_currAnim.length;
 		return 0;
@@ -192,7 +197,7 @@ public class SpriteAnim : SpriteAnimEventHandler
 
 	/// Returns the normalized time (between 0.0 and 1.0) of the currently playing clip (or zero if no clip is playing)
 	public float GetNormalisedTime()
-	{ 
+	{
 		if ( m_currAnim != null )
 			return m_animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
 		return 0;
@@ -225,7 +230,7 @@ public class SpriteAnim : SpriteAnimEventHandler
 		m_animator.runtimeAnimatorController = m_controller;
 
 		#if UNITY_5_6_OR_NEWER
-			m_controller.GetOverrides(m_clipPairList);			
+			m_controller.GetOverrides(m_clipPairList);
 		#else
 			m_clipPairArray = m_controller.clips;
 		#endif
@@ -240,7 +245,7 @@ public class SpriteAnim : SpriteAnimEventHandler
 
 	// Called when component is first added. Used to add the sprite renderer
 	void Reset()
-	{		
+	{
 		// NB: Doing this here rather than using the RequireComponent Attribute means we can add a UI.Image instead if it's a UI Object
 		if ( GetComponent<RectTransform>() == null )
 		{
@@ -250,7 +255,7 @@ public class SpriteAnim : SpriteAnimEventHandler
 				gameObject.AddComponent<SpriteRenderer>();
 			}
 		}
-		else 
+		else
 		{
 			// It's a UI Image, so add the Image component if it doesn't already exist
 			if ( GetComponent<UnityEngine.UI.Image>() == null )

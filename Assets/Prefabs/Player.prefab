@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4363176378934414}
   m_Layer: 0
-  m_Name: ShieldAnchor
+  m_Name: SwordAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 50425921316205328}
   - component: {fileID: 58740981323102530}
   m_Layer: 12
-  m_Name: Shield
+  m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,9 +221,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2, y: 0}
+  m_Offset: {x: 0.15, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.45
 --- !u!58 &58749400449453462
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -322,7 +322,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   shieldAnchor: {fileID: 4363176378934414}
-  shield: {fileID: 114494586970716236}
+  sword: {fileID: 114494586970716236}
   playerAnim: {fileID: 114943011308257730}
   playerHealth: {fileID: 11400000, guid: af7b056e5a04248d8bd7d11442f91193, type: 2}
   blood: {fileID: 212117894192380854}

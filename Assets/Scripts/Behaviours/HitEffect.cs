@@ -2,14 +2,15 @@
 using GameEvents;
 using PowerTools;
 
-public class ShieldHitEffect : MonoBehaviour {
-    
+public class HitEffect : MonoBehaviour {
+
     [SerializeField]
-    private GameObjectEvent onShieldEffectDone;
+    private GameObjectEvent onAnimDone;
     private SpriteAnim      anim;
 
     private void Awake() {
         anim = GetComponent<SpriteAnim>();
+        anim.AddDoneListener(OnAnimDone);
     }
 
     private void OnEnable() {
@@ -17,7 +18,7 @@ public class ShieldHitEffect : MonoBehaviour {
         anim.Play(anim.Clip);
     }
 
-    public void OnAnimDone() {
-        onShieldEffectDone.Invoke(gameObject);
+    private void OnAnimDone() {
+        onAnimDone.Invoke(gameObject);
     }
 }

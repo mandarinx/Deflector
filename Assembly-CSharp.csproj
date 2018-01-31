@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\Anim\SetAnimatorTrigger.cs" />
     <Compile Include="Assets\Scripts\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hitable.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\HitEffect.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hurt.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Immune.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Killable.cs" />
@@ -63,7 +64,6 @@
     <Compile Include="Assets\Scripts\Behaviours\Layers.cs" />
     <Compile Include="Assets\Scripts\Behaviours\LevelExit.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Moveable.cs" />
-    <Compile Include="Assets\Scripts\Behaviours\ShieldHitEffect.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Treasure.cs" />
     <Compile Include="Assets\Scripts\Brushes\SpawnPointBrush.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
@@ -71,10 +71,10 @@
     <Compile Include="Assets\Scripts\Controllers\Coords.cs" />
     <Compile Include="Assets\Scripts\Controllers\ExplosionController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameModes.cs" />
+    <Compile Include="Assets\Scripts\Controllers\HitEffectController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Levels.cs" />
     <Compile Include="Assets\Scripts\Controllers\Players.cs" />
     <Compile Include="Assets\Scripts\Controllers\ProjectileController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\ShieldHitEffectController.cs" />
     <Compile Include="Assets\Scripts\Controllers\TurretController.cs" />
     <Compile Include="Assets\Scripts\Data\GameMode.cs" />
     <Compile Include="Assets\Scripts\Data\HealthAsset.cs" />
@@ -86,8 +86,8 @@
     <Compile Include="Assets\Scripts\Entities\Explosion.cs" />
     <Compile Include="Assets\Scripts\Entities\Player.cs" />
     <Compile Include="Assets\Scripts\Entities\Projectile.cs" />
-    <Compile Include="Assets\Scripts\Entities\Shield.cs" />
     <Compile Include="Assets\Scripts\Entities\SpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\Entities\Sword.cs" />
     <Compile Include="Assets\Scripts\Entities\Turret.cs" />
     <Compile Include="Assets\Scripts\GameEvents\FloatEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\FloatEventListener.cs" />
