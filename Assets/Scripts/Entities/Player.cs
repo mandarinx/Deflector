@@ -5,13 +5,14 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
 public class Player : MonoBehaviour {
-    
+
     public float                      moveSpeed = 1f;
     public float                      bounceForce;
     public int                        immuneBlinks;
     public float                      immuneBlinkDuration;
     public float                      footstepInterval;
     public float                      hurtDuration;
+    public LayerMask                  hurtBy;
     public AnimationCurve             forceFalloff;
     public Transform                  shieldAnchor;
     public Shield                     shield;
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour {
     public SpriteRenderer             blood;
     public SpriteRenderer             shadow;
     public GameEvent                  onFootstep;
-    
+
     private Rigidbody2D               rb;
     private SpriteRenderer            sr;
     private float                     walkAngle;
@@ -69,7 +70,7 @@ public class Player : MonoBehaviour {
 
     public void Hit(Vector3 hitPos) {
         hitNormal = new Vector2(
-            transform.position.x - hitPos.x, 
+            transform.position.x - hitPos.x,
             transform.position.y - hitPos.y).normalized;
         Hit();
     }
@@ -82,21 +83,21 @@ public class Player : MonoBehaviour {
         playerHealth.RemoveLives(1);
         hitTime = Time.time;
         StartCoroutine(Immune());
-    } 
+    }
 
     private void Update() {
         if (!activated) {
             return;
         }
-        
+
         // Shield
 
         if (Input.GetKeyDown(KeyCode.X)) {
             shield.Hit(walkDir);
         }
-        
+
         // Movement
-        
+
         if (Input.GetKey(KeyCode.UpArrow)) {             inputMove = 2;
             if (Input.GetKey(KeyCode.RightArrow)) {      inputMove = 1; }
             else if (Input.GetKey(KeyCode.LeftArrow)) {  inputMove = 3; }
@@ -105,7 +106,7 @@ public class Player : MonoBehaviour {
             if (Input.GetKey(KeyCode.RightArrow)) {      inputMove = 7; }
             else if (Input.GetKey(KeyCode.LeftArrow)) {  inputMove = 5; }
         }
-        
+
         if (Input.GetKey(KeyCode.RightArrow)) {          inputMove = 0;
             if (Input.GetKey(KeyCode.UpArrow)) {         inputMove = 1; }
             else if (Input.GetKey(KeyCode.DownArrow)) {  inputMove = 7; }
@@ -121,15 +122,15 @@ public class Player : MonoBehaviour {
         if (inputMove == 3 || inputMove == 4 || inputMove == 5) {
             sr.flipX = false;
         }
-        
+
         // Overlap triggers
-        
+
         OverlapTrigger();
     }
-    
+
     private void FixedUpdate() {
         Vector2 velocity = Vector2.zero;
-        
+
         if (inputMove >= 0) {
             walkDir = inputMove;
             walkAngle = Angles.GetAngle(inputMove);
@@ -137,7 +138,7 @@ public class Player : MonoBehaviour {
             velocity = Angles.GetDirection(walkAngle) * moveSpeed;
             shieldAnchor.rotation = Quaternion.Euler(0f, 0f, Mathf.Rad2Deg * walkAngle);
         }
-        
+
         rb.MovePosition(rb.position + (velocity + (hitNormal * bounceForce)) * Time.fixedDeltaTime);
         hitNormal *= forceFalloff.Evaluate(Mathf.Clamp01((Time.time - hitTime) / 1f));
     }
@@ -154,26 +155,26 @@ public class Player : MonoBehaviour {
         if (trigger == null) {
             return;
         }
-        
+
         if (hurtRoutine != null) {
             return;
         }
-        
+
         Hurt hurt = trigger.GetComponent<Hurt>();
         if (hurt == null) {
             return;
         }
-        
+
         playerHealth.RemoveLives(1);
         hurtRoutine = StartCoroutine(Hurt());
     }
-    
+
     private void OnCollisionEnter2D(Collision2D other) {
         if (!activated) {
             return;
         }
 
-        if (other.gameObject.layer != LayerMask.NameToLayer("Projectiles")) {
+        if (!LayerMasks.LayerInMask(other.gameObject.layer, hurtBy)) {
             return;
         }
 
@@ -181,14 +182,14 @@ public class Player : MonoBehaviour {
         if (contacts == 0) {
             return;
         }
-        
+
         hitNormal = Vector2.zero;
         for (int i = 0; i < contacts; ++i) {
             hitNormal += contactPoints[i].normal;
         }
         hitNormal /= contacts;
         hitNormal.Normalize();
-        
+
         Hit();
     }
 
@@ -203,7 +204,7 @@ public class Player : MonoBehaviour {
         sr.color = new Color(1f, 1f, 1f, 1f);
         hurtRoutine = null;
     }
-    
+
     private IEnumerator Immune() {
         SetImmune(true);
 
@@ -217,7 +218,7 @@ public class Player : MonoBehaviour {
             yield return new WaitForSeconds(immuneBlinkDuration);
             ++count;
         }
-        
+
         SetImmune(false);
     }
 

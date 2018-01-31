@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4496519819737292}
   - component: {fileID: 212117894192380854}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,27 +51,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4805025532929630}
   - component: {fileID: 212835153610289030}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Shadow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1523981960674838
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4228557968937158}
-  - component: {fileID: 114468777036925394}
-  - component: {fileID: 114498359914231474}
-  - component: {fileID: 114534720961051336}
-  - component: {fileID: 114694424836282652}
-  m_Layer: 10
-  m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,26 +91,15 @@ GameObject:
   - component: {fileID: 4745368896387884}
   - component: {fileID: 114494586970716236}
   - component: {fileID: 212632009405841614}
-  m_Layer: 0
+  - component: {fileID: 50425921316205328}
+  - component: {fileID: 58740981323102530}
+  m_Layer: 12
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4228557968937158
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1523981960674838}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4928502872058554}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4363176378934414
 Transform:
   m_ObjectHideFlags: 1
@@ -196,7 +166,6 @@ Transform:
   - {fileID: 4363176378934414}
   - {fileID: 4805025532929630}
   - {fileID: 4496519819737292}
-  - {fileID: 4228557968937158}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -220,6 +189,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!50 &50425921316205328
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1790389534221734}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!58 &58740981323102530
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1790389534221734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
 --- !u!58 &58749400449453462
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -296,6 +300,9 @@ MonoBehaviour:
   immuneBlinkDuration: 0.12
   footstepInterval: 0.3
   hurtDuration: 3
+  hurtBy:
+    serializedVersion: 2
+    m_Bits: 512
   forceFalloff:
     serializedVersion: 2
     m_Curve:
@@ -321,27 +328,6 @@ MonoBehaviour:
   blood: {fileID: 212117894192380854}
   shadow: {fileID: 212835153610289030}
   onFootstep: {fileID: 11400000, guid: 819b49bb9700b49d082c6b6fcd351aa0, type: 2}
---- !u!114 &114468777036925394
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1523981960674838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67765f490a82546d096a0bc63f9ac231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 8300000, guid: 9b0b0fec7162c8a4191481f68f2750ef, type: 3}
-  - {fileID: 8300000, guid: 2d4676ef08547ee46aae10435f57f4b0, type: 3}
-  - {fileID: 8300000, guid: 38fd25ba348ac954b848aa2fa848530f, type: 3}
-  - {fileID: 8300000, guid: 73753d4e614a6714382f7dadb69b8c8e, type: 3}
-  onGetObject:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &114494586970716236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,59 +340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeColor: {r: 0, g: 1, b: 0.048275948, a: 1}
-  hitRadius: 0.5
-  hitOffset: {x: 0.2, y: 0}
-  hitLayer:
-    serializedVersion: 2
-    m_Bits: 512
---- !u!114 &114498359914231474
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1523981960674838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71123ab65ba8a445f94ad293f4529402, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onNext:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114534720961051336}
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &114534720961051336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1523981960674838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b52d35d891124e40a6fc0daa125387c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numAudioSources: 4
-  output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
-  volume: 0.344
-  audioSourceConfig:
-    minDistance: 5
-    maxDistance: 10
-    spatialBlend: 0
-    dopplerLevel: 0
-    spread: 1
-    rolloffMode: 0
 --- !u!114 &114593070675170002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,34 +357,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114108300275756790}
         m_MethodName: OnPlayerDied
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114694424836282652
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1523981960674838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 819b49bb9700b49d082c6b6fcd351aa0, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114498359914231474}
-        m_MethodName: FetchNextObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -523,7 +428,7 @@ SpriteRenderer:
   m_Size: {x: 0.24, y: 0.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212161194741644122
 SpriteRenderer:
@@ -603,7 +508,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300080, guid: 487de309fe7524e65a3787a4d4b0d48c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: decd70a859aa38c42832e42855050fe4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -655,5 +560,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

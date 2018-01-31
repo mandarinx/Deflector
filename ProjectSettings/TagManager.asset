@@ -15,10 +15,10 @@ TagManager:
   - 
   - 
   - Walls
-  - Projectiles
+  - Projectile
   - Player
   - Turrets
-  - 
+  - Shield
   - Obstacles
   - LevelExit
   - Treasure

@@ -3,12 +3,12 @@
 namespace HyperGames.Lib {
 
     public static class ArrayUtils {
-    
-        public static void Randomize(int[] list) {
+
+        public static void Shuffle<T>(T[] list) {
             // Randomize using Fisher-Yates algorithm
             for (int i = list.Length; i > 1; --i) {
                 int j = Random.Range(0, (i - 1));
-                int tmp = list[j];
+                T tmp = list[j];
                 list[j] = list[i - 1];
                 list[i - 1] = tmp;
             }

@@ -1,44 +1,37 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class Shield : MonoBehaviour {
-    
+
     [SerializeField]
-    private Color                activeColor;
-    [SerializeField]
-    private float                hitRadius;
-    [SerializeField]
-    private Vector2              hitOffset;
-    [SerializeField]
-    private LayerMask            hitLayer;
-    
-    private SpriteRenderer       sr;
-    private Collider2D[]         overlaps;
-    
+    private Color            activeColor;
+
+    private SpriteRenderer   sr;
+    private List<Collider2D> overlapped;
+
     private void Awake() {
+        overlapped = new List<Collider2D>(16);
         sr = GetComponent<SpriteRenderer>();
-        overlaps = new Collider2D[8];
     }
 
-    private void Update() {
-        sr.color = Overlap() > 0 ? activeColor : Color.white;
-    }
-    
-    public void Hit(int angleIndex) {
-        int numOverlaps = Overlap();
-        for (int i = 0; i < numOverlaps; ++i) {
-            overlaps[i].GetComponent<Hitable>()?.Hit(angleIndex);
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (!overlapped.Contains(other)) {
+            overlapped.Add(other);
         }
     }
 
-    private int Overlap() {
-        return Physics2D.OverlapCircleNonAlloc(transform.position + (Vector3)hitOffset, 
-                                               hitRadius,
-                                               overlaps,
-                                               hitLayer.value);
+    private void OnTriggerExit2D(Collider2D other) {
+        overlapped.Remove(other);
     }
 
-    private void OnDrawGizmosSelected() {
-        GizmoUtils.DrawCircle(transform.position + (Vector3)hitOffset, hitRadius, Color.white);
+    private void Update() {
+        sr.color = overlapped.Count > 0 ? activeColor : Color.white;
+    }
+
+    public void Hit(int angleIndex) {
+        for (int i = 0; i < overlapped.Count; ++i) {
+            overlapped[i].GetComponent<Hitable>()?.Hit(angleIndex);
+        }
     }
 }

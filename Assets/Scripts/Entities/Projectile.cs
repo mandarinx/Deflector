@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
 public class Projectile : MonoBehaviour {
-    
+
     [Tooltip("Angle in radians")]
     [SerializeField]
     private float                     angle;
@@ -21,7 +21,6 @@ public class Projectile : MonoBehaviour {
 
     private int                       contacts;
     private int                       angleIndex;
-    [SerializeField]
     private int                       activated;
     private bool                      exploding;
     private Vector2                   hitNormal;
@@ -39,6 +38,7 @@ public class Projectile : MonoBehaviour {
     private void OnEnable() {
         exploding = false;
         activated = 0;
+        speed = 1f;
         angleIndex = Random.Range(0, 4) * 2 + 1;
         angle = Angles.GetAngle(angleIndex);
         sr.sprite = sprites[angleIndex + activated];
@@ -53,9 +53,9 @@ public class Projectile : MonoBehaviour {
         if (exploding) {
             return;
         }
-        
+
         onHit.Invoke(gameObject);
-        
+
         if (activated == 8) {
             StartCoroutine(Explosion(4));
         }
@@ -70,15 +70,15 @@ public class Projectile : MonoBehaviour {
         if (hitAngleRelative == 4) {
             angleIndex += 4;
         }
-        
+
         if (hitAngleRelative > 0 && hitAngleRelative < 4) {
             angleIndex += 2;
         }
-        
+
         if (hitAngleRelative > 4 && hitAngleRelative < 8) {
             angleIndex -= 2;
         }
-        
+
         activated = 8;
         speed += 1f;
 
@@ -109,7 +109,7 @@ public class Projectile : MonoBehaviour {
             yield return new WaitForSeconds(0.2f);
             ++blink;
         }
-        
+
         onDespawn.Invoke(gameObject);
     }
 
@@ -121,7 +121,7 @@ public class Projectile : MonoBehaviour {
         if (!LayerMasks.LayerInMask(collision.gameObject.layer, hitLayer)) {
             return;
         }
-        
+
         if (!GetHitNormal(collision, out hitNormal)) {
             return;
         }
@@ -130,7 +130,7 @@ public class Projectile : MonoBehaviour {
         angle = Angles.GetAngle(angleIndex);
         sr.sprite = sprites[angleIndex + activated];
     }
-    
+
     private void OnCollisionStay2D(Collision2D collision) {
         if (!LayerMasks.LayerInMask(collision.gameObject.layer, hitLayer)) {
             return;
@@ -166,19 +166,19 @@ public class Projectile : MonoBehaviour {
         }
         return true;
     }
-    
+
     // TODO: Should be called something like DeflectAngleIndex
     private static int GetAngleIndex(int angleIndex, Vector2 hitNormal, Vector2 velocity) {
         float dot = Vector2.Dot(hitNormal, velocity);
         //  1 = same direction
         // -1 = opposite direction
         //  0 = perpendicular
-        
+
         // Bounce back
         if (dot < -0.995f) {
             angleIndex += 4;
         }
-        
+
         // Bounce to either side
         if ((dot < +0.7853f && dot > +float.Epsilon) ||
             (dot > -0.7853f && dot < -float.Epsilon)) {
@@ -192,19 +192,19 @@ public class Projectile : MonoBehaviour {
                 angleIndex -= 2;
             }
         }
-        
+
         // Follow the normal
-        if (dot >= -float.Epsilon && 
+        if (dot >= -float.Epsilon &&
             dot <= +float.Epsilon) {
             // convert normal to angle index
             angleIndex = Angles.GetAngleIndex(Angles.GetRadian(hitNormal));
         }
-        
+
         // Follow the velocity
         if (dot >= +0.7853f && dot <= 1f) {
             // do nothing
         }
-        
+
         angleIndex %= 8;
         if (angleIndex < 0) {
             angleIndex = 8 + angleIndex;
@@ -220,7 +220,7 @@ public class Projectile : MonoBehaviour {
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position, GetVelocity());
-        
+
         Gizmos.color = Color.cyan;
         for (int i=0; i<contacts; ++i) {
             Gizmos.DrawRay(contactPoints[i].point, contactPoints[i].normal);
