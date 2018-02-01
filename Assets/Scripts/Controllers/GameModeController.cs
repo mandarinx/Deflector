@@ -1,8 +1,8 @@
 ﻿using GameEvents;
 using UnityEngine;
 
-public class GameModes : MonoBehaviour, IOnUpdate {
-    
+public class GameModeController : MonoBehaviour, IOnUpdate {
+
     [SerializeField]
     private GameEvent   onGameWon;
     [SerializeField]

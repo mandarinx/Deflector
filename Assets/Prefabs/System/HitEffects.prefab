@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114457083671826134}
   - component: {fileID: 114981742702170024}
   m_Layer: 0
-  m_Name: ShieldHitEffects
+  m_Name: HitEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

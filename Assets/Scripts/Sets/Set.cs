@@ -3,7 +3,7 @@ using GameEvents;
 using UnityEngine;
 
 public abstract class Set<T> : ScriptableObject {
-    
+
     [SerializeField]
     private bool     clearOnEnable;
     [SerializeField]
@@ -12,7 +12,7 @@ public abstract class Set<T> : ScriptableObject {
     private IntEvent onItemAdded;
     [SerializeField]
     private IntEvent onItemRemoved;
-    
+
     public int Count => list.Count;
     public T this[int i] => list[i];
 
@@ -39,6 +39,7 @@ public abstract class Set<T> : ScriptableObject {
     }
 
     public void RemoveAll() {
+        Debug.Log($"Remove all {name}");
         list.Clear();
     }
 }

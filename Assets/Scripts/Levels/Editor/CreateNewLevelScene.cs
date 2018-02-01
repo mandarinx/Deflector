@@ -14,7 +14,6 @@ public static class CreateNewLevelScene {
 
         GameObject root = new GameObject("LevelRoot");
         root.transform.position = Vector3.left * 0.5f;
-        AddComponent<Grid>(root);
         AddComponent<Layers>(root);
 
         GameObject floor = CreateGO("Floor", root);

@@ -57,7 +57,6 @@
     <Compile Include="Assets\Scripts\Editor\CreateGameEvent.cs" />
     <Compile Include="Assets\Scripts\Editor\CreateInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\FindRefs.cs" />
-    <Compile Include="Assets\Scripts\Editor\GridZonesInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\SaveProject.cs" />
     <Compile Include="Assets\Scripts\Editor\TransformInspector.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Editor\GameEventInspector.cs" />

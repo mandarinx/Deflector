@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(LevelLoader))]
-public class Levels : MonoBehaviour {
+public class LevelController : MonoBehaviour {
 
     [SerializeField]
     private LevelEvent  onLevelLoaded;
@@ -18,7 +18,7 @@ public class Levels : MonoBehaviour {
         curLevel = -1;
         levelLoader = GetComponent<LevelLoader>();
     }
-    
+
     public void UnloadCurrentLevel() {
         levelLoader.Unload(curLevel);
     }
@@ -31,6 +31,8 @@ public class Levels : MonoBehaviour {
     public void OnLevelLoaded(Level level) {
         string sceneName = Path.GetFileNameWithoutExtension(level.ScenePath);
         level.Prepare(SceneManager.GetSceneByName(sceneName));
+
+        Debug.Log($"Level {level.name} loaded");
 
         // Delay the level loaded event to allow the scene
         // objects to run all of their Awake and Start methods.

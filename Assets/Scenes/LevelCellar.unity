@@ -1529,7 +1529,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1119435614}
   - component: {fileID: 1119435613}
-  - component: {fileID: 1119435612}
   - component: {fileID: 1119435611}
   m_Layer: 0
   m_Name: Cellar
@@ -1550,30 +1549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e538d3d0170403bae4fc04d03b2c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1119435612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114829104365083870, guid: 71e04671cee504a4fa2fbd50cbf26214,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1119435610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7bb9acb2cffc5f45abddc238a0ad9b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PositionIntKeys: []
-  m_PositionIntValues: 
-  m_PositionStringKeys: []
-  m_PositionStringValues: []
-  m_PositionFloatKeys: []
-  m_PositionFloatValues: []
-  m_PositionDoubleKeys: []
-  m_PositionDoubleValues: []
-  m_PositionObjectKeys: []
-  m_PositionObjectValues: []
-  m_PositionColorKeys: []
-  m_PositionColorValues: []
 --- !u!156049354 &1119435613
 Grid:
   m_ObjectHideFlags: 0

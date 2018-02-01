@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Players : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
     public GameObject    prefab;
     public SpawnPointSet spawnPoints;
@@ -17,8 +17,17 @@ public class Players : MonoBehaviour {
                 players[i] = Instantiate(prefab).GetComponent<Player>();
             }
 
+            Debug.Log($"spawnpoints: {spawnPoints.Count}");
+
             players[i].transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position;
             players[i].Activate();
+        }
+    }
+
+    public void DeactivatePlayers() {
+        for (int i = 0; i < players.Length; ++i) {
+            players[i].transform.position = Vector3.left * 1000f;
+            players[i].Deactivate();
         }
     }
 }
