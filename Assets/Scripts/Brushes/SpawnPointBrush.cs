@@ -34,7 +34,7 @@ public class SpawnPointBrush : GridBrushBase {
 
         BrushUtility.Instantiate<SpawnPoint>(
             m_Prefab,
-            grid.LocalToWorld(grid.CellToLocalInterpolated(position + m_PrefabOffset)),
+            BrushUtility.GetWorldPos(grid, position + m_PrefabOffset),
             BrushUtility.GetLayer(m_LayerName));
     }
 

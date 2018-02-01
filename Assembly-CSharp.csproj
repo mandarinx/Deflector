@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Behaviours\LevelExit.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Moveable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Treasure.cs" />
+    <Compile Include="Assets\Scripts\Brushes\BrushUtility.cs" />
     <Compile Include="Assets\Scripts\Brushes\LevelExitBrush.cs" />
     <Compile Include="Assets\Scripts\Brushes\SpawnPointBrush.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />

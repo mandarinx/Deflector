@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Brushes\Editor\BrushEditorUtility.cs" />
     <Compile Include="Assets\Scripts\Brushes\Editor\SpawnPointBrushInspector.cs" />
     <Compile Include="Assets\Scripts\Data\Editor\HealthAssetInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\CreateGameEvent.cs" />

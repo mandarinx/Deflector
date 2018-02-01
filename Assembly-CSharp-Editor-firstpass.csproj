@@ -57,18 +57,6 @@
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorInfoPanel.cs" />
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorNodes.cs" />
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorTimeline.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\BrushEditorUtility.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\DefaultBrushReplacementEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\DoorBrushEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\LaserBrushEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\LayerObjectBrushEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\LevelBrushEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\SequenceTurretBrushEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\SwarmBrushEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\TeleportBrushEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\TintBrushEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Brushes\Editor\TurretBrushEditor.cs" />
-    <Compile Include="Assets\Plugins\Robodash\Editor\TintTextureGeneratorEditor.cs" />
     <Compile Include="Assets\Plugins\Tilemap\Brushes\Coordinate Brush\Scripts\Editor\CoordinateBrush.cs" />
     <Compile Include="Assets\Plugins\Tilemap\Brushes\GameObject Brush\Scripts\Editor\GameObjectBrush.cs" />
     <Compile Include="Assets\Plugins\Tilemap\Brushes\Line Brush\Scripts\Editor\LineBrush.cs" />
@@ -76,7 +64,6 @@
     <Compile Include="Assets\Plugins\Tilemap\Brushes\Random Brush\Scripts\Editor\RandomBrush.cs" />
     <Compile Include="Assets\Plugins\Tilemap\Brushes\Tint Brush\Scripts\Editor\TintBrush.cs" />
     <Compile Include="Assets\Plugins\Tilemap\Tiles\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
-    <None Include="Assets\Plugins\Robodash\Brushes\Editor\GizmoShader.shader" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>

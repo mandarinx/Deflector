@@ -1,11 +1,9 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
-#if UNITY_EDITOR
-public class BrushEditorUtility 
-{
-	const string k_CameraName = "MainCamera";
+public static class BrushEditorUtility {
+
+    const string k_CameraName = "MainCamera";
 	private static Material s_GizmoMaterial;
 
 	private static void InitializeMaterial(Color color)
@@ -127,27 +125,56 @@ public class BrushEditorUtility
 		GL.Vertex(grid.CellToWorld(position + Vector3Int.right));
 	}
 
-	public static void UnpreparedSceneInspector()
+	public static void AutoSelectGrid()
 	{
+		if (Selection.activeGameObject == null || Selection.activeGameObject.GetComponentInParent<Grid>() == null)
+		{
+			Grid grid = BrushUtility.GetRootGrid();
+			if(grid)
+				Selection.activeTransform = grid.transform;
+		}
+	}
+
+	public static void AutoSelectLayer(string name)
+	{
+		Transform transform = Selection.activeTransform;
+		if (transform != null)
+		{
+			while (transform.parent != null)
+			{
+				if (transform.name == name)
+				{
+					return;
+				}
+				transform = transform.parent;
+			}
+		}
+
+		AutoSelectGrid();
+	}
+    
+    // THOMAS EDIT BELOW
+    
+	public static bool SceneIsPrepared() {
+		return BrushUtility.GetRootGrid();
+	}
+
+	public static void UnpreparedSceneInspector() {
 		GUILayout.Space(5f);
 		GUILayout.Label("This scene is not yet ready for level editing.");
 		GUILayout.BeginHorizontal();
-		if (GUILayout.Button("Initialize Scene"))
-		{
+		if (GUILayout.Button("Initialize Scene")) {
 			PrepareScene();
 		}
 		GUILayout.FlexibleSpace();
 		GUILayout.EndHorizontal();
 	}
-
-	public static bool SceneIsPrepared() {
-		bool prepared = GameObject.Find(k_CameraName) != null;
-		prepared &= BrushUtility.GetRootGrid(false);
-		return prepared;
-	}
 	
-	public static void PrepareScene()
-	{
+    // I would like to investigate a method for storing this
+    // as a data object, or a custom setup script
+	public static void PrepareScene() {
+	    return;
+	    
 		GameObject cam = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/MainCamera.prefab");
 		GameObject sfx = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/SoundEffects.prefab");
 		GameObject score = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/ScoreCounter.prefab");
@@ -183,33 +210,4 @@ public class BrushEditorUtility
 			Debug.LogWarning("Some prefabs for initializing the scene are missing.");
 		}
 	}
-
-	public static void AutoSelectGrid()
-	{
-		if (Selection.activeGameObject == null || Selection.activeGameObject.GetComponentInParent<Grid>() == null)
-		{
-			Grid grid = BrushUtility.GetRootGrid(false);
-			if(grid)
-				Selection.activeTransform = grid.transform;
-		}
-	}
-
-	public static void AutoSelectLayer(string name)
-	{
-		Transform transform = Selection.activeTransform;
-		if (transform != null)
-		{
-			while (transform.parent != null)
-			{
-				if (transform.name == name)
-				{
-					return;
-				}
-				transform = transform.parent;
-			}
-		}
-
-		AutoSelectGrid();
-	}
 }
-#endif

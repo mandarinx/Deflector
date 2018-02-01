@@ -32,12 +32,19 @@ public class LevelExitBrush : GridBrushBase {
 
         LevelExit le = BrushUtility.Instantiate<LevelExit>(
             m_Prefab,
-            grid.LocalToWorld(grid.CellToLocalInterpolated(position + m_PrefabOffset)),
+            BrushUtility.GetWorldPos(grid, position + m_PrefabOffset),
             BrushUtility.GetLayer(m_LayerName));
 
-        Tilemap tm = BrushUtility.GetLayer(m_LayerName).GetComponent<Tilemap>();
-        Vector3Int coord = grid.WorldToCell(le.transform.position);
-        tm.SetTile(coord, null);
+        Tilemap tm = BrushUtility
+           .GetLayer(m_LayerName)
+           .GetComponent<Tilemap>();
+
+        if (tm == null) {
+            return;
+        }
+
+        BrushUtility.RegisterUndo(tm, $"Clear tile");
+        tm.SetTile(grid.WorldToCell(le.transform.position), null);
     }
 
     public override void Select(GridLayout grid, GameObject layer, BoundsInt position) {
