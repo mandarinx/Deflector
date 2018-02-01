@@ -143,6 +143,7 @@
     <Compile Include="Assets\Scripts\Tests\DotProd.cs" />
     <Compile Include="Assets\Scripts\Tests\TriggerStay.cs" />
     <Compile Include="Assets\Scripts\TextColor.cs" />
+    <Compile Include="Assets\Scripts\Tiles\RuleTile.cs" />
     <Compile Include="Assets\Scripts\TransformUtils.cs" />
     <Compile Include="Assets\Scripts\UI\Multiplier.cs" />
     <Compile Include="Assets\Scripts\UI\MultiplierController.cs" />

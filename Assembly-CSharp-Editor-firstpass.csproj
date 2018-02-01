@@ -57,13 +57,6 @@
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorInfoPanel.cs" />
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorNodes.cs" />
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorTimeline.cs" />
-    <Compile Include="Assets\Plugins\Tilemap\Brushes\Coordinate Brush\Scripts\Editor\CoordinateBrush.cs" />
-    <Compile Include="Assets\Plugins\Tilemap\Brushes\GameObject Brush\Scripts\Editor\GameObjectBrush.cs" />
-    <Compile Include="Assets\Plugins\Tilemap\Brushes\Line Brush\Scripts\Editor\LineBrush.cs" />
-    <Compile Include="Assets\Plugins\Tilemap\Brushes\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
-    <Compile Include="Assets\Plugins\Tilemap\Brushes\Random Brush\Scripts\Editor\RandomBrush.cs" />
-    <Compile Include="Assets\Plugins\Tilemap\Brushes\Tint Brush\Scripts\Editor\TintBrush.cs" />
-    <Compile Include="Assets\Plugins\Tilemap\Tiles\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
