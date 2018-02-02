@@ -6,7 +6,7 @@ public static class BrushEditorUtility {
 
 	private static void InitializeMaterial(Color color) {
 	    if (s_GizmoMaterial == null) {
-	        s_GizmoMaterial = new Material(Shader.Find("Unlit/GizmoShader"));
+	        s_GizmoMaterial = new Material(Shader.Find("Unlit/Tilemap Gizmo"));
 	    }
 
 		s_GizmoMaterial.color = color;

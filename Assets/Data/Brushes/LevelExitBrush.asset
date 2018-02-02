@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9237f9b9124114e439fc794fbbd4c00a, type: 3}
   m_Name: LevelExitBrush
   m_EditorClassIdentifier: 
-  m_LayerName: Walls
-  m_Prefab: {fileID: 1388248185830346, guid: 75c831813a3904013bf740ad53bb234a, type: 2}
-  m_PrefabOffset: {x: 0.5, y: 0.5, z: 0}
+  layerName: Walls
+  closedDoor: {fileID: 11400000, guid: dae723dc9c6cf476782b2c6c3d0cd99a, type: 2}
+  prefab: {fileID: 1388248185830346, guid: 75c831813a3904013bf740ad53bb234a, type: 2}
+  prefabOffset: {x: 0.5, y: 0.5, z: 0}

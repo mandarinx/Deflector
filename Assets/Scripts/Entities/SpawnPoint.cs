@@ -8,7 +8,6 @@ public class SpawnPoint : MonoBehaviour {
     private SpawnPointSet set;
 
     private void Start() {
-        Debug.Log($"Add {name} to {set.name}");
         set.Add(this);
     }
 }

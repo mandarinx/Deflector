@@ -17,8 +17,6 @@ public class PlayerController : MonoBehaviour {
                 players[i] = Instantiate(prefab).GetComponent<Player>();
             }
 
-            Debug.Log($"spawnpoints: {spawnPoints.Count}");
-
             players[i].transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position;
             players[i].Activate();
         }

@@ -160,6 +160,7 @@
     <Compile Include="Assets\Scripts\Utils\TimeSince.cs" />
     <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
     <Compile Include="Assets\Scripts\Utils\UHookUpdate.cs" />
+    <None Include="Assets\Visuals\Shaders\TilemapGizmo.shader" />
     <None Include="Assets\Dadako\BitmapFonts\Pixel\_PixelCharLimits.txt" />
     <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
     <Reference Include="UnityEngine.UI">

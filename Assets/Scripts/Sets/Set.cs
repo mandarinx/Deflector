@@ -39,7 +39,6 @@ public abstract class Set<T> : ScriptableObject {
     }
 
     public void RemoveAll() {
-        Debug.Log($"Remove all {name}");
         list.Clear();
     }
 }

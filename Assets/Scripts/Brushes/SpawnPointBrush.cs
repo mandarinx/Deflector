@@ -9,22 +9,22 @@ using UnityEngine;
 public class SpawnPointBrush : GridBrushBase {
 
     [SerializeField]
-    private string 		m_LayerName;
+    private string 		layerName;
     [SerializeField]
-    private GameObject  m_Prefab;
+    private GameObject  prefab;
     [SerializeField]
-    private Vector3 	m_PrefabOffset;
+    private Vector3 	prefabOffset;
     [SerializeField]
     private Color       color;
 
     public Color        Color => color;
-    public string       Layer => m_LayerName;
+    public string       Layer => layerName;
 
     private List<SpawnPoint> m_Selection;
 
     public override void Paint(GridLayout grid, GameObject layer, Vector3Int position) {
-        // Get all SpawnPoints in grid
-        SpawnPoint[] spawnPoints = BrushUtility.GetRootGrid().GetComponentsInChildren<SpawnPoint>();
+        // Get all SpawnPoints in layer
+        SpawnPoint[] spawnPoints = BrushUtility.GetLayer(layerName).GetComponentsInChildren<SpawnPoint>();
         for (int i=0; i<spawnPoints.Length; ++i) {
             // If a SpawnPoint already exists at the current position, exit
             if (position == grid.WorldToCell(spawnPoints[i].transform.position)) {
@@ -33,10 +33,20 @@ public class SpawnPointBrush : GridBrushBase {
         }
 
         BrushUtility.Instantiate<SpawnPoint>(
-            m_Prefab,
-            BrushUtility.GetWorldPos(grid, position + m_PrefabOffset),
-            BrushUtility.GetLayer(m_LayerName));
+            prefab,
+            BrushUtility.GetWorldPos(grid, position + prefabOffset),
+            BrushUtility.GetLayer(layerName));
     }
+
+    public override void Erase(GridLayout grid, GameObject layer, Vector3Int position) {
+        SpawnPoint[] spawnPoints = BrushUtility.GetLayer(layerName).GetComponentsInChildren<SpawnPoint>();
+        for (int i = 0; i < spawnPoints.Length; ++i) {
+            if (position != grid.WorldToCell(spawnPoints[i].transform.position)) {
+                continue;
+            }
+            BrushUtility.Destroy(spawnPoints[i].gameObject);
+        }
+	}
 
     public override void Select(GridLayout grid, GameObject layer, BoundsInt position) {
         base.Select(grid, layer, position);

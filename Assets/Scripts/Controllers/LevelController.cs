@@ -32,8 +32,6 @@ public class LevelController : MonoBehaviour {
         string sceneName = Path.GetFileNameWithoutExtension(level.ScenePath);
         level.Prepare(SceneManager.GetSceneByName(sceneName));
 
-        Debug.Log($"Level {level.name} loaded");
-
         // Delay the level loaded event to allow the scene
         // objects to run all of their Awake and Start methods.
         StartCoroutine(DispatchOnLevelLoaded((level)));

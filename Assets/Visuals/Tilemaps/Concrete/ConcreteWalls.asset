@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: GrayWallRules
+  m_Name: ConcreteWalls
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 21300000, guid: d6a0d98853e133e498af1273e1acad14, type: 3}
-  m_DefaultColliderType: 1
+  m_DefaultColliderType: 2
   m_TilingRules:
   - m_Neighbors: 0000000002000000000000000200000001000000000000000200000000000000
     m_Sprites:
@@ -68,24 +68,6 @@ MonoBehaviour:
     m_Output: 0
     m_ColliderType: 2
     m_RandomTransform: 0
-  - m_Neighbors: 0000000001000000000000000200000001000000000000000200000000000000
-    m_Sprites:
-    - {fileID: 21300000, guid: 86e4d1ed96572a248ae4af06b2294062, type: 3}
-    m_AnimationSpeed: 1
-    m_PerlinScale: 0.5
-    m_RuleTransform: 0
-    m_Output: 0
-    m_ColliderType: 2
-    m_RandomTransform: 0
-  - m_Neighbors: 0000000001000000000000000100000002000000000000000200000000000000
-    m_Sprites:
-    - {fileID: 21300000, guid: 2261bb396625c13419862679952842ba, type: 3}
-    m_AnimationSpeed: 1
-    m_PerlinScale: 0.5
-    m_RuleTransform: 0
-    m_Output: 0
-    m_ColliderType: 2
-    m_RandomTransform: 0
   - m_Neighbors: 0000000002000000000000000200000001000000000000000100000000000000
     m_Sprites:
     - {fileID: 21300000, guid: 4269c26f30c3e91489f3c7817cc1db91, type: 3}
@@ -104,6 +86,24 @@ MonoBehaviour:
     m_Output: 0
     m_ColliderType: 2
     m_RandomTransform: 0
+  - m_Neighbors: 0000000001000000000000000200000001000000000000000200000000000000
+    m_Sprites:
+    - {fileID: 21300000, guid: 86e4d1ed96572a248ae4af06b2294062, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 2
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000001000000000000000100000002000000000000000200000000000000
+    m_Sprites:
+    - {fileID: 21300000, guid: 2261bb396625c13419862679952842ba, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 2
+    m_RandomTransform: 0
   - m_Neighbors: 0000000001000000000000000100000001000000000000000100000000000000
     m_Sprites:
     - {fileID: 21300000, guid: 3841a38e77d163d47b7468692f6a9979, type: 3}
@@ -111,25 +111,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_RuleTransform: 0
     m_Output: 0
-    m_ColliderType: 2
-    m_RandomTransform: 0
-  - m_Neighbors: 0000000002000000000000000100000001000000000000000100000000000000
-    m_Sprites:
-    - {fileID: 21300000, guid: f4705abe48961e14c86eaebb74958a4d, type: 3}
-    m_AnimationSpeed: 1
-    m_PerlinScale: 0.5
-    m_RuleTransform: 0
-    m_Output: 0
-    m_ColliderType: 2
-    m_RandomTransform: 0
-  - m_Neighbors: 0000000001000000000000000100000002000000000000000100000000000000
-    m_Sprites:
-    - {fileID: 21300000, guid: 72f491050cdb88a4d9087ab634b53706, type: 3}
-    m_AnimationSpeed: 1
-    m_PerlinScale: 0.5
-    m_RuleTransform: 0
-    m_Output: 0
-    m_ColliderType: 2
+    m_ColliderType: 1
     m_RandomTransform: 0
   - m_Neighbors: 0000000001000000000000000200000001000000000000000100000000000000
     m_Sprites:
@@ -138,7 +120,25 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_RuleTransform: 0
     m_Output: 0
-    m_ColliderType: 2
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000001000000000000000100000002000000000000000100000000000000
+    m_Sprites:
+    - {fileID: 21300000, guid: 72f491050cdb88a4d9087ab634b53706, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000002000000000000000100000001000000000000000100000000000000
+    m_Sprites:
+    - {fileID: 21300000, guid: f4705abe48961e14c86eaebb74958a4d, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
     m_RandomTransform: 0
   - m_Neighbors: 0000000001000000000000000100000001000000000000000200000000000000
     m_Sprites:
@@ -147,5 +147,5 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_RuleTransform: 0
     m_Output: 0
-    m_ColliderType: 2
+    m_ColliderType: 1
     m_RandomTransform: 0

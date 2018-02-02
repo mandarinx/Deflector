@@ -10,15 +10,17 @@ using UnityEngine.Tilemaps;
 public class LevelExitBrush : GridBrushBase {
 
     [SerializeField]
-    private string 		    m_LayerName;
+    private string 		    layerName;
     [SerializeField]
-    private GameObject      m_Prefab;
+    private Tile            closedDoor;
     [SerializeField]
-    private Vector3 	    m_PrefabOffset;
+    private GameObject      prefab;
+    [SerializeField]
+    private Vector3 	    prefabOffset;
 
-    private List<LevelExit> m_Selection;
+    private List<LevelExit> selection;
 
-    public string           Layer => m_LayerName;
+    public string           Layer => layerName;
 
     public override void Paint(GridLayout grid, GameObject layer, Vector3Int position) {
         // Get all LevelExits in grid
@@ -31,42 +33,57 @@ public class LevelExitBrush : GridBrushBase {
         }
 
         LevelExit le = BrushUtility.Instantiate<LevelExit>(
-            m_Prefab,
-            BrushUtility.GetWorldPos(grid, position + m_PrefabOffset),
-            BrushUtility.GetLayer(m_LayerName));
+            prefab,
+            BrushUtility.GetWorldPos(grid, position + prefabOffset),
+            BrushUtility.GetLayer(layerName));
 
         Tilemap tm = BrushUtility
-           .GetLayer(m_LayerName)
+           .GetLayer(layerName)
            .GetComponent<Tilemap>();
 
         if (tm == null) {
             return;
         }
 
-        BrushUtility.RegisterUndo(tm, $"Clear tile");
-        tm.SetTile(grid.WorldToCell(le.transform.position), null);
+        le.SetGridAndTilemap(grid, tm);
+
+        BrushUtility.RegisterUndo(tm, $"Add LevelExit tile to Grid");
+        tm.SetTile(grid.WorldToCell(le.transform.position), closedDoor);
     }
+
+    public override void Erase(GridLayout grid, GameObject layer, Vector3Int position) {
+        LevelExit[] exits = layer.GetComponentsInChildren<LevelExit>();
+        for (int i = 0; i < exits.Length; ++i) {
+            if (position != grid.WorldToCell(exits[i].transform.position)) {
+                continue;
+            }
+            layer
+               .GetComponent<Tilemap>()
+              ?.SetTile(grid.WorldToCell(exits[i].transform.position), null);
+            BrushUtility.Destroy(exits[i].gameObject);
+        }
+	}
 
     public override void Select(GridLayout grid, GameObject layer, BoundsInt position) {
         base.Select(grid, layer, position);
 
-        if (m_Selection == null) {
-            m_Selection = new List<LevelExit>();
+        if (selection == null) {
+            selection = new List<LevelExit>();
         }
 
-        m_Selection.Clear();
+        selection.Clear();
 
         LevelExit[] levelExits = BrushUtility.GetRootGrid().GetComponentsInChildren<LevelExit>();
         for (int i=0; i<levelExits.Length; ++i) {
             if (position.Contains(grid.WorldToCell(levelExits[i].transform.position))) {
-                m_Selection.Add(levelExits[i]);
+                selection.Add(levelExits[i]);
             }
         }
     }
 
     public override void Move(GridLayout grid, GameObject layer, BoundsInt from, BoundsInt to) {
-        for (int i=0; i<m_Selection.Count; ++i) {
-            m_Selection[i].transform.Translate(grid.CellToWorld(to.min) - grid.CellToWorld(from.min));
+        for (int i=0; i<selection.Count; ++i) {
+            selection[i].transform.Translate(grid.CellToWorld(to.min) - grid.CellToWorld(from.min));
         }
     }
 }
