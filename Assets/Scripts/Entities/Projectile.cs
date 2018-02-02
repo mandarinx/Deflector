@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using GameEvents;
+using JetBrains.Annotations;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
@@ -48,7 +49,11 @@ public class Projectile : MonoBehaviour {
         StopAllCoroutines();
     }
 
-    // Called by Hitable
+    /// <summary>
+    /// Called by Hitable.onHit
+    /// </summary>
+    /// <param name="hitAngleIndex">Tha angle index of the hit</param>
+    [UsedImplicitly]
     public void Hit(int hitAngleIndex) {
         if (exploding) {
             return;
@@ -90,7 +95,11 @@ public class Projectile : MonoBehaviour {
         sr.sprite = sprites[angleIndex + activated];
     }
 
-    // Called by Killable
+    /// <summary>
+    /// Called by Killable.onKilled
+    /// </summary>
+    /// <param name="pos">The position of the killer</param>
+    [UsedImplicitly]
     public void Explode(Vector3 pos) {
         if (exploding) {
             return;
