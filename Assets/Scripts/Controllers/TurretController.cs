@@ -3,7 +3,7 @@ using HyperGames;
 using UnityEngine;
 
 public class TurretController : MonoBehaviour {
-    
+
     [SerializeField]
     private float                  spawnInterval = 4;
     [SerializeField]
@@ -31,7 +31,7 @@ public class TurretController : MonoBehaviour {
     public void Despawn(GameObject projectile) {
         pool.Despawn(projectile.GetComponent<Turret>());
     }
-    
+
     public void Spawn(Vector3 pos) {
         Turret turret;
         pool.Spawn(out turret);
@@ -43,7 +43,7 @@ public class TurretController : MonoBehaviour {
     }
 
     private IEnumerator Spawn() {
-        while (maxTurrets < 0 || pool.numSpawned < maxTurrets) {
+        while (maxTurrets < 0 || pool.NumSpawned < maxTurrets) {
             yield return new WaitForSeconds(spawnInterval);
             if (spawnPoints.Count < 1) {
                 continue;

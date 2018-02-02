@@ -20,17 +20,10 @@ namespace HyperGames {
         public InstanceDelegate         OnDespawned;
         public InstanceDelegate         OnWillDespawn;
 
-        public int capacity {
-            get { return max < 0 ? int.MaxValue : max; }
-        }
-
-        public int numItems {
-            get { return actives.Count + deactives.Count; }
-        }
-
-        public int numSpawned {
-            get { return actives.Count; }
-        }
+        public int Capacity    => max < 0 ? int.MaxValue : max;
+        public int NumElements => actives.Count + deactives.Count;
+        public int NumSpawned  => actives.Count;
+        public T this[int i]   => actives[i];
 
         /// <summary>
         /// Constructs an object pool of specified type, and allows adjusting the flexibility of the pool
@@ -71,7 +64,7 @@ namespace HyperGames {
             if (!GetInstance(out instance)) {
                 return false;
             }
-            
+
             OnWillSpawn(instance);
             instance.gameObject.SetActive(true);
             OnSpawned(instance);
@@ -87,12 +80,12 @@ namespace HyperGames {
             if (index < 0) {
                 return;
             }
-            
+
             OnWillDespawn(instance);
             instance.gameObject.SetActive(false);
             instance.transform.SetParent(parent);
             OnDespawned(instance);
-            
+
             deactives.Add(instance);
             actives.RemoveAt(index);
         }
@@ -123,7 +116,7 @@ namespace HyperGames {
         public T GetInstance(int n) {
             return n < actives.Count ? actives[n] : default(T);
         }
-        
+
         public override string ToString() {
             return "ObjectPool<" + typeof(T) + "> " +
                 "Actives: " + actives.Count + "/" + actives.Capacity + " " +
