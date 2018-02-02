@@ -21,27 +21,36 @@ public class Explosion : MonoBehaviour {
     [SerializeField]
     private SpriteAnim[]  anims;
 
+    private Collider2D[] overlapped;
+
+    private void OnEnable() {
+        overlapped = new Collider2D[16];
+    }
+
     public IEnumerator BigBadaBoom() {
         yield return new WaitForSeconds(Random.Range(delayMin, delayMax));
 
         onExplodedAt?.Invoke(transform.position);
         ArrayUtils.Shuffle(anims);
-        Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position,
-                                                             radius,
-                                                             layerExplode.value);
-
-        for (int i = 0; i < overlapped.Length; ++i) {
-            overlapped[i].tag = "HitByExplosion";
-            overlapped[i]
-               .GetComponent<Killable>()
-              ?.Kill(transform.position);
-        }
 
         int expl = 0;
         while (expl < anims.Length) {
             anims[expl].Play(anims[expl].Clip);
             ++expl;
+
             yield return new WaitForSeconds(Random.Range(0.03f, 0.09f));
+
+            int num = Physics2D.OverlapCircleNonAlloc(transform.position,
+                                                      radius,
+                                                      overlapped,
+                                                      layerExplode.value);
+
+            for (int i = 0; i < num; ++i) {
+                overlapped[i].tag = "HitByExplosion";
+                overlapped[i]
+                   .GetComponent<Killable>()
+                  ?.Kill(transform.position);
+            }
         }
 
         yield return new WaitForSeconds(duration);
