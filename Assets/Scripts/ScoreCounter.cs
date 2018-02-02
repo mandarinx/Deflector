@@ -1,25 +1,40 @@
 ﻿using System.Collections;
 using GameEvents;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour {
 
-    public IntAsset score;
-    public IntAsset multiplier;
-    public int      explosionBaseScore;
-    public float    multiplierCooldown;
-    
+    [SerializeField]
+    private IntAsset           score;
+    [SerializeField]
+    private IntAsset           multiplier;
+    [SerializeField]
+    private int                explosionBaseScore;
+    [SerializeField]
+    private float              multiplierCooldown;
     [SerializeField]
     private Vector3AndIntEvent onMultiplierIncreasedAt;
-    
-    private Coroutine cooldown;
 
+    private Coroutine          cooldown;
+
+    /// <summary>
+    /// Resets both multiplier and score.
+    /// Called by OnGameReset handler.
+    /// </summary>
+    [UsedImplicitly]
     public void OnResetScore() {
         multiplier.SetValue(1);
         score.SetValue(0);
     }
 
-    public void OnProjectileDespawn(GameObject projectileGO) {
+    /// <summary>
+    /// Increase score and multiplier based on the state of the passed projectile.
+    /// Called by OnProjectileDespawn handler.
+    /// </summary>
+    /// <param name="projectileGO"></param>
+    [UsedImplicitly]
+    public void IncreaseScore(GameObject projectileGO) {
         Projectile projectile = projectileGO.GetComponent<Projectile>();
         if (projectile == null) {
             return;
@@ -32,7 +47,7 @@ public class ScoreCounter : MonoBehaviour {
         if (increase > 0) {
             onMultiplierIncreasedAt.Invoke(projectileGO.transform.position, multiplier.value);
         }
-        
+
         if (cooldown != null) {
             StopCoroutine(cooldown);
         }

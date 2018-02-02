@@ -58,7 +58,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114298975527782784}
-        m_MethodName: OnProjectileDespawn
+        m_MethodName: IncreaseScore
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
