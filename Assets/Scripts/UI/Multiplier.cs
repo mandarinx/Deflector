@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Multiplier : MonoBehaviour {
-    
+
     [SerializeField]
     private Text            label;
     [SerializeField]
@@ -19,7 +19,7 @@ public class Multiplier : MonoBehaviour {
     }
 
     public void Activate(Vector3 position, int value) {
-        transform.localPosition = position;
+        transform.position = position;
         targetY = position.y + 1f;
         label.text = $"{value}x";
         StartCoroutine(Animate());
