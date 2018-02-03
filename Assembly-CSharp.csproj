@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Brushes\SpawnPointBrush.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CameraShakeConfig.cs" />
+    <Compile Include="Assets\Scripts\Controllers\BloodController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ExplosionController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameModeController.cs" />
     <Compile Include="Assets\Scripts\Controllers\HitEffectController.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Scripts\Data\HealthAsset.cs" />
     <Compile Include="Assets\Scripts\Data\IntAsset.cs" />
     <Compile Include="Assets\Scripts\Data\UIPanelLink.cs" />
-    <Compile Include="Assets\Scripts\Delay.cs" />
     <Compile Include="Assets\Scripts\Entities\Explosion.cs" />
     <Compile Include="Assets\Scripts\Entities\Player.cs" />
     <Compile Include="Assets\Scripts\Entities\Projectile.cs" />
@@ -128,6 +128,7 @@
     <Compile Include="Assets\Scripts\List\ObjectList.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\PlaySound.cs" />
+    <Compile Include="Assets\Scripts\RandomPointInsideCircle.cs" />
     <Compile Include="Assets\Scripts\ScoreCounter.cs" />
     <Compile Include="Assets\Scripts\Sets\GameObjectSet.cs" />
     <Compile Include="Assets\Scripts\Sets\GridCoordsHashSet.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Assets\Scripts\TextColor.cs" />
     <Compile Include="Assets\Scripts\Tiles\AnimatedTile.cs" />
     <Compile Include="Assets\Scripts\Tiles\RuleTile.cs" />
+    <Compile Include="Assets\Scripts\Time\Delay.cs" />
     <Compile Include="Assets\Scripts\TransformUtils.cs" />
     <Compile Include="Assets\Scripts\UI\Multiplier.cs" />
     <Compile Include="Assets\Scripts\UI\MultiplierController.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="Assets\Scripts\Utils\UHookUpdate.cs" />
     <None Include="Assets\Visuals\Shaders\TilemapGizmo.shader" />
     <None Include="Assets\Dadako\BitmapFonts\Pixel\_PixelCharLimits.txt" />
+    <None Include="Assets\Visuals\Shaders\PixelSnapAlphaBlend.shader" />
     <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

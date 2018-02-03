@@ -15,13 +15,13 @@ public class Player : MonoBehaviour {
     public float                      hurtDuration;
     public LayerMask                  hurtBy;
     public AnimationCurve             forceFalloff;
-    public Transform                  shieldAnchor;
+    public Transform                  swordAnchor;
     public Sword                      sword;
     public SpriteAnim                 playerAnim;
     public HealthAsset                playerHealth;
-    public SpriteRenderer             blood;
     public SpriteRenderer             shadow;
     public GameEvent                  onFootstep;
+    public Vector3Event               onDiedAt;
 
     private Rigidbody2D               rb;
     private SpriteRenderer            sr;
@@ -45,7 +45,6 @@ public class Player : MonoBehaviour {
 
     public void Activate() {
         gameObject.layer = LayerMask.NameToLayer("Player");
-        blood.enabled = false;
         sword.Show();
         sr.enabled = true;
         sr.color = new Color(1f, 1f, 1f, 1f);
@@ -69,10 +68,11 @@ public class Player : MonoBehaviour {
     /// </summary>
     [UsedImplicitly]
     public void OnPlayerDied() {
-        blood.enabled = true;
+        // TODO: What about deactivating the gameobject?
         sr.enabled = false;
         sword.Hide();
         Deactivate();
+        onDiedAt.Invoke(transform.position);
     }
 
     /// <summary>
@@ -148,7 +148,7 @@ public class Player : MonoBehaviour {
             walkAngle = Angles.GetAngle(inputMove);
             inputMove = -1;
             velocity = Angles.GetDirection(walkAngle) * moveSpeed;
-            shieldAnchor.rotation = Quaternion.Euler(0f, 0f, Mathf.Rad2Deg * walkAngle);
+            swordAnchor.rotation = Quaternion.Euler(0f, 0f, Mathf.Rad2Deg * walkAngle);
         }
 
         rb.MovePosition(rb.position + (velocity + (hitNormal * bounceForce)) * Time.fixedDeltaTime);

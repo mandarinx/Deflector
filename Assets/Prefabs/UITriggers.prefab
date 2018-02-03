@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4854027390681410}
   - component: {fileID: 114942652130160110}
+  - component: {fileID: 114497742762912810}
   m_Layer: 0
   m_Name: Dead
   m_TagString: Untagged
@@ -352,6 +353,34 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114497742762912810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339807498307820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2078df0beddf84dc8b61423ab4aea2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
+  onDelayed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95934688120329042}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dead
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114532683346515000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -451,9 +480,9 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 95934688120329042}
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 114497742762912810}
+        m_MethodName: StartDelay
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

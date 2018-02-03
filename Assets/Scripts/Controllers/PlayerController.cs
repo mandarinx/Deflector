@@ -37,7 +37,9 @@ public class PlayerController : MonoBehaviour {
         }
 
         for (int i = 0; i < players.NumSpawned; ++i) {
-            players[i].transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position;
+            players[i].transform.position = spawnPoints.Count > 0
+                ? spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position
+                : Vector3.zero;
             players[i].Activate();
         }
     }
