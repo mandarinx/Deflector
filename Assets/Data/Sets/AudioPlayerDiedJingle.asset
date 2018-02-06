@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9024ae17e0ce84b8e8b319b2e0806609, type: 3}
+  m_Name: AudioPlayerDiedJingle
+  m_EditorClassIdentifier: 
+  audioItems:
+  - clip: {fileID: 8300000, guid: b52c7fd3bdc75fb49b8c63608482d916, type: 3}
+    weight: 1
+    pitchRange: {x: 0.9, y: 0.9}
+  weightSum: 1

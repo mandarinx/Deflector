@@ -7,13 +7,13 @@ public class MultiplierLabel : MonoBehaviour {
     public IntAsset multiplier;
 
     private Text label;
-    
+
     private void Start() {
         label = GetComponent<Text>();
         multiplier.OnValueChanged(OnMultiplierChanged);
     }
 
     private void OnMultiplierChanged(int value) {
-        label.text = value > 0 ? $"{value:###} x" : "";
+        label.text = value > 1 ? $"{value:###}x" : "";
     }
 }

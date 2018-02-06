@@ -87,6 +87,8 @@ MonoBehaviour:
   multiplierCooldown: 2
   onMultiplierIncreasedAt: {fileID: 11400000, guid: 2f0117e427da6413ea9ee0a21e4a344e,
     type: 2}
+  onMultiplierDecreased: {fileID: 11400000, guid: 42cf5ecee346744f7bcc64eb9f6408df,
+    type: 2}
 --- !u!114 &114863532475759946
 MonoBehaviour:
   m_ObjectHideFlags: 1

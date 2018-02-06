@@ -15,6 +15,8 @@ public class ScoreCounter : MonoBehaviour {
     private float              multiplierCooldown;
     [SerializeField]
     private Vector3AndIntEvent onMultiplierIncreasedAt;
+    [SerializeField]
+    private GameEvent          onMultiplierDecreased;
 
     private Coroutine          cooldown;
 
@@ -58,6 +60,7 @@ public class ScoreCounter : MonoBehaviour {
         while (multiplier.value > 1) {
             yield return new WaitForSeconds(multiplierCooldown);
             multiplier.SetValue(multiplier.value - 1);
+            onMultiplierDecreased.Invoke();
         }
     }
 }
