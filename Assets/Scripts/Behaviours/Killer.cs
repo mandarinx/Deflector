@@ -14,4 +14,12 @@ public class Killer : MonoBehaviour {
         }
         onKilled.Invoke(other.gameObject);
     }
+
+    public void SetOnKilledEvent(GameObjectEvent evt) {
+        onKilled = evt;
+    }
+
+    public void SetLayerMask(LayerMask layerMask) {
+        layer = layerMask;
+    }
 }

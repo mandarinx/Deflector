@@ -1222,13 +1222,13 @@ Transform:
   - {fileID: 247297085}
   - {fileID: 1831494277}
   - {fileID: 662254857}
-  - {fileID: 31538701}
-  - {fileID: 1971924343}
   - {fileID: 877653108}
   - {fileID: 134236359}
   - {fileID: 1059785682}
   - {fileID: 1030094359}
   - {fileID: 1048600180}
+  - {fileID: 31538701}
+  - {fileID: 1971924343}
   m_Father: {fileID: 1119435614}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2741,7 +2741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b190e62437f6c43249024757a9879fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onKilled: {fileID: 11400000, guid: ce6b4892b4e6e4f43ae86e2c775114fe, type: 2}
+  onKilled: {fileID: 11400000, guid: 70696427c874a4c1d999238aa20709a5, type: 2}
   layer:
     serializedVersion: 2
     m_Bits: 512
