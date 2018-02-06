@@ -7,33 +7,33 @@ namespace Modes {
     public class Survival : GameMode {
 
         [SerializeField]
-        private int          maxProjectiles;
-        private int          spawnedProjectiles;
+        private int             maxProjectiles;
+        private int             numDespawned;
         [SerializeField]
-        private Vector3Event onProjectileSpawned;
+        private GameObjectEvent onProjectileDespawned;
 
-        public override string title => $"Survive {maxProjectiles} projectiles";
+        public override string title => $"Destroy {maxProjectiles} projectiles";
 
         private void OnEnable() {
-            spawnedProjectiles = 0;
+            numDespawned = 0;
         }
 
         public override bool Validate() {
-            return spawnedProjectiles >= maxProjectiles;
+            return numDespawned >= maxProjectiles;
         }
 
         public override void Activate() {
-            spawnedProjectiles = 0;
-            onProjectileSpawned?.RegisterCallback(OnProjectileSpawned);
+            numDespawned = 0;
+            onProjectileDespawned?.RegisterCallback(OnProjectileDespawned);
         }
 
         public override void Reset() {
-            spawnedProjectiles = 0;
-            onProjectileSpawned?.UnregisterCallback(OnProjectileSpawned);
+            numDespawned = 0;
+            onProjectileDespawned?.UnregisterCallback(OnProjectileDespawned);
         }
 
-        private void OnProjectileSpawned(Vector3 pos) {
-            ++spawnedProjectiles;
+        private void OnProjectileDespawned(GameObject projectile) {
+            ++numDespawned;
         }
     }
 }

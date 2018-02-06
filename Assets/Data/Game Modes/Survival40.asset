@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26cc6b5e10a364005a45529b09fca1cf, type: 3}
-  m_Name: Survival10
+  m_Name: Survival40
   m_EditorClassIdentifier: 
-  maxProjectiles: 2
-  onProjectileSpawned: {fileID: 11400000, guid: 85c44eae7380b4c499b5a349142fd6ec,
+  maxProjectiles: 40
+  onProjectileDespawned: {fileID: 11400000, guid: 70696427c874a4c1d999238aa20709a5,
     type: 2}
