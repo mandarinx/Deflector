@@ -7,10 +7,11 @@ public class ExplosionController : MonoBehaviour {
     [SerializeField]
     private GameObject                prefab;
     private GameObjectPool<Explosion> pool;
-    
+
     private void Awake() {
         pool = new GameObjectPool<Explosion>(transform, prefab, 16, true) {
-            OnSpawned = OnExplosionSpawned
+            OnSpawned = OnExplosionSpawned,
+            OnWillDespawn = e => { e.StopAllCoroutines(); }
         };
         pool.Fill();
     }

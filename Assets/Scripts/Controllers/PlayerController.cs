@@ -12,7 +12,12 @@ public class PlayerController : MonoBehaviour {
     private GameObjectPool<Player> players;
 
     private void Awake() {
-        players = new GameObjectPool<Player>(transform, prefab, 1, false);
+        players = new GameObjectPool<Player>(parent: transform,
+                                             prefab: prefab,
+                                             size:   1,
+                                             grow:   false) {
+            OnWillDespawn = p => { p.Deactivate(); }
+        };
         players.Fill();
     }
 
@@ -35,13 +40,6 @@ public class PlayerController : MonoBehaviour {
             Player p;
             players.Spawn(out p);
         }
-
-        for (int i = 0; i < players.NumSpawned; ++i) {
-            players[i].transform.position = spawnPoints.Count > 0
-                ? spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position
-                : Vector3.zero;
-            players[i].Activate();
-        }
     }
 
     /// <summary>
@@ -51,5 +49,19 @@ public class PlayerController : MonoBehaviour {
     [UsedImplicitly]
     public void DeactivatePlayers() {
         players.Reset();
+    }
+
+    /// <summary>
+    /// Positions all players on the playing field.
+    /// Called by OnGameReady handler.
+    /// </summary>
+    [UsedImplicitly]
+    public void ActivatePlayers() {
+        for (int i = 0; i < players.NumSpawned; ++i) {
+            players[i].transform.position = spawnPoints.Count > 0
+                ? spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position
+                : Vector3.zero;
+            players[i].Activate();
+        }
     }
 }
