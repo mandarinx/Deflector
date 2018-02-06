@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\Data\Editor\HealthAssetInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\CreateGameEvent.cs" />
     <Compile Include="Assets\Scripts\Editor\CreateInspector.cs" />
+    <Compile Include="Assets\Scripts\Editor\EditorStyleViewer.cs" />
     <Compile Include="Assets\Scripts\Editor\FindRefs.cs" />
     <Compile Include="Assets\Scripts\Editor\SaveProject.cs" />
     <Compile Include="Assets\Scripts\Editor\TransformInspector.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\GameEvents\Editor\Vector3IntEventInspector.cs" />
     <Compile Include="Assets\Scripts\Levels\Editor\CreateNewLevelScene.cs" />
     <Compile Include="Assets\Scripts\Levels\Editor\LevelInspector.cs" />
+    <Compile Include="Assets\Scripts\Sets\Editor\AudioItemSetInspector.cs" />
     <Compile Include="Assets\Scripts\Tiles\Editor\RuleTileEditor.cs" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

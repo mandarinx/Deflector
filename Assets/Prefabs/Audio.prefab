@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4306441205923376}
   - component: {fileID: 114957085807187296}
-  - component: {fileID: 114225131022934708}
   - component: {fileID: 114441383823532996}
   m_Layer: 0
   m_Name: Explosions
@@ -38,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4238067806923168}
   - component: {fileID: 114004908518735240}
-  - component: {fileID: 114223570540282140}
   - component: {fileID: 114117267382195248}
   m_Layer: 0
   m_Name: UIButtonPress
@@ -56,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4413105075922856}
   - component: {fileID: 114018464807968278}
-  - component: {fileID: 114299890266547706}
   - component: {fileID: 114122462724218342}
   m_Layer: 0
   m_Name: PlayerHit
@@ -73,12 +70,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4284769949964242}
-  - component: {fileID: 114666894816114812}
-  - component: {fileID: 114923599691566294}
   - component: {fileID: 114891858021676800}
   - component: {fileID: 114347526075052778}
   m_Layer: 10
-  m_Name: PlayerFootstepd
+  m_Name: PlayerFootsteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +88,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4486865161402892}
   - component: {fileID: 114736092055902448}
-  - component: {fileID: 114722388495956638}
   - component: {fileID: 114501516357220194}
   m_Layer: 0
   m_Name: PlayerDied
@@ -111,7 +105,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4217741465422172}
   - component: {fileID: 114362751197115494}
-  - component: {fileID: 114562953802230882}
   - component: {fileID: 114778330788812218}
   m_Layer: 0
   m_Name: HeartAdded
@@ -129,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4335940079660182}
   - component: {fileID: 114835799123273782}
-  - component: {fileID: 114038690772777030}
   - component: {fileID: 114039849226882590}
   m_Layer: 0
   m_Name: ProjectileHit
@@ -147,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4310278340742456}
   m_Layer: 0
-  m_Name: SoundEffects
+  m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +154,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4381710541489086}
   - component: {fileID: 114708480597239754}
-  - component: {fileID: 114320127220012682}
   - component: {fileID: 114257325262407120}
   m_Layer: 0
   m_Name: TurretFire
@@ -317,6 +308,7 @@ MonoBehaviour:
     dopplerLevel: 0
     spread: 1
     rolloffMode: 0
+  audioItemSet: {fileID: 11400000, guid: 996d23cfdc676417095e86f9bedd4815, type: 2}
 --- !u!114 &114018464807968278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -338,35 +330,7 @@ MonoBehaviour:
     dopplerLevel: 0
     spread: 1
     rolloffMode: 0
---- !u!114 &114038690772777030
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1772793385253110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67765f490a82546d096a0bc63f9ac231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 8300000, guid: 5e99b24a65284c94183885b075233f05, type: 3}
-  onGetObject:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114835799123273782}
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+  audioItemSet: {fileID: 11400000, guid: bdbc82c23853442929d388ea31e925f3, type: 2}
 --- !u!114 &114039849226882590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,9 +346,9 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114038690772777030}
-        m_MethodName: DispatchObject
-        m_Mode: 3
+      - m_Target: {fileID: 114835799123273782}
+        m_MethodName: PlayRandomClip
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -410,9 +374,9 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114223570540282140}
-        m_MethodName: DispatchObject
-        m_Mode: 3
+      - m_Target: {fileID: 114004908518735240}
+        m_MethodName: PlayRandomClip
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -438,9 +402,9 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114299890266547706}
-        m_MethodName: DispatchObject
-        m_Mode: 3
+      - m_Target: {fileID: 114018464807968278}
+        m_MethodName: PlayRandomClip
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -450,64 +414,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: GameEvents.UnityIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &114223570540282140
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1175393987645052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67765f490a82546d096a0bc63f9ac231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 8300000, guid: 79d686dc7f909834691f6923ed48c64d, type: 3}
-  onGetObject:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114004908518735240}
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &114225131022934708
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1169236218114456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67765f490a82546d096a0bc63f9ac231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 8300000, guid: ea9bdfa0796bb734d901df5290f10cfc, type: 3}
-  onGetObject:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114957085807187296}
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114257325262407120
 MonoBehaviour:
@@ -524,9 +430,9 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114320127220012682}
-        m_MethodName: DispatchObject
-        m_Mode: 3
+      - m_Target: {fileID: 114708480597239754}
+        m_MethodName: PlayRandomClip
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -536,64 +442,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: GameEvents.UnityVector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &114299890266547706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1391244426753504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67765f490a82546d096a0bc63f9ac231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 8300000, guid: 49148fc9d244c90419e21d53f91f0614, type: 3}
-  onGetObject:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114018464807968278}
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &114320127220012682
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1890083985655296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67765f490a82546d096a0bc63f9ac231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 8300000, guid: d9786990e89fc91428aa09b096501cf4, type: 3}
-  onGetObject:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114708480597239754}
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114347526075052778
 MonoBehaviour:
@@ -610,8 +458,8 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114923599691566294}
-        m_MethodName: FetchNextObject
+      - m_Target: {fileID: 114891858021676800}
+        m_MethodName: PlayNextClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -644,6 +492,7 @@ MonoBehaviour:
     dopplerLevel: 0
     spread: 1
     rolloffMode: 0
+  audioItemSet: {fileID: 11400000, guid: 4211138fe8eea4cb0abcb6ba03ceed08, type: 2}
 --- !u!114 &114441383823532996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -659,9 +508,9 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114225131022934708}
-        m_MethodName: DispatchObject
-        m_Mode: 3
+      - m_Target: {fileID: 114957085807187296}
+        m_MethodName: PlayRandomClip
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -687,9 +536,9 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114722388495956638}
-        m_MethodName: DispatchObject
-        m_Mode: 3
+      - m_Target: {fileID: 114736092055902448}
+        m_MethodName: PlayRandomClip
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -700,56 +549,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114562953802230882
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1771429520684482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67765f490a82546d096a0bc63f9ac231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 8300000, guid: 2b17cb68a6c8cc84a8bae0b83b8cd695, type: 3}
-  onGetObject:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114362751197115494}
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &114666894816114812
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1654367528339544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67765f490a82546d096a0bc63f9ac231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 8300000, guid: 9b0b0fec7162c8a4191481f68f2750ef, type: 3}
-  - {fileID: 8300000, guid: 2d4676ef08547ee46aae10435f57f4b0, type: 3}
-  - {fileID: 8300000, guid: 38fd25ba348ac954b848aa2fa848530f, type: 3}
-  - {fileID: 8300000, guid: 73753d4e614a6714382f7dadb69b8c8e, type: 3}
-  onGetObject:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &114708480597239754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -771,35 +570,7 @@ MonoBehaviour:
     dopplerLevel: 0
     spread: 1
     rolloffMode: 0
---- !u!114 &114722388495956638
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1657341433875362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67765f490a82546d096a0bc63f9ac231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 8300000, guid: 762a5c5c8d2b2bb4cabe7d61651f3867, type: 3}
-  onGetObject:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114736092055902448}
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+  audioItemSet: {fileID: 11400000, guid: 216ce315f4b2f4d6388d8045f8f4d656, type: 2}
 --- !u!114 &114736092055902448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -821,6 +592,7 @@ MonoBehaviour:
     dopplerLevel: 0
     spread: 1
     rolloffMode: 0
+  audioItemSet: {fileID: 11400000, guid: d8f92907f57d14a95a191896fe74a443, type: 2}
 --- !u!114 &114778330788812218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -836,9 +608,9 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114562953802230882}
-        m_MethodName: DispatchObject
-        m_Mode: 3
+      - m_Target: {fileID: 114362751197115494}
+        m_MethodName: PlayRandomClip
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -870,6 +642,7 @@ MonoBehaviour:
     dopplerLevel: 0
     spread: 1
     rolloffMode: 0
+  audioItemSet: {fileID: 11400000, guid: 6b93a8b2f405e4a54a3275dce0583b93, type: 2}
 --- !u!114 &114891858021676800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -891,33 +664,7 @@ MonoBehaviour:
     dopplerLevel: 0
     spread: 1
     rolloffMode: 0
---- !u!114 &114923599691566294
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1654367528339544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71123ab65ba8a445f94ad293f4529402, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onNext:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114891858021676800}
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+  audioItemSet: {fileID: 11400000, guid: dea47690f3b2040968c454932fa3fa95, type: 2}
 --- !u!114 &114957085807187296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -939,3 +686,4 @@ MonoBehaviour:
     dopplerLevel: 0
     spread: 1
     rolloffMode: 0
+  audioItemSet: {fileID: 11400000, guid: 5e45aa8ee8e0442da83515f0fc82e113, type: 2}

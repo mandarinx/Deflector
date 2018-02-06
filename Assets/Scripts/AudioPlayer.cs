@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using Mandarin;
-using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
-namespace HyperGames.Lib {
-    
+namespace mlib {
+
     [Serializable]
     public struct AudioSourceConfig {
         public float            minDistance;
@@ -15,9 +15,9 @@ namespace HyperGames.Lib {
         public float            spread;
         public AudioRolloffMode rolloffMode;
     }
-    
-    [AddComponentMenu("Hyper Games/Lib/Play Sound")]
-    public class PlaySound : MonoBehaviour {
+
+    [AddComponentMenu("mlib/AudioPlayer")]
+    public class AudioPlayer : MonoBehaviour {
 
         [SerializeField]
         [Min(1)]
@@ -29,6 +29,8 @@ namespace HyperGames.Lib {
         private float             volume;
         [SerializeField]
         private AudioSourceConfig audioSourceConfig;
+        [SerializeField]
+        private AudioItemSet      audioItemSet;
 
         private AudioSource[]     audioSources;
 
@@ -57,18 +59,23 @@ namespace HyperGames.Lib {
 			source.rolloffMode = audioSourceConfig.rolloffMode;
         }
 
-        public void Play(Object obj) {
-            Play(obj as AudioClip);
+        public void PlayRandomClip() {
+            Play(audioItemSet.GetRandom());
         }
 
-        public void Play(AudioClip audioClip) {
+        public void PlayNextClip() {
+            Play(audioItemSet.GetNext());
+        }
+
+        private void Play(AudioItem audioItem) {
             AudioSource source = GetNextAudioSource();
             if (source == null) {
                 return;
             }
             source.outputAudioMixerGroup = output;
             source.volume = volume;
-            source.clip = audioClip;
+            source.clip = audioItem.AudioClip;
+            source.pitch = Random.Range(audioItem.PitchRange.x, audioItem.PitchRange.y);
             source.Play();
         }
 

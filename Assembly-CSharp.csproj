@@ -55,6 +55,7 @@
     <Compile Include="Assets\Scripts\Anim\InputKeyTrigger.cs" />
     <Compile Include="Assets\Scripts\Anim\SetAnimatorTrigger.cs" />
     <Compile Include="Assets\Scripts\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\Scripts\AudioPlayer.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hitable.cs" />
     <Compile Include="Assets\Scripts\Behaviours\HitEffect.cs" />
     <Compile Include="Assets\Scripts\Behaviours\Hurt.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\Controllers\TurretController.cs" />
+    <Compile Include="Assets\Scripts\Data\AudioItem.cs" />
     <Compile Include="Assets\Scripts\Data\GameMode.cs" />
     <Compile Include="Assets\Scripts\Data\GameModes\Survival.cs" />
     <Compile Include="Assets\Scripts\Data\HealthAsset.cs" />
@@ -127,9 +129,9 @@
     <Compile Include="Assets\Scripts\List\ListSequential.cs" />
     <Compile Include="Assets\Scripts\List\ObjectList.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
-    <Compile Include="Assets\Scripts\PlaySound.cs" />
     <Compile Include="Assets\Scripts\RandomPointInsideCircle.cs" />
     <Compile Include="Assets\Scripts\ScoreCounter.cs" />
+    <Compile Include="Assets\Scripts\Sets\AudioItemSet.cs" />
     <Compile Include="Assets\Scripts\Sets\GameObjectSet.cs" />
     <Compile Include="Assets\Scripts\Sets\GridCoordsHashSet.cs" />
     <Compile Include="Assets\Scripts\Sets\HashSet.cs" />
