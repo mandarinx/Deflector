@@ -166,7 +166,6 @@
     <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
     <Compile Include="Assets\Scripts\Utils\UHookUpdate.cs" />
     <None Include="Assets\Visuals\Shaders\TilemapGizmo.shader" />
-    <None Include="Assets\Dadako\BitmapFonts\Pixel\_PixelCharLimits.txt" />
     <None Include="Assets\Visuals\Shaders\PixelSnapAlphaBlend.shader" />
     <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
     <None Include="Assets\Visuals\Shaders\ScreenSpaceTexture.shader" />
