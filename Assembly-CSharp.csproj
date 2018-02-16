@@ -68,8 +68,9 @@
     <Compile Include="Assets\Scripts\Brushes\LevelExitBrush.cs" />
     <Compile Include="Assets\Scripts\Brushes\ProjectileKillerBrush.cs" />
     <Compile Include="Assets\Scripts\Brushes\SpawnPointBrush.cs" />
-    <Compile Include="Assets\Scripts\CameraShake.cs" />
-    <Compile Include="Assets\Scripts\CameraShakeConfig.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraShakeConfig.cs" />
+    <Compile Include="Assets\Scripts\Camera\PixelArtCamera.cs" />
     <Compile Include="Assets\Scripts\Controllers\BloodController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ExplosionController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameModeController.cs" />
@@ -169,6 +170,7 @@
     <None Include="Assets\Dadako\BitmapFonts\Pixel\_PixelCharLimits.txt" />
     <None Include="Assets\Visuals\Shaders\PixelSnapAlphaBlend.shader" />
     <None Include="Assets\Audio\8 Bit Retro Rampage Free\Readme.txt" />
+    <None Include="Assets\Visuals\Shaders\ScreenSpaceTexture.shader" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -228,6 +230,9 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>/Applications/Unity 2017.3.0p3/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WebGL.Extensions">
       <HintPath>/Applications/Unity 2017.3.0p3/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>

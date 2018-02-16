@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\PixelArtCamera\PixelArtCamera.cs" />
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\SpriteAnim.cs" />
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\SpriteAnimEventHandler.cs" />
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\SpriteAnimNodes.cs" />
@@ -119,6 +118,9 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>/Applications/Unity 2017.3.0p3/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WebGL.Extensions">
       <HintPath>/Applications/Unity 2017.3.0p3/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
