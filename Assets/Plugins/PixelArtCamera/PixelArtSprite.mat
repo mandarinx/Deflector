@@ -28,9 +28,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelSnap: 1
+    - _Cutoff: 0.5
     - _EnableExternalAlpha: 0
     - _PixelsPerUnit: 100
+    - _ScreenHeight: 288
+    - _ScreenWidth: 360
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

@@ -13,10 +13,10 @@ Shader "Ocias/Pixel Art Sprite"
 	SubShader
 	{
 		Tags
-		{ 
-			"Queue"="Transparent" 
-			"IgnoreProjector"="True" 
-			"RenderType"="Transparent" 
+		{
+			"Queue"="Transparent"
+			"IgnoreProjector"="True"
+			"RenderType"="Transparent"
 			"PreviewType"="Plane"
 			"CanUseSpriteAtlas"="True"
 		}
@@ -32,7 +32,7 @@ Shader "Ocias/Pixel Art Sprite"
 			#pragma vertex vert
 			#pragma fragment frag
 			#include "UnityCG.cginc"
-			
+
 			struct appdata_t
 			{
 				float4 vertex   : POSITION;
@@ -46,7 +46,7 @@ Shader "Ocias/Pixel Art Sprite"
 				fixed4 color    : COLOR;
 				half2 texcoord  : TEXCOORD0;
 			};
-			
+
 			fixed4 _Color;
 			float _PixelsPerUnit;
 
@@ -54,10 +54,11 @@ Shader "Ocias/Pixel Art Sprite"
 
 				float2 halfScreenRes = _ScreenParams.xy * 0.5f;
 
-				// // View space Pixel Snapping
-				float2 pixelPos = floor(pos * halfScreenRes + 1 / halfScreenRes) / halfScreenRes; // put back in that half pixel offset when you're done
+				// View space Pixel Snapping
+				// put back in that half pixel offset when you're done
+				float2 pixelPos = floor(pos * halfScreenRes + 1 / halfScreenRes) / halfScreenRes;
 				pos.xy = pixelPos;
-				
+
 				// Odd resolution handling
 				float2 odd = _ScreenParams.xy % 2;
 				pos.x += odd.x * 0.5 / halfScreenRes.x;
@@ -73,7 +74,7 @@ Shader "Ocias/Pixel Art Sprite"
 			// 	float ppu = _ScreenParams.y / zoom / 2;
 
 			// 	pos = mul(unity_ObjectToWorld, pos);
-				
+
 			// 	// World space Pixel Snapping
 			// 	pos = floor(pos * ppu + 1 / ppu) / ppu;
 			// 	// Adjust to pixel relative to camera position
@@ -91,7 +92,7 @@ Shader "Ocias/Pixel Art Sprite"
 			// 	return pos;
 			// }
 
-			
+
 
 			v2f vert(appdata_t IN)
 			{

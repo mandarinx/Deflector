@@ -131,7 +131,6 @@
     <Compile Include="Assets\Scripts\List\ListSequential.cs" />
     <Compile Include="Assets\Scripts\List\ObjectList.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
-    <Compile Include="Assets\Scripts\RandomPointInsideCircle.cs" />
     <Compile Include="Assets\Scripts\ScoreCounter.cs" />
     <Compile Include="Assets\Scripts\Sets\AudioItemSet.cs" />
     <Compile Include="Assets\Scripts\Sets\GameObjectSet.cs" />
