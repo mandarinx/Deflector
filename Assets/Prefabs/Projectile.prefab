@@ -167,7 +167,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3c638bdfc03903d4f92598f6d625532d, type: 3}
   - {fileID: 21300000, guid: 548f9e8e503ac354bbaeeebabf74b949, type: 3}
   - {fileID: 21300000, guid: 548f9e8e503ac354bbaeeebabf74b949, type: 3}
-  onDespawn: {fileID: 11400000, guid: 70696427c874a4c1d999238aa20709a5, type: 2}
+  onExploded: {fileID: 11400000, guid: e0fff273069e641abbf5c3bb3bb6d9f1, type: 2}
   onHit: {fileID: 11400000, guid: 03a4ed030947f4ec387fbebeb089625d, type: 2}
 --- !u!212 &212637977036971934
 SpriteRenderer:

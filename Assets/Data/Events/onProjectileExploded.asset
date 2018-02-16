@@ -8,9 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26cc6b5e10a364005a45529b09fca1cf, type: 3}
-  m_Name: Survival40
+  m_Script: {fileID: 11500000, guid: 91186cbe611394875bed613a597511a2, type: 3}
+  m_Name: onProjectileExploded
   m_EditorClassIdentifier: 
-  maxProjectiles: 40
-  onProjectileDespawned: {fileID: 11400000, guid: e0fff273069e641abbf5c3bb3bb6d9f1,
-    type: 2}

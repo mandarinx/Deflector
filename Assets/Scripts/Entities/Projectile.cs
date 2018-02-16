@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private Sprite[]                  sprites;
     [SerializeField]
-    private GameObjectEvent           onDespawn;
+    private GameObjectEvent           onExploded;
     [SerializeField]
     private GameObjectEvent           onHit;
 
@@ -119,7 +119,7 @@ public class Projectile : MonoBehaviour {
             ++blink;
         }
 
-        onDespawn.Invoke(gameObject);
+        onExploded.Invoke(gameObject);
     }
 
     private void FixedUpdate() {
