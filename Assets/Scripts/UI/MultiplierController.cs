@@ -2,16 +2,16 @@
 using UnityEngine;
 
 public class MultiplierController : MonoBehaviour {
-    
+
     [SerializeField]
     private GameObject                 prefab;
     [SerializeField]
     private Transform                  parent;
-    
+
     private GameObjectPool<Multiplier> pool;
 
     private void Awake() {
-        pool = new GameObjectPool<Multiplier>(parent, prefab, 16, true);
+        pool = new GameObjectPool<Multiplier>(parent, prefab, 64, true);
         pool.Fill();
     }
 

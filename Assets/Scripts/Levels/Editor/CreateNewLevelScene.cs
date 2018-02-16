@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 
 public static class CreateNewLevelScene {
 
-    [MenuItem("Tools/Create New Level Scene")]
+    [MenuItem("File/New Level Scene")]
     public static void Create() {
         Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Additive);
         EditorSceneManager.SetActiveScene(scene);
@@ -17,25 +17,39 @@ public static class CreateNewLevelScene {
         AddComponent<Grid>(root);
         AddComponent<Layers>(root);
 
+        Material pixelArtSprite = AssetDatabase.LoadAssetAtPath<Material>("Assets/Plugins/PixelArtCamera/PixelArtSprite.mat");
+
         GameObject floor = CreateGO("Floor", root);
         AddComponent<Tilemap>(floor, SetTilemap);
         AddComponent<TilemapRenderer>(floor,
-                                      tr => { tr.sortingOrder = 0; });
+                                      tr => {
+                                          tr.sortingOrder = 0;
+                                          tr.material = pixelArtSprite;
+                                      });
 
         GameObject spawnPointsPlayer = CreateGO("SpawnPointsPlayer", root);
         AddComponent<Tilemap>(spawnPointsPlayer, SetTilemap);
         AddComponent<TilemapRenderer>(spawnPointsPlayer,
-                                      tr => { tr.sortingOrder = 1; });
+                                      tr => {
+                                          tr.sortingOrder = 1;
+                                          tr.material = pixelArtSprite;
+                                      });
 
         GameObject spawnPointsTurrets = CreateGO("SpawnPointsTurrets", root);
         AddComponent<Tilemap>(spawnPointsTurrets, SetTilemap);
         AddComponent<TilemapRenderer>(spawnPointsTurrets,
-                                      tr => { tr.sortingOrder = 1; });
+                                      tr => {
+                                          tr.sortingOrder = 1;
+                                          tr.material = pixelArtSprite;
+                                      });
 
         GameObject walls = CreateGO("Walls", root);
         AddComponent<Tilemap>(walls, SetTilemap);
         AddComponent<TilemapRenderer>(walls,
-                                      tr => { tr.sortingOrder = 2; });
+                                      tr => {
+                                          tr.sortingOrder = 2;
+                                          tr.material = pixelArtSprite;
+                                      });
         AddComponent<TilemapCollider2D>(walls,
                                         tc => { tc.usedByComposite = true; });
         AddComponent<Rigidbody2D>(walls,
@@ -55,7 +69,10 @@ public static class CreateNewLevelScene {
         GameObject obstacles = CreateGO("Obstacles", root);
         AddComponent<Tilemap>(obstacles, SetTilemap);
         AddComponent<TilemapRenderer>(obstacles,
-                                      tr => { tr.sortingOrder = 3; });
+                                      tr => {
+                                          tr.sortingOrder = 3;
+                                          tr.material = pixelArtSprite;
+                                      });
         AddComponent<TilemapCollider2D>(obstacles,
                                         tc => {
                                             tc.usedByComposite = false;
@@ -67,7 +84,10 @@ public static class CreateNewLevelScene {
         GameObject projectileKiller = CreateGO("ProjectileKiller", root);
         AddComponent<Tilemap>(projectileKiller, SetTilemap);
         AddComponent<TilemapRenderer>(projectileKiller,
-                                      tr => { tr.sortingOrder = 2; });
+                                      tr => {
+                                          tr.sortingOrder = 2;
+                                          tr.material = pixelArtSprite;
+                                      });
         AddComponent<TilemapCollider2D>(projectileKiller,
                                         tc => { tc.usedByComposite = true; });
         AddComponent<Rigidbody2D>(projectileKiller,
