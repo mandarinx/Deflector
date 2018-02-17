@@ -70,7 +70,6 @@ public static class BrushUtility  {
 		T obj = Object.Instantiate(prefab).GetComponent<T>();
 		obj.transform.SetPositionAndRotation(position, Quaternion.identity);
 		obj.transform.SetParent(layer);
-		Undo.RegisterCreatedObjectUndo(obj, $"Instantiate {obj.gameObject.name}");
 		return obj;
 
 		#endif
