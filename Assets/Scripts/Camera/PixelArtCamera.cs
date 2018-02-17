@@ -12,6 +12,8 @@ namespace LunchGame01 {
         private RenderTexture rt;
         private Camera        cam;
 
+        public Vector2Int     TargetResolution => targetRes;
+
         private void Awake() {
             cam = GetComponent<Camera>();
             rt = new RenderTexture(targetRes.x,
@@ -37,19 +39,23 @@ namespace LunchGame01 {
             int scale   = BestFitScale(targetRes);
             int width   = targetRes.x * scale;
             int height  = targetRes.y * scale;
-            int offsetX = Mathf.FloorToInt((Screen.width - width) * 0.5f);
-            int offsetY = Mathf.FloorToInt((Screen.height - height) * 0.5f);
 
-            rtMaterial.SetVector("_Pos", new Vector4(offsetX,
-                                                     offsetY,
-                                                     offsetX + width,
-                                                     offsetY + height));
+            // Explicitly set the x, y, z, w components to make it
+            // easier to read the code in ScreenSpaceTexture.shader.
+            Vector4 pos = new Vector4();
+            pos.x = Mathf.FloorToInt((Screen.width - width) * 0.5f);
+            pos.y = Mathf.FloorToInt((Screen.height - height) * 0.5f);
+            pos.z = pos.x + width;
+            pos.w = pos.y + height;
+
+            rtMaterial.SetVector("_Pos", pos);
             rtMaterial.SetTexture("_MainTex", rt);
+            rtMaterial.SetColor("_BackgroundColor", cam.backgroundColor);
 
             Graphics.Blit(rt, null, rtMaterial);
         }
 
-        private static int BestFitScale(Vector2Int res) {
+        public static int BestFitScale(Vector2Int res) {
             return Mathf.Min(
                 Mathf.FloorToInt(Mathf.Max((float) Screen.width / res.x,  1)),
                 Mathf.FloorToInt(Mathf.Max((float) Screen.height / res.y, 1))
