@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Controllers\LevelController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ProjectileController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ScreenController.cs" />
     <Compile Include="Assets\Scripts\Controllers\TurretController.cs" />
     <Compile Include="Assets\Scripts\Data\AudioItem.cs" />
     <Compile Include="Assets\Scripts\Data\GameMode.cs" />

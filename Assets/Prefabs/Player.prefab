@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 50007249700960364}
   - component: {fileID: 58749400449453462}
   - component: {fileID: 95684812862246244}
-  - component: {fileID: 114906859649206792}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -339,17 +338,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114906859649206792
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1574596575962138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0320f52dcc5c744fa9e142a17ed198c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114943011308257730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,7 +478,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300018, guid: eb5f10529e36a4163bb7ada7f65e701f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f604951b5ff44c469d22d4d895eed74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.428}
   m_FlipX: 0
   m_FlipY: 0
@@ -498,5 +486,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
