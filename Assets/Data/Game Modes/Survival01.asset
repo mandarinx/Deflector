@@ -14,3 +14,5 @@ MonoBehaviour:
   maxProjectiles: 1
   onProjectileDespawned: {fileID: 11400000, guid: e0fff273069e641abbf5c3bb3bb6d9f1,
     type: 2}
+  onPlayerDied: {fileID: 11400000, guid: 5f91beb629d874778988875a2cfaccac, type: 2}
+  playerSet: {fileID: 11400000, guid: 449ebba2de74f4b45af73b7b456b2aee, type: 2}
