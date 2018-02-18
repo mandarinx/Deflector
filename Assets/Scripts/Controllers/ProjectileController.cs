@@ -1,30 +1,31 @@
-﻿using HyperGames;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ProjectileController : MonoBehaviour {
+namespace LunchGame01 {
+    public class ProjectileController : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject                 prefab;
-    private GameObjectPool<Projectile> pool;
+        [SerializeField]
+        private GameObject                 prefab;
+        private GameObjectPool<Projectile> pool;
 
-    private void Awake() {
-        pool = new GameObjectPool<Projectile>(transform, prefab, 16, true) {
-            OnWillSpawn = p => { p.tag = "Untagged"; }
-        };
-        pool.Fill();
-    }
+        private void Awake() {
+            pool = new GameObjectPool<Projectile>(transform, prefab, 16, true) {
+                OnWillSpawn = p => { p.tag = "Untagged"; }
+            };
+            pool.Fill();
+        }
 
-    public void Despawn(GameObject projectile) {
-        pool.Despawn(projectile.GetComponent<Projectile>());
-    }
+        public void Despawn(GameObject projectile) {
+            pool.Despawn(projectile.GetComponent<Projectile>());
+        }
 
-    public void Spawn(Vector3 pos) {
-        Projectile projectile;
-        pool.Spawn(out projectile);
-        projectile.transform.position = pos;
-    }
+        public void Spawn(Vector3 pos) {
+            Projectile projectile;
+            pool.Spawn(out projectile);
+            projectile.transform.position = pos;
+        }
 
-    public void DespawnAll() {
-        pool.Reset();
+        public void DespawnAll() {
+            pool.Reset();
+        }
     }
 }

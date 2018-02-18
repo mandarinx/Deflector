@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace GameEvents {
-    
+
     [CreateAssetMenu(menuName = "Game Events/GameEvent")]
     public class GameEvent : ScriptableObject {
 

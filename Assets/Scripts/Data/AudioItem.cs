@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace mlib {
+namespace LunchGame01 {
 
     [Serializable]
 	public class AudioItem {

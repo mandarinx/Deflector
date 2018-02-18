@@ -226,8 +226,9 @@ GameObject:
   - component: {fileID: 224113947955763546}
   - component: {fileID: 114072732374700526}
   - component: {fileID: 114771102360085806}
+  - component: {fileID: 114738835763861120}
   m_Layer: 5
-  m_Name: Health
+  m_Name: Hearts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224437537970214332}
   - component: {fileID: 223016642338177864}
-  - component: {fileID: 114992187782027174}
+  - component: {fileID: 114093971656245680}
   m_Layer: 5
   m_Name: InGame
   m_TagString: Untagged
@@ -435,6 +436,7 @@ GameObject:
   - component: {fileID: 224073653673935670}
   - component: {fileID: 223049963365681728}
   - component: {fileID: 114273913430916822}
+  - component: {fileID: 114064437633711822}
   m_Layer: 5
   m_Name: Intro
   m_TagString: Untagged
@@ -490,6 +492,45 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114064437633711822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1972816276523678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13dff3ca4e0954b6eb9ae8cebf5f2709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evt: {fileID: 11400000, guid: f9ffa4afdb1f242578881a6c88b88e26, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114967828428629572}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: AddUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: GameEvents.UnityLevelEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114072732374700526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -512,6 +553,39 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &114093971656245680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1636023597310824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5bc5dcba2c1b455aa2c96b711c62d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelLink: {fileID: 11400000, guid: 890a66e8ef89d4ab7936d44253de05bf, type: 2}
+  onEnterPanel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114771102360085806}
+        m_MethodName: RenderHearts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onClosePanel:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114215704063884930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -574,9 +648,20 @@ MonoBehaviour:
   onEnterPanel:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: AddUpdate
-        m_Mode: 1
+      - m_Target: {fileID: 114329623574486314}
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114967828428629572}
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -590,17 +675,6 @@ MonoBehaviour:
   onClosePanel:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 17b4e53f5e6524d27bb3553b6695bc23, type: 2}
-        m_MethodName: Invoke
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 0}
         m_MethodName: RemoveUpdate
         m_Mode: 1
@@ -925,17 +999,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 746a03cc87bab413dbb5c76990f2a9bd, type: 2}
-        m_MethodName: Invoke
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114641934978858718
@@ -1010,6 +1073,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplier: {fileID: 11400000, guid: 39e28525072b1499ab6d98a18a19e5ed, type: 2}
+--- !u!114 &114738835763861120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579540976005420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 746a03cc87bab413dbb5c76990f2a9bd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114771102360085806}
+        m_MethodName: Clear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114759448855987570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1052,6 +1143,7 @@ MonoBehaviour:
   heartPrefab: {fileID: 1523326015610284, guid: d86c36fc690b14bc193003e9af5b70e7,
     type: 2}
   onHeartFilled: {fileID: 11400000, guid: d62e61acb72204de3b34fccb9f032e6a, type: 2}
+  onHeartsRendered: {fileID: 11400000, guid: 3eb5ba2bacc8549838a7e7074543fdc4, type: 2}
 --- !u!114 &114784563501649746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1404,30 +1496,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: X to start
---- !u!114 &114992187782027174
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1636023597310824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f27b9402ed0e240afa0b893aecd5318a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelLink: {fileID: 11400000, guid: 890a66e8ef89d4ab7936d44253de05bf, type: 2}
-  onEnterPanel:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onClosePanel:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onGameReady: {fileID: 11400000, guid: 3eb5ba2bacc8549838a7e7074543fdc4, type: 2}
-  hearts: {fileID: 114771102360085806}
 --- !u!114 &114995452027519960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1651,7 +1719,7 @@ Canvas:
   m_GameObject: {fileID: 1931506645437574}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 5
   m_PixelPerfect: 1
@@ -1708,8 +1776,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1931506645437574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 0.041666664, y: 0.041666664, z: 0.041666664}
   m_Children:
   - {fileID: 224896168943703522}
   - {fileID: 224073653673935670}
@@ -1722,8 +1790,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 360, y: 288}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224073653673935670
 RectTransform:
   m_ObjectHideFlags: 1

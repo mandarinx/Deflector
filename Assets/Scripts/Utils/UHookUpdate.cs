@@ -1,22 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class UHookUpdate : MonoBehaviour, IOnUpdate {
-    
-    [SerializeField]
-    private UHooks hooks;
-    [SerializeField]
-    private UnityEvent onUpdate;
+namespace LunchGame01 {
+    public class UHookUpdate : MonoBehaviour, IOnUpdate {
 
-    public void AddUpdate() {
-        hooks.AddOnUpdate(this);
-    }
+        [SerializeField]
+        private UHooks hooks;
+        [SerializeField]
+        private UnityEvent onUpdate;
 
-    public void RemoveUpdate() {
-        hooks.RemoveOnUpdate(this);
-    }
+        public void AddUpdate() {
+            hooks.AddOnUpdate(this);
+        }
 
-    public void UOnUpdate() {
-        onUpdate.Invoke();
+        public void RemoveUpdate() {
+            hooks.RemoveOnUpdate(this);
+        }
+
+        public void UOnUpdate() {
+            onUpdate.Invoke();
+        }
     }
 }

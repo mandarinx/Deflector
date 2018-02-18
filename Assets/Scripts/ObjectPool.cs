@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HyperGames {
-
+namespace LunchGame01 {
 	// T must have a parameterless constructor
     public class ObjectPool<T> where T : class {
 
@@ -69,9 +68,9 @@ namespace HyperGames {
             if (!GetInstance(out instance)) {
                 return false;
             }
-            
+
             OnWillSpawn(instance);
-            
+
             IPoolable poolable = instance as IPoolable;
             if (poolable != null) {
                 poolable.OnEnable();
@@ -90,7 +89,7 @@ namespace HyperGames {
             if (index < 0) {
                 return;
             }
-            
+
             OnWillDespawn(instance);
 
             IPoolable poolable = instance as IPoolable;
@@ -99,7 +98,7 @@ namespace HyperGames {
             }
 
             OnDespawned(instance);
-            
+
             deactives.Add(instance);
             actives.RemoveAt(index);
         }
@@ -130,7 +129,7 @@ namespace HyperGames {
         public T GetInstance(int n) {
             return n < actives.Count ? actives[n] : default(T);
         }
-		
+
         public override string ToString() {
             return "ObjectPool<" + typeof(T) + "> " +
                 "Actives: " + actives.Count + "/" + actives.Capacity + " " +

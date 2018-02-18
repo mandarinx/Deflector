@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HyperGames.Lib {
-
+namespace LunchGame01 {
     public static class ArrayUtils {
 
         public static void Shuffle<T>(T[] list) {

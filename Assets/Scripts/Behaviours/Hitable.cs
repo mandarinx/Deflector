@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 
-public class Hitable : MonoBehaviour {
-    
-    [SerializeField]
-    private UnityIntEvent onHit;
+namespace LunchGame01 {
+    public class Hitable : MonoBehaviour {
 
-    public void Hit(int hitAngle) {
-        onHit.Invoke(hitAngle);
+        [SerializeField]
+        private UnityIntEvent onHit;
+
+        public void Hit(int hitAngle) {
+            onHit.Invoke(hitAngle);
+        }
     }
 }

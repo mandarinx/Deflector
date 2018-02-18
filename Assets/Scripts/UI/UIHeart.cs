@@ -1,20 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
-public class UIHeart : MonoBehaviour {
+namespace LunchGame01 {
+    [RequireComponent(typeof(Image))]
+    public class UIHeart : MonoBehaviour {
 
-    public Sprite alive;
-    public Sprite dead;
+        [SerializeField]
+        private Sprite alive;
+        [SerializeField]
+        private Sprite dead;
 
-    private Image image;
+        private Image  image;
 
-    private void OnEnable() {
-        image = GetComponent<Image>();
-        image.sprite = alive;
-    }
+        private void OnEnable() {
+            image = GetComponent<Image>();
+            image.sprite = alive;
+        }
 
-    public bool isAlive {
-        set { GetComponent<Image>().sprite = value ? alive : dead; }
+        public bool isAlive {
+            set { GetComponent<Image>().sprite = value ? alive : dead; }
+            get { return GetComponent<Image>().sprite == alive; }
+        }
     }
 }

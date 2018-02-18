@@ -1,40 +1,40 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Canvas))]
-public class UIPanel : MonoBehaviour {
-    
-    [SerializeField]
-    private UIPanelLink     panelLink;
-    
-    [Header("Events Out")]
-    [SerializeField]
-    private UnityEvent      onEnterPanel;
-    [SerializeField]
-    private UnityEvent      onClosePanel;
-    
-    private Canvas          canvas;
+namespace LunchGame01 {
+    [RequireComponent(typeof(Canvas))]
+    public class UIPanel : MonoBehaviour {
 
-    private void Awake() {
-        canvas = GetComponent<Canvas>();
-        panelLink.SetPanel(this);
-    }
+        [SerializeField]
+        private UIPanelLink     panelLink;
+        [SerializeField]
+        private UnityEvent      onEnterPanel;
+        [SerializeField]
+        private UnityEvent      onClosePanel;
 
-    public void Hide() {
-        canvas.enabled = false;
-    }
+        private Canvas          canvas;
 
-    public void Show() {
-        canvas.enabled = true;
-    }
-    
-    public virtual void Open() {
-        Show();
-        onEnterPanel.Invoke();
-    }
+        private void Awake() {
+            canvas = GetComponent<Canvas>();
+            panelLink.SetPanel(this);
+        }
 
-    public virtual void Close() {
-        Hide();
-        onClosePanel.Invoke();
+        public void Hide() {
+            canvas.enabled = false;
+        }
+
+        public void Show() {
+            canvas.enabled = true;
+        }
+
+        public virtual void Open() {
+            Show();
+            onEnterPanel.Invoke();
+        }
+
+        public virtual void Close() {
+            Hide();
+            onClosePanel.Invoke();
+        }
     }
 }

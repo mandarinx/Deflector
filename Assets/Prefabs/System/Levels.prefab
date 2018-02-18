@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114983043907393164}
   - component: {fileID: 114632195375867616}
   - component: {fileID: 114314431814483866}
+  - component: {fileID: 114585773823903336}
   m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
@@ -83,6 +84,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLevelLoaded: {fileID: 11400000, guid: f9ffa4afdb1f242578881a6c88b88e26, type: 2}
+--- !u!114 &114585773823903336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286284345385302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 746a03cc87bab413dbb5c76990f2a9bd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114529872853236176}
+        m_MethodName: LoadLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114632195375867616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,17 +127,6 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114529872853236176}
-        m_MethodName: UnloadCurrentLevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 114529872853236176}
         m_MethodName: LoadNextLevel
         m_Mode: 1
@@ -137,7 +155,7 @@ MonoBehaviour:
   onWillLoad:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: dc77f3e48e1124669b9c37c3494cf49a, type: 2}
+      - m_Target: {fileID: 11400000, guid: 06e3dbd4b442b4d5b87eda1896ad325e, type: 2}
         m_MethodName: Invoke
         m_Mode: 1
         m_Arguments:
@@ -164,7 +182,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Lib.UnityLevelEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    m_TypeName: LunchGame01.UnityLevelEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   onAllLevelsLoaded:
     m_PersistentCalls:
@@ -174,7 +192,7 @@ MonoBehaviour:
   onWillUnload:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 06e3dbd4b442b4d5b87eda1896ad325e, type: 2}
+      - m_Target: {fileID: 11400000, guid: f582b4e65d64a4f60ad1cf3d4076f738, type: 2}
         m_MethodName: Invoke
         m_Mode: 1
         m_Arguments:

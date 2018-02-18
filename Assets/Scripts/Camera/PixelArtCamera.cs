@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 namespace LunchGame01 {
-
     public class PixelArtCamera : MonoBehaviour {
 
         [SerializeField]

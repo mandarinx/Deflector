@@ -14,7 +14,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Dead
+  - m_Name: EndGame
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -167,7 +167,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dead
+    m_ConditionEvent: EndGame
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102635645753377920}
@@ -319,7 +319,7 @@ AnimatorState:
   - {fileID: 114420601881382852}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
+  m_WriteDefaultValues: 0
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
@@ -347,7 +347,7 @@ AnimatorState:
   - {fileID: 114811527153818038}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
+  m_WriteDefaultValues: 0
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
@@ -374,7 +374,7 @@ AnimatorState:
   - {fileID: 114630177760763830}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
+  m_WriteDefaultValues: 0
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
@@ -401,7 +401,7 @@ AnimatorState:
   - {fileID: 114986363254192646}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
+  m_WriteDefaultValues: 0
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
@@ -429,7 +429,7 @@ AnimatorState:
   - {fileID: 114100898193609916}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
+  m_WriteDefaultValues: 0
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
@@ -460,7 +460,7 @@ AnimatorStateMachine:
     m_Position: {x: 480, y: 252, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102968662592895552}
-    m_Position: {x: 600, y: 84, z: 0}
+    m_Position: {x: 480, y: 84, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102005078262704894}
     m_Position: {x: 348, y: 0, z: 0}

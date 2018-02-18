@@ -8,6 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85f284975f38a46209bdd5a3b7d80ee5, type: 3}
-  m_Name: onGameEnter
+  m_Script: {fileID: 11500000, guid: b397ff11bb6b543ddb39545424f905cf, type: 3}
+  m_Name: PlayerSet
   m_EditorClassIdentifier: 
+  clearOnEnable: 1
+  list:
+  - {fileID: 0}
+  onItemAdded: {fileID: 0}
+  onItemRemoved: {fileID: 0}

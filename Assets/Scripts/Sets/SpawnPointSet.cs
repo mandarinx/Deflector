@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Sets/Spawn Points", fileName = "SpawnPointSet.asset")]
-[Serializable]
-public class SpawnPointSet : Set<SpawnPoint> {}
+namespace LunchGame01 {
+    [CreateAssetMenu(menuName = "Sets/Spawn Points", fileName = "SpawnPointSet.asset")]
+    [Serializable]
+    public class SpawnPointSet : Set<SpawnPoint> {}
+}

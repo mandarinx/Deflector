@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 
-public class DebugLog : MonoBehaviour {
+namespace LunchGame01 {
+    public class DebugLog : MonoBehaviour {
 
-    public void Log(string msg) {
-        Debug.Log(msg);
+        public void Log(string msg) {
+            Debug.Log(msg);
+        }
     }
 }

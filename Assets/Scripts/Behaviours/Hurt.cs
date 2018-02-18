@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 
-public class Hurt : MonoBehaviour {
-    
-    [SerializeField]
-    private int value;
-    
-    public int GetValue() {
-        return value;
+namespace LunchGame01 {
+    public class Hurt : MonoBehaviour {
+
+        [SerializeField]
+        private int value;
+
+        public int GetValue() {
+            return value;
+        }
     }
 }

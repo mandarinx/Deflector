@@ -1,8 +1,7 @@
 ﻿using GameEvents;
 using UnityEngine;
 
-namespace Modes {
-
+namespace LunchGame01.Modes {
     [CreateAssetMenu(menuName = "Game Modes/Survival")]
     public class Survival : GameMode {
 
@@ -11,25 +10,43 @@ namespace Modes {
         private int             numDespawned;
         [SerializeField]
         private GameObjectEvent onProjectileDespawned;
+        [SerializeField]
+        private GameEvent       onPlayerDied;
+        [SerializeField]
+        private GameObjectSet   playerSet;
+
+        private int             deadPlayers;
 
         public override string title => $"Destroy {maxProjectiles} projectiles";
 
-        private void OnEnable() {
-            numDespawned = 0;
-        }
+        public override void Validate() {
+            // Prioritize game over
+            if (deadPlayers >= playerSet.Count) {
+                GameLost();
+                return;
+            }
 
-        public override bool Validate() {
-            return numDespawned >= maxProjectiles;
+            if (numDespawned >= maxProjectiles) {
+                GameWon();
+            }
         }
 
         public override void Activate() {
             numDespawned = 0;
-            onProjectileDespawned?.RegisterCallback(OnProjectileDespawned);
+            deadPlayers = 0;
+            onProjectileDespawned.RegisterCallback(OnProjectileDespawned);
+            onPlayerDied.RegisterCallback(OnPlayerDied);
         }
 
         public override void Reset() {
             numDespawned = 0;
-            onProjectileDespawned?.UnregisterCallback(OnProjectileDespawned);
+            deadPlayers = 0;
+            onProjectileDespawned.UnregisterCallback(OnProjectileDespawned);
+            onPlayerDied.UnregisterCallback(OnPlayerDied);
+        }
+
+        private void OnPlayerDied() {
+            ++deadPlayers;
         }
 
         private void OnProjectileDespawned(GameObject projectile) {

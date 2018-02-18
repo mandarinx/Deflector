@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HyperGames.Lib {
-
+namespace LunchGame01 {
     public static class TransformUtils {
 
         public static string GetFullPath(GameObject go) {

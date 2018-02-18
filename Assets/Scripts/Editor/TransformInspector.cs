@@ -5,7 +5,7 @@ using UnityEditor;
 [CustomEditor(typeof(Transform))]
 public class TransformInspector : Editor {
 
-	static public TransformInspector instance;
+	public static TransformInspector instance;
 
 	SerializedProperty mPos;
 	SerializedProperty mRot;

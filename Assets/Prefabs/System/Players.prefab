@@ -20,10 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4016236518607446}
   - component: {fileID: 114000145116107040}
-  - component: {fileID: 114895573607650912}
-  - component: {fileID: 114958875494106348}
   - component: {fileID: 114256803224469596}
   - component: {fileID: 114586695811376690}
+  - component: {fileID: 114216599437585194}
   m_Layer: 0
   m_Name: Players
   m_TagString: Untagged
@@ -56,7 +55,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1574596575962138, guid: 5599a919b6dbc455fb7b22a02aaf9666, type: 2}
+  playerSet: {fileID: 11400000, guid: 449ebba2de74f4b45af73b7b456b2aee, type: 2}
   spawnPoints: {fileID: 11400000, guid: 775d8738cc517469690f354591e6226f, type: 2}
+--- !u!114 &114216599437585194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1556081367154490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 3b3ca03ace036409a9a155492cb418f6, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114000145116107040}
+        m_MethodName: DeactivatePlayers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114256803224469596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,68 +124,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 17b4e53f5e6524d27bb3553b6695bc23, type: 2}
+  gameEvent: {fileID: 11400000, guid: 3eb5ba2bacc8549838a7e7074543fdc4, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114000145116107040}
         m_MethodName: ActivatePlayers
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114895573607650912
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1556081367154490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13dff3ca4e0954b6eb9ae8cebf5f2709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  evt: {fileID: 11400000, guid: f9ffa4afdb1f242578881a6c88b88e26, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114000145116107040}
-        m_MethodName: ResetPlayers
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: GameEvents.UnityLevelEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &114958875494106348
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1556081367154490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 746a03cc87bab413dbb5c76990f2a9bd, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114000145116107040}
-        m_MethodName: ResetPlayers
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

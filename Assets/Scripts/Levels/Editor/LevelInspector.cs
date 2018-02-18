@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
+using LunchGame01;
 
 [CustomEditor(typeof(Level))]
 public class LevelInspector : Editor {
@@ -15,10 +16,10 @@ public class LevelInspector : Editor {
             displayAddButton:    true,
             displayHeader:       true,
             displayRemoveButton: true) {
-            
+
             drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) => {
                 EditorGUI.PropertyField(
-                    new Rect(rect.x, rect.y + 2f, rect.width, EditorGUIUtility.singleLineHeight), 
+                    new Rect(rect.x, rect.y + 2f, rect.width, EditorGUIUtility.singleLineHeight),
                     gameModes.serializedProperty.GetArrayElementAtIndex(index),
                     new GUIContent($"Game Mode {index:00}"));
             },
@@ -31,7 +32,7 @@ public class LevelInspector : Editor {
 
     public override void OnInspectorGUI() {
         serializedObject.Update();
-        
+
         SceneField(serializedObject.FindProperty("scenePath"), "Scene");
 
         gameModes.DoLayoutList();

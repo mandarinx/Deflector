@@ -1,14 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class GameMode : ScriptableObject {
+namespace LunchGame01 {
+    public class GameMode : ScriptableObject {
 
-    public virtual string title => "";
+        public virtual string title => "";
+        public Action         onGameWon = () => { };
+        public Action         onGameLost = () => { };
 
-    public virtual bool Validate() {
-        return true;
+        public virtual void Reset() {}
+        public virtual void Activate() {}
+        public virtual void Validate() {}
+
+        protected void GameLost() {
+            onGameLost?.Invoke();
+        }
+
+        protected void GameWon() {
+            onGameWon?.Invoke();
+        }
     }
-
-    public virtual void Activate() {}
-    
-    public virtual void Reset() {}
 }

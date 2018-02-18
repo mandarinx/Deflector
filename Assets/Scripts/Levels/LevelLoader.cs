@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-namespace Lib {
+namespace LunchGame01 {
 
     [Serializable]
     public class UnityLevelEvent : UnityEvent<Level> {}
@@ -37,7 +37,7 @@ namespace Lib {
         private int                      numLoadedLevels;
         private int                      numLevelsToLoad;
         private List<LevelLoadOperation> loadOps;
-        
+
         public float                     Progress { get; private set; }
         public int                       Count => levels.Count;
 
@@ -49,7 +49,7 @@ namespace Lib {
             if (num >= levels.Count) {
                 return false;
             }
-            
+
             return StartLoadOp(num, mode);
         }
 
@@ -67,7 +67,7 @@ namespace Lib {
             if (num >= levels.Count) {
                 return;
             }
-            
+
             onWillUnload.Invoke();
             SceneManager
                 .UnloadSceneAsync(Path.GetFileNameWithoutExtension(levels[num].ScenePath))
@@ -84,7 +84,7 @@ namespace Lib {
                 scenePath = levels[n].ScenePath,
                 level = levels[n]
             };
-                
+
             // Scene path has not been set
             if (string.IsNullOrEmpty(loadOp.scenePath)) {
                 return false;
@@ -92,7 +92,7 @@ namespace Lib {
 
             onWillLoad.Invoke();
             string sceneName = Path.GetFileNameWithoutExtension(loadOp.scenePath);
-                
+
             // Scene is already loaded
             if (SceneManager.GetSceneByName(sceneName).IsValid()) {
                 onLevelLoaded.Invoke(loadOp.level);
@@ -115,12 +115,12 @@ namespace Lib {
 
             for (int i = loadOps.Count - 1; i >= 0; --i) {
                 LevelLoadOperation loadOp = loadOps[i];
-                
+
                 if (loadOp.asyncOp == null ||
                     !loadOp.asyncOp.isDone) {
                     continue;
                 }
-                
+
                 onLevelLoaded.Invoke(loadOp.level);
                 loadOps.RemoveAt(i);
                 ++numLoadedLevels;
@@ -131,7 +131,7 @@ namespace Lib {
             if (numLoadedLevels < numLevelsToLoad) {
                 return;
             }
-            
+
             onAllLevelsLoaded.Invoke();
             numLevelsToLoad = 0;
             numLoadedLevels = 0;

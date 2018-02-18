@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AngleTest.cs" />
     <Compile Include="Assets\Scripts\Anim\InputKeyTrigger.cs" />
     <Compile Include="Assets\Scripts\Anim\SetAnimatorTrigger.cs" />
     <Compile Include="Assets\Scripts\Attributes\MinAttribute.cs" />
@@ -76,6 +75,7 @@
     <Compile Include="Assets\Scripts\Controllers\GameModeController.cs" />
     <Compile Include="Assets\Scripts\Controllers\HitEffectController.cs" />
     <Compile Include="Assets\Scripts\Controllers\LevelController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\MultiplierController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ScreenController.cs" />
@@ -127,35 +127,22 @@
     <Compile Include="Assets\Scripts\Levels\Level.cs" />
     <Compile Include="Assets\Scripts\Levels\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\Levels\LevelSet.cs" />
-    <Compile Include="Assets\Scripts\List\ListPingPong.cs" />
-    <Compile Include="Assets\Scripts\List\ListRandom.cs" />
-    <Compile Include="Assets\Scripts\List\ListSequential.cs" />
-    <Compile Include="Assets\Scripts\List\ObjectList.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\ScoreCounter.cs" />
     <Compile Include="Assets\Scripts\Sets\AudioItemSet.cs" />
     <Compile Include="Assets\Scripts\Sets\GameObjectSet.cs" />
-    <Compile Include="Assets\Scripts\Sets\GridCoordsHashSet.cs" />
-    <Compile Include="Assets\Scripts\Sets\HashSet.cs" />
-    <Compile Include="Assets\Scripts\Sets\Pool.cs" />
     <Compile Include="Assets\Scripts\Sets\Set.cs" />
     <Compile Include="Assets\Scripts\Sets\SpawnPointSet.cs" />
-    <Compile Include="Assets\Scripts\Sets\Vector2IntSet.cs" />
-    <Compile Include="Assets\Scripts\Tests\DotProd.cs" />
-    <Compile Include="Assets\Scripts\Tests\TriggerStay.cs" />
     <Compile Include="Assets\Scripts\TextColor.cs" />
-    <Compile Include="Assets\Scripts\Tiles\AnimatedTile.cs" />
     <Compile Include="Assets\Scripts\Tiles\RuleTile.cs" />
     <Compile Include="Assets\Scripts\Time\Delay.cs" />
     <Compile Include="Assets\Scripts\TransformUtils.cs" />
     <Compile Include="Assets\Scripts\UI\Multiplier.cs" />
-    <Compile Include="Assets\Scripts\UI\MultiplierController.cs" />
     <Compile Include="Assets\Scripts\UI\MultiplierLabel.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerHearts.cs" />
     <Compile Include="Assets\Scripts\UI\ScoreLabel.cs" />
     <Compile Include="Assets\Scripts\UI\UIHeart.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanel.cs" />
-    <Compile Include="Assets\Scripts\UI\UIPanelInGame.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanelToggle.cs" />
     <Compile Include="Assets\Scripts\UnityEvents.cs" />
     <Compile Include="Assets\Scripts\Utils\Angles.cs" />

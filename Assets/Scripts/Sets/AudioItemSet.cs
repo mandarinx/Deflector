@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace mlib {
-
+namespace LunchGame01 {
     [CreateAssetMenu(menuName = "Sets/AudioItem Set")]
     public class AudioItemSet : ScriptableObject {
 

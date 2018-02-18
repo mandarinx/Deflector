@@ -1,34 +1,32 @@
 using System;
 using UnityEngine;
 using UnityEngine.Rendering;
-
-// Should implement a pool to avoid creating new GOs all the time.
-// Hide the pool in the static methods.
+using Object = UnityEngine.Object;
 
 namespace Mandarin {
 
     public partial class GO {
 
-        private GameObject current;
+        private readonly GameObject current;
 
-        static public GO Create(string name = "GameObject") {
+        public static GO Create(string name = "GameObject") {
             return new GO(name);
         }
 
-        static public GO Create(PrimitiveType type) {
+        public static GO Create(PrimitiveType type) {
             return new GO(GameObject.CreatePrimitive(type));
         }
 
-        static public GO Modify(Transform t) {
+        public static GO Modify(Transform t) {
             return new GO(t.gameObject);
         }
 
-        static public GO Modify(GameObject go) {
+        public static GO Modify(GameObject go) {
             return new GO(go);
         }
 
-        static public GO Instantiate(GameObject prefab) {
-            return new GO(GameObject.Instantiate(prefab));
+        public static GO Instantiate(GameObject prefab) {
+            return new GO(Object.Instantiate(prefab));
         }
 
         public GO(string name = "GameObject") {

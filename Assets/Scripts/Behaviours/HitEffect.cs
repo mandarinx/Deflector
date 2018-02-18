@@ -2,23 +2,25 @@
 using GameEvents;
 using PowerTools;
 
-public class HitEffect : MonoBehaviour {
+namespace LunchGame01 {
+    public class HitEffect : MonoBehaviour {
 
-    [SerializeField]
-    private GameObjectEvent onAnimDone;
-    private SpriteAnim      anim;
+        [SerializeField]
+        private GameObjectEvent onAnimDone;
+        private SpriteAnim      anim;
 
-    private void Awake() {
-        anim = GetComponent<SpriteAnim>();
-        anim.AddDoneListener(OnAnimDone);
-    }
+        private void Awake() {
+            anim = GetComponent<SpriteAnim>();
+            anim.AddDoneListener(OnAnimDone);
+        }
 
-    private void OnEnable() {
-        anim.SetTime(0f);
-        anim.Play(anim.Clip);
-    }
+        private void OnEnable() {
+            anim.SetTime(0f);
+            anim.Play(anim.Clip);
+        }
 
-    private void OnAnimDone() {
-        onAnimDone.Invoke(gameObject);
+        private void OnAnimDone() {
+            onAnimDone.Invoke(gameObject);
+        }
     }
 }

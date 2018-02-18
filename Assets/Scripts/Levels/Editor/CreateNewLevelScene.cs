@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using LunchGame01;
 
 public static class CreateNewLevelScene {
 

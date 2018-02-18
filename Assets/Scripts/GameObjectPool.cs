@@ -2,8 +2,7 @@
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace HyperGames {
-
+namespace LunchGame01 {
     public class GameObjectPool<T> where T : Component {
 
         public delegate                 void InstanceDelegate(T instance);

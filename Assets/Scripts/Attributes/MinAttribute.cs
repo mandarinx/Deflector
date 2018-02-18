@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace mlib {
-
+namespace LunchGame01 {
     public class MinAttribute : PropertyAttribute {
 
         public readonly float minValue;

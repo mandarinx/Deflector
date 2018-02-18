@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Mandarin {
     public partial class GO {
 
-        static public T FindInParents<T>(GameObject go) where T : Component {
+        public static T FindInParents<T>(GameObject go) where T : Component {
             if (go == null) {
                 return null;
             }
@@ -23,19 +23,19 @@ namespace Mandarin {
             return comp;
         }
 
-        static public T[] FindInChildren<T>(Transform parent) {
+        public static T[] FindInChildren<T>(Transform parent) {
             List<T> children = new List<T>();
             Crawl<T>(parent, ref children);
             return children.ToArray();
         }
 
-        static public T[] FindInChildren<T>(Transform parent, Predicate<T> validator) {
+        public static T[] FindInChildren<T>(Transform parent, Predicate<T> validator) {
             List<T> children = new List<T>();
             Crawl<T>(parent, ref children, validator);
             return children.ToArray();
         }
 
-        static private void Crawl<T>(Transform parent, ref List<T> list, Predicate<T> validator = null) {
+        private static void Crawl<T>(Transform parent, ref List<T> list, Predicate<T> validator = null) {
             foreach (Transform child in parent) {
                 T comp = child.GetComponent<T>();
                 if (comp != null) {

@@ -4,7 +4,7 @@ using UnityEngine.Audio;
 using Mandarin;
 using Random = UnityEngine.Random;
 
-namespace mlib {
+namespace LunchGame01 {
 
     [Serializable]
     public struct AudioSourceConfig {
