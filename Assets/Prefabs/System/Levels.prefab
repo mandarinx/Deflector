@@ -192,9 +192,9 @@ MonoBehaviour:
   onWillUnload:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: f582b4e65d64a4f60ad1cf3d4076f738, type: 2}
+      - m_Target: {fileID: 11400000, guid: 7b9a623d6b0534d5d9437f235cca2ae3, type: 2}
         m_MethodName: Invoke
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -203,8 +203,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+      - m_Target: {fileID: 114529872853236176}
+        m_MethodName: OnWillUnloadLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: LunchGame01.UnityLevelEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   onUnloaded:
     m_PersistentCalls:
       m_Calls: []

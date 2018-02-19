@@ -30,7 +30,7 @@ namespace LunchGame01 {
         [SerializeField]
         private UnityEvent               onAllLevelsLoaded;
         [SerializeField]
-        private UnityEvent               onWillUnload;
+        private UnityLevelEvent          onWillUnload;
         [SerializeField]
         private UnityEvent               onUnloaded;
         private bool                     isLoading;
@@ -68,7 +68,7 @@ namespace LunchGame01 {
                 return;
             }
 
-            onWillUnload.Invoke();
+            onWillUnload.Invoke(levels[num]);
             SceneManager
                 .UnloadSceneAsync(Path.GetFileNameWithoutExtension(levels[num].ScenePath))
                 .completed += OnLevelUnloaded;

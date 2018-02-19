@@ -33,7 +33,7 @@ namespace LunchGame01 {
 
         /// <summary>
         /// Increase score and multiplier based on the state of the passed projectile.
-        /// Called by OnProjectileDespawn handler.
+        /// Called by OnProjectileExploded handler.
         /// </summary>
         /// <param name="projectileGO"></param>
         [UsedImplicitly]
@@ -45,7 +45,8 @@ namespace LunchGame01 {
 
             score.SetValue(score.value + (explosionBaseScore * multiplier.value));
 
-            int increase = projectile.isActivated && projectile.tag.Contains("HitByExplosion") ? 1 : 0;
+            int increase = projectile.isActivated &&
+                           projectile.CompareTag("HitByExplosion") ? 1 : 0;
             multiplier.SetValue(multiplier.value + increase);
             if (increase > 0) {
                 onMultiplierIncreasedAt.Invoke(projectileGO.transform.position, multiplier.value);

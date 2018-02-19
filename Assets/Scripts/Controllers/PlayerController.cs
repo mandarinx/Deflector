@@ -18,7 +18,10 @@ namespace LunchGame01 {
                                                  prefab: prefab,
                                                  size:   1,
                                                  grow:   false) {
-                OnWillDespawn = p => { p.Deactivate(); }
+                OnWillDespawn = p => {
+                    p.transform.position = Vector3.left * 1000f;
+                    p.Deactivate();
+                }
             };
             players.Fill();
         }

@@ -8,11 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26cc6b5e10a364005a45529b09fca1cf, type: 3}
-  m_Name: Survival40
+  m_Script: {fileID: 11500000, guid: 9d9221a6de6914faeb0c1486b834084b, type: 3}
+  m_Name: Reach1500KScore
   m_EditorClassIdentifier: 
-  maxProjectiles: 40
-  onProjectileDespawned: {fileID: 11400000, guid: e0fff273069e641abbf5c3bb3bb6d9f1,
-    type: 2}
+  minScore: 1500000
+  scoreAsset: {fileID: 11400000, guid: a1d04d243c9ca4c2d90bfd3332002d06, type: 2}
   onPlayerDied: {fileID: 11400000, guid: 5f91beb629d874778988875a2cfaccac, type: 2}
   playerSet: {fileID: 11400000, guid: 449ebba2de74f4b45af73b7b456b2aee, type: 2}

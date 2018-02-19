@@ -8,11 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26cc6b5e10a364005a45529b09fca1cf, type: 3}
-  m_Name: Survival01
+  m_Script: {fileID: 11500000, guid: 678d0218496524079bed0ec3e8fe83a2, type: 3}
+  m_Name: Reach7xMultiplier
   m_EditorClassIdentifier: 
-  maxProjectiles: 1
-  onProjectileDespawned: {fileID: 11400000, guid: e0fff273069e641abbf5c3bb3bb6d9f1,
+  minMultipliers: 7
+  onMultiplierIncreasedAt: {fileID: 11400000, guid: 2f0117e427da6413ea9ee0a21e4a344e,
     type: 2}
   onPlayerDied: {fileID: 11400000, guid: 5f91beb629d874778988875a2cfaccac, type: 2}
   playerSet: {fileID: 11400000, guid: 449ebba2de74f4b45af73b7b456b2aee, type: 2}

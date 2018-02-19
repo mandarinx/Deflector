@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenePath: Assets/Scenes/LevelGarden
   gameModes:
+  - {fileID: 11400000, guid: 5e8a17a7865d542f6ab471cc4c3ec8b6, type: 2}
   - {fileID: 11400000, guid: 9335308e1b2444f5c92efea492495af9, type: 2}

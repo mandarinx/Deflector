@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26cc6b5e10a364005a45529b09fca1cf, type: 3}
+  m_Name: Destroy3Projectiles
+  m_EditorClassIdentifier: 
+  maxProjectiles: 3
+  onProjectileDespawned: {fileID: 11400000, guid: e0fff273069e641abbf5c3bb3bb6d9f1,
+    type: 2}
+  onPlayerDied: {fileID: 11400000, guid: 5f91beb629d874778988875a2cfaccac, type: 2}
+  playerSet: {fileID: 11400000, guid: 449ebba2de74f4b45af73b7b456b2aee, type: 2}

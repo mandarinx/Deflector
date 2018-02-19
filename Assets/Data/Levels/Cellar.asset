@@ -14,3 +14,4 @@ MonoBehaviour:
   scenePath: Assets/Scenes/LevelCellar
   gameModes:
   - {fileID: 11400000, guid: 83a0e069106874f48965a9750388efc9, type: 2}
+  - {fileID: 11400000, guid: dc74a82a874644094b520f075c22f7d6, type: 2}

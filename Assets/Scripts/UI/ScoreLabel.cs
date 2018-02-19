@@ -12,7 +12,7 @@ namespace LunchGame01 {
 
         private void OnEnable() {
             label = GetComponent<Text>();
-            score.OnValueChanged(OnScoreChanged);
+            score.AddChangeCallback(OnScoreChanged);
         }
 
         private void OnScoreChanged(int value) {

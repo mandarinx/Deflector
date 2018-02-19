@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.IO;
 using GameEvents;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,6 +30,10 @@ namespace LunchGame01 {
             levelLoader.Load(curLevel, LoadSceneMode.Additive);
         }
 
+        /// <summary>
+        /// Handler for onLoadNextLevel event.
+        /// </summary>
+        [UsedImplicitly]
         public void LoadNextLevel() {
             int nextLevel = (curLevel + 1) % levelLoader.Count;
             if (curLevel != nextLevel &&
@@ -39,6 +44,15 @@ namespace LunchGame01 {
             levelLoader.Load(curLevel, LoadSceneMode.Additive);
         }
 
+        public void OnWillUnloadLevel(Level level) {
+            level.IncreasePlayCount();
+        }
+
+        /// <summary>
+        /// Handler for LevelLoader.OnLevelLoaded
+        /// </summary>
+        /// <param name="level"></param>
+        [UsedImplicitly]
         public void OnLevelLoaded(Level level) {
             string sceneName = Path.GetFileNameWithoutExtension(level.ScenePath);
             level.Prepare(SceneManager.GetSceneByName(sceneName));

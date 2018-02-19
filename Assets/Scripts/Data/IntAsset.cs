@@ -1,4 +1,5 @@
 ﻿using System;
+using GameEvents;
 using UnityEngine;
 
 namespace LunchGame01 {
@@ -9,8 +10,10 @@ namespace LunchGame01 {
         private int         curValue;
         [SerializeField]
         private int         initValue;
+        [SerializeField]
+        private IntEvent    onValueChanged;
 
-        private Action<int> onValueChanged = i => { };
+        private Action<int> onValueChangedCallback = i => { };
 
         public int value => curValue;
 
@@ -21,13 +24,20 @@ namespace LunchGame01 {
         public void SetValue(int val) {
             bool changed = val != curValue;
             curValue = val;
-            if (changed) {
-                onValueChanged.Invoke(curValue);
+            if (!changed) {
+                return;
             }
+            onValueChanged?.Invoke(curValue);
+            onValueChangedCallback.Invoke(curValue);
         }
 
-        public void OnValueChanged(Action<int> callback) {
-            onValueChanged += callback;
+        public void AddChangeCallback(Action<int> callback) {
+            onValueChangedCallback -= callback;
+            onValueChangedCallback += callback;
+        }
+
+        public void RemoveChangeCallback(Action<int> callback) {
+            onValueChangedCallback -= callback;
         }
     }
 }

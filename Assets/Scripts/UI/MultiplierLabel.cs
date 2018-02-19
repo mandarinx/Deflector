@@ -12,7 +12,7 @@ namespace LunchGame01 {
 
         private void Start() {
             label = GetComponent<Text>();
-            multiplier.OnValueChanged(OnMultiplierChanged);
+            multiplier.AddChangeCallback(OnMultiplierChanged);
         }
 
         private void OnMultiplierChanged(int value) {

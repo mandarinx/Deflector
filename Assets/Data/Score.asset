@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Name: Score
   m_EditorClassIdentifier: 
   curValue: 0
+  initValue: 0
+  onValueChanged: {fileID: 0}

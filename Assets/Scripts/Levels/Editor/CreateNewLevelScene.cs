@@ -28,7 +28,8 @@ public static class CreateNewLevelScene {
                                           tr.material = pixelArtSprite;
                                       });
 
-        GameObject spawnPointsPlayer = CreateGO("SpawnPointsPlayer", root);
+        GameObject spawnPointsPlayer = CreateGO("SpawnPointsPlayers", root);
+        spawnPointsPlayer.layer = LayerMask.NameToLayer("Obstacles");
         AddComponent<Tilemap>(spawnPointsPlayer, SetTilemap);
         AddComponent<TilemapRenderer>(spawnPointsPlayer,
                                       tr => {
@@ -37,6 +38,7 @@ public static class CreateNewLevelScene {
                                       });
 
         GameObject spawnPointsTurrets = CreateGO("SpawnPointsTurrets", root);
+        spawnPointsTurrets.layer = LayerMask.NameToLayer("Obstacles");
         AddComponent<Tilemap>(spawnPointsTurrets, SetTilemap);
         AddComponent<TilemapRenderer>(spawnPointsTurrets,
                                       tr => {
@@ -45,6 +47,7 @@ public static class CreateNewLevelScene {
                                       });
 
         GameObject walls = CreateGO("Walls", root);
+        walls.layer = LayerMask.NameToLayer("Walls");
         AddComponent<Tilemap>(walls, SetTilemap);
         AddComponent<TilemapRenderer>(walls,
                                       tr => {
@@ -68,6 +71,7 @@ public static class CreateNewLevelScene {
                                           });
 
         GameObject obstacles = CreateGO("Obstacles", root);
+        obstacles.layer = LayerMask.NameToLayer("Obstacles");
         AddComponent<Tilemap>(obstacles, SetTilemap);
         AddComponent<TilemapRenderer>(obstacles,
                                       tr => {
@@ -83,6 +87,7 @@ public static class CreateNewLevelScene {
         AddComponent<Hurt>(obstacles);
 
         GameObject projectileKiller = CreateGO("ProjectileKiller", root);
+        projectileKiller.layer = LayerMask.NameToLayer("Killer");
         AddComponent<Tilemap>(projectileKiller, SetTilemap);
         AddComponent<TilemapRenderer>(projectileKiller,
                                       tr => {

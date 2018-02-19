@@ -536,6 +536,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 34304
   onExplodedAt: {fileID: 11400000, guid: a56038e5527de4414a96695d92cf4cbc, type: 2}
+  onChainReaction: {fileID: 11400000, guid: 7c6ce4f98a3bf45a4b2fa0c2a54916c1, type: 2}
   anims:
   - {fileID: 114423026720833434}
   - {fileID: 114537049593252454}

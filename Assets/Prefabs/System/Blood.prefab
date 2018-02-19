@@ -58,7 +58,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114265758680943432}
-        m_MethodName: HideSplats
+        m_MethodName: DespawnAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114265758680943432}
-        m_MethodName: SplatAt
+        m_MethodName: SpawnAt
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

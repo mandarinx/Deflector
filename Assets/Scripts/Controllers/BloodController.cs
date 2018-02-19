@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
 namespace LunchGame01 {
     public class BloodController : MonoBehaviour {
@@ -27,7 +28,8 @@ namespace LunchGame01 {
             }
         }
 
-        public void SplatAt(Vector3 position) {
+        [UsedImplicitly]
+        public void SpawnAt(Vector3 position) {
             ArrayUtils.Shuffle(renderers);
             for (int i = 0; i < numSplats; ++i) {
                 Vector2 splatPos = Random.insideUnitCircle * radius;
@@ -36,7 +38,8 @@ namespace LunchGame01 {
             }
         }
 
-        public void HideSplats() {
+        [UsedImplicitly]
+        public void DespawnAll() {
             for (int i = 0; i < renderers.Length; ++i) {
                 renderers[i].gameObject.SetActive(false);
             }

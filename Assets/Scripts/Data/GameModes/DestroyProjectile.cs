@@ -2,8 +2,8 @@
 using UnityEngine;
 
 namespace LunchGame01.Modes {
-    [CreateAssetMenu(menuName = "Game Modes/Survival")]
-    public class Survival : GameMode {
+    [CreateAssetMenu(menuName = "Game Modes/Destroy Projectile")]
+    public class DestroyProjectile : GameMode {
 
         [SerializeField]
         private int             maxProjectiles;
@@ -17,7 +17,8 @@ namespace LunchGame01.Modes {
 
         private int             deadPlayers;
 
-        public override string title => $"Destroy {maxProjectiles} projectiles";
+        public override string title => $"Destroy {maxProjectiles} "+
+                                        $"projectile{(maxProjectiles > 1 ? "s" : "")}";
 
         public override void Validate() {
             // Prioritize game over

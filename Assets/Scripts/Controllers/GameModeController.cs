@@ -1,4 +1,5 @@
 ﻿using GameEvents;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace LunchGame01 {
@@ -14,19 +15,32 @@ namespace LunchGame01 {
         private UHooks      hooks;
         private GameMode    gameMode;
 
+        /// <summary>
+        /// Handler for onLevelLoaded
+        /// </summary>
+        /// <param name="level"></param>
+        [UsedImplicitly]
         public void PrepareGameMode(Level level) {
-            int r = Random.Range(0, level.NumGameModes);
-            gameMode = level.GetGameMode(r);
+            int m = level.PlayCount % level.NumGameModes;
+            gameMode = level.GetGameMode(m);
             gameMode.onGameLost = OnGameLost;
             gameMode.onGameWon = OnGameWon;
             onGameModeDescription?.Invoke(gameMode.title);
         }
 
+        /// <summary>
+        /// Handler for onGameReady
+        /// </summary>
+        [UsedImplicitly]
         public void StartCurrentGameMode() {
             gameMode.Activate();
             hooks.AddOnUpdate(this);
         }
 
+        /// <summary>
+        /// Handler for onLevelWillLoad
+        /// </summary>
+        [UsedImplicitly]
         public void ResetCurrentGameMode() {
             gameMode?.Reset();
         }

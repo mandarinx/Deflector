@@ -19,6 +19,8 @@ namespace LunchGame01 {
         [SerializeField]
         private Vector3Event  onExplodedAt;
         [SerializeField]
+        private GameEvent     onChainReaction;
+        [SerializeField]
         private SpriteAnim[]  anims;
 
         private Collider2D[] overlapped;
@@ -46,6 +48,10 @@ namespace LunchGame01 {
                                                           layerExplode.value);
 
                 for (int i = 0; i < num; ++i) {
+                    if (overlapped[i].CompareTag("HitByExplosion")) {
+                        continue;
+                    }
+                    onChainReaction.Invoke();
                     overlapped[i].tag = "HitByExplosion";
                     overlapped[i]
                        .GetComponent<Killable>()

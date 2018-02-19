@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelGarden.unity
     guid: b2cce417ceb154b94beb2e51d86aed58
+  - enabled: 1
+    path: Assets/Scenes/LevelCellarSpikes.unity
+    guid: 0728941b528884c5bb1d7b893f23e981
+  - enabled: 1
+    path: Assets/Scenes/LevelGardenSpikes.unity
+    guid: bd6b60e9789eb4871b2c4e69803bcc67

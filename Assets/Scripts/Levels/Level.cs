@@ -16,9 +16,18 @@ namespace LunchGame01 {
         public Scene       Scene { get; private set; }
         public Layers      Layers { get; private set; }
         public Grid        Grid { get; private set; }
+        public int         PlayCount { get; private set; }
 
         public int         NumGameModes => gameModes.Length;
         public string      ScenePath => scenePath;
+
+        private void OnEnable() {
+            PlayCount = 0;
+        }
+
+        public void IncreasePlayCount() {
+            ++PlayCount;
+        }
 
         public GameMode GetGameMode(int n) {
             return gameModes[n];

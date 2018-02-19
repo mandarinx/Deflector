@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e26f83918002444b9a5ee25ef7372af3, type: 3}
-  m_Name: SpawnPointPlayer
+  m_Name: SpawnPointPlayersBrush
   m_EditorClassIdentifier: 
-  m_Prefab: {fileID: 1834353663006312, guid: 3b072e849a158481895594766d707abb, type: 2}
-  m_LayerName: SpawnPointsPlayers
-  m_PrefabOffset: {x: 0.5, y: 0.5, z: 0}
-  color: {r: 0, g: 1, b: 0.006896496, a: 0.284}
+  layerName: SpawnPointsPlayers
+  prefab: {fileID: 1834353663006312, guid: 3b072e849a158481895594766d707abb, type: 2}
+  prefabOffset: {x: 0.5, y: 0.5, z: 0}
+  color: {r: 0, g: 1, b: 0.21379304, a: 0.259}
