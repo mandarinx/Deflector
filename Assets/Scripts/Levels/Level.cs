@@ -13,13 +13,13 @@ namespace LunchGame01 {
         private GameMode[] gameModes;
 
         // Since scene is not serialized, it should be reset upon leaving play mode
-        public Scene       Scene { get; private set; }
-        public Layers      Layers { get; private set; }
-        public Grid        Grid { get; private set; }
+        public Scene       Scene     { get; private set; }
+        public Layers      Layers    { get; private set; }
+        public Grid        Grid      { get; private set; }
         public int         PlayCount { get; private set; }
 
         public int         NumGameModes => gameModes.Length;
-        public string      ScenePath => scenePath;
+        public string      ScenePath    => scenePath;
 
         private void OnEnable() {
             PlayCount = 0;
