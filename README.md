@@ -16,7 +16,7 @@ I have written as much documentation as I think is necessary to understand the s
 You can download the latest builds from the release tab, here.
 
 ## Contents
-- [Architecture](https://github.com/mandarinx/Deflector/blabla)
+- [Architecture](#architecture)
 - Events
 - Tilemap
 - Custom assets
@@ -49,7 +49,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-# Architecture
+# <a name=“architecture”></a>Architecture
 I chose an event driven architecture, where most of the components communicates via events as ScriptableObjects and UnityEvents for event handlers. As much of the data as possible was separated from the MonoBehaviours and put in ScriptableObjects. 
 
 The idea of using ScriptableObjects for events was taken from [Ryan Hipple’s talk at the Unite Austin 2017 conference](https://www.youtube.com/watch?v=raQ3iHhE_Kk).
