@@ -62,26 +62,26 @@ No matter what type architecture you use, it’s always a big challenge to creat
 
 
 ## Advantages to the architecture
-**Composition over inheritance**
+### Composition over inheritance
 By using composition instead of inheritance, you end up creating a library of many smaller components that do one or a few things. It’s very easy to find bugs when the classes are less than a hundred lines. It can also speed up the development since you don’t have to compile the project for every change. You simply drag and drop all the components you need, and do the plumbing via Unity’s Inspector instead of in code.
 
-**Reusable components**
+### Reusable components
 Generic components are free of context. A component for tinting a sprite’s color can be used in many different contexts, but the act of changing the color is still the same. These components are easier to reuse, both within the project and across multiple projects. 
 
-**Flexibility**
+### Flexibility
 A library of generic components with a well designed API, makes for a very flexible system. This is very good for prototyping and the first phase of development. 
 
-**Data in ScriptableObjects**
+### Data in ScriptableObjects
 ScriptableObjects live outside the scene. Any changes you make to a ScriptableObject while in play mode, gets serialized to disk and not lost when you reenter edit mote. Due to living outside the scene, they make it a lot easier to work in a multi scene setup. You can rely on ScriptableObjects for inter-scene communication. Unity won’t allow you to make a reference between two GameObjects in two different scenes. So, you can use a ScriptableObject as a middle man. This goes for any other Unity asset that doesn’t live in the scene, like an Animator or a Timeline asset.
 
 ## Disadvantages to the architecture
-**Hard to get an overview**
+### Hard to get an overview
 Your GameObjects will often end up with lots and lots of components, and they will all be referencing each other via UnityEvents. When they also communicate with other GameObjects via ScriptableObjects, it tends to be quite hard to really see what’s going on. Fixing bugs within a component is easier, but finding bugs in the plumbing is very hard. You need to good editor tools to help you visualize the code flow from component to component.
 
-**Temporarily increasing complexity**
+### Temporarily increasing complexity
 As you create more and more complex behaviors by composing lots of little components, you add complexity to the project. At some point it becomes hard to work with, and that’s when you should consider collapsing many generic components into a one or a few more game specific components. This is a disadvantage because you have to spend time making those game specific components. That work won’t take you any further towards your goal. In addition you are adding new code to the project, and therefore new bugs. There’s a technical debt building up as the complexity of your setup increases.
 
-**Generic callbacks**
+### Generic callbacks
 Due to the generic nature of the components, they will never output any of the custom data types you have created for your project. You’ll find that in some cases you would like a component to output a specific value. Instead you get something like a GameObject or a Transform, and therefore have to use GetComponent to get what you want. Sometimes you need to call GetComponent in multiple places within the same frame, which is a waste of CPU time. It might not be much, but it’s still unnecessary.
 
 # <a name=“events”></a>Events
