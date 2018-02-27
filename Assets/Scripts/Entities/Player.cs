@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 
 namespace LunchGame01 {
-    [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Player : MonoBehaviour {
 
         public float                      moveSpeed = 1f;
@@ -18,7 +18,17 @@ namespace LunchGame01 {
         public AnimationCurve             forceFalloff;
         public Transform                  swordAnchor;
         public Sword                      sword;
-        public SpriteAnim                 playerAnim;
+
+        [Space]
+        [Header("Animations")]
+        [SerializeField]
+        private SpriteAnim                anim;
+        [SerializeField]
+        private AnimationClip             animIdle;
+        [SerializeField]
+        private AnimationClip             animHit;
+
+        [Space]
         public HealthAsset                playerHealth;
         public SpriteRenderer             shadow;
         public GameEvent                  onFootstep;
@@ -40,8 +50,9 @@ namespace LunchGame01 {
             activated = false;
             inputMove = -1;
             rb = GetComponent<Rigidbody2D>();
-            sr = GetComponent<SpriteRenderer>();
+            sr = anim.GetComponent<SpriteRenderer>();
             walkAngle = Mathf.PI;
+            anim.AddDoneListener(OnAnimDone);
         }
 
         public void Activate() {
@@ -54,13 +65,13 @@ namespace LunchGame01 {
             trigger = null;
             StopAllCoroutines();
             hurtRoutine = null;
-            playerAnim.Play(playerAnim.Clip);
+            anim.Play(animIdle);
             StartCoroutine(Footsteps());
         }
 
         public void Deactivate() {
             activated = false;
-            playerAnim.Stop();
+            anim.Stop();
             StopAllCoroutines();
         }
 
@@ -74,6 +85,13 @@ namespace LunchGame01 {
             sword.Hide();
             Deactivate();
             onDiedAt.Invoke(transform.position);
+        }
+
+        private void OnAnimDone(AnimationClip clip) {
+            if (clip.name.Equals("PlayerIdle")) {
+                return;
+            }
+            anim.Play(animIdle);
         }
 
         /// <summary>
@@ -106,6 +124,7 @@ namespace LunchGame01 {
             // Shield
 
             if (Input.GetKeyDown(KeyCode.X)) {
+                anim.Play(animHit);
                 sword.Hit(walkDir);
             }
 
@@ -130,10 +149,10 @@ namespace LunchGame01 {
             }
 
             if (inputMove == 0 || inputMove == 1 || inputMove == 7) {
-                sr.flipX = true;
+                sr.flipX = false;
             }
             if (inputMove == 3 || inputMove == 4 || inputMove == 5) {
-                sr.flipX = false;
+                sr.flipX = true;
             }
 
             // Overlap triggers

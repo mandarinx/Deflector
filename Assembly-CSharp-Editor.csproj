@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B192BF1E-6BCE-23AA-7774-C17402EBC072}</ProjectGuid>
+    <ProjectGuid>{4979BA41-88D1-B8CA-CC37-E51B10800F8A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -56,7 +56,6 @@
     <Compile Include="Assets\Scripts\Data\Editor\HealthAssetInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\CreateGameEvent.cs" />
     <Compile Include="Assets\Scripts\Editor\CreateInspector.cs" />
-    <Compile Include="Assets\Scripts\Editor\EditorStyleViewer.cs" />
     <Compile Include="Assets\Scripts\Editor\FindRefs.cs" />
     <Compile Include="Assets\Scripts\Editor\SaveProject.cs" />
     <Compile Include="Assets\Scripts\Editor\TransformInspector.cs" />
@@ -94,7 +93,7 @@
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>/Users/mandarin/Projects/Games/LunchGame01/Library/resharper-unity-libs/nunit3.5.0/nunit.framework.dll</HintPath>
+      <HintPath>/Users/mandarin/Projects/Games/Deflector/Library/resharper-unity-libs/nunit3.5.0/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
@@ -177,15 +176,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{B4B84D7F-FEA5-5C8D-AA57-E7B59B8501DD}</Project>
+      <Project>{0AE359CD-3957-1C34-78A4-08BB91494F5D}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{323BC6CF-AB06-1975-2571-EDF83ADC37F8}</Project>
+      <Project>{E386D87C-7EF6-C903-5DE9-E6C5DD74298F}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{1967753B-E6A9-EB05-7FD4-7D20A59A2FF1}</Project>
+      <Project>{E0E49A73-5421-71E7-702A-5872F81EE6A8}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

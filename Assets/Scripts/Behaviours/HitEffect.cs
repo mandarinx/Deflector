@@ -19,7 +19,7 @@ namespace LunchGame01 {
             anim.Play(anim.Clip);
         }
 
-        private void OnAnimDone() {
+        private void OnAnimDone(AnimationClip clip) {
             onAnimDone.Invoke(gameObject);
         }
     }

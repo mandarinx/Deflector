@@ -30,7 +30,7 @@ public class SpriteAnim : SpriteAnimEventHandler
 
 	[SerializeField] AnimationClip m_defaultAnim = null;
 	[SerializeField] bool m_playOnAwake = true;
-	[SerializeField] private UnityEvent onAnimDone;
+	[SerializeField] private Action<AnimationClip> onAnimDone = a => { };
 
 	#endregion
 	#region Vars: Private
@@ -135,9 +135,9 @@ public class SpriteAnim : SpriteAnimEventHandler
 		m_animator.speed = m_speed;
 	}
 
-    public void AddDoneListener(UnityAction callback) {
-        onAnimDone.RemoveListener(callback);
-        onAnimDone.AddListener(callback);
+    public void AddDoneListener(Action<AnimationClip> callback) {
+        onAnimDone -= callback;
+        onAnimDone += callback;
     }
 
 	/// Returns the currently playing clip
@@ -277,7 +277,7 @@ public class SpriteAnim : SpriteAnimEventHandler
 			return;
 		}
 		isDone = true;
-		onAnimDone.Invoke();
+		onAnimDone.Invoke(m_currAnim);
 	}
 
 	#endregion

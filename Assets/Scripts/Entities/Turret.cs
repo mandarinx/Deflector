@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using GameEvents;
+using PowerTools;
 
 namespace LunchGame01 {
     public class Turret : MonoBehaviour {
 
         [SerializeField]
-        private SpriteRenderer  spawnHole;
+        private SpriteAnim      anim;
         [SerializeField]
         private GameObjectEvent onDespawn;
         [SerializeField]
         private Vector3Event    onFire;
 
         private void OnEnable() {
-            spawnHole.gameObject.SetActive(false);
             StartCoroutine(Fire());
         }
 
@@ -22,27 +22,10 @@ namespace LunchGame01 {
         }
 
         private IEnumerator Fire() {
-            const float blink = 0.25f;
-            spawnHole.gameObject.SetActive(true);
-            spawnHole.color = new Color(1f, 1f, 1f, 1f);
-            yield return new WaitForSeconds(blink);
-            spawnHole.color = new Color(1f, 1f, 1f, 0f);
-            yield return new WaitForSeconds(blink);
-            spawnHole.color = new Color(1f, 1f, 1f, 1f);
-            yield return new WaitForSeconds(blink);
-            spawnHole.color = new Color(1f, 1f, 1f, 0f);
-            yield return new WaitForSeconds(blink);
-            spawnHole.color = new Color(1f, 1f, 1f, 1f);
-            yield return new WaitForSeconds(blink);
-            spawnHole.color = new Color(1f, 1f, 1f, 0f);
-            yield return new WaitForSeconds(blink);
-            spawnHole.color = new Color(1f, 1f, 1f, 1f);
-
-            yield return new WaitForSeconds(0.5f);
-
+            anim.Play(anim.Clip);
+            yield return new WaitForSeconds(1.8f);
             onFire.Invoke(transform.position);
-
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.25f);
             onDespawn.Invoke(gameObject);
         }
     }

@@ -261,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1173977352691514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4882635200783726}
@@ -494,11 +494,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 0
-  onAnimDone:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114202162727734184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -512,11 +507,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 0
-  onAnimDone:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114307409420462842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -560,11 +550,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 0
-  onAnimDone:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114423026720833434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -578,11 +563,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 0
-  onAnimDone:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114457203271066402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -596,11 +576,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 0
-  onAnimDone:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114537049593252454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -614,11 +589,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 0
-  onAnimDone:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114642224346167316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -632,11 +602,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 0
-  onAnimDone:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114912033316871856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -650,11 +615,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 0
-  onAnimDone:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114936533498048728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -668,11 +628,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
   m_playOnAwake: 0
-  onAnimDone:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212294900819526830
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -706,7 +661,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -750,7 +705,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -794,7 +749,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -838,7 +793,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -882,7 +837,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -926,7 +881,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -970,7 +925,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1014,7 +969,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1058,7 +1013,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
