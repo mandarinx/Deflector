@@ -4,46 +4,60 @@ using JetBrains.Annotations;
 using UnityEngine;
 
 namespace LunchGame01 {
-    [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Projectile : MonoBehaviour {
 
-        [Tooltip("Angle in radians")]
         [SerializeField]
-        private float                     angle;
+        private float                     speedNeutral = 1f;
         [SerializeField]
-        private float                     speed = 1f;
+        private float                     speedCharged = 2f;
         [SerializeField]
         private LayerMask                 hitLayer;
         [SerializeField]
-        private Sprite[]                  sprites;
+        private Gradient                  colorsNeutral;
+        [SerializeField]
+        private Gradient                  colorsCharged;
         [SerializeField]
         private GameObjectEvent           onExploded;
         [SerializeField]
         private GameObjectEvent           onHit;
 
+        private Gradient                  colorsFlashing;
+        private float                     angle;
+        private float                     speed;
         private int                       contacts;
         private int                       angleIndex;
+
+        // Merge these two into a state enum, or even a bitmask!
         private int                       activated;
         private bool                      exploding;
+
         private Vector2                   hitNormal;
         private Rigidbody2D               rb;
-        private SpriteRenderer            sr;
+        private ParticleSystem            ps;
         private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[2];
 
+        // Figure out an other way
         public bool isActivated => activated > 0;
 
         private void Awake() {
             rb = GetComponent<Rigidbody2D>();
-            sr = GetComponent<SpriteRenderer>();
+            ps = GetComponent<ParticleSystem>();
+            colorsFlashing = new Gradient {
+                colorKeys = new[] {
+                    new GradientColorKey(Color.white, 0f),
+                    new GradientColorKey(Color.white, 1f)
+                }
+            };
         }
 
         private void OnEnable() {
             exploding = false;
             activated = 0;
-            speed = 1f;
+            speed = speedNeutral;
             angleIndex = Random.Range(0, 4) * 2 + 1;
             angle = Angles.GetAngle(angleIndex);
-            sr.sprite = sprites[angleIndex + activated];
+            SetPSysColorLifetime(ps, colorsNeutral);
         }
 
         private void OnDisable() {
@@ -53,7 +67,7 @@ namespace LunchGame01 {
         /// <summary>
         /// Called by Hitable.onHit
         /// </summary>
-        /// <param name="hitAngleIndex">Tha angle index of the hit</param>
+        /// <param name="hitAngleIndex">The angle index of the hit</param>
         [UsedImplicitly]
         public void Hit(int hitAngleIndex) {
             if (exploding) {
@@ -86,14 +100,14 @@ namespace LunchGame01 {
             }
 
             activated = 8;
-            speed += 1f;
+            SetPSysColorLifetime(ps, colorsCharged);
+            speed = speedCharged;
 
             angleIndex %= 8;
             if (angleIndex < 0) {
                 angleIndex = 8 + angleIndex;
             }
             angle = Angles.GetAngle(angleIndex);
-            sr.sprite = sprites[angleIndex + activated];
         }
 
         /// <summary>
@@ -113,9 +127,9 @@ namespace LunchGame01 {
             exploding = true;
             int blink = 0;
             while (blink < blinks) {
-                sr.color = new Color(1f, 1f, 1f, 0f);
+                SetPSysColorLifetime(ps, colorsFlashing);
                 yield return new WaitForSeconds(0.2f);
-                sr.color = new Color(1f, 1f, 1f, 1f);
+                SetPSysColorLifetime(ps, colorsCharged);
                 yield return new WaitForSeconds(0.2f);
                 ++blink;
             }
@@ -138,7 +152,6 @@ namespace LunchGame01 {
 
             angleIndex = GetAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
             angle = Angles.GetAngle(angleIndex);
-            sr.sprite = sprites[angleIndex + activated];
         }
 
         private void OnCollisionStay2D(Collision2D collision) {
@@ -160,7 +173,6 @@ namespace LunchGame01 {
             }
             angleIndex = index;
             angle = Angles.GetAngle(angleIndex);
-            sr.sprite = sprites[angleIndex + activated];
         }
 
         private bool GetHitNormal(Collision2D collision, out Vector2 normal) {
@@ -235,6 +247,12 @@ namespace LunchGame01 {
             for (int i=0; i<contacts; ++i) {
                 Gizmos.DrawRay(contactPoints[i].point, contactPoints[i].normal);
             }
+        }
+
+        private static void SetPSysColorLifetime(ParticleSystem particleSys,
+                                                 Gradient       gradient) {
+            ParticleSystem.ColorOverLifetimeModule colOverLife = particleSys.colorOverLifetime;
+            colOverLife.color = gradient;
         }
     }
 }

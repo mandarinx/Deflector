@@ -10,5 +10,9 @@ namespace LunchGame01 {
         public static string ToBitString(LayerMask mask) {
             return System.Convert.ToString(mask, 2).PadLeft(32, '0');
         }
+
+        public static string ToBitString(int mask) {
+            return System.Convert.ToString(mask, 2).PadLeft(32, '0');
+        }
     }
 }

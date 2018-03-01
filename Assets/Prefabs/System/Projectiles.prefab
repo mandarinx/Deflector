@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1400654147882312, guid: 3395c64833794429c9443c08f52e586c, type: 2}
+  despawnDelay: 2
 --- !u!114 &114775811089087106
 MonoBehaviour:
   m_ObjectHideFlags: 1
