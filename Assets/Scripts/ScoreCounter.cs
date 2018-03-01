@@ -45,7 +45,7 @@ namespace LunchGame01 {
 
             score.SetValue(score.value + (explosionBaseScore * multiplier.value));
 
-            int increase = projectile.isActivated &&
+            int increase = projectile.IsCharged &&
                            projectile.CompareTag("HitByExplosion") ? 1 : 0;
             multiplier.SetValue(multiplier.value + increase);
             if (increase > 0) {

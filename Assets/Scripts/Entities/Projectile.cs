@@ -1,11 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using GameEvents;
 using JetBrains.Annotations;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace LunchGame01 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Projectile : MonoBehaviour {
+
+        [Flags]
+        private enum State {
+            NEUTRAL   = 1,
+            CHARGED   = 2,
+            EXPLODING = 64,
+        }
 
         [SerializeField]
         private float                     speedNeutral = 1f;
@@ -27,18 +36,15 @@ namespace LunchGame01 {
         private float                     speed;
         private int                       contacts;
         private int                       angleIndex;
-
-        // Merge these two into a state enum, or even a bitmask!
-        private int                       activated;
-        private bool                      exploding;
-
+        private State                     state;
         private Vector2                   hitNormal;
         private Rigidbody2D               rb;
         private ParticleSystem            ps;
         private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[2];
 
-        // Figure out an other way
-        public bool isActivated => activated > 0;
+        public bool                       IsExploding => (state & State.EXPLODING) > 0;
+        public bool                       IsCharged   => (state & State.CHARGED)   > 0;
+        public bool                       IsNeutral   => (state & State.NEUTRAL)   > 0;
 
         private void Awake() {
             rb = GetComponent<Rigidbody2D>();
@@ -52,8 +58,7 @@ namespace LunchGame01 {
         }
 
         private void OnEnable() {
-            exploding = false;
-            activated = 0;
+            state = State.NEUTRAL;
             speed = speedNeutral;
             angleIndex = Random.Range(0, 4) * 2 + 1;
             angle = Angles.GetAngle(angleIndex);
@@ -70,13 +75,13 @@ namespace LunchGame01 {
         /// <param name="hitAngleIndex">The angle index of the hit</param>
         [UsedImplicitly]
         public void Hit(int hitAngleIndex) {
-            if (exploding) {
+            if (IsExploding) {
                 return;
             }
 
             onHit.Invoke(gameObject);
 
-            if (activated == 8) {
+            if (IsCharged) {
                 StartCoroutine(Explosion(4));
             }
 
@@ -99,7 +104,7 @@ namespace LunchGame01 {
                 angleIndex -= 2;
             }
 
-            activated = 8;
+            state = State.CHARGED;
             SetPSysColorLifetime(ps, colorsCharged);
             speed = speedCharged;
 
@@ -116,7 +121,7 @@ namespace LunchGame01 {
         /// <param name="pos">The position of the killer</param>
         [UsedImplicitly]
         public void Explode(Vector3 pos) {
-            if (exploding) {
+            if (IsExploding) {
                 return;
             }
 
@@ -124,7 +129,7 @@ namespace LunchGame01 {
         }
 
         private IEnumerator Explosion(int blinks) {
-            exploding = true;
+            state |= State.EXPLODING;
             int blink = 0;
             while (blink < blinks) {
                 SetPSysColorLifetime(ps, colorsFlashing);
@@ -150,7 +155,7 @@ namespace LunchGame01 {
                 return;
             }
 
-            angleIndex = GetAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
+            angleIndex = DeflectAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
             angle = Angles.GetAngle(angleIndex);
         }
 
@@ -167,7 +172,7 @@ namespace LunchGame01 {
             if (normal == hitNormal) {
                 return;
             }
-            int index = GetAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
+            int index = DeflectAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
             if (index == angleIndex) {
                 return;
             }
@@ -190,7 +195,7 @@ namespace LunchGame01 {
         }
 
         // TODO: Should be called something like DeflectAngleIndex
-        private static int GetAngleIndex(int angleIndex, Vector2 hitNormal, Vector2 velocity) {
+        private static int DeflectAngleIndex(int angleIndex, Vector2 hitNormal, Vector2 velocity) {
             float dot = Vector2.Dot(hitNormal, velocity);
             //  1 = same direction
             // -1 = opposite direction
