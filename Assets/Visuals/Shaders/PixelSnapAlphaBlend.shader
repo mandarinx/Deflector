@@ -76,5 +76,4 @@ Shader "Shader Forge/PixelSnapAlphaBlend" {
             ENDCG
         }
     }
-    CustomEditor "ShaderForgeMaterialInspector"
 }
