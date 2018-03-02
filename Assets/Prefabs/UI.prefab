@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 114771102360085806}
   - component: {fileID: 114738835763861120}
   m_Layer: 5
-  m_Name: Hearts
+  m_Name: Paddles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114771102360085806}
-        m_MethodName: RenderHearts
+        m_MethodName: RenderPaddles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1140,10 +1140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 11400000, guid: af7b056e5a04248d8bd7d11442f91193, type: 2}
-  heartPrefab: {fileID: 1523326015610284, guid: d86c36fc690b14bc193003e9af5b70e7,
+  paddlePrefab: {fileID: 1523326015610284, guid: d86c36fc690b14bc193003e9af5b70e7,
     type: 2}
-  onHeartFilled: {fileID: 11400000, guid: d62e61acb72204de3b34fccb9f032e6a, type: 2}
-  onHeartsRendered: {fileID: 11400000, guid: 3eb5ba2bacc8549838a7e7074543fdc4, type: 2}
+  onPaddleFilled: {fileID: 11400000, guid: d62e61acb72204de3b34fccb9f032e6a, type: 2}
+  onPaddlesRendered: {fileID: 11400000, guid: 3eb5ba2bacc8549838a7e7074543fdc4, type: 2}
 --- !u!114 &114784563501649746
 MonoBehaviour:
   m_ObjectHideFlags: 1

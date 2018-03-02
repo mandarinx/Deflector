@@ -967,78 +967,74 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114604175704198520, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onEnterPanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 55987312}
-    - target: {fileID: 114604175704198520, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onEnterPanel.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 2121212172}
-    - target: {fileID: 114604175704198520, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 55987312}
-    - target: {fileID: 114604175704198520, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 2121212172}
-    - target: {fileID: 223381477070392832, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1629761231}
-    - target: {fileID: 114373264281837730, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onLerpDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2002602182}
-    - target: {fileID: 114614635630046000, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2002602182}
-    - target: {fileID: 114804602471266178, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onEnterPanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 55987312}
-    - target: {fileID: 114804602471266178, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onEnterPanel.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 508565397}
-    - target: {fileID: 114804602471266178, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 55987312}
-    - target: {fileID: 114804602471266178, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 508565397}
-    - target: {fileID: 114273913430916822, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2121212172}
     - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
         type: 2}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2121212172}
+    - target: {fileID: 114273913430916822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2121212172}
+    - target: {fileID: 114804602471266178, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onEnterPanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 55987312}
+    - target: {fileID: 114804602471266178, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onEnterPanel.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 508565397}
+    - target: {fileID: 114804602471266178, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 55987312}
+    - target: {fileID: 114804602471266178, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 508565397}
+    - target: {fileID: 114614635630046000, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2002602182}
+    - target: {fileID: 114373264281837730, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onLerpDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2002602182}
+    - target: {fileID: 223381477070392832, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1629761231}
+    - target: {fileID: 114604175704198520, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onEnterPanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 55987312}
+    - target: {fileID: 114604175704198520, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onEnterPanel.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2121212172}
+    - target: {fileID: 114604175704198520, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 55987312}
+    - target: {fileID: 114604175704198520, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: onClosePanel.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2121212172}
     - target: {fileID: 1931506645437574, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}
       propertyPath: m_Name
       value: UIPanels
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931506645437574, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}

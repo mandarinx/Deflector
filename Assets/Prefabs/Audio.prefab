@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 114362751197115494}
   - component: {fileID: 114778330788812218}
   m_Layer: 0
-  m_Name: HeartAdded
+  m_Name: PaddleAdded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
