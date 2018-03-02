@@ -51,7 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Brushes\Editor\BrushBaseInspector.cs" />
     <Compile Include="Assets\Scripts\Brushes\Editor\BrushEditorUtility.cs" />
+    <Compile Include="Assets\Scripts\Brushes\Editor\DefaultBrushReplacementInspector.cs" />
+    <Compile Include="Assets\Scripts\Brushes\Editor\LevelExitBrushInspector.cs" />
+    <Compile Include="Assets\Scripts\Brushes\Editor\ProjectileKillerBrushInspector.cs" />
     <Compile Include="Assets\Scripts\Brushes\Editor\SpawnPointBrushInspector.cs" />
     <Compile Include="Assets\Scripts\Data\Editor\HealthAssetInspector.cs" />
     <Compile Include="Assets\Scripts\Editor\CreateGameEvent.cs" />
@@ -73,7 +77,8 @@
     <Compile Include="Assets\Scripts\Levels\Editor\CreateNewLevelScene.cs" />
     <Compile Include="Assets\Scripts\Levels\Editor\LevelInspector.cs" />
     <Compile Include="Assets\Scripts\Sets\Editor\AudioItemSetInspector.cs" />
-    <Compile Include="Assets\Scripts\Tiles\Editor\RuleTileEditor.cs" />
+    <Compile Include="Assets\Scripts\Tiles\Editor\AnimatedTileInspector.cs" />
+    <Compile Include="Assets\Scripts\Tiles\Editor\RuleTileInspector.cs" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.3.0p3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>

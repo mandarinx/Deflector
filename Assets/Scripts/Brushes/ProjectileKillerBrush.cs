@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using GameEvents;
 using UnityEngine.Tilemaps;
+using GameEvents;
 using LunchGame01;
 
 [CreateAssetMenu(menuName = "Brushes/Projectile Killer",

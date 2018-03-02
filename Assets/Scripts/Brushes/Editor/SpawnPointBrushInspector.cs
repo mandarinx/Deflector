@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace LunchGame01 {
     [CustomEditor(typeof(SpawnPointBrush))]
-    public class SpawnPointBrushInspector : GridBrushEditorBase {
+    public class SpawnPointBrushInspector : BrushBaseInspector {
 
         private SpawnPointBrush brush => target as SpawnPointBrush;
 

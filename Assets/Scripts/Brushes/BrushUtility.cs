@@ -120,13 +120,13 @@ namespace LunchGame01 {
             }
 
             Grid[] grids = Object.FindObjectsOfType<Grid>();
-            Assert.IsTrue(grids.Length == 1,
-                          grids.Length == 0
-                              ? $"Couldn't find any Grid components in any of the open scenes"
-                              : $"There are more than one Grid component in the open scenes. Returning the first found.");
-
             return grids.Length > 0 ? grids[0] : null;
         }
 
+        #if UNITY_EDITOR
+        public static void ShowCurrentScene() {
+            EditorGUILayout.LabelField("Current scene", GetRootGrid().gameObject.scene.name);
+        }
+        #endif
     }
 }
