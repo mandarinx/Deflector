@@ -1,0 +1,293 @@
+fileFormatVersion: 2
+guid: 7ffa031108c4b48419e039a5ef316ff6
+timeCreated: 1519978011
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Paddle_Gibs_0
+    21300002: Paddle_Gibs_1
+    21300004: Paddle_Gibs_2
+    21300006: Paddle_Gibs_3
+    21300008: Paddle_Gibs_4
+    21300010: Paddle_Gibs_5
+    21300012: Paddle_Gibs_6
+    21300014: Paddle_Gibs_7
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 12
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paddle_Gibs_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddle_Gibs_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddle_Gibs_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddle_Gibs_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddle_Gibs_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddle_Gibs_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddle_Gibs_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddle_Gibs_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -11, y: -4}
+      - {x: -10, y: -6}
+      - {x: 0, y: -6}
+      - {x: 0, y: 0}
+      - {x: -1, y: 2}
+      - {x: -4, y: 5}
+      - {x: -8, y: 5}
+      - {x: -11, y: 4}
+    - - {x: 19, y: 6}
+      - {x: 18, y: 6}
+      - {x: 14, y: 1}
+      - {x: 14, y: -5}
+      - {x: 15, y: -6}
+      - {x: 22, y: -6}
+      - {x: 24, y: -5}
+      - {x: 24, y: 0}
+      - {x: 23, y: 4}
+    - - {x: 2, y: -2}
+      - {x: 4, y: -6}
+      - {x: 10, y: -6}
+      - {x: 10, y: -1}
+      - {x: 8, y: 4}
+      - {x: 5, y: 4}
+      - {x: 2, y: 1}
+    - - {x: 29, y: 4}
+      - {x: 26, y: 2}
+      - {x: 26, y: -5}
+      - {x: 28, y: -6}
+      - {x: 33, y: -6}
+      - {x: 35, y: -4}
+      - {x: 35, y: 0}
+      - {x: 33, y: 4}
+    - - {x: 47, y: 4}
+      - {x: 40, y: 4}
+      - {x: 38, y: 3}
+      - {x: 37, y: 2}
+      - {x: 37, y: -5}
+      - {x: 40, y: -6}
+      - {x: 45, y: -6}
+      - {x: 48, y: -3}
+      - {x: 48, y: 3}
+    - - {x: -43, y: 4}
+      - {x: -46, y: 1}
+      - {x: -47, y: -3}
+      - {x: -45, y: -5}
+      - {x: -40, y: -5}
+      - {x: -38, y: -3}
+      - {x: -38, y: 1}
+      - {x: -41, y: 4}
+    - - {x: -34, y: 5}
+      - {x: -36, y: 4}
+      - {x: -36, y: -2}
+      - {x: -32, y: -5}
+      - {x: -27, y: -4}
+      - {x: -24, y: -2}
+      - {x: -24, y: 0}
+      - {x: -28, y: 5}
+    - - {x: -15, y: 3}
+      - {x: -21, y: 3}
+      - {x: -24, y: 0}
+      - {x: -24, y: -4}
+      - {x: -22, y: -5}
+      - {x: -15, y: -5}
+      - {x: -14, y: -4}
+      - {x: -13, y: -2}
+      - {x: -13, y: 2}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

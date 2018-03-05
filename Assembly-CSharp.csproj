@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Controllers\BloodController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ExplosionController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameModeController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\GibsController.cs" />
     <Compile Include="Assets\Scripts\Controllers\HitEffectController.cs" />
     <Compile Include="Assets\Scripts\Controllers\LevelController.cs" />
     <Compile Include="Assets\Scripts\Controllers\MultiplierController.cs" />
