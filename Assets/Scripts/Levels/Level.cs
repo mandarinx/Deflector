@@ -22,6 +22,10 @@ namespace LunchGame01 {
         public string      ScenePath    => scenePath;
 
         private void OnEnable() {
+            Reset();
+        }
+
+        public void Reset() {
             PlayCount = 0;
         }
 

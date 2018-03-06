@@ -45,6 +45,12 @@ namespace LunchGame01 {
             loadOps = new List<LevelLoadOperation>();
         }
 
+        public void ResetLevels() {
+            for (int i = 0; i < levels.Count; ++i) {
+                levels[i].Reset();
+            }
+        }
+
         public bool Load(int num, LoadSceneMode mode) {
             if (num >= levels.Count) {
                 return false;
