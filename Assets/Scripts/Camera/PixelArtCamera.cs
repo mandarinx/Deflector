@@ -4,14 +4,15 @@ namespace LunchGame01 {
     public class PixelArtCamera : MonoBehaviour {
 
         [SerializeField]
-        private Vector2Int    targetRes;
+        private Vector2Int            targetRes;
         [SerializeField]
-        private Material      rtMaterial;
+        private Material              rtMaterial;
 
-        private RenderTexture rt;
-        private Camera        cam;
+        private RenderTexture         rt;
+        private Camera                cam;
+        private Material              mat;
 
-        public Vector2Int     TargetResolution => targetRes;
+        public Vector2Int             TargetResolution => targetRes;
 
         private void Awake() {
             cam = GetComponent<Camera>();
@@ -26,6 +27,7 @@ namespace LunchGame01 {
                 wrapMode         = TextureWrapMode.Clamp
             };
             cam.targetTexture = rt;
+            mat = Instantiate(rtMaterial);
         }
 
         private void OnPreRender() {
@@ -47,11 +49,11 @@ namespace LunchGame01 {
             pos.z = pos.x + width;
             pos.w = pos.y + height;
 
-            rtMaterial.SetVector("_Pos", pos);
-            rtMaterial.SetTexture("_MainTex", rt);
-            rtMaterial.SetColor("_BackgroundColor", cam.backgroundColor);
+            mat.SetVector("_Pos", pos);
+            mat.SetTexture("_MainTex", rt);
+            mat.SetColor("_BackgroundColor", cam.backgroundColor);
 
-            Graphics.Blit(rt, null, rtMaterial);
+            Graphics.Blit(rt, null, mat);
         }
 
         public static int BestFitScale(Vector2Int res) {
