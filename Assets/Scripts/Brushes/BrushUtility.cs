@@ -125,7 +125,7 @@ namespace LunchGame01 {
 
         #if UNITY_EDITOR
         public static void ShowCurrentScene() {
-            EditorGUILayout.LabelField("Current scene", GetRootGrid().gameObject.scene.name);
+            EditorGUILayout.LabelField("Current scene", GetRootGrid()?.gameObject.scene.name);
         }
         #endif
     }
