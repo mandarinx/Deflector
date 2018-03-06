@@ -55,9 +55,9 @@
                 int drawColor = clamp(x + y + z + w, 0, 1);
 
                 float u = float((screenPos.x - _Pos.x) / (_Pos.z - _Pos.x));
-                float v = 1 - float((screenPos.y - _Pos.y) / (_Pos.w - _Pos.y));
+                float v = float((screenPos.y - _Pos.y) / (_Pos.w - _Pos.y));
 
-                #if SHADER_API_GLCORE
+                #if UNITY_UV_STARTS_AT_TOP
                     v = 1 - v;
                 #endif
 
