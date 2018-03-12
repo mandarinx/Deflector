@@ -91,10 +91,10 @@
     <Compile Include="Assets\Scripts\Data\IntAsset.cs" />
     <Compile Include="Assets\Scripts\Data\UIPanelLink.cs" />
     <Compile Include="Assets\Scripts\Entities\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Entities\HitPoint.cs" />
     <Compile Include="Assets\Scripts\Entities\Player.cs" />
     <Compile Include="Assets\Scripts\Entities\Projectile.cs" />
     <Compile Include="Assets\Scripts\Entities\SpawnPoint.cs" />
-    <Compile Include="Assets\Scripts\Entities\Sword.cs" />
     <Compile Include="Assets\Scripts\Entities\Turret.cs" />
     <Compile Include="Assets\Scripts\GameEvents\FloatEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\FloatEventListener.cs" />

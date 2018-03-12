@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4363176378934414}
   m_Layer: 0
-  m_Name: SwordAnchor
+  m_Name: HitPointAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 50425921316205328}
   - component: {fileID: 58740981323102530}
   m_Layer: 12
-  m_Name: Sword
+  m_Name: HitPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,7 +322,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   swordAnchor: {fileID: 4363176378934414}
-  sword: {fileID: 114494586970716236}
+  hitPoint: {fileID: 114494586970716236}
   anim: {fileID: 114955960190743706}
   animIdle: {fileID: 7400000, guid: 834317c78794d4090a3ca0d770e7f6d2, type: 2}
   animHit: {fileID: 7400000, guid: 8b634c4d6b6ec4acc9e39cb4af52a42b, type: 2}

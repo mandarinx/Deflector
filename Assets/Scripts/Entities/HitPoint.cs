@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace LunchGame01 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class Sword : MonoBehaviour {
+    public class HitPoint : MonoBehaviour {
 
         [SerializeField]
         private Color            activeColor;

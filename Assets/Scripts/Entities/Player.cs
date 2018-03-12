@@ -17,7 +17,7 @@ namespace LunchGame01 {
         public LayerMask                  hurtBy;
         public AnimationCurve             forceFalloff;
         public Transform                  swordAnchor;
-        public Sword                      sword;
+        public HitPoint                   hitPoint;
 
         [Space]
         [Header("Animations")]
@@ -57,7 +57,7 @@ namespace LunchGame01 {
 
         public void Activate() {
             gameObject.layer = LayerMask.NameToLayer("Player");
-            sword.Show();
+            hitPoint.Show();
             sr.enabled = true;
             sr.color = new Color(1f, 1f, 1f, 1f);
             shadow.color = new Color(1f, 1f, 1f, 1f);
@@ -80,9 +80,8 @@ namespace LunchGame01 {
         /// </summary>
         [UsedImplicitly]
         public void OnPlayerDied() {
-            // TODO: What about deactivating the gameobject?
             sr.enabled = false;
-            sword.Hide();
+            hitPoint.Hide();
             Deactivate();
             onDiedAt.Invoke(transform.position);
         }
@@ -121,11 +120,11 @@ namespace LunchGame01 {
                 return;
             }
 
-            // Shield
+            // HitPoint
 
             if (Input.GetKeyDown(KeyCode.X)) {
                 anim.Play(animHit);
-                sword.Hit(walkDir);
+                hitPoint.Hit(walkDir);
             }
 
             // Movement
