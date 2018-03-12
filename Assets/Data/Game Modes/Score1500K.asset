@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d9221a6de6914faeb0c1486b834084b, type: 3}
-  m_Name: Reach1500KScore
+  m_Name: Score1500K
   m_EditorClassIdentifier: 
   minScore: 1500000
   scoreAsset: {fileID: 11400000, guid: a1d04d243c9ca4c2d90bfd3332002d06, type: 2}
