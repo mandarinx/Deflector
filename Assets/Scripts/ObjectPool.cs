@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LunchGame01 {
+namespace Deflector {
 	// T must have a parameterless constructor
     public class ObjectPool<T> where T : class {
 

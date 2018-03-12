@@ -2,7 +2,7 @@
 using GameEvents;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     [CreateAssetMenu(menuName = "Data/Health Asset", fileName = "HealthAsset.asset")]
     public class HealthAsset : ScriptableObject {
 

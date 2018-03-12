@@ -2,7 +2,7 @@
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class GameObjectPool<T> where T : Component {
 
         public delegate                 void InstanceDelegate(T instance);

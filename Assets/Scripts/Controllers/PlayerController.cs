@@ -1,7 +1,7 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class PlayerController : MonoBehaviour {
 
         [SerializeField]

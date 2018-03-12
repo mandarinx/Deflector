@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class UHookUpdate : MonoBehaviour, IOnUpdate {
 
         [SerializeField]

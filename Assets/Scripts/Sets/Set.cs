@@ -2,7 +2,7 @@
 using GameEvents;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     public abstract class Set<T> : ScriptableObject {
 
         [SerializeField]

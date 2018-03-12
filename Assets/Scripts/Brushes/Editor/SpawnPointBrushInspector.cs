@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     [CustomEditor(typeof(SpawnPointBrush))]
     public class SpawnPointBrushInspector : BrushBaseInspector {
 

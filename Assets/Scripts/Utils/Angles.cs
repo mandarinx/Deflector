@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace LunchGame01 {
+namespace Deflector {
     public static class Angles {
 
         private static readonly Dictionary<int, float> radianMap = new Dictionary<int, float> {

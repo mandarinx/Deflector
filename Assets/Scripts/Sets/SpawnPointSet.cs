@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     [CreateAssetMenu(menuName = "Sets/Spawn Points", fileName = "SpawnPointSet.asset")]
     [Serializable]
     public class SpawnPointSet : Set<SpawnPoint> {}

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace LunchGame01 {
+namespace Deflector {
     [RequireComponent(typeof(Canvas))]
     public class UIPanel : MonoBehaviour {
 

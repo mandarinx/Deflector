@@ -3,7 +3,7 @@ using GameEvents;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class Multiplier : MonoBehaviour {
 
         [SerializeField]

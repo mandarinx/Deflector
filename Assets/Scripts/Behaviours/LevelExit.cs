@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace LunchGame01 {
+namespace Deflector {
     [RequireComponent(typeof(BoxCollider2D))]
     public class LevelExit : MonoBehaviour {
 

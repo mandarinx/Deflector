@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
-using LunchGame01;
+using Deflector;
 
 [CustomEditor(typeof(Level))]
 public class LevelInspector : Editor {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace LunchGame01 {
+namespace Deflector {
     public interface IOnGUI {
         void UOnGUI();
     }

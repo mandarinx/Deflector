@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace LunchGame01 {
+namespace Deflector {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Projectile : MonoBehaviour {
 

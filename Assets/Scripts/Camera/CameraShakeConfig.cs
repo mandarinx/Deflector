@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     [CreateAssetMenu(menuName = "Configs/Camera Shake", fileName = "CameraShake.asset")]
     public class CameraShakeConfig : ScriptableObject {
 

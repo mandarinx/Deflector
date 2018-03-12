@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace LunchGame01 {
+namespace Deflector {
     [CreateAssetMenu(menuName = "Data/Level")]
     [Serializable]
     public class Level : ScriptableObject {

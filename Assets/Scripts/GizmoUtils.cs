@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     public static class GizmoUtils {
 
         public static void DrawCircle(Vector3 position, float radius, Color color) {

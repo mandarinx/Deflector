@@ -1,7 +1,7 @@
 ﻿using GameEvents;
 using UnityEngine;
 
-namespace LunchGame01.Modes {
+namespace Deflector.Modes {
     [CreateAssetMenu(menuName = "Game Modes/Destroy Projectile")]
     public class DestroyProjectile : GameMode {
 

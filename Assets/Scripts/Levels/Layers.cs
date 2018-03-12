@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class Layers : MonoBehaviour {
 
         private Dictionary<string, Tilemap> layers;

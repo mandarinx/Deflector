@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     [CreateAssetMenu(menuName = "UI/Panel Link")]
     public class UIPanelLink : ScriptableObject {
 

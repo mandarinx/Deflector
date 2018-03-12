@@ -2,7 +2,7 @@
 using GameEvents;
 using PowerTools;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class HitEffect : MonoBehaviour {
 
         [SerializeField]

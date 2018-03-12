@@ -1,7 +1,7 @@
 ﻿using GameEvents;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class Killer : MonoBehaviour {
 
         [SerializeField]

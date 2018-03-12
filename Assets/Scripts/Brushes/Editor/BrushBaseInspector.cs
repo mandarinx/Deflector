@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class BrushBaseInspector : GridBrushEditorBase {
 
         public override void OnInspectorGUI() {

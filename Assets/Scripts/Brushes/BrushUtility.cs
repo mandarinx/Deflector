@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace LunchGame01 {
+namespace Deflector {
     public static class BrushUtility {
 
         public static Transform GetLayer(string layerName) {

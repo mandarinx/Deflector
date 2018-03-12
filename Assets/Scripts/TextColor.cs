@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace LunchGame01 {
+namespace Deflector {
     [RequireComponent(typeof(Text))]
     public class TextColor : MonoBehaviour {
 

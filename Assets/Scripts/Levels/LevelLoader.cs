@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-namespace LunchGame01 {
+namespace Deflector {
 
     [Serializable]
     public class UnityLevelEvent : UnityEvent<Level> {}

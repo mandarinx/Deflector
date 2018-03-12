@@ -4,7 +4,7 @@ using GameEvents;
 using JetBrains.Annotations;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Player : MonoBehaviour {
 

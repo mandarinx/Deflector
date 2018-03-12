@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 using GameEvents;
-using LunchGame01;
+using Deflector;
 
 [CreateAssetMenu(menuName = "Brushes/Projectile Killer",
                  fileName = "ProjectileKillerBrush.asset")]

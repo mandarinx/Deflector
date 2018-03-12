@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class GameMode : ScriptableObject {
 
         public virtual string title => "";

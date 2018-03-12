@@ -1,6 +1,6 @@
 using UnityEditor;
 
-namespace LunchGame01 {
+namespace Deflector {
     [CustomEditor(typeof(ProjectileKillerBrush))]
     public class ProjectileKillerBrushInspector : BrushBaseInspector {}
 }

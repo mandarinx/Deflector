@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
 
     [Serializable]
 	public class AudioItem {

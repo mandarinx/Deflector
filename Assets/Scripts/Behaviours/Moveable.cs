@@ -3,7 +3,7 @@ using System.Collections;
 using GameEvents;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class Moveable : MonoBehaviour {
 
         public AnimationCurve  positionOverTime;

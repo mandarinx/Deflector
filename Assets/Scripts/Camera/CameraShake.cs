@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     [RequireComponent(typeof(Camera))]
     public class CameraShake : MonoBehaviour {
 

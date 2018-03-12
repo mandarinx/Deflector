@@ -1,5 +1,5 @@
 ﻿
-namespace LunchGame01 {
+namespace Deflector {
     public interface IPoolable {
         void OnEnable();
         void OnDisable();

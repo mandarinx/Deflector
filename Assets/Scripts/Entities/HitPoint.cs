@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     [RequireComponent(typeof(SpriteRenderer))]
     public class HitPoint : MonoBehaviour {
 

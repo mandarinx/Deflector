@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace LunchGame01 {
+namespace Deflector {
     [RequireComponent(typeof(LevelLoader))]
     public class LevelController : MonoBehaviour {
 

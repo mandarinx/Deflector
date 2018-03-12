@@ -1,5 +1,5 @@
 ﻿
-namespace LunchGame01 {
+namespace Deflector {
     public static class IntUtils {
 
         public static bool WithinRange(int value, int low, int high) {

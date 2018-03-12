@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     public static class BrushEditorUtility {
 
         private static Material s_GizmoMaterial;

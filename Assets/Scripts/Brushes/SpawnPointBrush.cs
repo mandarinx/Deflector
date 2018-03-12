@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using LunchGame01;
+using Deflector;
 
 [CreateAssetMenu(menuName = "Brushes/Spawn Point", fileName = "SpawnPointBrush.asset")]
 [CustomGridBrush(hideAssetInstances:  false,

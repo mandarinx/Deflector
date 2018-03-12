@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace LunchGame01 {
+namespace Deflector {
     [RequireComponent(typeof(Image))]
     public class ImageColorLerp : MonoBehaviour {
 

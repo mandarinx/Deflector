@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     [CustomGridBrush(true, true, true, "Default Brush")]
     public class DefaultBrushReplacement : GridBrushBase {}
 }

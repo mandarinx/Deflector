@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
 
     [CustomEditor(typeof(AudioItemSet))]
 	public class AudioEventInspector : Editor {

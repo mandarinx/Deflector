@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
-using LunchGame01;
+using Deflector;
 
 [CreateAssetMenu(menuName = "Brushes/Level Exit", fileName = "LevelExitBrush.asset")]
 [CustomGridBrush(hideAssetInstances:  false,

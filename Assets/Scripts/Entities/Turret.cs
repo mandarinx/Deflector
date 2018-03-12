@@ -3,7 +3,7 @@ using System.Collections;
 using GameEvents;
 using PowerTools;
 
-namespace LunchGame01 {
+namespace Deflector {
     public class Turret : MonoBehaviour {
 
         [SerializeField]

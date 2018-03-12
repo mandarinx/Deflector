@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     public static class ArrayUtils {
 
         public static void Shuffle<T>(T[] list) {

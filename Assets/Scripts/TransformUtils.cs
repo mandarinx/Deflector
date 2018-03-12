@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LunchGame01 {
+namespace Deflector {
     public static class TransformUtils {
 
         public static string GetFullPath(GameObject go) {

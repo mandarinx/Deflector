@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 
-namespace LunchGame01 {
+namespace Deflector {
     public static class FindRefs {
 
         [MenuItem("CONTEXT/Component/Find references to this")]
