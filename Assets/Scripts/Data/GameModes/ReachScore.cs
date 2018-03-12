@@ -18,7 +18,7 @@ namespace Deflector.Modes {
         private int            scoreIncrease;
         private int            deadPlayers;
 
-        public override string title => $"Earn {minScore:### ### ##0} points";
+        public override string title => $"Score {minScore:### ### ##0} points";
 
         public override void Validate() {
             // Prioritize game over
