@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.IO;
 using GameEvents;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -44,19 +43,12 @@ namespace Deflector {
             levelLoader.Load(curLevel, LoadSceneMode.Additive);
         }
 
-        public void OnWillUnloadLevel(Level level) {
-            level.IncreasePlayCount();
-        }
-
         /// <summary>
         /// Handler for LevelLoader.OnLevelLoaded
         /// </summary>
         /// <param name="level"></param>
         [UsedImplicitly]
         public void OnLevelLoaded(Level level) {
-            string sceneName = Path.GetFileNameWithoutExtension(level.ScenePath);
-            level.Prepare(SceneManager.GetSceneByName(sceneName));
-
             // Delay the level loaded event to allow the scene
             // objects to run all of their Awake and Start methods.
             StartCoroutine(DispatchOnLevelLoaded((level)));
