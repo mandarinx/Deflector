@@ -644,6 +644,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224056464227970776, guid: aa87f282a081d4a4c97a023f7fa91abb,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -803,9 +808,134 @@ Prefab:
       propertyPath: m_Name
       value: UIPanels
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 223800245502856000, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223049963365681728, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114434781586289588, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1152354257}
+    - target: {fileID: 114434781586289588, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PrintText
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483542306220956, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2121212172}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddUpdate
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddUpdate
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114064437633711822, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1152354256 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1382113683925276, guid: aa87f282a081d4a4c97a023f7fa91abb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1152354254}
+--- !u!114 &1152354257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152354256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e795b5211e5004ca985e61daede6be24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterDuration: 0.1
+  onPrintDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1152354259}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2121212172}
+        m_MethodName: AddUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1152354259 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114967828428629572, guid: aa87f282a081d4a4c97a023f7fa91abb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1152354254}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &1216348315 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4447360263185458, guid: d6ae88bc3bd9446969d269f7b562f649,

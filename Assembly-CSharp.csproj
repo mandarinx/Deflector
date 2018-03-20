@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Data\HealthAsset.cs" />
     <Compile Include="Assets\Scripts\Data\IntAsset.cs" />
     <Compile Include="Assets\Scripts\Data\UIPanelLink.cs" />
+    <Compile Include="Assets\Scripts\Effects\TextLetterPrinter.cs" />
     <Compile Include="Assets\Scripts\Entities\Explosion.cs" />
     <Compile Include="Assets\Scripts\Entities\HitPoint.cs" />
     <Compile Include="Assets\Scripts\Entities\Player.cs" />
