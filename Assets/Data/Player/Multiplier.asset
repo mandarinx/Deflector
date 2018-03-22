@@ -13,3 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curValue: 1
   initValue: 1
+  onValueChanged: {fileID: 0}
