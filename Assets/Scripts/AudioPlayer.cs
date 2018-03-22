@@ -16,7 +16,6 @@ namespace Deflector {
         public AudioRolloffMode rolloffMode;
     }
 
-    [AddComponentMenu("mlib/AudioPlayer")]
     public class AudioPlayer : MonoBehaviour {
 
         [SerializeField]

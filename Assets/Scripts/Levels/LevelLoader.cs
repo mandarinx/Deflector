@@ -18,7 +18,6 @@ namespace Deflector {
         public AsyncOperation asyncOp;
     }
 
-    [AddComponentMenu("Lib/Level Loader")]
     public class LevelLoader : MonoBehaviour {
 
         [SerializeField]

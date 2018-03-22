@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace Deflector {
-    [CreateAssetMenu(menuName = "Configs/Camera Shake", fileName = "CameraShake.asset")]
+    [CreateAssetMenu(menuName = "Config/Camera Shake", fileName = "CameraShake.asset")]
     public class CameraShakeConfig : ScriptableObject {
 
         /// <summary>
