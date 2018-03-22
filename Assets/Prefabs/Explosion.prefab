@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4882635200783726}
   - component: {fileID: 212682587651247880}
   - component: {fileID: 95086689009997714}
-  - component: {fileID: 114423026720833434}
+  - component: {fileID: 114024595899566204}
   m_Layer: 0
-  m_Name: 1
+  m_Name: Expl00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,9 +39,9 @@ GameObject:
   - component: {fileID: 4586802780532854}
   - component: {fileID: 212839251199163412}
   - component: {fileID: 95669756767494688}
-  - component: {fileID: 114202162727734184}
+  - component: {fileID: 114243227284742794}
   m_Layer: 0
-  m_Name: 4
+  m_Name: Expl03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,9 +73,9 @@ GameObject:
   - component: {fileID: 4311610175418952}
   - component: {fileID: 212390888107543678}
   - component: {fileID: 95091731460638044}
-  - component: {fileID: 114537049593252454}
+  - component: {fileID: 114850684586138472}
   m_Layer: 0
-  m_Name: 2
+  m_Name: Expl01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,9 +91,9 @@ GameObject:
   - component: {fileID: 4953314367274222}
   - component: {fileID: 212782870359371928}
   - component: {fileID: 95744823907187380}
-  - component: {fileID: 114642224346167316}
+  - component: {fileID: 114845899615480328}
   m_Layer: 0
-  m_Name: 5
+  m_Name: Expl04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,9 +109,9 @@ GameObject:
   - component: {fileID: 4181170750361502}
   - component: {fileID: 212294900819526830}
   - component: {fileID: 95840907168263724}
-  - component: {fileID: 114912033316871856}
+  - component: {fileID: 114775702819889152}
   m_Layer: 0
-  m_Name: 6
+  m_Name: Expl05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,9 +127,9 @@ GameObject:
   - component: {fileID: 4198081843893424}
   - component: {fileID: 212727650395053242}
   - component: {fileID: 95023845134952604}
-  - component: {fileID: 114457203271066402}
+  - component: {fileID: 114056419834958800}
   m_Layer: 0
-  m_Name: 3
+  m_Name: Expl02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,9 +145,9 @@ GameObject:
   - component: {fileID: 4327801023824530}
   - component: {fileID: 212414644962893930}
   - component: {fileID: 95850547645962722}
-  - component: {fileID: 114070216063935924}
+  - component: {fileID: 114149066578680464}
   m_Layer: 0
-  m_Name: 7
+  m_Name: Expl06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,9 +163,9 @@ GameObject:
   - component: {fileID: 4995803012566762}
   - component: {fileID: 212480033232567224}
   - component: {fileID: 95021021781596486}
-  - component: {fileID: 114936533498048728}
+  - component: {fileID: 114075061548989132}
   m_Layer: 0
-  m_Name: 9
+  m_Name: Expl08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,9 +181,9 @@ GameObject:
   - component: {fileID: 4480745418888364}
   - component: {fileID: 212631709438591242}
   - component: {fileID: 95386664705853218}
-  - component: {fileID: 114357529524393522}
+  - component: {fileID: 114989039973876840}
   m_Layer: 0
-  m_Name: 8
+  m_Name: Expl07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1173977352691514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4882635200783726}
@@ -481,7 +481,64 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114070216063935924
+--- !u!114 &114024595899566204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015917591878514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114056419834958800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634446839357708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114075061548989132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880819614360276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114149066578680464
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -489,12 +546,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1827583123040136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
-  m_playOnAwake: 0
---- !u!114 &114202162727734184
+  anim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114243227284742794
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -502,11 +565,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1035449774976898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
-  m_playOnAwake: 0
+  anim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114307409420462842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -528,81 +597,16 @@ MonoBehaviour:
   onExplodedAt: {fileID: 11400000, guid: a56038e5527de4414a96695d92cf4cbc, type: 2}
   onChainReaction: {fileID: 11400000, guid: 7c6ce4f98a3bf45a4b2fa0c2a54916c1, type: 2}
   anims:
-  - {fileID: 114423026720833434}
-  - {fileID: 114537049593252454}
-  - {fileID: 114457203271066402}
-  - {fileID: 114202162727734184}
-  - {fileID: 114642224346167316}
-  - {fileID: 114912033316871856}
-  - {fileID: 114070216063935924}
-  - {fileID: 114357529524393522}
-  - {fileID: 114936533498048728}
---- !u!114 &114357529524393522
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963146357838364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
-  m_playOnAwake: 0
---- !u!114 &114423026720833434
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1015917591878514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
-  m_playOnAwake: 0
---- !u!114 &114457203271066402
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1634446839357708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
-  m_playOnAwake: 0
---- !u!114 &114537049593252454
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1419752747324912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
-  m_playOnAwake: 0
---- !u!114 &114642224346167316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1527839494259420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
-  m_playOnAwake: 0
---- !u!114 &114912033316871856
+  - {fileID: 114024595899566204}
+  - {fileID: 114850684586138472}
+  - {fileID: 114056419834958800}
+  - {fileID: 114243227284742794}
+  - {fileID: 114845899615480328}
+  - {fileID: 114775702819889152}
+  - {fileID: 114149066578680464}
+  - {fileID: 114989039973876840}
+  - {fileID: 114075061548989132}
+--- !u!114 &114775702819889152
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -610,24 +614,74 @@ MonoBehaviour:
   m_GameObject: {fileID: 1580173919347770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
-  m_playOnAwake: 0
---- !u!114 &114936533498048728
+  anim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114845899615480328
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1880819614360276}
+  m_GameObject: {fileID: 1527839494259420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
-  m_playOnAwake: 0
+  anim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114850684586138472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1419752747324912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114989039973876840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963146357838364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7400000, guid: 7d93a48196314451ba3803e39b0933f6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!212 &212294900819526830
 SpriteRenderer:
   m_ObjectHideFlags: 1

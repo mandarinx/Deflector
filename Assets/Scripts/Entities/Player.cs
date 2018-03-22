@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using PowerTools;
 using GameEvents;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -22,7 +21,7 @@ namespace Deflector {
         [Space]
         [Header("Animations")]
         [SerializeField]
-        private SpriteAnim                anim;
+        private SpriteAnimPlayer          animPlayer;
         [SerializeField]
         private AnimationClip             animIdle;
         [SerializeField]
@@ -36,6 +35,7 @@ namespace Deflector {
 
         private Rigidbody2D               rb;
         private SpriteRenderer            sr;
+        private Color                     shadowColor;
         private float                     walkAngle;
         private int                       walkDir;
         private float                     hitTime;
@@ -50,28 +50,30 @@ namespace Deflector {
             activated = false;
             inputMove = -1;
             rb = GetComponent<Rigidbody2D>();
-            sr = anim.GetComponent<SpriteRenderer>();
+            sr = animPlayer.GetComponent<SpriteRenderer>();
             walkAngle = Mathf.PI;
-            anim.AddDoneListener(OnAnimDone);
+            shadowColor = shadow.color;
+            animPlayer.OnDone(OnAnimDone);
         }
 
+        [ContextMenu("Activate")]
         public void Activate() {
             gameObject.layer = LayerMask.NameToLayer("Player");
             hitPoint.Show();
             sr.enabled = true;
             sr.color = new Color(1f, 1f, 1f, 1f);
-            shadow.color = new Color(1f, 1f, 1f, 1f);
+            shadow.color = shadowColor;
             activated = true;
             trigger = null;
             StopAllCoroutines();
             hurtRoutine = null;
-            anim.Play(animIdle);
+            animPlayer.Play(animIdle);
             StartCoroutine(Footsteps());
         }
 
         public void Deactivate() {
             activated = false;
-            anim.Stop();
+            animPlayer.Stop();
             StopAllCoroutines();
         }
 
@@ -90,7 +92,7 @@ namespace Deflector {
             if (clip.name.Equals("PlayerIdle")) {
                 return;
             }
-            anim.Play(animIdle);
+            animPlayer.Play(animIdle);
         }
 
         /// <summary>
@@ -123,7 +125,7 @@ namespace Deflector {
             // HitPoint
 
             if (Input.GetKeyDown(KeyCode.X)) {
-                anim.Play(animHit);
+                animPlayer.Play(animHit);
                 hitPoint.Hit(walkDir);
             }
 
@@ -245,7 +247,7 @@ namespace Deflector {
                 shadow.color = new Color(1f, 1f, 1f, 0f);
                 yield return new WaitForSeconds(immuneBlinkDuration);
                 sr.color = new Color(1f, 1f, 1f, 1f);
-                shadow.color = new Color(1f, 1f, 1f, 1f);
+                shadow.color = shadowColor;
                 yield return new WaitForSeconds(immuneBlinkDuration);
                 ++count;
             }

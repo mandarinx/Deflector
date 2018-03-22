@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114975686723375720}
   - component: {fileID: 212640629202137496}
   - component: {fileID: 95962295517647380}
-  - component: {fileID: 114894591851038328}
+  - component: {fileID: 114646037792239040}
   m_Layer: 0
   m_Name: HitEffect
   m_TagString: Untagged
@@ -60,7 +60,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114894591851038328
+--- !u!114 &114646037792239040
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -68,16 +68,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1681930951813180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 19d4e153a77564b3ab0687afb5b6ee86, type: 2}
-  m_playOnAwake: 0
+  anim: {fileID: 7400000, guid: 19d4e153a77564b3ab0687afb5b6ee86, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
   onAnimDone:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114975686723375720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,7 +124,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 16
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

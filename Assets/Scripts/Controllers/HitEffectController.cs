@@ -13,9 +13,10 @@ namespace Deflector {
         }
 
         public void Spawn(GameObject go) {
-            HitEffect shieldHitEffect;
-            pool.Spawn(out shieldHitEffect);
-            shieldHitEffect.transform.position = go.transform.position;
+            HitEffect hitEffect;
+            pool.Spawn(out hitEffect);
+            hitEffect.transform.position = go.transform.position;
+            hitEffect.Activate();
         }
 
         public void Despawn(GameObject instance) {

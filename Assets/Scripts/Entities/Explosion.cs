@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using PowerTools;
 using GameEvents;
 using UnityEngine;
 
@@ -7,26 +6,32 @@ namespace Deflector {
     public class Explosion : MonoBehaviour {
 
         [SerializeField]
-        private float         delayMin;
+        private float              delayMin;
         [SerializeField]
-        private float         delayMax;
+        private float              delayMax;
         [SerializeField]
-        private float         duration;
+        private float              duration;
         [SerializeField]
-        private float         radius;
+        private float              radius;
         [SerializeField]
-        private LayerMask     layerExplode;
+        private LayerMask          layerExplode;
         [SerializeField]
-        private Vector3Event  onExplodedAt;
+        private Vector3Event       onExplodedAt;
         [SerializeField]
-        private GameEvent     onChainReaction;
+        private GameEvent          onChainReaction;
         [SerializeField]
-        private SpriteAnim[]  anims;
+        private SpriteAnimPlayer[] anims;
 
-        private Collider2D[] overlapped;
+        private Collider2D[]       overlapped;
+        private const string       hitByExplosionTag = "HitByExplosion";
 
         private void OnEnable() {
             overlapped = new Collider2D[16];
+        }
+
+        [ContextMenu("Explode!")]
+        private void Explode() {
+            StartCoroutine(BigBadaBoom());
         }
 
         public IEnumerator BigBadaBoom() {
@@ -37,7 +42,7 @@ namespace Deflector {
 
             int expl = 0;
             while (expl < anims.Length) {
-                anims[expl].Play(anims[expl].Clip);
+                anims[expl].Play();
                 ++expl;
 
                 yield return new WaitForSeconds(Random.Range(0.03f, 0.09f));
@@ -48,11 +53,11 @@ namespace Deflector {
                                                           layerExplode.value);
 
                 for (int i = 0; i < num; ++i) {
-                    if (overlapped[i].CompareTag("HitByExplosion")) {
+                    if (overlapped[i].CompareTag(hitByExplosionTag)) {
                         continue;
                     }
                     onChainReaction.Invoke();
-                    overlapped[i].tag = "HitByExplosion";
+                    overlapped[i].tag = hitByExplosionTag;
                     overlapped[i]
                        .GetComponent<Killable>()
                       ?.Kill(transform.position);

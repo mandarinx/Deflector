@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114133750966311380}
   - component: {fileID: 58740511937192244}
   - component: {fileID: 95440708773379164}
-  - component: {fileID: 114999396474408592}
+  - component: {fileID: 114566007884782262}
   - component: {fileID: 212480625323581638}
   m_Layer: 11
   m_Name: Turret
@@ -87,10 +87,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3382f958c536841738e765c624a9d81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 114999396474408592}
+  anim: {fileID: 114566007884782262}
   onDespawn: {fileID: 11400000, guid: ce6b4892b4e6e4f43ae86e2c775114fe, type: 2}
   onFire: {fileID: 11400000, guid: 77d19a1d6ec5a4105bdfd604d72c7d4e, type: 2}
---- !u!114 &114999396474408592
+--- !u!114 &114566007884782262
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -98,16 +98,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1238722765353642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 2ae5ce650e6524b38a7439ff902d4fe6, type: 2}
-  m_playOnAwake: 1
+  anim: {fileID: 7400000, guid: 2ae5ce650e6524b38a7439ff902d4fe6, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
   onAnimDone:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!212 &212480625323581638
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -51,8 +51,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4102208701689662}
   - component: {fileID: 95408670176831636}
-  - component: {fileID: 114955960190743706}
   - component: {fileID: 212646268144339786}
+  - component: {fileID: 114334085718333022}
   m_Layer: 10
   m_Name: Anim
   m_TagString: Untagged
@@ -160,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574596575962138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4363176378934414}
@@ -323,13 +323,32 @@ MonoBehaviour:
     m_RotationOrder: 0
   swordAnchor: {fileID: 4363176378934414}
   hitPoint: {fileID: 114494586970716236}
-  anim: {fileID: 114955960190743706}
+  animPlayer: {fileID: 114334085718333022}
   animIdle: {fileID: 7400000, guid: 834317c78794d4090a3ca0d770e7f6d2, type: 2}
   animHit: {fileID: 7400000, guid: 8b634c4d6b6ec4acc9e39cb4af52a42b, type: 2}
   playerHealth: {fileID: 11400000, guid: af7b056e5a04248d8bd7d11442f91193, type: 2}
   shadow: {fileID: 212835153610289030}
   onFootstep: {fileID: 11400000, guid: 819b49bb9700b49d082c6b6fcd351aa0, type: 2}
   onDiedAt: {fileID: 11400000, guid: 2d1d7b03712b440419a651c34c25ba37, type: 2}
+--- !u!114 &114334085718333022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1418512328114546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64427eef5bc8940bda913d8ffe3cd8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7400000, guid: 834317c78794d4090a3ca0d770e7f6d2, type: 2}
+  sharedController: {fileID: 11400000, guid: 36c89cca61504409fa52ba7bb8634bca, type: 2}
+  playOnAwake: 0
+  onAnimDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Deflector.SpriteAnimPlayer+UnityAnimationClipEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114494586970716236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -370,19 +389,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114955960190743706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1418512328114546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_defaultAnim: {fileID: 7400000, guid: 834317c78794d4090a3ca0d770e7f6d2, type: 2}
-  m_playOnAwake: 0
 --- !u!212 &212161194741644122
 SpriteRenderer:
   m_ObjectHideFlags: 1

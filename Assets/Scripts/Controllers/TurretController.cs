@@ -50,6 +50,7 @@ namespace Deflector {
                 }
                 Turret turret;
                 pool.Spawn(out turret);
+                turret.Activate();
                 turret.transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position;
             }
         }

@@ -1,22 +1,20 @@
 ﻿using UnityEngine;
 using GameEvents;
-using PowerTools;
 
 namespace Deflector {
     public class HitEffect : MonoBehaviour {
 
         [SerializeField]
-        private GameObjectEvent onAnimDone;
-        private SpriteAnim      anim;
+        private GameObjectEvent  onAnimDone;
+        private SpriteAnimPlayer anim;
 
         private void Awake() {
-            anim = GetComponent<SpriteAnim>();
-            anim.AddDoneListener(OnAnimDone);
+            anim = GetComponent<SpriteAnimPlayer>();
+            anim.OnDone(OnAnimDone);
         }
 
-        private void OnEnable() {
-            anim.SetTime(0f);
-            anim.Play(anim.Clip);
+        public void Activate() {
+            anim.PlayFrom(0f);
         }
 
         private void OnAnimDone(AnimationClip clip) {
