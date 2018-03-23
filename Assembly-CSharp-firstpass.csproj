@@ -54,11 +54,11 @@
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\SpriteAnim.cs" />
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\SpriteAnimEventHandler.cs" />
     <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\SpriteAnimNodes.cs" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtDiffuse.shader" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtParticle.shader" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtUI.shader" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtFont.shader" />
-    <None Include="Assets\Plugins\PixelArtCamera\PixelArtSprite.shader" />
+    <None Include="Assets\Plugins\PixelArtShaders\PixelArtDiffuse.shader" />
+    <None Include="Assets\Plugins\PixelArtShaders\PixelArtParticle.shader" />
+    <None Include="Assets\Plugins\PixelArtShaders\PixelArtUI.shader" />
+    <None Include="Assets\Plugins\PixelArtShaders\PixelArtFont.shader" />
+    <None Include="Assets\Plugins\PixelArtShaders\PixelArtSprite.shader" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.3.1p4/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>

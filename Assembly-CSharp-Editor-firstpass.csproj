@@ -52,6 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\Editor\JetBrains\Unity3DRider.cs" />
+    <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimator.cs" />
+    <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorInfoPanel.cs" />
+    <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorNodes.cs" />
+    <Compile Include="Assets\Plugins\PowerSpriteAnimator\Scripts\Editor\SpriteAnimatorTimeline.cs" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity 2017.3.1p4/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -139,6 +143,12 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>/Users/mandarin/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{0AE359CD-3957-1C34-78A4-08BB91494F5D}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

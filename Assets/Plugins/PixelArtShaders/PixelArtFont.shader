@@ -4,7 +4,7 @@ Shader "Ocias/Pixel Art Font" {
 	Properties {
 		_MainTex ("Font Texture", 2D) = "white" {}
 		_Color ("Text Color", Color) = (1,1,1,1)
-		
+
 		_StencilComp ("Stencil Comparison", Float) = 8
 		_Stencil ("Stencil ID", Float) = 0
 		_StencilOp ("Stencil Operation", Float) = 0
@@ -16,31 +16,31 @@ Shader "Ocias/Pixel Art Font" {
 
 	SubShader {
 
-		Tags 
+		Tags
 		{
 			"Queue"="Transparent"
 			"IgnoreProjector"="True"
 			"RenderType"="Transparent"
 			"PreviewType"="Plane"
 		}
-		
+
 		Stencil
 		{
 			Ref [_Stencil]
 			Comp [_StencilComp]
-			Pass [_StencilOp] 
+			Pass [_StencilOp]
 			ReadMask [_StencilReadMask]
 			WriteMask [_StencilWriteMask]
 		}
-		
-		Lighting Off 
-		Cull Off 
+
+		Lighting Off
+		Cull Off
 		ZTest [unity_GUIZTestMode]
-		ZWrite Off 
+		ZWrite Off
 		Blend SrcAlpha OneMinusSrcAlpha
 		ColorMask [_ColorMask]
 
-		Pass 
+		Pass
 		{
 			CGPROGRAM
 			#pragma vertex vert
@@ -63,15 +63,16 @@ Shader "Ocias/Pixel Art Font" {
 			sampler2D _MainTex;
 			uniform float4 _MainTex_ST;
 			uniform fixed4 _Color;
-			
+
 			inline float4 ViewSpacePixelSnap (float4 pos) {
 
 				float2 halfScreenRes = _ScreenParams.xy * 0.5f;
 
-				// // View space Pixel Snapping
-				float2 pixelPos = round(pos * halfScreenRes + 1 / halfScreenRes) / halfScreenRes; // put back in that half pixel offset when you're done
+				// View space Pixel Snapping
+				// put back in that half pixel offset when you're done
+				float2 pixelPos = round(pos * halfScreenRes + 1 / halfScreenRes) / halfScreenRes;
 				pos.xy = pixelPos;
-				
+
 				// Odd resolution handling
 				float2 odd = _ScreenParams.xy % 2;
 				pos.x += odd.x * 0.5 / halfScreenRes.x;
@@ -100,7 +101,7 @@ Shader "Ocias/Pixel Art Font" {
 				clip (col.a - 0.01);
 				return col;
 			}
-			ENDCG 
+			ENDCG
 		}
 	}
 }
