@@ -147,6 +147,7 @@
     <Compile Include="Assets\Scripts\UI\MultiplierLabel.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerPaddles.cs" />
     <Compile Include="Assets\Scripts\UI\ScoreLabel.cs" />
+    <Compile Include="Assets\Scripts\UI\UIOnSelect.cs" />
     <Compile Include="Assets\Scripts\UI\UIPaddle.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanel.cs" />
     <Compile Include="Assets\Scripts\UI\UIPanelToggle.cs" />

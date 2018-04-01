@@ -53,6 +53,9 @@ namespace Deflector {
 
         public void Play(AnimationClip clip) {
             anim = clip;
+            overrideController.GetOverrides(clipPairList);
+            clipPairList[0] = new KeyValuePair<AnimationClip, AnimationClip>(clipPairList[0].Key, anim);
+            overrideController.ApplyOverrides(clipPairList);
             Play();
         }
 
@@ -60,6 +63,9 @@ namespace Deflector {
             if (anim == null || anim.length <= 0f) {
                 return;
             }
+            animator.enabled = true;
+            isDone = false;
+            animator.Update(0.0f);
             SetNormalizedTime(time / anim.length);
         }
 

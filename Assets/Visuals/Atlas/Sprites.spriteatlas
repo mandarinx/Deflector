@@ -40,6 +40,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9e0f124731a7c4ae683f13186bed26c7, type: 3}
   - {fileID: 21300000, guid: 56294441df2c949768c115bc86752049, type: 3}
   - {fileID: 21300000, guid: 30268c4d625694341bb251c21ae95cb7, type: 3}
+  - {fileID: 21300000, guid: 1240fce0a0fdc4e6eaf30f3cd22f2d48, type: 3}
   - {fileID: 21300000, guid: 2f1b6f71c3af24b1396e06993c78eab9, type: 3}
   - {fileID: 21300000, guid: fbb933e8d51c14011bf27bfa06fd40c7, type: 3}
   - {fileID: 21300000, guid: d9590c168e8bb4f278f6804258c7b9f6, type: 3}
@@ -72,6 +73,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9a83de36b0ff84ab48664645cb01002a, type: 3}
   - {fileID: 21300000, guid: 4f657f1454480433d861992bbdbdd2c0, type: 3}
   - {fileID: 21300000, guid: 1521016fd953d430cb46e1b1e42680c0, type: 3}
+  - {fileID: 21300000, guid: b049b3057054349c79123771b295dfb7, type: 3}
   - {fileID: 21300022, guid: 783d19173a61d4cc9b990c4f44954094, type: 3}
   - {fileID: 21300020, guid: 783d19173a61d4cc9b990c4f44954094, type: 3}
   - {fileID: 21300012, guid: 783d19173a61d4cc9b990c4f44954094, type: 3}
@@ -111,6 +113,7 @@ SpriteAtlas:
   - Dots_Junction_T_02
   - Dots_Junction_T_03
   - Dots_Junction_T_01
+  - FrameFilled
   - Dots_Junction_X
   - Junction_X
   - Dots_H
@@ -143,6 +146,7 @@ SpriteAtlas:
   - Turn_01
   - Turn_03
   - Turn_02
+  - Frame
   - SpawnAnim_11
   - SpawnAnim_10
   - SpawnAnim_6
