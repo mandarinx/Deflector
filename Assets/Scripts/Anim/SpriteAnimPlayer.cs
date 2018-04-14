@@ -30,13 +30,13 @@ namespace Deflector {
         private void Awake() {
             animator = GetComponent<Animator>();
 
-            overrideController = new AnimatorOverrideController(sharedController.Controller);
-            clipPairList = new List<KeyValuePair<AnimationClip, AnimationClip>>();
-
+            overrideController = new AnimatorOverrideController {
+                runtimeAnimatorController = sharedController.Controller
+            };
             animator.runtimeAnimatorController = overrideController;
+
+            clipPairList = new List<KeyValuePair<AnimationClip, AnimationClip>>();
             overrideController.GetOverrides(clipPairList);
-            clipPairList[0] = new KeyValuePair<AnimationClip, AnimationClip>(clipPairList[0].Key, anim);
-            overrideController.ApplyOverrides(clipPairList);
 
             if (playOnAwake) {
                 Play();
@@ -47,15 +47,17 @@ namespace Deflector {
         public void Play() {
             animator.enabled = true;
             isDone = false;
+            clipPairList[0] = new KeyValuePair<AnimationClip, AnimationClip>(clipPairList[0].Key, anim);
+            overrideController.ApplyOverrides(clipPairList);
             animator.Update(0.0f);
             Play(0, 0f);
+            animator.speed = 1f;
+            animator.Update(0.0f);
         }
 
         public void Play(AnimationClip clip) {
             anim = clip;
             overrideController.GetOverrides(clipPairList);
-            clipPairList[0] = new KeyValuePair<AnimationClip, AnimationClip>(clipPairList[0].Key, anim);
-            overrideController.ApplyOverrides(clipPairList);
             Play();
         }
 
@@ -67,6 +69,8 @@ namespace Deflector {
             isDone = false;
             animator.Update(0.0f);
             SetNormalizedTime(time / anim.length);
+            animator.speed = 1f;
+            animator.Update(0.0f);
         }
 
         public void Stop() {
