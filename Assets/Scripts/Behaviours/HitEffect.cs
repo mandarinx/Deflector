@@ -14,7 +14,7 @@ namespace Deflector {
         }
 
         public void Activate() {
-            anim.PlayFrom(0f);
+            anim.Play();
         }
 
         private void OnAnimDone(AnimationClip clip) {

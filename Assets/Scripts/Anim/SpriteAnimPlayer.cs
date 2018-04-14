@@ -50,7 +50,7 @@ namespace Deflector {
             clipPairList[0] = new KeyValuePair<AnimationClip, AnimationClip>(clipPairList[0].Key, anim);
             overrideController.ApplyOverrides(clipPairList);
             animator.Update(0.0f);
-            Play(0, 0f);
+            animator.Play(sharedController.StateName, 0, 0f);
             animator.speed = 1f;
             animator.Update(0.0f);
         }
@@ -61,29 +61,9 @@ namespace Deflector {
             Play();
         }
 
-        public void PlayFrom(float time) {
-            if (anim == null || anim.length <= 0f) {
-                return;
-            }
-            animator.enabled = true;
-            isDone = false;
-            animator.Update(0.0f);
-            SetNormalizedTime(time / anim.length);
-            animator.speed = 1f;
-            animator.Update(0.0f);
-        }
-
         public void Stop() {
             animator.enabled = false;
         }
-
-        private void Play(int layer, float normalizedTime) {
-            animator.Play(sharedController.StateName, layer, normalizedTime);
-        }
-
-        private void SetNormalizedTime(float ratio) {
-            Play(0, anim.isLooping ? Mathf.Repeat(ratio, 1) : Mathf.Clamp01(ratio));
-    	}
 
         public void OnDone(UnityAction<AnimationClip> cb) {
             onAnimDone.RemoveListener(cb);
