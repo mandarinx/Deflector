@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: AudioPaddleAdded
   m_EditorClassIdentifier: 
   audioItems:
-  - clip: {fileID: 8300000, guid: 2b17cb68a6c8cc84a8bae0b83b8cd695, type: 3}
+  - clip: {fileID: 8300000, guid: 83da66f2c23ad07429da988aa291e995, type: 3}
     weight: 1
     pitchRange: {x: 1, y: 1}
   weightSum: 1

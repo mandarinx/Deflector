@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Name: AudioExplosions
   m_EditorClassIdentifier: 
   audioItems:
-  - clip: {fileID: 8300000, guid: ea9bdfa0796bb734d901df5290f10cfc, type: 3}
+  - clip: {fileID: 8300000, guid: 2ef897bd356f5c44c832e80fca25a81a, type: 3}
     weight: 1
     pitchRange: {x: 0.8073085, y: 1.2308965}
-  weightSum: 1
+  - clip: {fileID: 8300000, guid: e8f06ef6827c2ee44ab2342a2cdf9e44, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  - clip: {fileID: 8300000, guid: 7fc9687438e69e1419aff87a662d9cba, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  weightSum: 3

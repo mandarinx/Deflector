@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: AudioLevelExit
   m_EditorClassIdentifier: 
   audioItems:
-  - clip: {fileID: 8300000, guid: e04a8ef9c5242e24f8f309abf1d5ec69, type: 3}
+  - clip: {fileID: 8300000, guid: f4d9ccf591026334e82f56c99fd9f681, type: 3}
     weight: 1
     pitchRange: {x: 1, y: 1}
   weightSum: 1

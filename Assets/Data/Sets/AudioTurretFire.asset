@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Name: AudioTurretFire
   m_EditorClassIdentifier: 
   audioItems:
-  - clip: {fileID: 8300000, guid: 9dd6f325ab9c6eb4c993d038eede82a1, type: 3}
+  - clip: {fileID: 8300000, guid: a44ccdf84bc400f488f1ef223489faeb, type: 3}
     weight: 1
     pitchRange: {x: 0.8, y: 1.2}
-  - clip: {fileID: 8300000, guid: 77454ed15d92793438cd8eeb4ca02bca, type: 3}
+  - clip: {fileID: 8300000, guid: a44ccdf84bc400f488f1ef223489faeb, type: 3}
     weight: 1
     pitchRange: {x: 0.8, y: 1.2}
-  - clip: {fileID: 8300000, guid: acc9e64390c90644fa4c78ca5060eda0, type: 3}
+  - clip: {fileID: 8300000, guid: a44ccdf84bc400f488f1ef223489faeb, type: 3}
     weight: 1
     pitchRange: {x: 0.8, y: 1.2}
-  - clip: {fileID: 8300000, guid: 75eb59fd1bae3d44d987593d2b57c5a8, type: 3}
+  - clip: {fileID: 8300000, guid: a44ccdf84bc400f488f1ef223489faeb, type: 3}
     weight: 1
     pitchRange: {x: 0.8, y: 1.2}
   weightSum: 4

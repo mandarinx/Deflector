@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: AudioUIButtonPress
   m_EditorClassIdentifier: 
   audioItems:
-  - clip: {fileID: 8300000, guid: 79d686dc7f909834691f6923ed48c64d, type: 3}
+  - clip: {fileID: 8300000, guid: 7bef57f7630a9364eb7cb762b0a4edeb, type: 3}
     weight: 1
     pitchRange: {x: 1, y: 1}
   weightSum: 1

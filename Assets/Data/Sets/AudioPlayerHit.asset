@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: AudioPlayerHit
   m_EditorClassIdentifier: 
   audioItems:
-  - clip: {fileID: 8300000, guid: 49148fc9d244c90419e21d53f91f0614, type: 3}
+  - clip: {fileID: 8300000, guid: 55a7e7f1fddb50e4ab1fa80573356df7, type: 3}
     weight: 1
     pitchRange: {x: 0.80111873, y: 1.149161}
   weightSum: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: AudioPlayerDiedScream
   m_EditorClassIdentifier: 
   audioItems:
-  - clip: {fileID: 8300000, guid: 762a5c5c8d2b2bb4cabe7d61651f3867, type: 3}
+  - clip: {fileID: 8300000, guid: a5bf24664119d304b97faf99af413b8c, type: 3}
     weight: 1
     pitchRange: {x: 0.8756992, y: 1.149161}
   weightSum: 1
