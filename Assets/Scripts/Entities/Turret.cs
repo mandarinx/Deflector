@@ -8,6 +8,8 @@ namespace Deflector {
         [SerializeField]
         private SpriteAnimPlayer anim;
         [SerializeField]
+        private GameObjectEvent  onSpawn;
+        [SerializeField]
         private GameObjectEvent  onDespawn;
         [SerializeField]
         private Vector3Event     onFire;
@@ -21,6 +23,7 @@ namespace Deflector {
         }
 
         private IEnumerator Fire() {
+            onSpawn.Invoke(gameObject);
             anim.Play();
             yield return new WaitForSeconds(1.8f);
             onFire.Invoke(transform.position);
