@@ -8,7 +8,7 @@ namespace Deflector {
         public Action         onGameWon = () => { };
         public Action         onGameLost = () => { };
 
-        public virtual void Reset() {}
+        public virtual void Deactivate() {}
         public virtual void Activate() {}
         public virtual void Validate() {}
 

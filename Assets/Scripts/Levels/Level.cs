@@ -9,13 +9,9 @@ namespace Deflector {
         [SerializeField]
         private string     scenePath;
         [SerializeField]
-        private GameMode[] gameModes;
+        private GameMode   gameMode;
 
-        public int         NumGameModes => gameModes.Length;
-        public string      ScenePath    => scenePath;
-
-        public GameMode GetGameMode(int n) {
-            return gameModes[n];
-        }
+        public string      ScenePath => scenePath;
+        public GameMode    GameMode  => gameMode;
     }
 }

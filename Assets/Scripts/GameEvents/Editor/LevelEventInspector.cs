@@ -7,6 +7,11 @@ namespace GameEvents {
     public class LevelEventInspector : Editor {
 
         private Level payload;
+        private EventBindings<LevelEventListener, LevelEvent> bindings;
+
+        private void OnEnable() {
+            bindings = new EventBindings<LevelEventListener, LevelEvent>(target as LevelEvent);
+        }
 
         public override void OnInspectorGUI() {
             base.OnInspectorGUI();
@@ -17,6 +22,8 @@ namespace GameEvents {
             if (GUILayout.Button("Invoke")) {
                 (target as LevelEvent)?.Invoke(payload);
             }
+
+            bindings.OnInspectorGUI();
         }
     }
 }

@@ -19,6 +19,18 @@ namespace Deflector {
             levelLoader = GetComponent<LevelLoader>();
         }
 
+        /// <summary>
+        /// Handler for onGameReset
+        /// </summary>
+        [UsedImplicitly]
+        public void ResetAndUnloadCurrentLevel() {
+            if (curLevel >= 0) {
+                levelLoader.Unload(curLevel);
+            }
+            curLevel = -1;
+        }
+
+        [UsedImplicitly]
         public void LoadLevel(int n) {
             int nextLevel = Mathf.Clamp(n, 0, levelLoader.Count);
             if (curLevel != nextLevel &&
@@ -56,7 +68,9 @@ namespace Deflector {
 
         private IEnumerator DispatchOnLevelLoaded(Level level) {
             yield return null;
-            onLevelLoaded?.Invoke(level);
+            if (onLevelLoaded != null) {
+                onLevelLoaded.Invoke(level);
+            }
         }
     }
 }

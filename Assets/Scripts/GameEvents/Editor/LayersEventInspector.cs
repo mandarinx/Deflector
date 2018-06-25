@@ -7,6 +7,11 @@ namespace GameEvents {
     public class LayersEventInspector : Editor {
 
         private Layers payload;
+        private EventBindings<LayersEventListener, LayersEvent> bindings;
+
+        private void OnEnable() {
+            bindings = new EventBindings<LayersEventListener, LayersEvent>(target as LayersEvent);
+        }
 
         public override void OnInspectorGUI() {
             base.OnInspectorGUI();
@@ -17,6 +22,8 @@ namespace GameEvents {
             if (GUILayout.Button("Invoke")) {
                 (target as LayersEvent)?.Invoke(payload);
             }
+
+            bindings.OnInspectorGUI();
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Deflector.Modes {
             onPlayerDied.RegisterCallback(OnPlayerDied);
         }
 
-        public override void Reset() {
+        public override void Deactivate() {
             onChainReaction.UnregisterCallback(OnChainReaction);
             onPlayerDied.UnregisterCallback(OnPlayerDied);
         }

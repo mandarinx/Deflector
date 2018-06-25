@@ -38,7 +38,7 @@ namespace Deflector.Modes {
             onPlayerDied.RegisterCallback(OnPlayerDied);
         }
 
-        public override void Reset() {
+        public override void Deactivate() {
             onMultiplierIncreasedAt.RemoveCallback(OnMultiplierIncreasedAt);
             onPlayerDied.UnregisterCallback(OnPlayerDied);
         }

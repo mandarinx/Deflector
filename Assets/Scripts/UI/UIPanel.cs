@@ -6,35 +6,35 @@ namespace Deflector {
     public class UIPanel : MonoBehaviour {
 
         [SerializeField]
-        private UIPanelLink     panelLink;
+        private UIPanelRef      panelRef;
         [SerializeField]
         private UnityEvent      onEnterPanel;
         [SerializeField]
         private UnityEvent      onClosePanel;
+        [SerializeField]
+        private MenuOption[]    menuOptions;
+        [SerializeField]
+        private UIPanelRef[]    panelRefs;
 
         private Canvas          canvas;
 
         private void Awake() {
             canvas = GetComponent<Canvas>();
-            panelLink.SetPanel(this);
+            panelRef.SetPanel(this);
         }
 
-        public void Hide() {
-            canvas.enabled = false;
-        }
-
-        public void Show() {
+        public void Open() {
             canvas.enabled = true;
-        }
-
-        public virtual void Open() {
-            Show();
             onEnterPanel.Invoke();
         }
 
-        public virtual void Close() {
-            Hide();
+        public void Close() {
+            canvas.enabled = false;
             onClosePanel.Invoke();
         }
+
+        public MenuOption[] MenuOptions => menuOptions;
+        public UIPanelRef[] PanelRefs => panelRefs;
+        public UIPanelRef   PanelRef => panelRef;
     }
 }

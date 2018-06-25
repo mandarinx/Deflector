@@ -39,7 +39,7 @@ namespace Deflector.Modes {
             onPlayerDied.RegisterCallback(OnPlayerDied);
         }
 
-        public override void Reset() {
+        public override void Deactivate() {
             numDespawned = 0;
             deadPlayers = 0;
             onProjectileDespawned.UnregisterCallback(OnProjectileDespawned);

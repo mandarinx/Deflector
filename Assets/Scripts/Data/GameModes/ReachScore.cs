@@ -40,7 +40,7 @@ namespace Deflector.Modes {
             onPlayerDied.RegisterCallback(OnPlayerDied);
         }
 
-        public override void Reset() {
+        public override void Deactivate() {
             scoreAsset.RemoveChangeCallback(OnScoreChanged);
             onPlayerDied.UnregisterCallback(OnPlayerDied);
         }

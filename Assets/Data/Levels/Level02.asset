@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Name: Level02
   m_EditorClassIdentifier: 
   scenePath: Assets/Scenes/Level02
-  gameModes:
-  - {fileID: 11400000, guid: 1ce3b5f4c17dc4729b54098dc50f6c23, type: 2}
-  - {fileID: 11400000, guid: 559d3ace69fc04bf8bb6bdfaa35fdd9c, type: 2}
+  gameMode: {fileID: 11400000, guid: 1ce3b5f4c17dc4729b54098dc50f6c23, type: 2}

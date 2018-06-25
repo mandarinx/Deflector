@@ -37,7 +37,7 @@ public class CreateGameEvent : ScriptableWizard {
     // Tag
     // Text
     // Toggle (bool)
-    
+
     [MenuItem("Tools/Hyper Games/Create Game Event")]
     public static void Create() {
         DisplayWizard<CreateGameEvent>("Create a Game Event", "Create");
@@ -48,14 +48,14 @@ public class CreateGameEvent : ScriptableWizard {
             Debug.LogError("Cannot create event class with empty name.");
             return;
         }
-        
+
         string eventClassName = $"{eventClassType}Event";
-        string eventListener = $"{eventClassName}Listener";
-        string eventInspector = $"{eventClassName}Inspector";
+        string eventListenerClassName = $"{eventClassName}Listener";
+        string eventInspectorClassName = $"{eventClassName}Inspector";
 
         ClassPrinter gameEvent = new ClassPrinter()
             .Lines(
-                "using System.Collections.Generic;", 
+                "using System.Collections.Generic;",
                 "using UnityEngine;")
             .EmptyLine();
 
@@ -65,13 +65,13 @@ public class CreateGameEvent : ScriptableWizard {
                 .EmptyLine()
                 .Indent();
         }
-        
+
         gameEvent
             .Lines(
                 $"[CreateAssetMenu(menuName = \"Game Events/{eventClassType}\", fileName = \"{eventClassName}.asset\")]",
                 $"public class {eventClassName} : ScriptableObject {{")
             .Indent()
-                .Line($"private readonly List<{eventListener}> eventListeners = new List<{eventListener}>();")
+                .Line($"private readonly List<{eventListenerClassName}> eventListeners = new List<{eventListenerClassName}>();")
                 .EmptyLine()
 
                 .Line($"public void Invoke({payloadClassType} payload) {{")
@@ -86,7 +86,7 @@ public class CreateGameEvent : ScriptableWizard {
 
                 .EmptyLine()
 
-                .Line($"public void AddListener({eventListener} listener) {{")
+                .Line($"public void AddListener({eventListenerClassName} listener) {{")
                 .Indent()
                     .Line("if (!eventListeners.Contains(listener)) {")
                     .Indent()
@@ -98,7 +98,7 @@ public class CreateGameEvent : ScriptableWizard {
 
                 .EmptyLine()
 
-                .Line($"public void RemoveListener({eventListener} listener) {{")
+                .Line($"public void RemoveListener({eventListenerClassName} listener) {{")
                 .Indent()
                     .Line("eventListeners.Remove(listener);")
                 .Outdent()
@@ -106,7 +106,7 @@ public class CreateGameEvent : ScriptableWizard {
 
             .Outdent()
             .Line("}");
-            
+
         if (!string.IsNullOrEmpty(eventNamespace)) {
             gameEvent
                 .Outdent()
@@ -132,10 +132,10 @@ public class CreateGameEvent : ScriptableWizard {
                 "[Serializable]",
                 $"public class Unity{eventClassName} : UnityEvent<{payloadClassType}> {{}}")
             .EmptyLine()
-            
+
             .Lines(
-                $"[AddComponentMenu(\"Game Events/{eventListener}\")]",
-                $"public class {eventListener} : MonoBehaviour {{")
+                $"[AddComponentMenu(\"Game Events/{eventListenerClassName}\")]",
+                $"public class {eventListenerClassName} : MonoBehaviour {{")
             .EmptyLine()
             .Indent()
 
@@ -143,30 +143,30 @@ public class CreateGameEvent : ScriptableWizard {
                     $"public {eventClassName} evt;",
                     $"public Unity{eventClassName} response;")
                 .EmptyLine()
-                
+
                 .Line("private void OnEnable() {")
                 .Indent()
                     .Line("evt.AddListener(this);")
                 .Outdent()
                 .Line("}")
                 .EmptyLine()
-                
+
                 .Line("private void OnDisable() {")
                 .Indent()
                     .Line("evt.RemoveListener(this);")
                 .Outdent()
                 .Line("}")
                 .EmptyLine()
-                
+
                 .Line($"public void OnEventInvoked({payloadClassType} payload) {{")
                 .Indent()
                     .Line("response.Invoke(payload);")
                 .Outdent()
                 .Line("}")
-        
+
             .Outdent()
             .Line("}");
-            
+
         if (!string.IsNullOrEmpty(eventNamespace)) {
             gameEventListener
                 .Outdent()
@@ -184,38 +184,47 @@ public class CreateGameEvent : ScriptableWizard {
                 .Line($"namespace {eventNamespace} {{")
                 .Indent();
         }
-        
+
         inspector
             .Lines(
                 $"[CustomEditor(typeof({eventClassName}))]",
-                $"public class {eventInspector} : Editor {{")
+                $"public class {eventInspectorClassName} : Editor {{")
             .EmptyLine()
             .Indent()
-                
-                .Line($"private {payloadClassType} payload;")
+
+                .Lines(
+                    $"private {payloadClassType} payload;",
+                    $"private EventBindings<{eventListenerClassName}, {eventClassName}> bindings;")
                 .EmptyLine()
-                
+
+                .Line("private void OnEnable() {")
+                    .Indent()
+                    .Line($"bindings = new EventBindings<{eventListenerClassName}, {eventClassName}>(target as {eventClassName});")
+                    .Outdent()
+                .Line("}")
+
                 .Line("public override void OnInspectorGUI() {")
                     .Indent()
-                    
+
                     .Lines(
                         "base.OnInspectorGUI();",
                         "GUI.enabled = Application.isPlaying;",
                         GetInspectorField(payloadClassType),
                         "if (GUILayout.Button(\"Invoke\")) {")
                         .Indent()
-                            
+
                             .Line($"(target as {eventClassName})?.Invoke(payload);")
-                            
+
                         .Outdent()
                         .Line("}")
-                    
+
+                    .Line("bindings.OnInspectorGUI();")
                     .Outdent()
                 .Line("}")
-                
+
             .Outdent()
             .Line("}");
-            
+
         if (!string.IsNullOrEmpty(eventNamespace)) {
             inspector
                 .Outdent()
@@ -225,19 +234,19 @@ public class CreateGameEvent : ScriptableWizard {
         if (!Directory.Exists(GetSelectedFolderFull() + "/Editor")) {
             AssetDatabase.CreateFolder(GetSelectedFolderRel(), "Editor");
         }
-        
+
         File.WriteAllText(GetSelectedFolderRel() + $"/{eventClassName}.cs", gameEvent.ToString());
-        File.WriteAllText(GetSelectedFolderRel() + $"/{eventListener}.cs", gameEventListener.ToString());
-        File.WriteAllText(GetSelectedFolderRel() + $"/Editor/{eventInspector}.cs", inspector.ToString());
+        File.WriteAllText(GetSelectedFolderRel() + $"/{eventListenerClassName}.cs", gameEventListener.ToString());
+        File.WriteAllText(GetSelectedFolderRel() + $"/Editor/{eventInspectorClassName}.cs", inspector.ToString());
 
         AssetDatabase.Refresh();
     }
-    
+
     private void OnWizardUpdate() {
         helpString = "Select destination folder in Project view. Editor scripts will be placed in an Editor sub folder. "+
         "Currently selected folder is " + GetSelectedFolderRel();
     }
-    
+
     private static string GetSelectedFolderRel() {
         string path = "Assets";
         foreach (Object obj in Selection.GetFiltered(typeof(Object), SelectionMode.Assets)) {
@@ -249,7 +258,7 @@ public class CreateGameEvent : ScriptableWizard {
         }
         return path;
     }
-    
+
     private static string GetSelectedFolderFull() {
         string path = Application.dataPath.Replace("Assets", "");
         foreach (Object obj in Selection.GetFiltered(typeof(Object), SelectionMode.Assets)) {
@@ -269,7 +278,7 @@ public class CreateGameEvent : ScriptableWizard {
 }
 
 public class ClassPrinter {
-    
+
     private const string tab = "    ";
     private int indent = 0;
 

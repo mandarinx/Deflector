@@ -24,6 +24,7 @@ namespace Deflector {
 
         public void Hide() {
             sr.enabled = false;
+            overlapped.Clear();
         }
 
         public void Show() {

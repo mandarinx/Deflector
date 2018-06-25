@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 114566007884782262}
+  onSpawn: {fileID: 11400000, guid: 2033ac64116484d7c861587846a367d4, type: 2}
   onDespawn: {fileID: 11400000, guid: ce6b4892b4e6e4f43ae86e2c775114fe, type: 2}
   onFire: {fileID: 11400000, guid: 77d19a1d6ec5a4105bdfd604d72c7d4e, type: 2}
 --- !u!114 &114566007884782262

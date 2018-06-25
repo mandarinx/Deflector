@@ -7,6 +7,11 @@ namespace GameEvents {
 
         private Vector3 payload1;
         private int payload2;
+        private EventBindings<Vector3AndIntEventListener, Vector3AndIntEvent> bindings;
+
+        private void OnEnable() {
+            bindings = new EventBindings<Vector3AndIntEventListener, Vector3AndIntEvent>(target as Vector3AndIntEvent);
+        }
 
         public override void OnInspectorGUI() {
             base.OnInspectorGUI();
@@ -16,6 +21,7 @@ namespace GameEvents {
             if (GUILayout.Button("Invoke")) {
                 (target as Vector3AndIntEvent)?.Invoke(payload1, payload2);
             }
+            bindings.OnInspectorGUI();
         }
     }
 }

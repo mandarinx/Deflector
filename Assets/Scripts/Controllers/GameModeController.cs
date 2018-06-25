@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using GameEvents;
+﻿using GameEvents;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -7,56 +6,34 @@ namespace Deflector {
     public class GameModeController : MonoBehaviour, IOnUpdate {
 
         [SerializeField]
-        private GameEvent                       onGameWon;
+        private GameEvent   onGameWon;
         [SerializeField]
-        private GameEvent                       onGameLost;
+        private GameEvent   onGameLost;
         [SerializeField]
-        private StringEvent                     onGameModeDescription;
+        private StringEvent onGameModeDescription;
         [SerializeField]
-        private UHooks                          hooks;
+        private UHooks      hooks;
 
-        private GameMode                        gameMode;
-        private Level                           curLevel;
-        private readonly Dictionary<Level, int> playCounts = new Dictionary<Level, int>();
+        private GameMode    gameMode;
 
         /// <summary>
         /// Handler for onLevelLoaded
         /// </summary>
-        /// <param name="level"></param>
         [UsedImplicitly]
         public void PrepareGameMode(Level level) {
-            curLevel = level;
-
-            int playCount;
-            if (!playCounts.TryGetValue(curLevel, out playCount)) {
-                playCounts.Add(level, 0);
-            } else {
-                playCounts[curLevel] = 0;
-                playCount = 0;
-            }
-
-            int m = playCount % curLevel.NumGameModes;
-            gameMode = curLevel.GetGameMode(m);
+            gameMode = level.GameMode;
             gameMode.onGameLost = OnGameLost;
             gameMode.onGameWon = OnGameWon;
-            onGameModeDescription?.Invoke(gameMode.title);
+            onGameModeDescription.Invoke(gameMode.title);
         }
 
         /// <summary>
         /// Handler for onGameReady
         /// </summary>
         [UsedImplicitly]
-        public void StartCurrentGameMode() {
+        public void ActivateGameMode() {
             gameMode.Activate();
             hooks.AddOnUpdate(this);
-        }
-
-        /// <summary>
-        /// Handler for onLevelWillLoad
-        /// </summary>
-        [UsedImplicitly]
-        public void ResetCurrentGameMode() {
-            gameMode?.Reset();
         }
 
         public void UOnUpdate() {
@@ -64,19 +41,15 @@ namespace Deflector {
         }
 
         private void OnGameWon() {
-            if (playCounts.ContainsKey(curLevel)) {
-                playCounts[curLevel] += 1;
-            }
             hooks.RemoveOnUpdate(this);
             onGameWon.Invoke();
+            gameMode.Deactivate();
         }
 
         private void OnGameLost() {
-            if (playCounts.ContainsKey(curLevel)) {
-                playCounts[curLevel] = 0;
-            }
             hooks.RemoveOnUpdate(this);
             onGameLost.Invoke();
+            gameMode.Deactivate();
         }
     }
 }

@@ -40,6 +40,7 @@ namespace Deflector {
         private Vector2                   hitNormal;
         private Rigidbody2D               rb;
         private ParticleSystem            ps;
+        private CircleCollider2D          coll;
         private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[2];
 
         public bool                       IsExploding => (state & State.EXPLODING) > 0;
@@ -49,6 +50,7 @@ namespace Deflector {
         private void Awake() {
             rb = GetComponent<Rigidbody2D>();
             ps = GetComponent<ParticleSystem>();
+            coll = GetComponent<CircleCollider2D>();
             colorsFlashing = new Gradient {
                 colorKeys = new[] {
                     new GradientColorKey(Color.white, 0f),
@@ -63,9 +65,11 @@ namespace Deflector {
             angleIndex = Random.Range(0, 4) * 2 + 1;
             angle = Angles.GetAngle(angleIndex);
             SetPSysColorLifetime(ps, colorsNeutral);
+            coll.enabled = true;
         }
 
         private void OnDisable() {
+            coll.enabled = false;
             StopAllCoroutines();
         }
 
