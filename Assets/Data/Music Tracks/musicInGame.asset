@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be3bf7a8859b442879f5eeac1f73ca5c, type: 3}
+  m_Name: musicInGame
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: c7d75a35a8b07dc47acc2ad3edf54651, type: 3}
+  mixerGroup: {fileID: 243838433738774026, guid: fe6d3ac65c6eb4d7b92d4221be709ab6,
+    type: 2}
+  snapshot: InGame
+  playOnFadeIn: 0
