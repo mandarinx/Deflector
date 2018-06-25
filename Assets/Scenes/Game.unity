@@ -349,13 +349,7 @@ Prefab:
       propertyPath: panelRoot
       value: 
       objectReference: {fileID: 1320657793}
-    - target: {fileID: 114694406322424706, guid: 88d36ade11bf14a29a6e119d54cff91a,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114694406322424706, guid: 88d36ade11bf14a29a6e119d54cff91a, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88d36ade11bf14a29a6e119d54cff91a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &307494933 stripped

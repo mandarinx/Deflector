@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using GameEvents;
 using UnityEngine.Assertions;
 
 namespace Deflector {
@@ -14,6 +15,10 @@ namespace Deflector {
         private UHooks                            uHooks;
         [SerializeField]
         private Transform                         panelRoot;
+        [SerializeField]
+        private GameEvent                         onMenuOptionSelected;
+        [SerializeField]
+        private GameEvent                         onMenuOptionClicked;
 
         private int[]                             panelIds;
         private readonly Dictionary<int, UIPanel> panels = new Dictionary<int, UIPanel>();
@@ -91,6 +96,9 @@ namespace Deflector {
             }
             n = Mathf.Clamp(n, 0, currentOptions.Count);
             currentOptions[n].Select();
+            if (onMenuOptionSelected != null) {
+                onMenuOptionSelected.Invoke();
+            }
         }
 
         private void DeselectMenuOption(int n) {
@@ -131,6 +139,9 @@ namespace Deflector {
                     return;
                 }
                 opt.Click();
+                if (onMenuOptionClicked != null) {
+                    onMenuOptionClicked.Invoke();
+                }
                 UIPanelRef next = currentPanelRefs[currentOption];
                 if (next == nonePanel) {
                     ClosePanel(currentPanelInstanceId);

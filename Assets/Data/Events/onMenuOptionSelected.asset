@@ -9,5 +9,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85f284975f38a46209bdd5a3b7d80ee5, type: 3}
-  m_Name: onUIButtonPress
+  m_Name: onMenuOptionSelected
   m_EditorClassIdentifier: 

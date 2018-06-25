@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4033402068350050}
   - component: {fileID: 114367891520103244}
-  - component: {fileID: 114694406322424706}
   - component: {fileID: 114354546271323310}
   - component: {fileID: 114297124287047496}
   m_Layer: 0
@@ -99,31 +98,7 @@ MonoBehaviour:
   nonePanel: {fileID: 11400000, guid: e8ccc3fe98441482ab6425d3606b5d23, type: 2}
   uHooks: {fileID: 0}
   panelRoot: {fileID: 0}
---- !u!114 &114694406322424706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1791061751336830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4d968e32dad4479911be7dacf28816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: d79e6f162f30d42318358d92ee6d2420, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 430c8140d778443739ffc61291a9ff80, type: 2}
-        m_MethodName: Invoke
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  onMenuOptionSelected: {fileID: 11400000, guid: f9a5726f7c6e540ab85fb214e741226e,
+    type: 2}
+  onMenuOptionClicked: {fileID: 11400000, guid: e0b0c384e36074d3a8a3a647a5669855,
+    type: 2}
