@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be32845a35e9467ab7637e5a70889f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cutoff: {fileID: 11400000, guid: 5a629578cba3d48c39831c77d02622cf, type: 2}
   duration: 0.75
   musicPlayer: {fileID: 839399341}
 --- !u!1 &353403405
@@ -534,6 +535,7 @@ GameObject:
   - component: {fileID: 751006005}
   - component: {fileID: 751006004}
   - component: {fileID: 751006007}
+  - component: {fileID: 751006008}
   m_Layer: 5
   m_Name: EnterGame
   m_TagString: Untagged
@@ -610,6 +612,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 751006008}
+        m_MethodName: Fade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &751006005
@@ -659,6 +672,20 @@ MonoBehaviour:
   track: {fileID: 11400000, guid: e01eeb5ec364a4b2dbbeaea1292c2cdc, type: 2}
   fadeDuration: 1
   musicPlayer: {fileID: 839399341}
+--- !u!114 &751006008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 751006002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be32845a35e9467ab7637e5a70889f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutoff: {fileID: 11400000, guid: dedf944889c674605b4209850529b31b, type: 2}
+  duration: 0
+  musicPlayer: {fileID: 839399341}
 --- !u!1 &839399338
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,9 +730,6 @@ MonoBehaviour:
   tracks:
   - {fileID: 11400000, guid: e01eeb5ec364a4b2dbbeaea1292c2cdc, type: 2}
   - {fileID: 11400000, guid: f435e50de1306498e80fe9c113c62294, type: 2}
-  lowPassCutOff:
-  - 5000
-  - 500
   lowPassName: Muffle
 --- !u!1 &1269979168
 GameObject:
@@ -1022,7 +1046,6 @@ GameObject:
   - component: {fileID: 1764556998}
   - component: {fileID: 1764556997}
   - component: {fileID: 1764557000}
-  - component: {fileID: 1764557001}
   m_Layer: 5
   m_Name: BtnStartGame
   m_TagString: Untagged
@@ -1088,17 +1111,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1764557001}
-        m_MethodName: Fade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1764557000}
         m_MethodName: Play
         m_Mode: 1
@@ -1158,19 +1170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   track: {fileID: 11400000, guid: f435e50de1306498e80fe9c113c62294, type: 2}
   fadeDuration: 1
-  musicPlayer: {fileID: 839399341}
---- !u!114 &1764557001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1764556995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6be32845a35e9467ab7637e5a70889f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 0.75
   musicPlayer: {fileID: 839399341}
 --- !u!1 &1778107591
 GameObject:
@@ -1404,6 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be32845a35e9467ab7637e5a70889f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cutoff: {fileID: 11400000, guid: dedf944889c674605b4209850529b31b, type: 2}
   duration: 0.75
   musicPlayer: {fileID: 839399341}
 --- !u!1 &2070996517

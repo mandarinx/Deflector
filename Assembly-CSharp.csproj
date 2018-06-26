@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Controllers\UIController.cs" />
     <Compile Include="Assets\Scripts\Data\AudioItem.cs" />
     <Compile Include="Assets\Scripts\Data\ColorAsset.cs" />
+    <Compile Include="Assets\Scripts\Data\FloatAsset.cs" />
     <Compile Include="Assets\Scripts\Data\GameMode.cs" />
     <Compile Include="Assets\Scripts\Data\GameModes\ChainReaction.cs" />
     <Compile Include="Assets\Scripts\Data\GameModes\DestroyProjectile.cs" />

@@ -12,12 +12,9 @@ namespace Deflector {
         [SerializeField]
         private MusicTrack[]  tracks;
         [SerializeField]
-        private float[]       lowPassCutOff;
-        [SerializeField]
         private string        lowPassName;
 
         private AudioSource[] sources;
-        private int           curCutOff;
 
         private void Awake() {
             sources = new AudioSource[tracks.Length];
@@ -27,10 +24,6 @@ namespace Deflector {
                 sources[i].outputAudioMixerGroup = tracks[i].MixerGroup;
                 sources[i].playOnAwake = false;
             }
-        }
-
-        private void Start() {
-            FadeLowPassCutOff(0f);
         }
 
         public void PlayTrack(MusicTrack track, float duration) {
@@ -53,9 +46,8 @@ namespace Deflector {
             sources[t].Play();
         }
 
-        public void FadeLowPassCutOff(float duration) {
-            StartCoroutine(FadeFloat(lowPassCutOff[curCutOff], duration));
-            curCutOff = ++curCutOff % lowPassCutOff.Length;
+        public void FadeLowPassCutOff(FloatAsset cutoff, float duration) {
+            StartCoroutine(FadeFloat(cutoff.Value, duration));
         }
 
         private IEnumerator FadeFloat(float target, float duration) {
