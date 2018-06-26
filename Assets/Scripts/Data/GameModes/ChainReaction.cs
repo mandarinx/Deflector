@@ -17,7 +17,7 @@ namespace Deflector.Modes {
         private int           numChainReactions;
         private int           deadPlayers;
 
-        public override string title => $"Cause {minChainReactions} chain reactions of explosions";
+        public override string title => $"Cause a chain reaction of {minChainReactions} explosions";
 
         public override void Validate() {
             // Prioritize game over

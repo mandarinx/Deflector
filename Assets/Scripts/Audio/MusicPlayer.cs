@@ -44,6 +44,7 @@ namespace Deflector {
             }
 
             sources[t].Play();
+            sources[t].loop = !track.RestartOnFadeIn;
         }
 
         public void FadeLowPassCutOff(FloatAsset cutoff, float duration) {

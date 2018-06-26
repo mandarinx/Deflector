@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraShakeConfig.cs" />
     <Compile Include="Assets\Scripts\Camera\PixelArtCamera.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CheatController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ExplosionController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameModeController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GibsController.cs" />

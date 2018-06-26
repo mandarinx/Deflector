@@ -12,18 +12,17 @@ namespace Deflector {
         [SerializeField]
         private Text       label;
         [SerializeField]
+        private ColorAsset defaultColor;
+        [SerializeField]
         private ColorAsset selectedColor;
         [SerializeField]
         private GameEvent  onClick;
 
-        private Color      defaultColor;
-
         private void Awake() {
             Assert.IsNotNull(selection, $"MenuOption {name} is missing a reference to the selection Image");
             Assert.IsNotNull(label, $"MenuOption {name} is missing a reference to the label");
+            Assert.IsNotNull(defaultColor, $"MenuOption {name} is missing a reference to a default color");
             Assert.IsNotNull(selectedColor, $"MenuOption {name} is missing a reference to a selection color");
-
-            defaultColor = label.color;
         }
 
         public void Select() {
@@ -33,7 +32,7 @@ namespace Deflector {
 
         public void Deselect() {
             selection.enabled = false;
-            label.color = defaultColor;
+            label.color = defaultColor.Color;
         }
 
         public void Click() {
