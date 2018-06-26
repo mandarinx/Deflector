@@ -32,6 +32,7 @@ namespace Deflector {
         public SpriteRenderer             shadow;
         public GameEvent                  onFootstep;
         public Vector3Event               onDiedAt;
+        public GameEvent                  onPaddleSwing;
 
         private Rigidbody2D               rb;
         private SpriteRenderer            sr;
@@ -125,6 +126,9 @@ namespace Deflector {
             // HitPoint
 
             if (Input.GetKeyDown(KeyCode.X)) {
+                if (onPaddleSwing != null) {
+                    onPaddleSwing.Invoke();
+                }
                 animPlayer.Play(animHit);
                 hitPoint.Hit(walkDir);
             }
