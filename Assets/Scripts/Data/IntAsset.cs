@@ -15,7 +15,7 @@ namespace Deflector {
 
         private Action<int> onValueChangedCallback = i => { };
 
-        public int value => curValue;
+        public int Value => curValue;
 
         private void OnEnable() {
             curValue = initValue;
@@ -27,7 +27,9 @@ namespace Deflector {
             if (!changed) {
                 return;
             }
-            onValueChanged?.Invoke(curValue);
+            if (onValueChanged != null) {
+                onValueChanged.Invoke(curValue);
+            }
             onValueChangedCallback.Invoke(curValue);
         }
 

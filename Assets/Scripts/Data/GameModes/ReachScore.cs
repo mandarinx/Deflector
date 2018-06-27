@@ -35,7 +35,7 @@ namespace Deflector.Modes {
         public override void Activate() {
             deadPlayers = 0;
             scoreIncrease = 0;
-            scoreInit = scoreAsset.value;
+            scoreInit = scoreAsset.Value;
             scoreAsset.AddChangeCallback(OnScoreChanged);
             onPlayerDied.RegisterCallback(OnPlayerDied);
         }

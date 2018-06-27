@@ -43,13 +43,13 @@ namespace Deflector {
                 return;
             }
 
-            score.SetValue(score.value + (explosionBaseScore * multiplier.value));
+            score.SetValue(score.Value + (explosionBaseScore * multiplier.Value));
 
             int increase = projectile.IsCharged &&
                            projectile.CompareTag("HitByExplosion") ? 1 : 0;
-            multiplier.SetValue(multiplier.value + increase);
+            multiplier.SetValue(multiplier.Value + increase);
             if (increase > 0) {
-                onMultiplierIncreasedAt.Invoke(projectileGO.transform.position, multiplier.value);
+                onMultiplierIncreasedAt.Invoke(projectileGO.transform.position, multiplier.Value);
             }
 
             if (cooldown != null) {
@@ -59,9 +59,9 @@ namespace Deflector {
         }
 
         private IEnumerator Cooldown() {
-            while (multiplier.value > 1) {
+            while (multiplier.Value > 1) {
                 yield return new WaitForSeconds(multiplierCooldown);
-                multiplier.SetValue(multiplier.value - 1);
+                multiplier.SetValue(multiplier.Value - 1);
                 onMultiplierDecreased.Invoke();
             }
         }

@@ -126,11 +126,11 @@ namespace Deflector {
             // HitPoint
 
             if (Input.GetKeyDown(KeyCode.X)) {
+                animPlayer.Play(animHit);
+                hitPoint.Hit(walkDir);
                 if (onPaddleSwing != null) {
                     onPaddleSwing.Invoke();
                 }
-                animPlayer.Play(animHit);
-                hitPoint.Hit(walkDir);
             }
 
             // Movement

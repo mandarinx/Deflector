@@ -635,6 +635,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114276525359763294, guid: 242409bea922448e2a947f8559372ba5,
+        type: 2}
+      propertyPath: mute
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 242409bea922448e2a947f8559372ba5, type: 2}
   m_IsPrefabParent: 0
@@ -1048,22 +1053,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114013520819932122, guid: aa87f282a081d4a4c97a023f7fa91abb,
+    - target: {fileID: 223381477070392832, guid: aa87f282a081d4a4c97a023f7fa91abb,
         type: 2}
-      propertyPath: musicPlayer
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 1659196322}
-    - target: {fileID: 114741658339676458, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: musicPlayer
-      value: 
-      objectReference: {fileID: 1659196322}
-    - target: {fileID: 114868623159318876, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: musicPlayer
-      value: 
-      objectReference: {fileID: 1659196322}
-    - target: {fileID: 114688966019125576, guid: aa87f282a081d4a4c97a023f7fa91abb,
+      objectReference: {fileID: 1629761231}
+    - target: {fileID: 114896036404628754, guid: aa87f282a081d4a4c97a023f7fa91abb,
         type: 2}
       propertyPath: musicPlayer
       value: 
@@ -1073,16 +1068,26 @@ Prefab:
       propertyPath: musicPlayer
       value: 
       objectReference: {fileID: 1659196322}
-    - target: {fileID: 114896036404628754, guid: aa87f282a081d4a4c97a023f7fa91abb,
+    - target: {fileID: 114688966019125576, guid: aa87f282a081d4a4c97a023f7fa91abb,
         type: 2}
       propertyPath: musicPlayer
       value: 
       objectReference: {fileID: 1659196322}
-    - target: {fileID: 223381477070392832, guid: aa87f282a081d4a4c97a023f7fa91abb,
+    - target: {fileID: 114868623159318876, guid: aa87f282a081d4a4c97a023f7fa91abb,
         type: 2}
-      propertyPath: m_Camera
+      propertyPath: musicPlayer
       value: 
-      objectReference: {fileID: 1629761231}
+      objectReference: {fileID: 1659196322}
+    - target: {fileID: 114741658339676458, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: musicPlayer
+      value: 
+      objectReference: {fileID: 1659196322}
+    - target: {fileID: 114013520819932122, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: musicPlayer
+      value: 
+      objectReference: {fileID: 1659196322}
     - target: {fileID: 1931506645437574, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}
       propertyPath: m_Name
       value: UIPanels

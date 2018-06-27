@@ -15,6 +15,10 @@ namespace Deflector {
             score.AddChangeCallback(OnScoreChanged);
         }
 
+        private void Start() {
+            OnScoreChanged(score.Value);
+        }
+
         private void OnScoreChanged(int value) {
             label.text = value.ToString("### ### ##0");
         }

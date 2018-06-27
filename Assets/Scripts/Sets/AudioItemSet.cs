@@ -16,6 +16,10 @@ namespace Deflector {
         }
 
         public AudioItem GetRandom() {
+            if (audioItems.Length == 0) {
+                return null;
+            }
+
 			float rnd = Random.value * weightSum;
 
 			for (int i = 0; i < audioItems.Length; ++i) {

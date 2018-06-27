@@ -13,6 +13,8 @@ namespace Deflector {
         private MusicTrack[]  tracks;
         [SerializeField]
         private string        lowPassName;
+        [SerializeField]
+        private bool          mute;
 
         private AudioSource[] sources;
 
@@ -27,6 +29,10 @@ namespace Deflector {
         }
 
         public void PlayTrack(MusicTrack track, float duration) {
+            if (mute) {
+                return;
+            }
+
             int t = Array.IndexOf(tracks, track);
             if (t < 0) {
                 return;

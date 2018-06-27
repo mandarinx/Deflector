@@ -67,6 +67,9 @@ namespace Deflector {
         }
 
         private void Play(AudioItem audioItem) {
+            if (audioItem == null) {
+                return;
+            }
             AudioSource source = GetNextAudioSource();
             if (source == null) {
                 return;
