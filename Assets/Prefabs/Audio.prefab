@@ -222,9 +222,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4381710541489086}
   - component: {fileID: 114708480597239754}
-  - component: {fileID: 114257325262407120}
+  - component: {fileID: 114197881131839820}
   m_Layer: 0
-  m_Name: TurretFire
+  m_Name: TurretSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -648,7 +648,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114257325262407120
+--- !u!114 &114197881131839820
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -656,11 +656,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1890083985655296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28084496a80494d728291c8ffc77d994, type: 3}
+  m_Script: {fileID: 11500000, guid: 40502709289fe49e3ac93115745917d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vector3Event: {fileID: 11400000, guid: 77d19a1d6ec5a4105bdfd604d72c7d4e, type: 2}
-  response:
+  Event: {fileID: 11400000, guid: 2033ac64116484d7c861587846a367d4, type: 2}
+  Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114708480597239754}
@@ -674,8 +674,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: GameEvents.UnityVector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    m_TypeName: GameEvents.UnityGameObjectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114276525359763294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -692,6 +692,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e01eeb5ec364a4b2dbbeaea1292c2cdc, type: 2}
   - {fileID: 11400000, guid: f435e50de1306498e80fe9c113c62294, type: 2}
   lowPassName: Muffle
+  mute: 1
 --- !u!114 &114283585848883140
 MonoBehaviour:
   m_ObjectHideFlags: 1

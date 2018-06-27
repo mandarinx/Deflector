@@ -9,19 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9024ae17e0ce84b8e8b319b2e0806609, type: 3}
-  m_Name: AudioTurretFire
+  m_Name: AudioTurretSpawn
   m_EditorClassIdentifier: 
   audioItems:
   - clip: {fileID: 8300000, guid: a44ccdf84bc400f488f1ef223489faeb, type: 3}
     weight: 1
     pitchRange: {x: 0.8, y: 1.2}
-  - clip: {fileID: 8300000, guid: a44ccdf84bc400f488f1ef223489faeb, type: 3}
-    weight: 1
-    pitchRange: {x: 0.8, y: 1.2}
-  - clip: {fileID: 8300000, guid: a44ccdf84bc400f488f1ef223489faeb, type: 3}
-    weight: 1
-    pitchRange: {x: 0.8, y: 1.2}
-  - clip: {fileID: 8300000, guid: a44ccdf84bc400f488f1ef223489faeb, type: 3}
-    weight: 1
-    pitchRange: {x: 0.8, y: 1.2}
-  weightSum: 4
+  weightSum: 1
