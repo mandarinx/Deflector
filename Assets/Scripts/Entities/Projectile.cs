@@ -150,7 +150,17 @@ namespace Deflector {
             rb.MovePosition(rb.position + GetVelocity() * Time.fixedDeltaTime);
         }
 
+        private Vector3 reflected;
+
         private void OnCollisionEnter2D(Collision2D collision) {
+            HandleCollision(collision);
+        }
+
+        private void OnCollisionStay2D(Collision2D collision) {
+            HandleCollision(collision);
+        }
+
+        private void HandleCollision(Collision2D collision) {
             if (!LayerMasks.LayerInMask(collision.gameObject.layer, hitLayer)) {
                 return;
             }
@@ -159,29 +169,10 @@ namespace Deflector {
                 return;
             }
 
-            angleIndex = DeflectAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
-            angle = Angles.GetAngle(angleIndex);
-        }
-
-        private void OnCollisionStay2D(Collision2D collision) {
-            if (!LayerMasks.LayerInMask(collision.gameObject.layer, hitLayer)) {
-                return;
-            }
-
-            // compare hit normals, if not the same, calc new angleindex
-            Vector2 normal;
-            if (!GetHitNormal(collision, out normal)) {
-                return;
-            }
-            if (normal == hitNormal) {
-                return;
-            }
-            int index = DeflectAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
-            if (index == angleIndex) {
-                return;
-            }
-            angleIndex = index;
-            angle = Angles.GetAngle(angleIndex);
+            reflected = Vector3.Reflect(GetVelocity(), hitNormal);
+            angleIndex = GetDiagonal(reflected);
+            angle = ((angleIndex * 90f) + 45f) * Mathf.Deg2Rad;
+            rb.position += GetVelocity() * Time.fixedDeltaTime * 2f;
         }
 
         private bool GetHitNormal(Collision2D collision, out Vector2 normal) {
@@ -193,63 +184,36 @@ namespace Deflector {
 
             normal = Vector2.zero;
             for (int i = 0; i < contacts; ++i) {
-                normal += contactPoints[i].normal.normalized;
+                normal += contactPoints[i].normal;
             }
+            normal.Normalize();
             return true;
         }
 
-        // TODO: Should be called something like DeflectAngleIndex
-        private static int DeflectAngleIndex(int angleIndex, Vector2 hitNormal, Vector2 velocity) {
-            float dot = Vector2.Dot(hitNormal, velocity);
-            //  1 = same direction
-            // -1 = opposite direction
-            //  0 = perpendicular
-
-            // Bounce back
-            if (dot < -0.995f) {
-                angleIndex += 4;
+        private static int GetDiagonal(Vector3 dir) {
+            float deg = (Mathf.Atan2(dir.y, dir.x) + Mathf.PI) * Mathf.Rad2Deg;
+            if (deg >= 0 && deg < 90) {
+                return 2;
             }
-
-            // Bounce to either side
-            if ((dot < +0.7853f && dot > +float.Epsilon) ||
-                (dot > -0.7853f && dot < -float.Epsilon)) {
-                Vector3 cross = Vector3.Cross(hitNormal, velocity).normalized;
-                // To right
-                if (cross == Vector3.back) {
-                    angleIndex += 2;
-                }
-                // To left
-                if (cross == Vector3.forward) {
-                    angleIndex -= 2;
-                }
+            if (deg >= 90 && deg < 180) {
+                return 3;
             }
-
-            // Follow the normal
-            if (dot >= -float.Epsilon &&
-                dot <= +float.Epsilon) {
-                // convert normal to angle index
-                angleIndex = Angles.GetAngleIndex(Angles.GetRadian(hitNormal));
+            if (deg >= 180 && deg < 270) {
+                return 0;
             }
-
-            // Follow the velocity
-            if (dot >= +0.7853f && dot <= 1f) {
-                // do nothing
-            }
-
-            angleIndex %= 8;
-            if (angleIndex < 0) {
-                angleIndex = 8 + angleIndex;
-            }
-
-            return angleIndex;
+            // when deg >= 270
+            return 1;
         }
 
         private Vector2 GetVelocity() {
-            return Angles.GetDirection(angle) * speed;
+            return Angles.GetDirection(angle).normalized * speed;
         }
 
-        private void OnDrawGizmosSelected() {
-            Gizmos.color = Color.green;
+        private void OnDrawGizmos() {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawRay(transform.position, reflected);
+
+            Gizmos.color = Color.red;
             Gizmos.DrawRay(transform.position, GetVelocity());
 
             Gizmos.color = Color.cyan;

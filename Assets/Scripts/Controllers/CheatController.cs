@@ -4,11 +4,12 @@ namespace Deflector {
 
     public class CheatController : MonoBehaviour {
 
-        public ProjectileController projectiles;
+        public Transform projectiles;
+        public Transform players;
 
         private void Update() {
             if (Input.GetKeyUp(KeyCode.V)) {
-                foreach (Transform child in projectiles.transform) {
+                foreach (Transform child in projectiles) {
                     Projectile p = child.gameObject.GetComponent<Projectile>();
                     if (p == null) {
                         continue;
@@ -22,7 +23,7 @@ namespace Deflector {
                 }
             }
             if (Input.GetKeyUp(KeyCode.C)) {
-                foreach (Transform child in projectiles.transform) {
+                foreach (Transform child in projectiles) {
                     Projectile p = child.gameObject.GetComponent<Projectile>();
                     if (p == null) {
                         continue;
@@ -40,7 +41,7 @@ namespace Deflector {
                 }
             }
             if (Input.GetKeyUp(KeyCode.B)) {
-                foreach (Transform child in projectiles.transform) {
+                foreach (Transform child in projectiles) {
                     Projectile p = child.gameObject.GetComponent<Projectile>();
                     if (p == null) {
                         continue;
@@ -53,6 +54,17 @@ namespace Deflector {
                     if (p.IsCharged) {
                         p.Hit(Random.Range(0,4));
                     }
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.I)) {
+                foreach (Transform child in players) {
+                    Immune i = child.gameObject.GetComponent<Immune>();
+                    if (i == null) {
+                        continue;
+                    }
+
+                    i.enabled = !i.enabled;
+                    Debug.Log($"{child.name} {(i.enabled ? "immune" : "no longer immune")}");
                 }
             }
         }

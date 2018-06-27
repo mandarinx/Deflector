@@ -284,7 +284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485a933d2f11641499b47e7b9a70748b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectiles: {fileID: 1290271338}
+  projectiles: {fileID: 400920022}
+  players: {fileID: 1700834805}
 --- !u!1001 &246933246
 Prefab:
   m_ObjectHideFlags: 0
@@ -919,12 +920,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0223038dadeac4f6ca5caead0a0718da, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1290271338 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114406091078340032, guid: 0223038dadeac4f6ca5caead0a0718da,
-    type: 2}
-  m_PrefabInternal: {fileID: 1290271337}
-  m_Script: {fileID: 11500000, guid: fe55c904d61934b2cbfca604ace7fa77, type: 3}
 --- !u!224 &1320657793 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224056464227970776, guid: aa87f282a081d4a4c97a023f7fa91abb,
