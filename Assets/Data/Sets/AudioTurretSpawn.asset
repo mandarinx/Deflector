@@ -15,4 +15,7 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: a44ccdf84bc400f488f1ef223489faeb, type: 3}
     weight: 1
     pitchRange: {x: 0.8, y: 1.2}
-  weightSum: 1
+  - clip: {fileID: 8300000, guid: 530339068f98b0a409e8263a6bebdf39, type: 3}
+    weight: 1
+    pitchRange: {x: 0.8, y: 1.2}
+  weightSum: 2
