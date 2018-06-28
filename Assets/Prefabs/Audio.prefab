@@ -692,7 +692,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e01eeb5ec364a4b2dbbeaea1292c2cdc, type: 2}
   - {fileID: 11400000, guid: f435e50de1306498e80fe9c113c62294, type: 2}
   lowPassName: Muffle
-  mute: 1
+  mute: 0
 --- !u!114 &114283585848883140
 MonoBehaviour:
   m_ObjectHideFlags: 1
