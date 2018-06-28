@@ -24,6 +24,7 @@ namespace Deflector {
 
         private Collider2D[]       overlapped;
         private const string       hitByExplosionTag = "HitByExplosion";
+        private bool               doHitCheck;
 
         private void OnEnable() {
             overlapped = new Collider2D[16];
@@ -35,36 +36,48 @@ namespace Deflector {
         }
 
         public IEnumerator BigBadaBoom() {
+            doHitCheck = true;
             yield return new WaitForSeconds(Random.Range(delayMin, delayMax));
 
-            onExplodedAt?.Invoke(transform.position);
+            if (onExplodedAt != null) {
+                onExplodedAt.Invoke(transform.position);
+            }
+
             ArrayUtils.Shuffle(anims);
 
             int expl = 0;
             while (expl < anims.Length) {
                 anims[expl].Play();
                 ++expl;
-
                 yield return new WaitForSeconds(Random.Range(0.03f, 0.09f));
-
-                int num = Physics2D.OverlapCircleNonAlloc(transform.position,
-                                                          radius,
-                                                          overlapped,
-                                                          layerExplode.value);
-
-                for (int i = 0; i < num; ++i) {
-                    if (overlapped[i].CompareTag(hitByExplosionTag)) {
-                        continue;
-                    }
-                    onChainReaction.Invoke();
-                    overlapped[i].tag = hitByExplosionTag;
-                    overlapped[i]
-                       .GetComponent<Killable>()
-                      ?.Kill(transform.position);
-                }
             }
 
+            // Wait a little before returning the control back to
+            // ExplosionController.
             yield return new WaitForSeconds(duration);
+            doHitCheck = false;
+        }
+
+        private void Update() {
+            if (!doHitCheck) {
+                return;
+            }
+
+            int num = Physics2D.OverlapCircleNonAlloc(transform.position,
+                                                      radius,
+                                                      overlapped,
+                                                      layerExplode.value);
+
+            for (int i = 0; i < num; ++i) {
+                if (overlapped[i].CompareTag(hitByExplosionTag)) {
+                    continue;
+                }
+                onChainReaction.Invoke();
+                overlapped[i].tag = hitByExplosionTag;
+                overlapped[i]
+                   .GetComponent<Killable>()
+                  ?.Kill(transform.position);
+            }
         }
 
         private void OnDrawGizmos() {

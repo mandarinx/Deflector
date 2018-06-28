@@ -590,7 +590,7 @@ MonoBehaviour:
   delayMin: 0.1
   delayMax: 0.3
   duration: 0.3
-  radius: 0.82
+  radius: 1
   layerExplode:
     serializedVersion: 2
     m_Bits: 34304

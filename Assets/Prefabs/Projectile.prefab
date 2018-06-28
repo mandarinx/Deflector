@@ -150,7 +150,7 @@ MonoBehaviour:
   speedCharged: 2
   hitLayer:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 256
   colorsNeutral:
     serializedVersion: 2
     key0: {r: 1, g: 0.85246164, b: 0, a: 1}

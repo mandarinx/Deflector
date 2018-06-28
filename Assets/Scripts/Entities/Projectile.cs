@@ -34,14 +34,24 @@ namespace Deflector {
         private Gradient                  colorsFlashing;
         private float                     angle;
         private float                     speed;
-        private int                       contacts;
         private int                       angleIndex;
         private State                     state;
-        private Vector2                   hitNormal;
         private Rigidbody2D               rb;
         private ParticleSystem            ps;
         private CircleCollider2D          coll;
-        private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[2];
+        private Vector2                   hitNormal;
+        private readonly RaycastHit2D[]   hits = new RaycastHit2D[1];
+        private float                     rayLen;
+        private readonly Vector2[]        raycastDirs = {
+            Vector2.up,
+            (Vector2.up + Vector2.right).normalized,
+            Vector2.right,
+            (Vector2.down + Vector2.right).normalized,
+            Vector2.down,
+            (Vector2.down + Vector2.left).normalized,
+            Vector2.left,
+            (Vector2.up + Vector2.left).normalized,
+        };
 
         public bool                       IsExploding => (state & State.EXPLODING) > 0;
         public bool                       IsCharged   => (state & State.CHARGED)   > 0;
@@ -51,6 +61,7 @@ namespace Deflector {
             rb = GetComponent<Rigidbody2D>();
             ps = GetComponent<ParticleSystem>();
             coll = GetComponent<CircleCollider2D>();
+            rayLen = coll.radius * 1.25f;
             colorsFlashing = new Gradient {
                 colorKeys = new[] {
                     new GradientColorKey(Color.white, 0f),
@@ -148,78 +159,79 @@ namespace Deflector {
 
         private void FixedUpdate() {
             rb.MovePosition(rb.position + GetVelocity() * Time.fixedDeltaTime);
-        }
 
-        private Vector3 reflected;
+            hitNormal = Vector2.zero;
+            for (int i = 0; i < raycastDirs.Length; ++i) {
+                hitNormal += Raycast(raycastDirs[i]);
+            }
 
-        private void OnCollisionEnter2D(Collision2D collision) {
-            HandleCollision(collision);
-        }
-
-        private void OnCollisionStay2D(Collision2D collision) {
-            HandleCollision(collision);
-        }
-
-        private void HandleCollision(Collision2D collision) {
-            if (!LayerMasks.LayerInMask(collision.gameObject.layer, hitLayer)) {
+            if (hitNormal == Vector2.zero) {
                 return;
             }
 
-            if (!GetHitNormal(collision, out hitNormal)) {
-                return;
-            }
-
-            reflected = Vector3.Reflect(GetVelocity(), hitNormal);
-            angleIndex = GetDiagonal(reflected);
-            angle = ((angleIndex * 90f) + 45f) * Mathf.Deg2Rad;
-            rb.position += GetVelocity() * Time.fixedDeltaTime * 2f;
+            angleIndex = DeflectAngleIndex(angleIndex, hitNormal, GetVelocity().normalized);
+            angle = Angles.GetAngle(angleIndex);
+            rb.MovePosition(rb.position + GetVelocity() * Time.fixedDeltaTime * 2f);
         }
 
-        private bool GetHitNormal(Collision2D collision, out Vector2 normal) {
-            contacts = collision.GetContacts(contactPoints);
-            if (contacts == 0) {
-                normal = Vector2.zero;
-                return false;
-            }
-
-            normal = Vector2.zero;
-            for (int i = 0; i < contacts; ++i) {
-                normal += contactPoints[i].normal;
-            }
-            normal.Normalize();
-            return true;
+        private Vector2 Raycast(Vector3 dir) {
+            int numHits = Physics2D.RaycastNonAlloc(transform.position, dir, hits, rayLen, hitLayer);
+            Debug.DrawRay(transform.position, dir * rayLen, numHits > 0 ? Color.green : Color.red);
+            return numHits > 0 ? hits[0].normal : Vector2.zero;
         }
 
-        private static int GetDiagonal(Vector3 dir) {
-            float deg = (Mathf.Atan2(dir.y, dir.x) + Mathf.PI) * Mathf.Rad2Deg;
-            if (deg >= 0 && deg < 90) {
-                return 2;
+        private static int DeflectAngleIndex(int angleIndex, Vector2 hitNormal, Vector2 velocity) {
+            float dot = Vector2.Dot(hitNormal, velocity);
+            //  1 = same direction
+            // -1 = opposite direction
+            //  0 = perpendicular
+
+            // Bounce back
+            if (dot < -0.995f) {
+                angleIndex += 4;
             }
-            if (deg >= 90 && deg < 180) {
-                return 3;
+
+            // Bounce to either side
+            if ((dot < +0.7853f && dot > +float.Epsilon) ||
+                (dot > -0.7853f && dot < -float.Epsilon)) {
+                Vector3 cross = Vector3.Cross(hitNormal, velocity).normalized;
+                // To right
+                if (cross == Vector3.back) {
+                    angleIndex += 2;
+                }
+                // To left
+                if (cross == Vector3.forward) {
+                    angleIndex -= 2;
+                }
             }
-            if (deg >= 180 && deg < 270) {
-                return 0;
+
+            // Follow the normal
+            if (dot >= -float.Epsilon &&
+                dot <= +float.Epsilon) {
+                // convert normal to angle index
+                angleIndex = Angles.GetAngleIndex(Angles.GetRadian(hitNormal));
             }
-            // when deg >= 270
-            return 1;
+
+            // Follow the velocity
+            if (dot >= +0.7853f && dot <= 1f) {
+                // do nothing
+            }
+
+            angleIndex %= 8;
+            if (angleIndex < 0) {
+                angleIndex = 8 + angleIndex;
+            }
+
+            return angleIndex;
         }
 
         private Vector2 GetVelocity() {
-            return Angles.GetDirection(angle).normalized * speed;
+            return Angles.GetDirection(angle) * speed;
         }
 
-        private void OnDrawGizmos() {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawRay(transform.position, reflected);
-
-            Gizmos.color = Color.red;
+        private void OnDrawGizmosSelected() {
+            Gizmos.color = Color.green;
             Gizmos.DrawRay(transform.position, GetVelocity());
-
-            Gizmos.color = Color.cyan;
-            for (int i=0; i<contacts; ++i) {
-                Gizmos.DrawRay(contactPoints[i].point, contactPoints[i].normal);
-            }
         }
 
         private static void SetPSysColorLifetime(ParticleSystem particleSys,

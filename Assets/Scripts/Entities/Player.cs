@@ -47,6 +47,8 @@ namespace Deflector {
         private Coroutine                 hurtRoutine;
         private Collider2D                trigger;
 
+        public Vector2 Velocity { get; private set; }
+
         private void Awake() {
             activated = false;
             inputMove = -1;
@@ -166,17 +168,17 @@ namespace Deflector {
         }
 
         private void FixedUpdate() {
-            Vector2 velocity = Vector2.zero;
+            Velocity = Vector2.zero;
 
             if (inputMove >= 0) {
                 walkDir = inputMove;
                 walkAngle = Angles.GetAngle(inputMove);
                 inputMove = -1;
-                velocity = Angles.GetDirection(walkAngle) * moveSpeed;
+                Velocity = Angles.GetDirection(walkAngle) * moveSpeed;
                 swordAnchor.rotation = Quaternion.Euler(0f, 0f, Mathf.Rad2Deg * walkAngle);
             }
 
-            rb.MovePosition(rb.position + (velocity + (hitNormal * bounceForce)) * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + (Velocity + (hitNormal * bounceForce)) * Time.fixedDeltaTime);
             hitNormal *= forceFalloff.Evaluate(Mathf.Clamp01((Time.time - hitTime) / 1f));
         }
 
