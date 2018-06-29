@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using GameEvents;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -46,6 +47,31 @@ namespace Deflector {
         private readonly ContactPoint2D[] contactPoints = new ContactPoint2D[8];
         private Coroutine                 hurtRoutine;
         private Collider2D                trigger;
+
+        private const uint up    = 0x01 << 0;
+        private const uint right = 0x01 << 1;
+        private const uint down  = 0x01 << 2;
+        private const uint left  = 0x01 << 3;
+        private static readonly Dictionary<uint, int> inputDirections = new Dictionary<uint, int> {
+            { right,        0 },
+            { right | up,   1 },
+            { up,           2 },
+            { up | left,    3 },
+            { left,         4 },
+            { left | down,  5 },
+            { down,         6 },
+            { down | right, 7 },
+        };
+        private static readonly Dictionary<int, bool> flipDirections = new Dictionary<int, bool> {
+            { 0, false },
+            { 1, false },
+            { 2, false },
+            { 3, true },
+            { 4, true },
+            { 5, true },
+            { 6, false },
+            { 7, false },
+        };
 
         public Vector2 Velocity { get; private set; }
 
@@ -139,29 +165,9 @@ namespace Deflector {
 
             // Movement
 
-            if (Input.GetKey(KeyCode.UpArrow)) {             inputMove = 2;
-                if (Input.GetKey(KeyCode.RightArrow)) {      inputMove = 1; }
-                else if (Input.GetKey(KeyCode.LeftArrow)) {  inputMove = 3; }
-            }
-            else if (Input.GetKey(KeyCode.DownArrow)) {      inputMove = 6;
-                if (Input.GetKey(KeyCode.RightArrow)) {      inputMove = 7; }
-                else if (Input.GetKey(KeyCode.LeftArrow)) {  inputMove = 5; }
-            }
-
-            if (Input.GetKey(KeyCode.RightArrow)) {          inputMove = 0;
-                if (Input.GetKey(KeyCode.UpArrow)) {         inputMove = 1; }
-                else if (Input.GetKey(KeyCode.DownArrow)) {  inputMove = 7; }
-            }
-            else if (Input.GetKey(KeyCode.LeftArrow)) {      inputMove = 4;
-                if (Input.GetKey(KeyCode.UpArrow)) {         inputMove = 3; }
-                else if (Input.GetKey(KeyCode.DownArrow)) {  inputMove = 5; }
-            }
-
-            if (inputMove == 0 || inputMove == 1 || inputMove == 7) {
-                sr.flipX = false;
-            }
-            if (inputMove == 3 || inputMove == 4 || inputMove == 5) {
-                sr.flipX = true;
+            inputMove = GetInputDirection(GetInputMask());
+            if (inputMove > -1) {
+                sr.flipX = flipDirections[inputMove];
             }
 
             // Overlap triggers
@@ -276,6 +282,20 @@ namespace Deflector {
                 }
                 yield return null;
             }
+        }
+
+        private static uint GetInputMask() {
+            uint mask = 0;
+            mask |= (uint)((Input.GetKey(KeyCode.UpArrow)    ? 1 : 0) << 0);
+            mask |= (uint)((Input.GetKey(KeyCode.RightArrow) ? 1 : 0) << 1);
+            mask |= (uint)((Input.GetKey(KeyCode.DownArrow)  ? 1 : 0) << 2);
+            mask |= (uint)((Input.GetKey(KeyCode.LeftArrow)  ? 1 : 0) << 3);
+            return mask;
+        }
+
+        private static int GetInputDirection(uint inputMask) {
+            int dir;
+            return inputDirections.TryGetValue(inputMask, out dir) ? dir : -1;
         }
     }
 }
