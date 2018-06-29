@@ -10,6 +10,8 @@ namespace Deflector {
         [SerializeField]
         private GameEvent   onGameLost;
         [SerializeField]
+        private GameEvent   onGameModeWinCoditionMet;
+        [SerializeField]
         private StringEvent onGameModeDescription;
         [SerializeField]
         private UHooks      hooks;
@@ -40,10 +42,18 @@ namespace Deflector {
             gameMode.Validate();
         }
 
-        private void OnGameWon() {
+        /// <summary>
+        /// Handler for onLevelExit
+        /// </summary>
+        [UsedImplicitly]
+        public void OnLevelExit() {
             hooks.RemoveOnUpdate(this);
             onGameWon.Invoke();
             gameMode.Deactivate();
+        }
+
+        private void OnGameWon() {
+            onGameModeWinCoditionMet.Invoke();
         }
 
         private void OnGameLost() {

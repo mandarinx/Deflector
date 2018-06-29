@@ -65,6 +65,7 @@ namespace Deflector {
             hitPoint.Show();
             sr.enabled = true;
             sr.color = new Color(1f, 1f, 1f, 1f);
+            shadow.enabled = true;
             shadow.color = shadowColor;
             activated = true;
             trigger = null;
@@ -86,6 +87,7 @@ namespace Deflector {
         [UsedImplicitly]
         public void OnPlayerDied() {
             sr.enabled = false;
+            shadow.enabled = false;
             hitPoint.Hide();
             Deactivate();
             onDiedAt.Invoke(transform.position);
