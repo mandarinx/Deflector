@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8d06049634f418d8882283fefad8cc, type: 3}
   m_Name: lowPassCutOffHigh
   m_EditorClassIdentifier: 
-  curValue: 0
-  initValue: 5000
+  curValue: 22000
+  initValue: 22000
   onValueChanged: {fileID: 0}
