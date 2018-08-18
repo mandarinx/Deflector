@@ -11,5 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9024ae17e0ce84b8e8b319b2e0806609, type: 3}
   m_Name: AudioPaddleSwing
   m_EditorClassIdentifier: 
-  audioItems: []
-  weightSum: 0
+  audioItems:
+  - clip: {fileID: 8300000, guid: 819f9d2bae6f22a44abf349eb7e8a12e, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  - clip: {fileID: 8300000, guid: 819f9d2bae6f22a44abf349eb7e8a12e, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  - clip: {fileID: 8300000, guid: 772ae3635e81f0649aa012c35f5c2867, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  - clip: {fileID: 8300000, guid: 7cff09454f55e7e4bb06f4358f19f3b2, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  weightSum: 4
