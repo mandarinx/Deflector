@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -10,6 +11,8 @@ namespace Deflector.Effects {
 
         [SerializeField]
         private float       letterDuration;
+        [SerializeField]
+        private UnityEvent  onPrintLetter;
         [SerializeField]
         private UnityEvent  onPrintDone;
 
@@ -22,6 +25,11 @@ namespace Deflector.Effects {
             compText = GetComponent<Text>();
         }
 
+        /// <summary>
+        /// Called by the event handler for OnGameModeDescription
+        /// </summary>
+        /// <param name="text">The game mode description</param>
+        [UsedImplicitly]
         public void PrintText(string text) {
             curLetter = 0;
             compText.text = text;
@@ -31,6 +39,9 @@ namespace Deflector.Effects {
 
         private IEnumerator TypeText(float delay) {
             while (curLetter < textLength) {
+                if (compText.text[curLetter] != ' ') {
+                    onPrintLetter.Invoke();
+                }
                 ++curLetter;
                 compText.SetVerticesDirty();
                 yield return new WaitForSeconds(delay);
