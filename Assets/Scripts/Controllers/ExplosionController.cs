@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Deflector {
@@ -10,14 +11,9 @@ namespace Deflector {
 
         private void Awake() {
             pool = new GameObjectPool<Explosion>(transform, prefab, 16, true) {
-                OnSpawned = OnExplosionSpawned,
-                OnWillDespawn = e => { e.StopAllCoroutines(); }
+                OnWillDespawn = e => { e.Despawn(); }
             };
             pool.Fill();
-        }
-
-        private void OnExplosionSpawned(Explosion expl) {
-            StartCoroutine(Boom(expl));
         }
 
         private IEnumerator Boom(Explosion expl) {
@@ -25,13 +21,24 @@ namespace Deflector {
             pool.Despawn(expl);
         }
 
+        /// <summary>
+        /// Called by the event handler for OnProjectileExploded
+        /// </summary>
+        /// <param name="go"></param>
+        [UsedImplicitly]
         public void Spawn(GameObject go) {
             Explosion explosion;
             pool.Spawn(out explosion);
             explosion.transform.position = go.transform.position;
+            StartCoroutine(Boom(explosion));
         }
 
+        /// <summary>
+        /// Called by the event handler for OnLevelWillLoad
+        /// </summary>
+        [UsedImplicitly]
         public void DespawnAll() {
+            StopAllCoroutines();
             pool.Reset();
         }
     }

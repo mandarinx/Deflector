@@ -30,6 +30,14 @@ namespace Deflector {
             overlapped = new Collider2D[16];
         }
 
+        public void Despawn() {
+            StopAllCoroutines();
+            doHitCheck = false;
+            for (int i = 0; i < anims.Length; ++i) {
+                anims[i].Stop();
+            }
+        }
+
         [ContextMenu("Explode!")]
         private void Explode() {
             StartCoroutine(BigBadaBoom());
