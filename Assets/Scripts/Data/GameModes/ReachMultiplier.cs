@@ -16,6 +16,7 @@ namespace Deflector.Modes {
 
         private int                curMultiplier;
         private int                deadPlayers;
+        private bool               didWin;
 
         public override string title => $"Reach a {minMultipliers}x multiplier";
 
@@ -26,7 +27,12 @@ namespace Deflector.Modes {
                 return;
             }
 
+            if (didWin) {
+                return;
+            }
+
             if (curMultiplier >= minMultipliers) {
+                didWin = true;
                 GameWon();
             }
         }
@@ -34,6 +40,7 @@ namespace Deflector.Modes {
         public override void Activate() {
             deadPlayers = 0;
             curMultiplier = 0;
+            didWin = false;
             onMultiplierIncreasedAt.AddCallback(OnMultiplierIncreasedAt);
             onPlayerDied.RegisterCallback(OnPlayerDied);
         }

@@ -16,18 +16,23 @@ namespace Deflector.Modes {
         private GameObjectSet   playerSet;
 
         private int             deadPlayers;
+        private bool            didWin;
 
         public override string title => $"Destroy {maxProjectiles} "+
                                         $"projectile{(maxProjectiles > 1 ? "s" : "")}";
 
         public override void Validate() {
-            // Prioritize game over
             if (deadPlayers >= playerSet.Count) {
                 GameLost();
                 return;
             }
 
+            if (didWin) {
+                return;
+            }
+
             if (numDespawned >= maxProjectiles) {
+                didWin = true;
                 GameWon();
             }
         }
@@ -35,13 +40,12 @@ namespace Deflector.Modes {
         public override void Activate() {
             numDespawned = 0;
             deadPlayers = 0;
+            didWin = false;
             onProjectileDespawned.RegisterCallback(OnProjectileDespawned);
             onPlayerDied.RegisterCallback(OnPlayerDied);
         }
 
         public override void Deactivate() {
-            numDespawned = 0;
-            deadPlayers = 0;
             onProjectileDespawned.UnregisterCallback(OnProjectileDespawned);
             onPlayerDied.UnregisterCallback(OnPlayerDied);
         }

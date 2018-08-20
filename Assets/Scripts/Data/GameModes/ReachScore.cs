@@ -17,6 +17,7 @@ namespace Deflector.Modes {
         private int            scoreInit;
         private int            scoreIncrease;
         private int            deadPlayers;
+        private bool           didWin;
 
         public override string title => $"Score {minScore:### ### ##0} points";
 
@@ -27,7 +28,12 @@ namespace Deflector.Modes {
                 return;
             }
 
+            if (didWin) {
+                return;
+            }
+
             if (scoreIncrease >= minScore) {
+                didWin = true;
                 GameWon();
             }
         }
@@ -35,6 +41,7 @@ namespace Deflector.Modes {
         public override void Activate() {
             deadPlayers = 0;
             scoreIncrease = 0;
+            didWin = false;
             scoreInit = scoreAsset.Value;
             scoreAsset.AddChangeCallback(OnScoreChanged);
             onPlayerDied.RegisterCallback(OnPlayerDied);

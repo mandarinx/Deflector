@@ -16,6 +16,7 @@ namespace Deflector.Modes {
 
         private int           numChainReactions;
         private int           deadPlayers;
+        private bool          didWin;
 
         public override string title => $"Cause a chain reaction of {minChainReactions} explosions";
 
@@ -26,7 +27,12 @@ namespace Deflector.Modes {
                 return;
             }
 
+            if (didWin) {
+                return;
+            }
+
             if (numChainReactions >= minChainReactions) {
+                didWin = true;
                 GameWon();
             }
         }
@@ -34,6 +40,7 @@ namespace Deflector.Modes {
         public override void Activate() {
             deadPlayers = 0;
             numChainReactions = 0;
+            didWin = false;
             onChainReaction.RegisterCallback(OnChainReaction);
             onPlayerDied.RegisterCallback(OnPlayerDied);
         }
