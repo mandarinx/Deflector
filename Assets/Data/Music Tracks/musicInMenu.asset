@@ -15,4 +15,4 @@ MonoBehaviour:
   mixerGroup: {fileID: 243897998915258324, guid: fe6d3ac65c6eb4d7b92d4221be709ab6,
     type: 2}
   snapshot: InMenu
-  restartOnFadeIn: 1
+  loop: 1

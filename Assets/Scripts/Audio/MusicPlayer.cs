@@ -40,17 +40,12 @@ namespace Deflector {
 
             mixer.FindSnapshot(track.Snapshot).TransitionTo(duration);
 
-            if (track.RestartOnFadeIn) {
-                sources[t].Play();
-                return;
-            }
-
             if (sources[t].isPlaying) {
                 return;
             }
 
             sources[t].Play();
-            sources[t].loop = !track.RestartOnFadeIn;
+            sources[t].loop = track.Loop;
         }
 
         public void FadeLowPassCutOff(FloatAsset cutoff, float duration) {

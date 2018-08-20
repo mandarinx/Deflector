@@ -15,4 +15,4 @@ MonoBehaviour:
   mixerGroup: {fileID: 243838433738774026, guid: fe6d3ac65c6eb4d7b92d4221be709ab6,
     type: 2}
   snapshot: InGame
-  playOnFadeIn: 0
+  loop: 1

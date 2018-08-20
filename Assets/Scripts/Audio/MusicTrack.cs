@@ -13,11 +13,11 @@ namespace Deflector {
         [SerializeField]
         private string          snapshot;
         [SerializeField]
-        private bool            restartOnFadeIn;
+        private bool            loop;
 
         public AudioClip        AudioClip       => audioClip;
         public AudioMixerGroup  MixerGroup      => mixerGroup;
         public string           Snapshot        => snapshot;
-        public bool             RestartOnFadeIn => restartOnFadeIn;
+        public bool             Loop            => loop;
     }
 }
