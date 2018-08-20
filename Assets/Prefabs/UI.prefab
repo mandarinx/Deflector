@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutoff: {fileID: 11400000, guid: dedf944889c674605b4209850529b31b, type: 2}
-  duration: 0.75
+  duration: 1
   musicPlayer: {fileID: 0}
 --- !u!114 &114023160960153190
 MonoBehaviour:
@@ -1364,7 +1364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutoff: {fileID: 11400000, guid: 5a629578cba3d48c39831c77d02622cf, type: 2}
-  duration: 0.75
+  duration: 1
   musicPlayer: {fileID: 0}
 --- !u!114 &114372289249681592
 MonoBehaviour:
@@ -2001,7 +2001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutoff: {fileID: 11400000, guid: dedf944889c674605b4209850529b31b, type: 2}
-  duration: 0.75
+  duration: 1
   musicPlayer: {fileID: 0}
 --- !u!114 &114709200118997920
 MonoBehaviour:
@@ -2268,8 +2268,8 @@ MonoBehaviour:
   onEnterPanel:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114868623159318876}
-        m_MethodName: Fade
+      - m_Target: {fileID: 114741658339676458}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2279,8 +2279,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114741658339676458}
-        m_MethodName: Play
+      - m_Target: {fileID: 114868623159318876}
+        m_MethodName: Fade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2436,7 +2436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutoff: {fileID: 11400000, guid: dedf944889c674605b4209850529b31b, type: 2}
-  duration: 0.75
+  duration: 1
   musicPlayer: {fileID: 0}
 --- !u!114 &114875957504798298
 MonoBehaviour:
