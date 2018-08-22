@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9024ae17e0ce84b8e8b319b2e0806609, type: 3}
+  m_Name: AudioOptionToggle
+  m_EditorClassIdentifier: 
+  audioItems:
+  - clip: {fileID: 8300000, guid: 4d112be9aea93814f8210a41ddcad8df, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  - clip: {fileID: 8300000, guid: 4d112be9aea93814f8210a41ddcad8df, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  - clip: {fileID: 8300000, guid: 133a030abe1fd6c4b8e3b61313b0de73, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  weightSum: 3
