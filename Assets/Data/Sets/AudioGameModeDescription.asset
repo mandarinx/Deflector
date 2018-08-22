@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Name: AudioGameModeDescription
   m_EditorClassIdentifier: 
   audioItems:
-  - clip: {fileID: 8300000, guid: aa55845815093a342acfbc716b8762d9, type: 3}
+  - clip: {fileID: 8300000, guid: ac96752a8973659449dc2c80b038c28d, type: 3}
     weight: 1
     pitchRange: {x: 1, y: 1}
-  weightSum: 1
+  - clip: {fileID: 8300000, guid: b61d9fa5b7d5f3540a9b928ef64abe4f, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  - clip: {fileID: 8300000, guid: 051bf367c4dd49a4daf2eb754e26c135, type: 3}
+    weight: 1
+    pitchRange: {x: 1, y: 1}
+  weightSum: 3
