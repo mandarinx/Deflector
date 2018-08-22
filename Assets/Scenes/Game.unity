@@ -286,6 +286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectiles: {fileID: 400920022}
   players: {fileID: 1700834805}
+  score: {fileID: 11400000, guid: a1d04d243c9ca4c2d90bfd3332002d06, type: 2}
+  health: {fileID: 11400000, guid: af7b056e5a04248d8bd7d11442f91193, type: 2}
 --- !u!1001 &246933246
 Prefab:
   m_ObjectHideFlags: 0

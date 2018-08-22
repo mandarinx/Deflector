@@ -6,8 +6,16 @@ namespace Deflector {
 
         public Transform projectiles;
         public Transform players;
+        public IntAsset score;
+        public HealthAsset health;
 
         private void Update() {
+            if (Input.GetKeyUp(KeyCode.N)) {
+                score.SetValue(Random.Range(0, 25) * 250000);
+            }
+            if (Input.GetKeyUp(KeyCode.M)) {
+                health.SetLives(3);
+            }
             if (Input.GetKeyUp(KeyCode.V)) {
                 foreach (Transform child in projectiles) {
                     Projectile p = child.gameObject.GetComponent<Projectile>();
