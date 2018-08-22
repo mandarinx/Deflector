@@ -1043,27 +1043,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 223381477070392832, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1629761231}
-    - target: {fileID: 114896036404628754, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: musicPlayer
-      value: 
-      objectReference: {fileID: 1659196322}
-    - target: {fileID: 114371972475754066, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: musicPlayer
-      value: 
-      objectReference: {fileID: 1659196322}
-    - target: {fileID: 114688966019125576, guid: aa87f282a081d4a4c97a023f7fa91abb,
-        type: 2}
-      propertyPath: musicPlayer
-      value: 
-      objectReference: {fileID: 1659196322}
-    - target: {fileID: 114868623159318876, guid: aa87f282a081d4a4c97a023f7fa91abb,
+    - target: {fileID: 114013520819932122, guid: aa87f282a081d4a4c97a023f7fa91abb,
         type: 2}
       propertyPath: musicPlayer
       value: 
@@ -1073,11 +1053,31 @@ Prefab:
       propertyPath: musicPlayer
       value: 
       objectReference: {fileID: 1659196322}
-    - target: {fileID: 114013520819932122, guid: aa87f282a081d4a4c97a023f7fa91abb,
+    - target: {fileID: 114868623159318876, guid: aa87f282a081d4a4c97a023f7fa91abb,
         type: 2}
       propertyPath: musicPlayer
       value: 
       objectReference: {fileID: 1659196322}
+    - target: {fileID: 114688966019125576, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: musicPlayer
+      value: 
+      objectReference: {fileID: 1659196322}
+    - target: {fileID: 114371972475754066, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: musicPlayer
+      value: 
+      objectReference: {fileID: 1659196322}
+    - target: {fileID: 114896036404628754, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: musicPlayer
+      value: 
+      objectReference: {fileID: 1659196322}
+    - target: {fileID: 223381477070392832, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1629761231}
     - target: {fileID: 1931506645437574, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}
       propertyPath: m_Name
       value: UIPanels
