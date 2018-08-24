@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numAudioSources: 1
-  output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
+  output: {fileID: 243530560575683722, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 1
   audioSourceConfig:
     minDistance: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numAudioSources: 3
-  output: {fileID: 243882336717359688, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
+  output: {fileID: 243420455794201496, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.799
   audioSourceConfig:
     minDistance: 5
@@ -854,7 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numAudioSources: 6
-  output: {fileID: 24300002, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
+  output: {fileID: 243714058568376140, guid: fe6d3ac65c6eb4d7b92d4221be709ab6, type: 2}
   volume: 0.444
   audioSourceConfig:
     minDistance: 0
