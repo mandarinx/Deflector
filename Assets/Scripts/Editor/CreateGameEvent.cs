@@ -38,7 +38,7 @@ public class CreateGameEvent : ScriptableWizard {
     // Text
     // Toggle (bool)
 
-    [MenuItem("Tools/Hyper Games/Create Game Event")]
+    [MenuItem("Tools/Create Game Event")]
     public static void Create() {
         DisplayWizard<CreateGameEvent>("Create a Game Event", "Create");
     }
