@@ -33,7 +33,7 @@ namespace Deflector {
 
         private AudioSource[]     audioSources;
 
-        private void Start() {
+        private void Awake() {
             if (numAudioSources <= 0) {
                 numAudioSources = 1;
             }

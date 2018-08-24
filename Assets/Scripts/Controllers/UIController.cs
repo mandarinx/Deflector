@@ -80,7 +80,7 @@ namespace Deflector {
             currentPanelRefs.AddRange(nextPanel.PanelRefs);
             currentOption = 0;
             DeselectAllMenuOptions();
-            SelectMenuOption(currentOption);
+            HighlightMenuOption(currentOption);
 
             if (currentOptions.Count > 0) {
                 uHooks.AddOnUpdate(this);
@@ -90,12 +90,19 @@ namespace Deflector {
             currentPanelInstanceId = instanceId;
         }
 
-        private void SelectMenuOption(int n) {
+        private bool HighlightMenuOption(int n) {
             if (currentOptions.Count == 0) {
-                return;
+                return false;
             }
             n = Mathf.Clamp(n, 0, currentOptions.Count);
             currentOptions[n].Select();
+            return true;
+        }
+
+        private void SelectMenuOption(int n) {
+            if (!HighlightMenuOption(n)) {
+                return;
+            }
             if (onMenuOptionSelected != null) {
                 onMenuOptionSelected.Invoke();
             }
