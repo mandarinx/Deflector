@@ -78,6 +78,8 @@
     <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraShakeConfig.cs" />
     <Compile Include="Assets\Scripts\Camera\PixelArtCamera.cs" />
+    <Compile Include="Assets\Scripts\Camera\ScreenRecorder.cs" />
+    <Compile Include="Assets\Scripts\Camera\Screenshot.cs" />
     <Compile Include="Assets\Scripts\Controllers\CheatController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ExplosionController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameModeController.cs" />
@@ -140,7 +142,6 @@
     <Compile Include="Assets\Scripts\Levels\Level.cs" />
     <Compile Include="Assets\Scripts\Levels\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\Levels\LevelSet.cs" />
-    <Compile Include="Assets\Scripts\PlayTrack.cs" />
     <Compile Include="Assets\Scripts\Pool\GameObjectPool.cs" />
     <Compile Include="Assets\Scripts\Pool\IPoolable.cs" />
     <Compile Include="Assets\Scripts\Pool\ObjectPool.cs" />
@@ -148,8 +149,6 @@
     <Compile Include="Assets\Scripts\Sets\GameObjectSet.cs" />
     <Compile Include="Assets\Scripts\Sets\Set.cs" />
     <Compile Include="Assets\Scripts\Sets\SpawnPointSet.cs" />
-    <Compile Include="Assets\Scripts\TestMusic.cs" />
-    <Compile Include="Assets\Scripts\TestStateMachine.cs" />
     <Compile Include="Assets\Scripts\Tiles\AnimatedTile.cs" />
     <Compile Include="Assets\Scripts\Tiles\RuleTile.cs" />
     <Compile Include="Assets\Scripts\Time\Delay.cs" />
