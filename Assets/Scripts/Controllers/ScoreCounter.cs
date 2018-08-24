@@ -62,6 +62,9 @@ namespace Deflector {
         /// </summary>
         [UsedImplicitly]
         public void StopCooldown() {
+            if (cooldown == null) {
+                return;
+            }
             StopCoroutine(cooldown);
             cooldown = null;
         }
