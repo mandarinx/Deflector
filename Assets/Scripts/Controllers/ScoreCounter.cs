@@ -21,6 +21,10 @@ namespace Deflector {
 
         private Coroutine          cooldown;
 
+        private void Start() {
+            multiplier.AddChangeCallback(OnMultiplierChanged);
+        }
+
         /// <summary>
         /// Resets both multiplier and score.
         /// Called by OnGameReset handler.
@@ -51,9 +55,20 @@ namespace Deflector {
             if (increase > 0) {
                 onMultiplierIncreasedAt.Invoke(projectileGO.transform.position, multiplier.Value);
             }
+        }
 
+        /// <summary>
+        /// Called by the event handler for OnLevelExit
+        /// </summary>
+        [UsedImplicitly]
+        public void StopCooldown() {
+            StopCoroutine(cooldown);
+            cooldown = null;
+        }
+
+        private void OnMultiplierChanged(int m) {
             if (cooldown != null) {
-                StopCoroutine(cooldown);
+                return;
             }
             cooldown = StartCoroutine(Cooldown());
         }
@@ -64,6 +79,7 @@ namespace Deflector {
                 multiplier.SetValue(multiplier.Value - 1);
                 onMultiplierDecreased.Invoke();
             }
+            cooldown = null;
         }
     }
 }
