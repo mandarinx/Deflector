@@ -97,7 +97,7 @@ namespace Deflector {
                                                   enableTransparency
                                                       ? TextureFormat.ARGB32
                                                       : TextureFormat.RGB24,
-                                                  mipmap: false);
+                                                  false);
                 capture.ReadPixels(captureRect, 0, 0);
                 capture.Apply();
 
