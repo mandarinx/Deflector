@@ -30,7 +30,7 @@ namespace Deflector {
                 GameObject go = allObjects[j];
 
                 if (PrefabUtility.GetPrefabType(go) == PrefabType.PrefabInstance
-                    && PrefabUtility.GetPrefabParent(go) == to) {
+                    && PrefabUtility.GetCorrespondingObjectFromSource(go) == to) {
 
                     Debug.Log($"Referenced by {TransformUtils.GetFullPath(go)}, {go.GetType()}", go);
                     referencedBy.Add(go);
