@@ -38,8 +38,6 @@ namespace Deflector.Modes {
         }
 
         public override string GetDescription(SystemLanguage lang) {
-            //Cause a chain reaction of {chain_reactions} explosions
-            //Lag en kjedereaksjon med {chain_reactions} eksplosjoner
             string desc = description.GetLocalizedText(lang);
             desc = desc.Replace("{chain_reactions}", minChainReactions.ToString());
             return desc;

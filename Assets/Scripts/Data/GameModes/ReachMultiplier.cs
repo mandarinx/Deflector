@@ -38,8 +38,6 @@ namespace Deflector.Modes {
         }
 
         public override string GetDescription(SystemLanguage lang) {
-            //Reach a {multipliers}x multiplier
-            //Oppnå {multipliers}x poengbonus
             string desc = description.GetLocalizedText(lang);
             desc = desc.Replace("{multipliers}", minMultipliers.ToString());
             return desc;

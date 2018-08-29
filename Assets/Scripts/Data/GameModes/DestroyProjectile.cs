@@ -37,8 +37,6 @@ namespace Deflector.Modes {
         }
 
         public override string GetDescription(SystemLanguage lang) {
-            //Destroy {projectiles} projectiles
-            //Spreng {projectiles} prosjektiler
             string desc = description.GetLocalizedText(lang);
             desc = desc.Replace("{projectiles}", maxProjectiles.ToString());
             return desc;

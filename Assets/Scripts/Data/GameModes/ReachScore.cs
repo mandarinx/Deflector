@@ -39,8 +39,6 @@ namespace Deflector.Modes {
         }
 
         public override string GetDescription(SystemLanguage lang) {
-            //Score {score} points
-            //Samle {score} poeng
             string desc = description.GetLocalizedText(lang);
             desc = desc.Replace("{score}", minScore.ToString("### ### ##0"));
             return desc;
