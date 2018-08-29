@@ -6,7 +6,7 @@ namespace Deflector {
     public class GibsController : MonoBehaviour {
 
         [SerializeField]
-        private ParticleSystem prefab;
+        private ParticleSystem                 prefab;
 
         private GameObjectPool<ParticleSystem> pool;
 
@@ -14,9 +14,7 @@ namespace Deflector {
             pool = new GameObjectPool<ParticleSystem>(parent: transform,
                                                       prefab: prefab.gameObject,
                                                       size:   2,
-                                                      grow:   false) {
-                OnSpawned = OnParticleSystemSpawned
-            };
+                                                      grow:   false);
             pool.Fill();
         }
 
@@ -25,15 +23,13 @@ namespace Deflector {
             ParticleSystem psys;
             pool.Spawn(out psys);
             psys.transform.position = position;
+            psys.Play();
+            StartCoroutine(DespawnWhenDone(psys, pool));
         }
 
         [UsedImplicitly]
         public void DespawnAll() {
             pool.Reset();
-        }
-
-        private void OnParticleSystemSpawned(ParticleSystem instance) {
-            StartCoroutine(DespawnWhenDone(instance, pool));
         }
 
         private static IEnumerator DespawnWhenDone(ParticleSystem                 psys,
