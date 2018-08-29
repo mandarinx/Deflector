@@ -6,19 +6,19 @@ namespace Deflector.Modes {
     public class ChainReaction : GameMode {
 
         [SerializeField]
-        private int           minChainReactions;
+        private int                 minChainReactions;
         [SerializeField]
-        private GameEvent     onChainReaction;
+        private GameEvent           onChainReaction;
         [SerializeField]
-        private GameEvent     onPlayerDied;
+        private GameEvent           onPlayerDied;
         [SerializeField]
-        private GameObjectSet playerSet;
+        private GameObjectSet       playerSet;
+        [SerializeField]
+        private LocalizedTextAsset  description;
 
-        private int           numChainReactions;
-        private int           deadPlayers;
-        private bool          didWin;
-
-        public override string title => $"Cause a chain reaction of {minChainReactions} explosions";
+        private int                 numChainReactions;
+        private int                 deadPlayers;
+        private bool                didWin;
 
         public override void Validate() {
             // Prioritize game over
@@ -35,6 +35,14 @@ namespace Deflector.Modes {
                 didWin = true;
                 GameWon();
             }
+        }
+
+        public override string GetDescription(SystemLanguage lang) {
+            //Cause a chain reaction of {chain_reactions} explosions
+            //Lag en kjedereaksjon med {chain_reactions} eksplosjoner
+            string desc = description.GetLocalizedText(lang);
+            desc = desc.Replace("{chain_reactions}", minChainReactions.ToString());
+            return desc;
         }
 
         public override void Activate() {

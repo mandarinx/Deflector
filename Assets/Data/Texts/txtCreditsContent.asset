@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb952c343a43d4634b5bd03e4be0b8cc, type: 3}
+  m_Name: txtCreditsContent
+  m_EditorClassIdentifier: 
+  languages: 0a0000001a000000
+  texts:
+  - <color=#ff004dff>Deflector</color>\\n\\nCreated by <color=#ff77a8ff>Thomas Viktil</color>
+    in 2018\\n\\nLogo by <color=#ff77a8ff>Pete Ellison</color>\\n<color=#29adffff>https://peteellison.com</color>\\n\\nAudio
+    by <color=#ff77a8ff>Dan Wakefield</color>\\n<color=#29adffff>https://wakefield.no</color>\\n\\nThe
+    source code is open and hosted at <color=#29adffff>https://github.com/mandarinx/Deflector</color>\\n\\nPlay
+    the game at <color=#29adffff>https://itch.io/mandarin/deflector</color>\\n\\nThomas
+    is on Twitter at <color=#29adffff>https://twitter.com/mandarinx</color>
+  - "<color=#ff004dff>Deflector</color>\\\\n\\\\nLaget av <color=#ff77a8ff>Thomas
+    Viktil</color> i 2018\\\\n\\\\nLogo av <color=#ff77a8ff>Pete Ellison</color>\\\\n<color=#29adffff>https://peteellison.com</color>\\\\n\\\\nLyd
+    og musikk av <color=#ff77a8ff>Dan Wakefield</color>\\\\n<color=#29adffff>https://wakefield.no</color>\\\\n\\\\nKildekoden
+    er \xE5pen og finnes p\xE5 <color=#29adffff>https://github.com/mandarinx/Deflector</color>\\\\n\\\\nLast
+    ned spillet fra <color=#29adffff>https://itch.io/mandarin/deflector</color>\\\\n\\\\nThomas
+    er p\xE5 Twitter p\xE5 <color=#29adffff>https://twitter.com/mandarinx</color>"

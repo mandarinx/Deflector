@@ -151,7 +151,7 @@ namespace Deflector {
                 }
                 UIPanelRef next = currentPanelRefs[currentOption];
                 if (next == nonePanel) {
-                    ClosePanel(currentPanelInstanceId);
+//                    ClosePanel(currentPanelInstanceId);
                     return;
                 }
                 OpenPanel(next);

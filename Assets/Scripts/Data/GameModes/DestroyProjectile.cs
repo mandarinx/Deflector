@@ -6,20 +6,19 @@ namespace Deflector.Modes {
     public class DestroyProjectile : GameMode {
 
         [SerializeField]
-        private int             maxProjectiles;
-        private int             numDespawned;
+        private int                 maxProjectiles;
+        private int                 numDespawned;
         [SerializeField]
-        private GameObjectEvent onProjectileDespawned;
+        private GameObjectEvent     onProjectileDespawned;
         [SerializeField]
-        private GameEvent       onPlayerDied;
+        private GameEvent           onPlayerDied;
         [SerializeField]
-        private GameObjectSet   playerSet;
+        private GameObjectSet       playerSet;
+        [SerializeField]
+        private LocalizedTextAsset  description;
 
-        private int             deadPlayers;
-        private bool            didWin;
-
-        public override string title => $"Destroy {maxProjectiles} "+
-                                        $"projectile{(maxProjectiles > 1 ? "s" : "")}";
+        private int                 deadPlayers;
+        private bool                didWin;
 
         public override void Validate() {
             if (deadPlayers >= playerSet.Count) {
@@ -35,6 +34,14 @@ namespace Deflector.Modes {
                 didWin = true;
                 GameWon();
             }
+        }
+
+        public override string GetDescription(SystemLanguage lang) {
+            //Destroy {projectiles} projectiles
+            //Spreng {projectiles} prosjektiler
+            string desc = description.GetLocalizedText(lang);
+            desc = desc.Replace("{projectiles}", maxProjectiles.ToString());
+            return desc;
         }
 
         public override void Activate() {

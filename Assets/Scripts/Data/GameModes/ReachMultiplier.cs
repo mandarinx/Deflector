@@ -6,19 +6,19 @@ namespace Deflector.Modes {
     public class ReachMultiplier : GameMode {
 
         [SerializeField]
-        private int                minMultipliers;
+        private int                 minMultipliers;
         [SerializeField]
-        private Vector3AndIntEvent onMultiplierIncreasedAt;
+        private Vector3AndIntEvent  onMultiplierIncreasedAt;
         [SerializeField]
-        private GameEvent          onPlayerDied;
+        private GameEvent           onPlayerDied;
         [SerializeField]
-        private GameObjectSet      playerSet;
+        private GameObjectSet       playerSet;
+        [SerializeField]
+        private LocalizedTextAsset  description;
 
-        private int                curMultiplier;
-        private int                deadPlayers;
-        private bool               didWin;
-
-        public override string title => $"Reach a {minMultipliers}x multiplier";
+        private int                 curMultiplier;
+        private int                 deadPlayers;
+        private bool                didWin;
 
         public override void Validate() {
             // Prioritize game over
@@ -35,6 +35,14 @@ namespace Deflector.Modes {
                 didWin = true;
                 GameWon();
             }
+        }
+
+        public override string GetDescription(SystemLanguage lang) {
+            //Reach a {multipliers}x multiplier
+            //Oppnå {multipliers}x poengbonus
+            string desc = description.GetLocalizedText(lang);
+            desc = desc.Replace("{multipliers}", minMultipliers.ToString());
+            return desc;
         }
 
         public override void Activate() {

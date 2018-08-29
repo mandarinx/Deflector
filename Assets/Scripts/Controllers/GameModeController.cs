@@ -6,17 +6,18 @@ namespace Deflector {
     public class GameModeController : MonoBehaviour, IOnUpdate {
 
         [SerializeField]
-        private GameEvent   onGameWon;
+        private GameEvent       onGameWon;
         [SerializeField]
-        private GameEvent   onGameLost;
+        private GameEvent       onGameLost;
         [SerializeField]
-        private GameEvent   onGameModeWinCoditionMet;
+        private GameEvent       onGameModeWinCoditionMet;
         [SerializeField]
-        private StringEvent onGameModeDescription;
+        private StringEvent     onGameModeDescription;
         [SerializeField]
-        private UHooks      hooks;
+        private UHooks          hooks;
 
-        private GameMode    gameMode;
+        private GameMode        gameMode;
+        private SystemLanguage  curLang;
 
         /// <summary>
         /// Handler for onLevelLoaded
@@ -26,7 +27,7 @@ namespace Deflector {
             gameMode = level.GameMode;
             gameMode.onGameLost = OnGameLost;
             gameMode.onGameWon = OnGameWon;
-            onGameModeDescription.Invoke(gameMode.title);
+            onGameModeDescription.Invoke(gameMode.GetDescription(curLang));
         }
 
         /// <summary>
@@ -50,6 +51,10 @@ namespace Deflector {
             hooks.RemoveOnUpdate(this);
             onGameWon.Invoke();
             gameMode.Deactivate();
+        }
+
+        public void OnLanguageChanged(int langId) {
+            curLang = (SystemLanguage) langId;
         }
 
         private void OnGameWon() {

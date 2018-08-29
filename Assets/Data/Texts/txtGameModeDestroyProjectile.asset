@@ -8,11 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60ad266b35dd343dc866f6dcef6b6614, type: 3}
-  m_Name: LevelSetDev
+  m_Script: {fileID: 11500000, guid: bb952c343a43d4634b5bd03e4be0b8cc, type: 3}
+  m_Name: txtGameModeDestroyProjectile
   m_EditorClassIdentifier: 
-  clearOnEnable: 0
-  list:
-  - {fileID: 11400000, guid: 0f4b86957c7f54e1d9b6edb8982678bc, type: 2}
-  onItemAdded: {fileID: 0}
-  onItemRemoved: {fileID: 0}
+  languages: 0a0000001a000000
+  texts:
+  - Destroy {projectiles} projectiles
+  - Spreng {projectiles} prosjektiler
