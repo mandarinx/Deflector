@@ -6,7 +6,7 @@ Deflector is a game made in the Unity engine. The full source code is open sourc
 
 Download a playable build from [Deflector’s Itch.io page](https://mandarin.itch.io/deflector).
 
-Check out the trailer on [YouTube](https://www.youtube.com/watch?v=dBHhqP7QriI).
+Check out the trailer on [YouTube](https://youtu.be/jqXhi98KjPQ).
 
 ## Author
 Concept, design, animation and programming done by Thomas Viktil. [Follow me on Twitter](https://twitter.com/mandarinx) for tweets about programming and game development.
