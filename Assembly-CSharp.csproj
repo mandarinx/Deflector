@@ -87,11 +87,13 @@
     <Compile Include="Assets\Scripts\Controllers\GibsController.cs" />
     <Compile Include="Assets\Scripts\Controllers\HitEffectController.cs" />
     <Compile Include="Assets\Scripts\Controllers\LevelController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\LocalizationController.cs" />
     <Compile Include="Assets\Scripts\Controllers\MultiplierController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ScoreCounter.cs" />
     <Compile Include="Assets\Scripts\Controllers\ScreenController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ToggleLanguage.cs" />
     <Compile Include="Assets\Scripts\Controllers\TurretController.cs" />
     <Compile Include="Assets\Scripts\Controllers\UIController.cs" />
     <Compile Include="Assets\Scripts\Data\AudioItem.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="Assets\Scripts\Data\GameModes\ReachScore.cs" />
     <Compile Include="Assets\Scripts\Data\HealthAsset.cs" />
     <Compile Include="Assets\Scripts\Data\IntAsset.cs" />
+    <Compile Include="Assets\Scripts\Data\LocalizedTextAsset.cs" />
     <Compile Include="Assets\Scripts\Data\UIPanelRef.cs" />
     <Compile Include="Assets\Scripts\Effects\ImageColorLerp.cs" />
     <Compile Include="Assets\Scripts\Effects\TextLetterPrinter.cs" />
@@ -153,6 +156,7 @@
     <Compile Include="Assets\Scripts\Tiles\AnimatedTile.cs" />
     <Compile Include="Assets\Scripts\Tiles\RuleTile.cs" />
     <Compile Include="Assets\Scripts\Time\Delay.cs" />
+    <Compile Include="Assets\Scripts\UI\LocalizedLabel.cs" />
     <Compile Include="Assets\Scripts\UI\MenuOption.cs" />
     <Compile Include="Assets\Scripts\UI\Multiplier.cs" />
     <Compile Include="Assets\Scripts\UI\MultiplierLabel.cs" />
@@ -168,6 +172,7 @@
     <Compile Include="Assets\Scripts\Utils\GizmoUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\IntUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\LayerMasks.cs" />
+    <Compile Include="Assets\Scripts\Utils\ReplaceLineEndings.cs" />
     <Compile Include="Assets\Scripts\Utils\TimeSince.cs" />
     <Compile Include="Assets\Scripts\Utils\TransformUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
