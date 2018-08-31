@@ -134,7 +134,7 @@ namespace Deflector {
         private void AddInstance() {
             GameObject go = Object.Instantiate(prefab);
             go.transform.SetParent(parent, false);
-            go.name = prefab.name + "_" + deactives.Count.ToString("00");
+            go.name = prefab.name + "_" + (deactives.Count + actives.Count).ToString("00");
             go.SetActive(false);
 
             T instance = go.GetComponent<T>();
