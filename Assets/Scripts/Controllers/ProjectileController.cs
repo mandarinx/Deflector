@@ -8,7 +8,7 @@ namespace Deflector {
         private GameObjectPool<Projectile> pool;
 
         private void Awake() {
-            pool = new GameObjectPool<Projectile>(transform, prefab, 16, true) {
+            pool = new GameObjectPool<Projectile>(transform, prefab, 128, true) {
                 OnWillSpawn = p => { p.tag = "Untagged"; }
             };
             pool.Fill();
