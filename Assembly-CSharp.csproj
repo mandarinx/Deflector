@@ -83,10 +83,12 @@
     <Compile Include="Assets\Scripts\Camera\ScreenRecorder.cs" />
     <Compile Include="Assets\Scripts\Camera\Screenshot.cs" />
     <Compile Include="Assets\Scripts\Controllers\CheatController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\DemoController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ExplosionController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameModeController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GibsController.cs" />
     <Compile Include="Assets\Scripts\Controllers\HitEffectController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\IdleController.cs" />
     <Compile Include="Assets\Scripts\Controllers\LevelController.cs" />
     <Compile Include="Assets\Scripts\Controllers\LocalizationController.cs" />
     <Compile Include="Assets\Scripts\Controllers\MultiplierController.cs" />
@@ -110,6 +112,7 @@
     <Compile Include="Assets\Scripts\Data\LocalizedTextAsset.cs" />
     <Compile Include="Assets\Scripts\Data\UIPanelRef.cs" />
     <Compile Include="Assets\Scripts\Effects\ImageColorLerp.cs" />
+    <Compile Include="Assets\Scripts\Effects\TextBlinker.cs" />
     <Compile Include="Assets\Scripts\Effects\TextLetterPrinter.cs" />
     <Compile Include="Assets\Scripts\Entities\Explosion.cs" />
     <Compile Include="Assets\Scripts\Entities\HitPoint.cs" />
@@ -178,6 +181,7 @@
     <Compile Include="Assets\Scripts\Utils\TransformUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\UHooks.cs" />
     <Compile Include="Assets\Scripts\Utils\UHookUpdate.cs" />
+    <Compile Include="Assets\Scripts\Video\VideoListener.cs" />
     <None Include="Assets\Visuals\Shaders\TilemapGizmo.shader" />
     <None Include="Assets\Visuals\Shaders\PixelSnapAlphaBlend.shader" />
     <None Include="Assets\Visuals\Shaders\ScreenSpaceTexture.shader" />
@@ -754,4 +758,9 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

@@ -53,6 +53,17 @@ namespace Deflector {
             gameMode.Deactivate();
         }
 
+        /// <summary>
+        /// Handler for OnReturnToMainMenu
+        /// </summary>
+        [UsedImplicitly]
+        public void DeactivateCurrentGameMode() {
+            hooks.RemoveOnUpdate(this);
+            if (gameMode != null) {
+                gameMode.Deactivate();
+            }
+        }
+
         public void OnLanguageChanged(int langId) {
             curLang = (SystemLanguage) langId;
         }

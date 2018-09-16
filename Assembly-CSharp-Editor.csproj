@@ -716,4 +716,9 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>/Applications/Unity/Hub/Editor/2018.2.7f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

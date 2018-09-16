@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb952c343a43d4634b5bd03e4be0b8cc, type: 3}
+  m_Name: txtInstructionsIngame
+  m_EditorClassIdentifier: 
+  languages: 0a0000001a000000
+  texts:
+  - Arrows to move, X to hit
+  - "Piltaster for \xE5 flytte, X for \xE5 sl\xE5"
