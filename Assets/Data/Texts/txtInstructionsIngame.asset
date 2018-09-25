@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   languages: 0a0000001a000000
   texts:
-  - Arrows to move, X to hit
-  - "Piltaster for \xE5 flytte, X for \xE5 sl\xE5"
+  - D-pad or joystick to move, B to hit
+  - "Piltaster eller joystick for \xE5 flytte, B for \xE5 sl\xE5"
