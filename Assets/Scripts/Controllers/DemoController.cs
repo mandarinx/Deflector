@@ -33,7 +33,7 @@ namespace Deflector {
         }
 
         public void UOnUpdate() {
-            if (!Input.anyKeyDown) {
+            if (!InputController.anyKey) {
                 return;
             }
             StopDemo();
