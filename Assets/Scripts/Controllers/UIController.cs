@@ -123,7 +123,7 @@ namespace Deflector {
         }
 
         public void UOnUpdate() {
-            if (Input.GetKeyUp(KeyCode.UpArrow)) {
+            if (InputController.btnUp) {
                 DeselectMenuOption(currentOption);
                 --currentOption;
                 if (currentOption < 0) {
@@ -133,14 +133,14 @@ namespace Deflector {
                 SelectMenuOption(currentOption);
             }
 
-            if (Input.GetKeyUp(KeyCode.DownArrow)) {
+            if (InputController.btnDown) {
                 DeselectMenuOption(currentOption);
                 ++currentOption;
                 currentOption = currentOption % currentOptions.Count;
                 SelectMenuOption(currentOption);
             }
 
-            if (Input.GetKeyUp(KeyCode.X)) {
+            if (InputController.btnHit) {
                 MenuOption opt = currentOptions[currentOption];
                 if (!opt.gameObject.activeSelf) {
                     return;

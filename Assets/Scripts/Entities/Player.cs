@@ -155,7 +155,7 @@ namespace Deflector {
 
             // HitPoint
 
-            if (Input.GetKeyDown(KeyCode.X)) {
+            if (InputController.btnHit) {
                 animPlayer.Play(animHit);
                 hitPoint.Hit(walkDir);
                 if (onPaddleSwing != null) {
@@ -165,7 +165,7 @@ namespace Deflector {
 
             // Movement
 
-            inputMove = GetInputDirection(GetInputMask());
+            inputMove = GetInputDirection(InputController.inputMask);
             if (inputMove > -1) {
                 sr.flipX = flipDirections[inputMove];
             }
@@ -282,15 +282,6 @@ namespace Deflector {
                 }
                 yield return null;
             }
-        }
-
-        private static uint GetInputMask() {
-            uint mask = 0;
-            mask |= (uint)((Input.GetKey(KeyCode.UpArrow)    ? 1 : 0) << 0);
-            mask |= (uint)((Input.GetKey(KeyCode.RightArrow) ? 1 : 0) << 1);
-            mask |= (uint)((Input.GetKey(KeyCode.DownArrow)  ? 1 : 0) << 2);
-            mask |= (uint)((Input.GetKey(KeyCode.LeftArrow)  ? 1 : 0) << 3);
-            return mask;
         }
 
         private static int GetInputDirection(uint inputMask) {

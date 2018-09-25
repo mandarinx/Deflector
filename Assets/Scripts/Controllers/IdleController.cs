@@ -21,7 +21,7 @@ namespace Deflector {
 
             timeSinceInput += Time.deltaTime;
 
-            if (Input.anyKeyDown) {
+            if (InputController.anyKey) {
                 timeSinceInput = 0f;
             }
 
