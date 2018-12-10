@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   languages: 0a0000001a000000
   texts:
-  - D-pad or joystick to move\\nB to swing the racket
-  - "Piltaster eller joystick for \xE5 bevege deg\\\\nB for \xE5 svinge racketen"
+  - Directional keys to move\\nX to swing the racket
+  - "Piltaster for \xE5 bevege deg\\\\nX for \xE5 svinge racketen"

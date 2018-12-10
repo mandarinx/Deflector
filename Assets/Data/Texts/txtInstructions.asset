@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   languages: 0a0000001a000000
   texts:
-  - D-pad to select, B to choose
-  - "Piltaster for \xE5 markere, B for \xE5 velge"
+  - Up/down to select, X to choose
+  - "Opp/ned for \xE5 markere, X for \xE5 velge"

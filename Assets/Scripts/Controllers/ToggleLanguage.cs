@@ -15,7 +15,7 @@ namespace Deflector {
         public void Toggle() {
             ++curLanguage;
             curLanguage %= languages.Length;
-            Debug.Log($"Toggle to: {languages[curLanguage]}");
+            //Debug.Log($"Toggle to: {languages[curLanguage]}");
             onSetLanguage.Invoke((int)languages[curLanguage]);
         }
     }

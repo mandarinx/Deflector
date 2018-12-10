@@ -701,6 +701,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 1417544748323332, guid: 4a58fc883607f4eeab3dec4e17043602, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a58fc883607f4eeab3dec4e17043602, type: 2}
   m_IsPrefabAsset: 0
@@ -932,6 +936,16 @@ Prefab:
     - target: {fileID: 1931506645437574, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}
       propertyPath: m_Name
       value: UIPanels
+      objectReference: {fileID: 0}
+    - target: {fileID: 223049963365681728, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223800245502856000, guid: aa87f282a081d4a4c97a023f7fa91abb,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa87f282a081d4a4c97a023f7fa91abb, type: 2}
@@ -1168,6 +1182,10 @@ Prefab:
       propertyPath: uHooks
       value: 
       objectReference: {fileID: 1964890642}
+    - target: {fileID: 1240393529648650, guid: 9eacc5e06598b467cbcb71fcd1362ae9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eacc5e06598b467cbcb71fcd1362ae9, type: 2}
   m_IsPrefabAsset: 0

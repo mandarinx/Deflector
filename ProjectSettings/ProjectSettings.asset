@@ -118,14 +118,19 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0.1
+  bundleVersion: 1.0.3
   preloadedAssets:
   - {fileID: 11400000, guid: 13a4203b3d9744f7ea81a0f6d781b006, type: 2}
+  - {fileID: 102900000, guid: 4376aa7afae7b458597be5dcd846a751, type: 3}
+  - {fileID: 102900000, guid: b2cce417ceb154b94beb2e51d86aed58, type: 3}
+  - {fileID: 102900000, guid: bd6b60e9789eb4871b2c4e69803bcc67, type: 3}
+  - {fileID: 102900000, guid: 0728941b528884c5bb1d7b893f23e981, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0
   xboxOneEnable7thCore: 0
+  isWsaHolographicRemotingEnabled: 0
   vrSettings:
     cardboard:
       depthFormat: 0
@@ -450,6 +455,7 @@ PlayerSettings:
   switchAllowsVideoCapturing: 1
   switchAllowsRuntimeAddOnContentInstall: 0
   switchDataLossConfirmation: 0
+  switchUserAccountLockEnabled: 0
   switchSupportedNpadStyles: 3
   switchNativeFsCacheSize: 32
   switchIsHoldTypeHorizontal: 0
@@ -598,7 +604,7 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   platformArchitecture: {}
   scriptingBackend:
-    Standalone: 1
+    Standalone: 0
   il2cppCompilerConfiguration: {}
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
